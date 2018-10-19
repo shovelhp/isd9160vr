@@ -1,0 +1,38 @@
+#ifndef _AUDIOINFO_H_
+#define _AUDIOINFO_H_
+
+enum Audio_ID_Table
+{
+	BAIHU=0,	//MD4
+	COMMAND1=1,	//MD4
+	COMMAND2=2,	//MD4
+	COMMAND3=3,	//MD4
+	COMMAND4=4,	//MD4
+	COMMAND7=5,	//MD4
+	COMMAND8=6,	//MD4
+	COMMAND9=7,	//MD4
+	COMMAND10=8,	//MD4
+	COMMAND11=9,	//MD4
+	COMMAND12=10,	//MD4
+	COMMAND13=11,	//MD4
+	COMMAND14=12,	//MD4
+	BACKGROUND=13,	//MD4
+	COMMAND5=14,	//MD4
+	COMMAND6=15,	//MD4
+	HUXIDENG=16,	//MD4
+	YITIAOLIANG=17,	//MD4
+	YITIAOAN=18,	//MD4
+	YIZUILIANG=19,	//MD4
+	YIZUIAN=20,	//MD4
+};
+#define AUDIOSYN_SOUND_MAX_ID	20
+
+// Define AudioRes_AudioInfoMerge.ROM size (without MIDI WavTable)
+#define AUDIOINFO_ROM_NO_WTB_SIZE	887074
+// Define MIDI WavTable size
+#define MIDISYN_WTB_SIZE	0
+// Define AudioRes_AudioInfoMerge.ROM size (with MIDI WavTable)
+#define AUDIOINFO_ROM_SIZE	887074
+
+#endif
+

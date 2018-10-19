@@ -1,0 +1,54 @@
+; UID file provides user to define play equation, and speech that will be used in program
+
+[Audio]
+; ===================================================================
+; All speech files and files in play equation, should be defined here
+; Syntax
+; 	DEFAUD file_name < ext= 0, format= XXX , bitrate=Y.Y>
+;
+; Description
+;	file_name: The speech file name (without extention name) which will be played in program.
+;	ext: Reserved for future use, set it to 0 now.
+;	format: audio format will be stored in storage
+;		"MD4", "P16", "LP8", "NUS", "NUO", "NUL", "NUV" for speech
+;		"MID" is for Midi.
+;	bitrate: encoded bits for one sample
+;		Range of NUS: 1.5~3.0 bits
+;		Range of NUO: 0.8~2.0 bits
+;		Range of NUL: 0.5~3.0 bits
+;		Range of NUV: 0.3, 0.7, and 0.8
+; ===================================================================
+
+; VR group1 response
+;defaud OK<ext=0,format=MD4>
+;defaud command0<ext=0,format=MD4>
+defaud baihu<ext=0,format=MD4>
+defaud command1<ext=0,format=MD4>
+defaud command2<ext=0,format=MD4>
+defaud command3<ext=0,format=MD4>
+defaud command4<ext=0,format=MD4>
+defaud command7<ext=0,format=MD4>
+defaud command8<ext=0,format=MD4>
+defaud command9<ext=0,format=MD4>
+defaud command10<ext=0,format=MD4>
+defaud command11<ext=0,format=MD4>
+defaud command12<ext=0,format=MD4>
+defaud command13<ext=0,format=MD4>
+defaud command14<ext=0,format=MD4>
+defaud background<ext=0,format=MD4>
+
+defaud command5<ext=0,format=MD4>;14
+defaud command6<ext=0,format=MD4>
+defaud huxideng<ext=0,format=MD4>
+defaud yitiaoliang<ext=0,format=MD4>
+defaud yitiaoan<ext=0,format=MD4>
+defaud yizuiliang<ext=0,format=MD4>
+defaud yizuian<ext=0,format=MD4>
+
+; VR group2 response
+
+
+
+
+
+
