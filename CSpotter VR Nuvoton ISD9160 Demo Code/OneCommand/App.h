@@ -41,8 +41,11 @@
 //#define VRCMD_START_ADDR	(0x0012400)		//User needs to estimate code size and fix the VR model start address in Data Flash. 
 
 //Data Flash erasable sector is 1Kbyte.
-#define VRCMD_MAX_SIZE		(105*1024) 		//Unit: byte; 
-#define VRCMD_START_ADDR	(0x00a000)		//User needs to estimate code size and fix the VR model start address in Data Flash. 											
+//#define VRCMD_MAX_SIZE		(105*1024) 		//Unit: byte; 
+//#define VRCMD_START_ADDR	(0x00A000)		//User needs to estimate code size and fix the VR model start address in Data Flash. 											
+//Data Flash erasable sector is 1Kbyte.
+#define VRCMD_MAX_SIZE		(97*1024) 		//Unit: byte; 
+#define VRCMD_START_ADDR	(0x00C000)		//User needs to estimate code size and fix the VR model start address in Data Flash. 											
 // -------------------------------------------------------------------------------------------------------------------------------
 // N575 APROM End Address
 // -------------------------------------------------------------------------------------------------------------------------------

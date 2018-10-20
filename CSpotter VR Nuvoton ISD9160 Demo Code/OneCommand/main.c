@@ -23,6 +23,7 @@
 //	Reference "Readme.txt" for more information.
 // ---------------------------------------------------------------------------------------------------------
 
+#include <stdio.h>
 #include "App.h"
 #include "Framework.h"
 #include "Keypad.h"
@@ -320,6 +321,8 @@ INT32 main()
 //	GPIO_SetMode(PA, 12, GPIO_MODE_OUTPUT);
 	
 	//App_StartPlay(0);
+	printf("\n\n");
+	printf("INIT Finished!\n");
 	while (1)
 	{
 		

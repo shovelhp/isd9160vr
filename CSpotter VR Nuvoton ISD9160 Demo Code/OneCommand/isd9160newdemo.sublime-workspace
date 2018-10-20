@@ -1,0 +1,1017 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"pw",
+				"POWER"
+			],
+			[
+				"cu",
+				"CURRENT"
+			],
+			[
+				"CALC",
+				"CALC_DATA"
+			],
+			[
+				"VBUS_c",
+				"VBUS_CNVR"
+			],
+			[
+				"ov",
+				"VBUS_OVF"
+			],
+			[
+				"vubs",
+				"VBUS"
+			],
+			[
+				"con",
+				"CONF_DATA"
+			],
+			[
+				"i2c",
+				"i2c_read"
+			],
+			[
+				"sla",
+				"Slave_Address"
+			],
+			[
+				"pri",
+				"printf_P"
+			],
+			[
+				"INIT",
+				"INITSEG1"
+			],
+			[
+				"chip",
+				"chip_init_all"
+			],
+			[
+				"def",
+				"define"
+			],
+			[
+				"clk",
+				"CLK_chip_init2"
+			],
+			[
+				"drive_clk",
+				"drive_CLK_CFG_low"
+			],
+			[
+				"ui",
+				"uint8_t"
+			],
+			[
+				"org",
+				"org_addr"
+			],
+			[
+				"data",
+				"data_addr"
+			],
+			[
+				"DATA",
+				"data_addr"
+			],
+			[
+				"de",
+				"default"
+			],
+			[
+				"uint",
+				"uint8_t"
+			],
+			[
+				"cha",
+				"changetype"
+			],
+			[
+				"uin",
+				"uint8_t"
+			],
+			[
+				"un",
+				"uint16_t"
+			],
+			[
+				"dri",
+				"drive_ADC_CFG_low"
+			],
+			[
+				"SP",
+				"SPI_DEV"
+			],
+			[
+				"CLK",
+				"CLK_chip_reset"
+			],
+			[
+				"S",
+				"SPICMD_WRITE"
+			],
+			[
+				"spi",
+				"spi_cmd_match"
+			],
+			[
+				"he",
+				"helppage"
+			],
+			[
+				"prin",
+				"printchar"
+			],
+			[
+				"p",
+				"printchar"
+			],
+			[
+				"add",
+				"address"
+			],
+			[
+				"re",
+				"register"
+			],
+			[
+				"ini",
+				"initial"
+			],
+			[
+				"SPI",
+				"SPI_DEV"
+			],
+			[
+				"ADC",
+				"ADC1_init"
+			],
+			[
+				"T",
+				"Tx_SCFDE"
+			],
+			[
+				"cnt",
+				"cnt_data"
+			],
+			[
+				"frq",
+				"Freq_en"
+			],
+			[
+				"rf",
+				"rfic_initclk"
+			],
+			[
+				"rfic_cfgen_f",
+				"rfic_cfgen_ff1"
+			],
+			[
+				"rfic",
+				"rfic_cfgen"
+			],
+			[
+				"rf_cfg",
+				"rfic_cfgen_ff0"
+			],
+			[
+				"rfi",
+				"rfic_cfgen"
+			],
+			[
+				"Fr",
+				"Fre_en"
+			],
+			[
+				"wire",
+				"wire"
+			],
+			[
+				"spen",
+				"sp_en"
+			],
+			[
+				"da",
+				"dataout_rfic"
+			],
+			[
+				"riiclkff",
+				"rfic_initclk_out_ff"
+			],
+			[
+				"a",
+				"always	always"
+			],
+			[
+				"addr",
+				"ADDR"
+			],
+			[
+				"TX",
+				"TX_GAIN_INIT"
+			],
+			[
+				"F",
+				"Freq_en"
+			],
+			[
+				"lmsoutte",
+				"lms_coeff_out0_temp"
+			],
+			[
+				"lmsadd",
+				"LMS_COEFF_0_2_ADDR"
+			],
+			[
+				"lmscoad",
+				"LMS_COEFF_0_2_ADDR"
+			],
+			[
+				"lmswi",
+				"LMS_COEFF_PHY_WIDTH"
+			],
+			[
+				"pown",
+				"pow_null_out_temp"
+			],
+			[
+				"pow",
+				"pow_null_out_temp"
+			],
+			[
+				"POW",
+				"POW_NULL_INIT"
+			],
+			[
+				"LMSST",
+				"LMS_STEP_WIDTH"
+			],
+			[
+				"LMS",
+				"LMS_COEFF_0_2_ADDR"
+			],
+			[
+				"dout_da",
+				"dout_i_da"
+			],
+			[
+				"b",
+				"b0"
+			],
+			[
+				"h1",
+				"h1"
+			],
+			[
+				"opre1out",
+				"optional_reg1_out"
+			],
+			[
+				"opretemp",
+				"optional_reg1_out_temp"
+			],
+			[
+				"puintff",
+				"PU_INT_STATUS_IN_FF"
+			],
+			[
+				"PU_INT_ST",
+				"PU_INT_STATUS_INIT"
+			],
+			[
+				"pustau",
+				"PU_INT_STATUS_WIDTH"
+			],
+			[
+				"mapuptcnt",
+				"MAP_UPDATE_CNT_ADDR"
+			],
+			[
+				"fecff",
+				"FEC_TOTAL_ID_CNT_DATA_IN_FF"
+			],
+			[
+				"pdlostint",
+				"PD_LOST_INT_CNT_ADDR"
+			],
+			[
+				"ofdmbitwith",
+				"OFDM_BIT_T_PHY_ADDR_WIDTH-1"
+			],
+			[
+				"ddlsphdatawi",
+				"DD_LS_SUMX2_PHY_DATA_WIDTH-1"
+			],
+			[
+				"ddlssumxdatawi",
+				"DD_LS_SUMX_PHY_DATA_WIDTH-1"
+			],
+			[
+				"ddlsdatawi",
+				"DD_LS_IND_PHY_DATA_WIDTH"
+			],
+			[
+				"ofdmbittdatawi",
+				"OFDM_BIT_T_PHY_DATA_WIDTH-1"
+			],
+			[
+				"pilotse",
+				"PILOT_C_PHASE_selected"
+			],
+			[
+				"hip",
+				"hiphy_time"
+			],
+			[
+				"stp",
+				"stp_on"
+			],
+			[
+				"stpwi",
+				"STP_EN_WIDTH"
+			],
+			[
+				"staddr",
+				"STP_REG_ADDR"
+			],
+			[
+				"stsrc",
+				"stp_src_sel_out_temp"
+			],
+			[
+				"stp_sr",
+				"stp_src_sel_out_temp"
+			],
+			[
+				"stpbit",
+				"STP_END_BIT"
+			],
+			[
+				"st",
+				"stp_end_in"
+			],
+			[
+				"STPEND",
+				"STP_END_IN_FF"
+			],
+			[
+				"ampmovedon",
+				"amp_ram_move_done_in"
+			],
+			[
+				"phasenouttem",
+				"phase_ram_move_en_out_temp"
+			],
+			[
+				"amprammovoutt",
+				"amp_ram_move_id_out_temp"
+			],
+			[
+				"ampen",
+				"AMP_RAM_MOVE_EN_INIT"
+			],
+			[
+				"ampidout",
+				"amp_ram_move_id_out_temp"
+			],
+			[
+				"amp",
+				"amp_parameter_out_temp"
+			],
+			[
+				"ampmovdon",
+				"AMP_RAM_MOVE_DONE_BIT"
+			],
+			[
+				"AMPmove_d",
+				"AMP_RAM_MOVE_DONE_IN_FF"
+			],
+			[
+				"moveid",
+				"MOVE_ID_ADDR"
+			],
+			[
+				"phasemovedon",
+				"PHASE_RAM_move_DONE"
+			],
+			[
+				"AMP_RAM_move",
+				"AMP_RAM_move_EN"
+			],
+			[
+				"amp_",
+				"amp_ram_move_done_in"
+			],
+			[
+				"AMPmov",
+				"AMP_RAM_move_EN"
+			],
+			[
+				"phasewi",
+				"PHASE_RAM_MOVE_ID_WIDTH"
+			],
+			[
+				"ampwi",
+				"AMP_RAM_MOVE_ID_WIDTH"
+			],
+			[
+				"d",
+				"d10000"
+			],
+			[
+				"move",
+				"AMP_move_flag_ff"
+			],
+			[
+				"hiphy",
+				"hiphy_time"
+			],
+			[
+				"amp_moveaddr",
+				"AMP_RAM_move_Base_addr"
+			],
+			[
+				"AM",
+				"AMP_addr_cnt"
+			],
+			[
+				"Amp",
+				"AMP_addr_cnt"
+			],
+			[
+				"cpurdata",
+				"cpu_rdata_AMP_RAM"
+			],
+			[
+				"cpur",
+				"cpu_rdata_AMP_RAM"
+			],
+			[
+				"clk_hiphy_",
+				"clk_hiphy_ff"
+			],
+			[
+				"hiph",
+				"hiphy_adc_i"
+			],
+			[
+				"H",
+				"HIPHY_ADC_DATA_WIDTH"
+			],
+			[
+				"s",
+				"stp_on"
+			],
+			[
+				"clk_hi",
+				"clk_hiphy"
+			],
+			[
+				"r_fre_corr_out_",
+				"r_fre_corr_out_temp"
+			],
+			[
+				"t_fre_out_",
+				"t_fre_out_temp"
+			],
+			[
+				"esti_in_use_",
+				"esti_in_use_out_temp"
+			],
+			[
+				"clk_",
+				"clk_hiphy"
+			],
+			[
+				"fre_",
+				"fre_delta"
+			],
+			[
+				"r_ppm",
+				"r_ppm_esti_data_in"
+			],
+			[
+				"fre",
+				"freq_data"
+			],
+			[
+				"St",
+				"STP_REG_INIT"
+			],
+			[
+				"hiphy_wdata_AMP_RAM_tmp_",
+				"hiphy_wdata_AMP_RAM_tmp_A"
+			],
+			[
+				"hiphy_addr_PREAMB_",
+				"hiphy_addr_PREAMB_B"
+			],
+			[
+				"hiphy_addr_MOD_B_R_",
+				"hiphy_addr_MOD_B_R_B"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "/*---------------------------------------------------------------------------------------------------------*/\n/*                                                                                                         */\n/* Copyright(c) Nuvoton Technology Corp. All rights reserved.                                              */\n/*                                                                                                         */\n/*---------------------------------------------------------------------------------------------------------*/		 \n\n// ---------------------------------------------------------------------------------------------------------\n//	Functions:\n//		- System clock configuration.\n//		- Keypad configuration.\n//		- SPI Flash configuration.\n//		- Speaker configuration.\n//		- MIC configuration.\n//		- Output pin configuration.\n//		- UltraIO configuration.\n//		- Application Initiation.\n//		- Processing loop:\n//			* Codec processing(use functions in \"AppFunctions.c\").\n//			* Voice effect processing(use functions in \"AppFunctions.c\").\n//			* Keypad check and execution actions(use functions in \"InputKeyActions.c\").\n//			* Etc.\n//	\n//	Reference \"Readme.txt\" for more information.\n// ---------------------------------------------------------------------------------------------------------\n\n#include <stdio.h>\n#include \"App.h\"\n#include \"Framework.h\"\n#include \"Keypad.h\"\n#include \"ConfigSysClk.h\"\n#include \"MicSpk.h\"\n\n#include \"AudioRes/Output/AudioRes_AudioInfo.h\"\n\n//#include \"N5162S.h\"\n//#include \"gpio_spi.h\"\n\n#if( !defined(__CHIP_SERIES__) )\n#error \"Please update SDS version >= v5.0.\"\n#endif\n\n// SPI flash handler.\nS_SPIFLASH_HANDLER g_sSpiFlash;\n\n// Application control.\nvolatile UINT8 g_u8AppCtrl;\n\n// Application handler.\nS_APP g_sApp;\n\nstatic UART_T	*g_pUART = UART0;                              /////modify 20170804\n\n\nuart_type ap_uart0;\npwm_type pwm0;\n\nUINT8 SPIFlash_Initiate(void)\n{ \n	UINT16 ui16Temp;\n	UINT32 ui32Temp;\n	UINT32 u32Count;\n\n	// SPI0: GPA1=SSB00, GPA2=SCLK0, GPA3=MISO0, GPA4=MOSI0 \n	SYS->GPA_MFP  = \n		(SYS->GPA_MFP & (~(SYS_GPA_MFP_PA0MFP_Msk|SYS_GPA_MFP_PA1MFP_Msk|SYS_GPA_MFP_PA2MFP_Msk|SYS_GPA_MFP_PA3MFP_Msk)) )\n		| (SYS_GPA_MFP_PA0MFP_SPI_MOSI0|SYS_GPA_MFP_PA1MFP_SPI_SCLK|SYS_GPA_MFP_PA2MFP_SPI_SSB0|SYS_GPA_MFP_PA3MFP_SPI_MISO0);	\n	\n	// Reset IP module\n	CLK_EnableModuleClock(SPI0_MODULE);\n	SYS_ResetModule(SPI0_RST);\n	SPIFlash_Open(SPI0, SPI_SS0, SPI0_CLOCK, &g_sSpiFlash );\n\n	// Make SPI flash leave power down mode if some where or some time had made it entring power down mode\n	SPIFlash_PowerDown(&g_sSpiFlash, FALSE);\n	\n	// Check SPI flash is ready for accessing\n	u32Count = ui32Temp = 0;\n	while(u32Count!=100)\n	{\n		SPIFlash_Read(&g_sSpiFlash, 0, (PUINT8) &ui16Temp, 2);\n		if ( ui32Temp != (UINT32)ui16Temp )\n		{\n			ui32Temp = (UINT32)ui16Temp;\n			u32Count = 0;\n		}\n		else\n			u32Count++;\n	}\n\n	// The following code can be remove to save code if the flash size is not necessary for this application\n	SPIFlash_GetChipInfo(&g_sSpiFlash);\n	if (g_sSpiFlash.u32FlashSize == 0)\n		return 0;\n	\n	// The above code can be remove to save code if the flash size is not necessary for this application\n	return 1;\n}\n\nvoid UART_Init(void)\n{\n   /* Init UART to 115200-8n1 for print message */\n	SYS->GPA_MFP  = (SYS->GPA_MFP & (~SYS_GPA_MFP_PA8MFP_Msk) ) | SYS_GPA_MFP_PA8MFP_UART_TX;\n	SYS->GPA_MFP  = (SYS->GPA_MFP & (~SYS_GPA_MFP_PA9MFP_Msk) ) | SYS_GPA_MFP_PA9MFP_UART_RX;\n	\n	CLK_EnableModuleClock(UART_MODULE);//Ê¹ÄÜUARTÍâÉèÊ±ÖÓ\n	\n  UART_Open(UART0, 115200);\n	UART_ClearIntFlag(UART0,UART_INTSTS_BUFERRINT_Msk);\n	UART_ClearIntFlag(UART0,UART_INTSTS_RLSINT_Msk);\n	UART_ClearIntFlag(UART0,UART_INTSTS_MODEMINT_Msk);\n	UART_ClearIntFlag(UART0,UART_INTSTS_RXTOINT_Msk);\n	UART0->INTEN |=(1<<0); //Ê¹ÄÜ½ÓÊÕÖÐ¶Ï\n  NVIC_EnableIRQ(UART0_IRQn);                      ////modify 20170804 \n}\n\nvoid pwm_init(void)\n{\n	pwm0.period =200;\n	pwm0.Duty =50;\n	pwm0.rate = 30000;\n	\n	CLK_SetModuleClock(PWM0_MODULE, CLK_CLKSEL1_PWM0CH01SEL_HCLK, 0);\n	CLK_EnableModuleClock(PWM0_MODULE);\n	SYS_ResetModule(PWM0_RST);\n	\n	/* Set GPA multi-function pins for PWM0 Channel0 */\n	SYS->GPA_MFP  = (SYS->GPA_MFP & (~SYS_GPA_MFP_PA12MFP_Msk) ) | SYS_GPA_MFP_PA12MFP_PWM0CH0;\n	//set PWM0 channel 0 output configuration */\n  PWM_ConfigOutputChannel(PWM0, PWM_CH0, pwm0.rate, pwm0.Duty);\n  //Enable PWM Output path for PWM0 channel 0 */\n  PWM_EnableOutput(PWM0, 0x1);\n	// Enable PWM channel 0 period interrupt\n  PWM0->INTEN = PWM_INTEN_PIEN0_Msk;\n  NVIC_EnableIRQ(PWM0_IRQn);\n    \n  PWM_Start(PWM0, 0x00);\n}\n\nvoid time_init(void)\n{\n	CLK_EnableModuleClock(TMR0_MODULE);  //Ê¹ÄÜtime0ÍâÉèÊ±ÖÓ\n	CLK_SetModuleClock(TMR0_MODULE, CLK_CLKSEL1_TMR0SEL_HCLK, 0);   /////modify 20170804\n	TIMER_Open(TIMER0, TIMER_PERIODIC_MODE, 1000);\n	NVIC_EnableIRQ(TMR0_IRQn);\n	TIMER_Start(TIMER0);\n	TIMER_EnableInt(TIMER0);\n	\n}\n\nuint16_t vr_time=0;\nuint16_t main_init_time=2000;\nuint8_t spk_sta=0;\nuint16_t PB_PIN_STA=0;\nvoid TMR0_IRQHandler(void)\n{\n	static uint8_t time_10ms=0;\n\n	static uint16_t tt=0;\n	static uint8_t ll=0;\n	if(pwm0.Breath_light)\n	{\n		tt++;\n		if(tt>10)\n		{\n			tt =0;\n			if(ll==0)\n			{\n				pwm0.Duty ++;\n				if((pwm0.Duty)>= pwm0.period) ll=1;\n			}\n			else\n			{\n				if(pwm0.Duty)	pwm0.Duty--;\n				else ll=0;\n			}\n		}\n	}\n	\n	if(time_10ms)	time_10ms--;\n	else\n	{\n		time_10ms=10;\n		\n		PB_PIN_STA <<=1;\n		if(((PB->PIN)&(1<<6))==0)	PB_PIN_STA+=1;\n		\n		if (PB_PIN_STA==0xfF00)	spk_sta++;\n	}\n	\n	if(ap_uart0.uart_rx_time)	ap_uart0.uart_rx_time --;\n    //printf(\"Timer IRQ handler test #%d/3.\\n\", ++u8Counter );\n    TIMER_ClearIntFlag(TIMER0);	\n	if(vr_time)	vr_time--;\n}\n\nvoid UART0_IRQHandler(void)   ////modify 20170804\n{\n	uint32_t  u32IntStatus;\n	u32IntStatus= UART0->INTSTS;\n	\nif(u32IntStatus & (1<<0))	//½ÓÊÕÖÐ¶Ï\n	{\n		ap_uart0.uart_rx_data[ap_uart0.uart_rx_len] = UART0->DAT;\n		if((ap_uart0.uart_rx_len+1) <UART_DA)	ap_uart0.uart_rx_len ++;	//Ô¤·ÀÔ½½ç\n		\n		ap_uart0.uart_rx_time = UART_TT;\n	}\n	else if(u32IntStatus & (1<<1))	//·¢ËÍ»º³å¿ÕÖÐ¶Ï\n	{\n		UART0->INTEN &= ~(1<<1);     /////THREIEN\n		if(ap_uart0.uart_tx_len)\n		{\n			UART0->DAT= ap_uart0.uart_tx_data[ap_uart0.uart_tx_per]  ;\n			ap_uart0.uart_tx_len--;\n			ap_uart0.uart_tx_per ++;\n			UART0->INTEN |=(1<<1);\n		}\n		else\n		{\n			ap_uart0.uart_tx_per =0;\n			UART0->INTEN &= ~(1<<1);		//·¢ËÍÍê±Ï£¬¹Ø±Õ·¢ËÍÖÐ¶Ï\n			//UART0->INTEN |=(1<<1);\n		}\n	}\n\n} \n\nvoid uart_send(uint8_t *dara, uint16_t len)\n{\n	uint16_t ii;\n	UART0->INTEN |=(1<<1);\n	for(ii=0; ii<len; ii++)\n	{\n		ap_uart0.uart_tx_data[ii] = *dara++;\n	}\n	ap_uart0.uart_tx_len =len;\n	if(ap_uart0.uart_tx_len==0)	return;\n	while((g_pUART->FIFOSTS &(1<<22)) == 0)	;\n	g_pUART->DAT= ap_uart0.uart_tx_data[0];//·¢ËÍ\n	ap_uart0.uart_tx_per++;\n	ap_uart0.uart_tx_len --;\n	UART0->INTEN |=(1<<1);	//´ò¿ª·¢ËÍÖÐ¶Ï\n}\n\n\nvoid uart_rev_task(void)\n{\n	if((ap_uart0.uart_rx_time==0)&&(ap_uart0.uart_rx_len))//ÓÐ½ÓÊÕµ½Êý¾Ý\n	{\n\n		//uart_send(ap_uart0.uart_rx_data	, ap_uart0.uart_rx_len);	//·¢ËÍ½ÓÊÕµ½µÄÊý¾Ý\n\n		ap_uart0.uart_rx_len =0;\n	}\n}\n\n\n\nvoid PWM0_IRQHandler(void)\n{\n    // Update PWM0 channel 0 period and duty\n    PWM_SET_CNR(PWM0, PWM_CH0, pwm0.period);\n    PWM_SET_CMR(PWM0, PWM_CH0, pwm0.Duty);\n    // Clear channel 0 period interrupt flag\n    PWM_ClearIntFlag(PWM0, 0);\n}\n\n\n\nuint8_t spk_add=0;\nuint8_t key_spk;\nuint8_t io_aa;\n//---------------------------------------------------------------------------------------------------------\n// Main Function                                                           \n//---------------------------------------------------------------------------------------------------------\nINT32 main()\n{\n\n	SYSCLK_INITIATE();								// Configure CPU clock source and operation clock frequency.\n																		// The configuration functions are in \"ConfigSysClk.h\"\n\n	CLK_EnableLDO(CLK_LDOSEL_3_3V);		// Enable interl 3.3 LDO.\n\n	if (! SPIFlash_Initiate())				// Initiate SPI interface and checking flows for accessing SPI flash.\n	while(1); 												// loop here for easy debug\n	\n\n	OUTPUTPIN_INITIATE();							// Initiate output pin configuration.\n//																		// The output pins configurations are defined in \"ConfigIO.h\".\n\n	ULTRAIO_INITIATE();								// Initiate ultraio output configurations.\n																		// The ultraio output pin configurations are defined in \"ConfigUltraIO.h\"\n\n	KEYPAD_INITIATE();								// Initiate keypad configurations including direct trigger key and matrix key\n																		// The keypad configurations are defined in \"ConfigIO.h\".\n\n	PDMA_INITIATE();									// Initiate PDMA.\n																		// After initiation, the PDMA engine clock NVIC are enabled.\n																		// Use PdmaCtrl_Open() to set PDMA service channel for desired IP.\n																		// Use PdmaCtrl_Start() to trigger PDMA operation.\n																		// Reference \"PdmaCtrl.h\" for PDMA related APIs.\n																		// PDMA_INITIATE() must be call before SPK_INITIATE() and MIC_INITIATE(), if open MIC or speaker.\n\n	SPK_INITIATE();										// Initiate speaker including pop-sound canceling.\n																		// After initiation, the APU is paused.\n																		// Use SPK_Resume(0) to start APU operation.\n																		// Reference \"MicSpk.h\" for speaker related APIs.\n\n	MIC_INITIATE();										// Initiate MIC.\n																		// After initiation, the ADC is paused.\n																		// Use ADC_Resume() to start ADC operation.\n																		// Reference \"MicSpk.h\" for MIC related APIs.\n\n\n	UART_Init();   \n	time_init();\n	pwm_init();																	\n//			\n	App_Initiate();										// Initiate application for audio decode.\n	\n//	GPIO_SetMode(PA, 12, GPIO_MODE_OUTPUT);\n	\n	//App_StartPlay(0);\n	printf(\"\\n\\n\");\n	printf(\"INIT Finished!\\n\");\n	while (1)\n	{\n		\n		App_Process();	//ÓïÒôÊ¶±ð\n		uart_rev_task();	//uartÈÎÎñ\n		\n		\n		//if((g_u8AppCtrl & APPCTRL_PLAY)==0)	 App_StartPlay(1);	//ÅÐ¶Ïµ±Ç°ÊÇ·ñ²¥·ÅÍê±Ï\n		\n		\n//		TRIGGER_KEY_CHECK();		// Check and execute direct trigger key actions defined in \"InputKeyActions.c\"\n														// Default trigger key handler is \"Default_KeyHandler()\"\n														// The trigger key configurations are defined in \"ConfigIO.h\".\n		\n//		MATRIX_KEY_CHECK();			// Check and execute matrix key actions defined in \"InputKeyActions.c\"\n														// Default matrix key handler is \"Default_KeyHandler()\"\n														// The matrix key configurations are defined in \"ConfigIO.h\".\n	}\n\n}\n\n",
+			"file": "main.c",
+			"file_size": 10627,
+			"file_write_time": 131842368770898281,
+			"settings":
+			{
+				"buffer_size": 10281,
+				"line_ending": "Windows",
+				"scratch": true
+			}
+		},
+		{
+			"contents": "/*---------------------------------------------------------------------------------------------------------*/\n/*                                                                                                         */\n/* Copyright(c) Nuvoton Technology Corp. All rights reserved.                                              */\n/*                                                                                                         */\n/*---------------------------------------------------------------------------------------------------------*/\n#ifndef _APP_H_\n#define _APP_H_	  	 \n\n#include \"ConfigApp.h\"\n#include \"Framework.h\"\n\n// -------------------------------------------------------------------------------------------------------------------------------\n// g_u8AppCtrl Bit Field Definitions \n// -------------------------------------------------------------------------------------------------------------------------------\n#define APPCTRL_NO_ACTION			0\n#define APPCTRL_PLAY				BIT0\n#define APPCTRL_PLAY_STOP			BIT1\n#define APPCTRL_MODE_EQUATION		BIT3\n#define APPCTRL_RECORD				BIT4\n#define APPCTRL_RECORD_END			BIT5\n#define APPCTRL_PAUSE				BIT6\n#define APPCTRL_MUTE				BIT7\n\n// -------------------------------------------------------------------------------------------------------------------------------\n// Application Related Definitions \n// -------------------------------------------------------------------------------------------------------------------------------\n#include \"MD4App/MD4App.h\"\n#include \"VROneCmdApp/VROneCmdApp.h\"\n#include \"MicGetApp/MicGetApp.h\"\n#include \"PlaybackRecord.h\"\n#include \"BufCtrl.h\"\n#include \"ConfigIO.h\"\n#include \"Preload.h\"\n\n// -------------------------------------------------------------------------------------------------------------------------------\n// VR Commands Model Maximum Size For Load To Data Flash\n// -------------------------------------------------------------------------------------------------------------------------------\n// User must enable data flash area via ICP config. This area saves VR model loaded\n// from SPIFLah.\n//#define VRCMD_MAX_SIZE		(72*1024) 		//Unit: byte; \n//#define VRCMD_START_ADDR	(0x0012400)		//User needs to estimate code size and fix the VR model start address in Data Flash. \n\n//Data Flash erasable sector is 1Kbyte.\n//#define VRCMD_MAX_SIZE		(105*1024) 		//Unit: byte; \n//#define VRCMD_START_ADDR	(0x00A000)		//User needs to estimate code size and fix the VR model start address in Data Flash. 											\n//Data Flash erasable sector is 1Kbyte.\n#define VRCMD_MAX_SIZE		(97*1024) 		//Unit: byte; \n#define VRCMD_START_ADDR	(0x00C000)		//User needs to estimate code size and fix the VR model start address in Data Flash. 											\n// -------------------------------------------------------------------------------------------------------------------------------\n// N575 APROM End Address\n// -------------------------------------------------------------------------------------------------------------------------------\n#define APROM_END_ADDR	(0x00024400)\n#if ((VRCMD_START_ADDR+VRCMD_MAX_SIZE)>APROM_END_ADDR)\n	#error \"VR mdole size exceed APROM 145k bytes!\"\n#endif\n\ntypedef struct\n{\n	union\n	{\n		S_MICGETAPP sMicGetApp;\n		\n		S_MD4_APP asMD4App;\n	\n	}Mic_MD4;\n\n//	S_MICGETAPP sMicGetApp;\n	S_VRONECMD_APP sVRapp;\n//	S_MD4_APP asMD4App;\n	// Current audio play id.\n	UINT32 u32PlayID;\n	// Total audio number(load from rom header.)\n	UINT32 u32TotalAudioNum;\n	// Audio start address in SPIFlash\n	UINT32 u32AudioStartAddr;\n	// VR models start address in SPIFlash\n	UINT32 u32VRModelStartAddr;\n	// VR model ID.\n	UINT8 u8VRModelID;\n	\n} S_APP;\n\n\nvoid App_Initiate(void);\n\nvoid App_Process(void);\n\nBOOL App_StartRecognize(void);\n\nvoid App_StopRecognize(void);\n	\nBOOL App_StartPlay(UINT32 u32PlayID);\n\nBOOL App_StopPlay(void);\n\nvoid App_PowerDown(void);\n\n#define UART_TT		80	//uart数据每帧之间有时间间隔，         /////modify 20170804\n#define UART_DA		60                                         /////modify 20170804\ntypedef struct		//uart中断收发数据结构                     /////modify 20170804\n{\n	uint16_t uart_tx_len;\n	uint8_t uart_tx_data[UART_DA];\n	uint16_t uart_rx_len;\n	uint8_t uart_rx_data[UART_DA];\n	uint16_t uart_tx_per;\n	uint16_t uart_rx_time;\n}uart_type;\n\ntypedef struct		//\n{\n	uint16_t period;	//周期\n	uint16_t Duty;		//占空比\n	uint32_t rate;	  //频率\n	uint8_t Breath_light; //呼吸灯使能\n}pwm_type;\n\n\n\n\n\n#endif //#ifndef _APP_H_\n\n",
+			"file": "App.h",
+			"file_size": 4551,
+			"file_write_time": 131841321682957677,
+			"settings":
+			{
+				"buffer_size": 4396,
+				"line_ending": "Windows",
+				"scratch": true
+			}
+		},
+		{
+			"file": "AppFunctions.c",
+			"settings":
+			{
+				"buffer_size": 11011,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/src/pwm.c",
+			"settings":
+			{
+				"buffer_size": 18481,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "ConfigUltraIO.h",
+			"settings":
+			{
+				"buffer_size": 6368,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 35.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: de",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: up",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: isn",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 504.0
+	},
+	"console":
+	{
+		"height": 146.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/AudioRes/Output/AudioResText.h",
+		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/AudioRes/AudioRes.uid",
+		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/AudioRes/1.txt",
+		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/AudioRes/Output/AudioRes_AudioInfo.h",
+		"/F/shovelhp/Downloads/NuvotonISD9160/ISD9160_VR语音识别_2018年4月3日/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/AppFunctions.c",
+		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/AppFunctions - Origin.c_BACK",
+		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/AppFunctions.c",
+		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/AudioRes/AudioRes.wba",
+		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/src/pwm.c",
+		"/C/Nuvoton ISD9100 SDS/V5.02.001/SampleCode/Template/main.c",
+		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/App.h",
+		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/ConfigIO.h",
+		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/src/ConfigIO.c",
+		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/inc/Framework.h",
+		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Device/Nuvoton/ISD9100/Include/ISD9100.h",
+		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/inc/pwm.h",
+		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Device/Nuvoton/ISD9100/Source/ARM/startup_ISD9100.s",
+		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/Library/CMSIS/DSP_Lib/Examples/Common/ARM/startup_ARMCM0.s",
+		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/ConfigSysClk.h",
+		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/gpio_spi.c",
+		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/src/MicSpk.c",
+		"/C/Nuvoton/BSP Library/ISD9100BSP_CMSIS_V3.01.001/SampleCode/StdDriver/Uart/main.c",
+		"/C/Nuvoton/ISD91XX_SDK/NuvotonPlatform_Keil/Sample/TestOK/LightDemo_RecordG722__3VP_Touch-1pad/src/PlaySpiG722.c",
+		"/C/Nuvoton/ISD91XX_SDK/NuvotonPlatform_Keil/Sample/TestOK/LightDemo_RecordG722__3VP_Touch-1pad/src/PlaySpiSiren7_key.c",
+		"/C/Nuvoton/ISD91XX_SDK/NuvotonPlatform_Keil/Sample/TestOK/LightDemo_RecordG722__3VP_Touch-1pad/src/RecordSpiG722.c",
+		"/C/Nuvoton/ISD91XX_SDK/NuvotonPlatform_Keil/Sample/TestOK/LightDemo_RecordG722__3VP_Touch-1pad/src/Recording.c",
+		"/C/Program Files (x86)/Nuvoton/ISD9xxx/ISD91XX_SDK/NuvotonPlatform_Keil/Sample/TestOK/CheckVRID/CheckVRID.c",
+		"/C/Nuvoton/ISD91XX_SDK/NuvotonPlatform_Keil/Sample/TestOK/LightDemo_RecordG722__3VP_Touch-1pad/src/main.c",
+		"/C/Program Files (x86)/Spirent Communications/Spirent TestCenter 4.38/Spirent TestCenter Application/API/Tcl/readme.txt",
+		"/D/pkgIndex.tcl",
+		"/E/shovelhpwork/hinoc/MCU/ADCCTRL/ADCCTRL/ADCCTRL/cmdres.c",
+		"/E/shovelhpwork/hinoc/MCU/ADCCTRL/ADCCTRL/ADCCTRL/chipinit.c",
+		"/E/shovelhpwork/hinoc/MCU/ADCCTRL/ADCCTRL/ADCCTRL/include/adc1_init_cfg.h",
+		"/Z/ghp/temp/ina220/ina220.txt",
+		"/F/softwares/专业软件/keysight/ScopeBinaryToMatlabBinaryExamples/importAgilentBin.m",
+		"/F/softwares/专业软件/keysight/ScopeBinaryToMatlabBinaryExamples/myFileName.bin",
+		"/F/softwares/专业软件/keysight/ScopeBinaryToMatlabBinaryExamples/points10.bin",
+		"/D/Program Files (x86)/Sublime Text 3/Data/Packages/HexViewer/hex_viewer.sublime-settings",
+		"/Z/ghp/temp/flash测试波形/analog/scope_25.bin",
+		"/F/softwares/专业软件/keysight/ScopeBinaryToMatlabBinaryExamples/headerSize",
+		"/D/Program Files (x86)/Sublime Text 3/Data/Packages/Git/Git.sublime-settings",
+		"/E/shovelhpwork/hinoc/MCU/ADCCTRL/ADCCTRL/ADCCTRL/main.c",
+		"/R/forZTE/20170623/PON/SCFDE_PON_SSB.vtmu_pack/Resources/Tx_SCFDE.vtmg_pack/Inputs/Tx_SCFDE.m",
+		"/Z/ghp/temp/RF滤波器带宽/Save0x0000000.dfl",
+		"/C/Program Files (x86)/Spirent Communications/Spirent TestCenter 4.38/Spirent TestCenter Application/Tcl/lib/stc2.0/pkgIndex.tcl",
+		"/C/Program Files (x86)/Spirent Communications/Spirent TestCenter 4.38/Spirent TestCenter Application/API/Tcl/SpirentTestCenter.tcl",
+		"/C/Program Files (x86)/Spirent Communications/Spirent TestCenter 4.38/Spirent TestCenter Application/API/Tcl/pkgIndex.tcl",
+		"/E/shovelhpwork/hinoc/MCU/ADCCTRL/ADCCTRL/ADCCTRL/include/clk_chip_cfg.h",
+		"/E/shovelhpwork/hinoc/MCU/ADCCTRL/ADCCTRL/ADCCTRL/include/chipinit.h",
+		"/E/shovelhpwork/hinoc/MCU/ADCCTRL/ADCCTRL/ADCCTRL/include/cmdres.h",
+		"/E/shovelhpwork/hinoc/MCU/ADCCTRL/ADCCTRL/ADCCTRL/include/dispstr.h",
+		"/E/shovelhpwork/hinoc/MCU/ADCCTRL/ADCCTRL/ADCCTRL/include/adc2_init_cfg.h",
+		"/E/shovelhpwork/hinoc/MCU/ADCCTRL/ADCCTRL/ADCCTRL/include/atmel_start_pins.h",
+		"/E/shovelhpwork/hinoc/MCU/ADCCTRL/ADCCTRL/ADCCTRL/clk_chip_cfg.h",
+		"/E/shovelhpwork/hinoc/MCU/ADCCTRL/ADCCTRL/ADCCTRL/adc1_init_cfg.h",
+		"/E/shovelhpwork/hinoc/MCU/ADCCTRL/ADCCTRL/ADCCTRL/adc2_init_cfg.h",
+		"/E/shovelhpwork/hinoc/MCU/ADCCTRL/ADCCTRL/ADCCTRL/cmdres.h",
+		"/E/shovelhpwork/hinoc/MCU/ADCCTRL/ADCCTRL/ADCCTRL/chipinit.h",
+		"/E/shovelhpwork/hinoc/cpu/hinoc2arc/board/debug.c",
+		"/E/shovelhpwork/hinoc/MCU/ADCCTRL/ADCCTRL/ADCCTRL/main_cmd0.c",
+		"/C/quartusprj/HINOC_195/FPGA_SOC_TOP_mulWlh5_nodiv_newHimac_mdio_phy_0415_ldpc_rftest/FPGA_SOC_TOP.qsf",
+		"/E/shovelhpwork/hinoc/cpu/Hi401_ctrl/spi.txt",
+		"/E/shovelhpwork/hinoc/cpu/pllswitch/sw_pll/boot_spi.c",
+		"/Z/#Test/201711江苏信道测试/数据/分支分配器/201711JSYX/NJ-JKXC-S11.set",
+		"/Z/IC_design_group/DINI/DNIOB_SFP/DNIOB_SFP/5SGXEAB_N2_C3/fpga_a.rbf",
+		"/E/shovelhpwork/quartus/Dini_En1460_pku_daclkout/Dini_En1460_pku.qsf",
+		"/E/shovelhpwork/quartus/EP4CE30F23C6_en1460_rc1_0820_ChangeFreq_FilterAdj_IQCorrect/RFXIAO_TEST.qsf",
+		"/C/quartusprj/HINOC_195/FPGA_SOC_TOP_mulWlh5_nodiv_newHimac_mdio_phy_0415_ldpc/HINOC_TOP_Entropic_RF.qsf",
+		"/C/quartusprj/HINOC_195/FPGA_SOC_TOP_mulWlh5_nodiv_newHimac_mdio_phy_0415_ldpc/HINOC_TOP_PKU_RF.qsf",
+		"/C/quartusprj/HINOC_195/FPGA_SOC_TOP_mulWlh5_nodiv_newHimac_mdio_phy_0415_ldpc/HINOC_TOP_INTER_A.qsf",
+		"/E/shovelhpwork/hinoc/s5gxboard/DNS5GX_F2/FPGA_Reference_Designs/boards/dn0237_dns5gx_f2/MainRef/IOB_Boards/dniob_qsfp_common.qsf",
+		"/E/shovelhpwork/hinoc/s5gxboard/DNS5GX_F2/FPGA_Reference_Designs/boards/dn0237_dns5gx_f2/MainRef/PROJECTS/fpga_a.qsf",
+		"/E/shovelhpwork/hinoc/s5gxboard/DNS5GX_F2/FPGA_Reference_Designs/boards/dn0237_dns5gx_f2/MainRef/PROJECTS/fpga_b.qsf",
+		"/Z/ywy/Mifi.mif",
+		"/E/shovelhpwork/Dr/科学研究方法与实践/latex作业/中文论文.tex",
+		"/I/COM6_2_15_10_13_2 (2).txt",
+		"/Z/ghp/Dr/amcc/log20170207/20170204pon_ratio20to0_rate100to500_cl0to35_len16x_nofec.log",
+		"/Z/ghp/Dr/amcc/logAMCC/amcc_16x_ratio_speed_cl0to35_nofec_rcos.log",
+		"/Z/#挂网数据/channel data/telnetlog/telnet",
+		"/Z/#挂网数据/channel data/telnet",
+		"/Z/ghp/Dr/amcc/logAMCC/sweep_amcc_fec_rcos_speed2.log",
+		"/E/shovelhpwork/matlab/amcc/PON/SCFDE/Tx_SCFDE/Tx_SCFDE.m",
+		"/E/shovelhpwork/matlab/数字通信/2/homework2_2.m",
+		"/E/shovelhpwork/matlab/数字通信/2/homework2_1.m",
+		"/E/shovelhpwork/matlab/amcc/PON/SCFDE/Rx_SCFDE/data_map.m",
+		"/E/shovelhpwork/matlab/数字通信/2/homework4_1.m",
+		"/Z/ghp/Dr/amcc/logAMCC/sweep_apd_cl9to35_ratio18to27_speed_len16x_nofec_hpf30k.log",
+		"/Z/ghp/Dr/amcc/logPON/sweep_cl30to35_ratio18to30_rate100to500_len8x_nofec_hpf30k.log",
+		"/Z/ghp/Dr/amcc/logPON/sweep_cl9to35_ratio18to30_rate100to500_len8x_nofec_hpf30k.log",
+		"/Z/ghp/Dr/amcc/logAMCC/sweep_apd_cl9to35_ratio18to27_speed_len16x_fec0_hpf30k.log",
+		"/Z/ghp/Dr/amcc/logPON/sweep_cl15to30_ratio18to30_rate100to500_len16x_nofec.log",
+		"/Z/ghp/Dr/amcc/logAMCC/sweep_amcc_fec_rcos_speed.log",
+		"/Z/ghp/Dr/amcc/logPON/testdata2.txt",
+		"/Z/ghp/Dr/amcc/logPON/testdata.txt",
+		"/R/PON1/SCFDE_PON_SSB.vtmu_pack/Reports/sweep_ratio_20to50_lpf_1to3_len8x4096x32_newlaser.log",
+		"/Z/ghp/Dr/amcc/logPON/sweep_power_ratio_len4096x32_newlaser.log",
+		"/Z/ghp/Dr/amcc/logPON/vpilogtodata.m",
+		"/Z/ghp/Dr/amcc/logPON/sweep_ratio_20to50_len32x4096x32.log",
+		"/Z/ghp/Dr/amcc/logAMCC/sweep_ratio_20to50_lpf_1to3_len4096x32.log",
+		"/E/shovelhpwork/Dr/amcc/sweep_ratio_30to50.log",
+		"/F/softwares/专业软件/Matlab2015a/matlab_crack/license_standalone.lic",
+		"/Z/Tools/Linux/Matlab/Mathworks.Matlab.R2012a.UNIX.ISO-TBE/tbe.nfo",
+		"/E/shovelhpwork/matlab/amcc/PON/SCFDE/Rx_SCFDE/Rx_SCFDE.m",
+		"/E/shovelhpwork/matlab/amcc/PON/SCFDE/Rx_SCFDE/Frm_Sync.m",
+		"/E/shovelhpwork/matlab/amcc/PON/SCFDE/AMCC/genrandidata.m",
+		"/E/shovelhpwork/matlab/amcc/PON/SCFDE/AMCC/amccdecode.m",
+		"/E/shovelhpwork/matlab/amcc/PON/SCFDE/AMCC/datasample.m",
+		"/E/shovelhpwork/matlab/amcc/PON/SCFDE/AMCC/testcase.m",
+		"/E/shovelhpwork/matlab/amcc/PON/SCFDE/Rx_SCFDE/Rx_OFDM.m",
+		"/E/shovelhpwork/matlab/amcc/PON/SCFDE/Tx_SCFDE/Tx_SCFDE_bk.m",
+		"/E/shovelhpwork/matlab/amcc/PON/SCFDE/Tx_SCFDE/SCFDE_Code.m",
+		"/E/shovelhpwork/matlab/amcc/PON/PON.vtmu",
+		"/E/shovelhpwork/matlab/amcc/PON/SCFDE_PON_SSB.vtmu",
+		"/E/shovelhpwork/matlab/amcc/PON/SCFDE_PON_SSB.vtmu_pack/Resources/Tx_SCFDE.vtmg",
+		"/E/shovelhpwork/matlab/amcc/PON/SCFDE/Tx_SCFDE/MyQuant.m",
+		"/E/shovelhpwork/matlab/amcc/PON/SCFDE/Rx_SCFDE/Generate_Pilot.m",
+		"/E/shovelhpwork/others/shark/machine-learning-ex1/ex1/ex1.m",
+		"/E/shovelhpwork/matlab/amcc/PON/SCFDE/Rx_SCFDE/mseq.m",
+		"/F/softwares/专业软件/VPI 9.5版/license/vpi-triallicense-upgrade_20160729.vpl",
+		"/Z/gzh/debug.c",
+		"/Z/ghp/soc测试/soc1v64/ru.txt",
+		"/E/shovelhpwork/hinoc/cpu/i2c/i2c_hal.h",
+		"/E/shovelhpwork/hinoc/cpu/i2c/i2c.h",
+		"/E/shovelhpwork/hinoc/cpu/i2c/i2c.c",
+		"/E/shovelhpwork/hinoc/cpu/i2c/debug.c",
+		"/E/shovelhpwork/hinoc/cpu/i2c/e2prom.c",
+		"/C/quartusprj/HINOC_195/FPGA_SOC_TOP_mulWlh5_nodiv_newHimac_mdio_phy_0415_ldpc_rftest/hdl/rf_ctr/en1460_sio.v",
+		"/E/shovelhpwork/quartus/rf_ctr_new/en1460_sio.v"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "main.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10281,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								392,
+								392
+							]
+						],
+						"settings":
+						{
+							"encoding_helper_encoding": "GB2312",
+							"in_converting": true,
+							"origin_encoding": "GBK",
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "App.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4396,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1062,
+								1062
+							]
+						],
+						"settings":
+						{
+							"encoding_helper_encoding": "GB2312",
+							"in_converting": true,
+							"origin_encoding": "GBK",
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "AppFunctions.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11011,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8258,
+								8258
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 4392.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/src/pwm.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 18481,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3694,
+								3694
+							]
+						],
+						"settings":
+						{
+							"encoding_helper_encoding": "cp936",
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "ConfigUltraIO.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6368,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2845,
+								2845
+							]
+						],
+						"settings":
+						{
+							"encoding_helper_encoding": "UTF-8",
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "isd9160newdemo.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 240.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

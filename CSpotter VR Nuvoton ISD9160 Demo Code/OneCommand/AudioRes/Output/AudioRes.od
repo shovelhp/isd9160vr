@@ -20,29 +20,33 @@
 ; VR group1 response
 ;defaud OK<ext=0,format=MD4>
 ;defaud command0<ext=0,format=MD4>
+;defaud command6<ext=0,format=MD4>
+;defaud huxideng<ext=0,format=MD4>
+;defaud yitiaoliang<ext=0,format=MD4>
+;defaud yitiaoan<ext=0,format=MD4>
+;defaud yizuiliang<ext=0,format=MD4>
+;defaud yizuian<ext=0,format=MD4>
+; VR group2 response
 
 [AUDIO]
-DEFAUD baihu <FIX=1, EXT=0, FORMAT=MD4>
-DEFAUD command1 <FIX=1, EXT=0, FORMAT=MD4>
-DEFAUD command2 <FIX=1, EXT=0, FORMAT=MD4>
-DEFAUD command3 <FIX=1, EXT=0, FORMAT=MD4>
-DEFAUD command4 <FIX=1, EXT=0, FORMAT=MD4>
-DEFAUD command7 <FIX=1, EXT=0, FORMAT=MD4>
-DEFAUD command8 <FIX=1, EXT=0, FORMAT=MD4>
-DEFAUD command9 <FIX=1, EXT=0, FORMAT=MD4>
-DEFAUD command10 <FIX=1, EXT=0, FORMAT=MD4>
-DEFAUD command11 <FIX=1, EXT=0, FORMAT=MD4>
-DEFAUD command12 <FIX=1, EXT=0, FORMAT=MD4>
-DEFAUD command13 <FIX=1, EXT=0, FORMAT=MD4>
-DEFAUD command14 <FIX=1, EXT=0, FORMAT=MD4>
-DEFAUD background <FIX=1, EXT=0, FORMAT=MD4>
-DEFAUD command5 <FIX=1, EXT=0, FORMAT=MD4>  ; 14
-DEFAUD command6 <FIX=1, EXT=0, FORMAT=MD4>
-DEFAUD huxideng <FIX=1, EXT=0, FORMAT=MD4>
-DEFAUD yitiaoliang <FIX=1, EXT=0, FORMAT=MD4>
-DEFAUD yitiaoan <FIX=1, EXT=0, FORMAT=MD4>
-DEFAUD yizuiliang <FIX=1, EXT=0, FORMAT=MD4>
-DEFAUD yizuian <FIX=1, EXT=0, FORMAT=MD4>  ;  VR group2 response
+DEFAUD cmd00xiaofengtongxue <FIX=1, EXT=0, FORMAT=MD4>
+DEFAUD cmd01kaifengshan <FIX=1, EXT=0, FORMAT=MD4>
+DEFAUD cmd02guanfengshan <FIX=1, EXT=0, FORMAT=MD4>
+DEFAUD cmd03qingyaotou <FIX=1, EXT=0, FORMAT=MD4>
+DEFAUD cmd04guanyaotou <FIX=1, EXT=0, FORMAT=MD4>
+DEFAUD cmd05disufeng <FIX=1, EXT=0, FORMAT=MD4>
+DEFAUD cmd06zhongsufeng <FIX=1, EXT=0, FORMAT=MD4>
+DEFAUD cmd07gaosufeng <FIX=1, EXT=0, FORMAT=MD4>
+DEFAUD cmd08dingshishezhi <FIX=1, EXT=0, FORMAT=MD4>
+DEFAUD cmd09jiadingshishijian <FIX=1, EXT=0, FORMAT=MD4>
+DEFAUD cmd10jiandingshishijian <FIX=1, EXT=0, FORMAT=MD4>
+DEFAUD cmd11dingshiguanbi <FIX=1, EXT=0, FORMAT=MD4>
+DEFAUD cmd12kaifulizi <FIX=1, EXT=0, FORMAT=MD4>
+DEFAUD cmd13guanfulizi <FIX=1, EXT=0, FORMAT=MD4>
+DEFAUD cmd14kaicaideng <FIX=1, EXT=0, FORMAT=MD4>
+DEFAUD cmd15guancaideng <FIX=1, EXT=0, FORMAT=MD4>
+DEFAUD cmd16shuimianfeng <FIX=1, EXT=0, FORMAT=MD4>
+DEFAUD cmd17ziranfeng <FIX=1, EXT=0, FORMAT=MD4>  ; defaud command5<ext=0,format=MD4>;14
 
 
 

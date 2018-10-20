@@ -30,6 +30,7 @@
 //#include "VRModelsID.h"
 //#include "OneCommandAllBinID.h"
 #include "AudioRes/Output/AudioRes_AudioInfo.h"
+#include "AudioRes/Output/AudioResText.h"
 
 UINT8 u8TotalAudioNum=0;
 
@@ -46,6 +47,7 @@ extern S_APP g_sApp;
 extern volatile UINT8 g_u8AppCtrl;
 extern uint32_t VR_count;
 
+extern char * AudioResStr[];
 
 // Continue spk control.
 volatile UINT8 g_u8Con_Spk;
@@ -259,36 +261,44 @@ void App_Process(void)
 			if(i32ID==0)	//唤醒词
 			{
 				vr_time=10000;
-				App_StartPlay(1);	//播放音乐
+				App_StartPlay(0);	//播放音乐
+				printf("\n");
+				printf("wake up!\n");
 			}
 			else if(vr_time)	//在唤醒计时内
 			{
 				vr_time=10000;
 				switch(i32ID)
 				{
-					case 11:	//播放音乐
-						//App_StartPlay(12);
-						App_StartPlay(13);
-					break;
-					case 12:	//请开灯
+					case 1:	//请开灯
 						pwm0.Breath_light =0;
 						pwm0.period =200;
 						pwm0.Duty =50;
 						PWM_Start(PWM0, 0x1);
-						App_StartPlay(14);
+						printf("Fan on!\n");
+						App_StartPlay(1);
 					break;
-					case 13:	//请关灯
+					case 2:	//请关灯
 						pwm0.Breath_light =0;
 						pwm0.Duty = pwm0.period;
 						PWM_Start(PWM0, 0x0);
-						App_StartPlay(15);
+						printf("Fan off!\n");
+						App_StartPlay(2);
 					break;
-					case 14:	//呼吸灯
+					case 3:	//呼吸灯
 						PWM_Start(PWM0, 0x1);
 						pwm0.Breath_light =1;
-						App_StartPlay(16);
+						printf("Wave start!\n");
+						App_StartPlay(3);
 					break;
-					case 15:	//调亮一点
+					case 4:	//调亮一点
+						pwm0.Breath_light =0;
+						pwm0.Duty = pwm0.period;
+						PWM_Start(PWM0, 0x0);
+						printf("Wave stop!\n");
+						App_StartPlay(4);
+					break;
+					case 9:	//调亮一点
 						pwm0.Breath_light =0;
 						pwm0.Duty /= 10;
 						pwm0.Duty *= 10;
@@ -297,11 +307,12 @@ void App_Process(void)
 							PWM_Start(PWM0, 0x1);
 							pwm0.Duty -=10;
 							if(pwm0.Duty < 140)	pwm0.Duty =0;
-							App_StartPlay(17);
+							App_StartPlay(9);
 						}
-						else App_StartPlay(19); //已最亮
+						else App_StartPlay(9); //已最亮
+						printf("Timer ++!\n");
 					break;
-					case 16:	//调暗一点
+					case 10:	//调暗一点
 						pwm0.Breath_light =0;
 						pwm0.Duty /= 10;
 						pwm0.Duty *= 10;
@@ -310,16 +321,20 @@ void App_Process(void)
 							PWM_Start(PWM0, 0x1);
 							pwm0.Duty +=10;
 							if(pwm0.Duty <140)	pwm0.Duty=140;
-							App_StartPlay(18);
+							App_StartPlay(10);
 						}
-						else App_StartPlay(20); //已最暗
+						else App_StartPlay(10); //已最暗
+						printf("Timer --!\n");
 					break;
-					default:;
+					default:
+						App_StartPlay(i32ID);
+						printf("%s\n", AudioResStr[i32ID]);
+					//break;
 				}
 				
-				if(i32ID < 11)	 App_StartPlay(i32ID+1);	//播放
+				//if(i32ID < 11)	 App_StartPlay(i32ID+1);	//播放
 				
-				uart_send(vr_uart_send(i32ID), 4);
+				//uart_send(vr_uart_send(i32ID+32), 4);
 			}
 			else return;
 

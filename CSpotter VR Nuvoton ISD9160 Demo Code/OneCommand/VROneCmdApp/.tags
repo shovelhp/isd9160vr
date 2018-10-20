@@ -1,0 +1,63 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+CSPDLL_API	.\CSpotterSDKApi.h	12;"	d
+CSPDLL_API	.\CSpotterSDKApi.h	17;"	d
+CSPOTTER_ERR_AddSampleFailed	.\CSpotterSDKApi_Const.h	37;"	d
+CSPOTTER_ERR_BuildCommandFailed	.\CSpotterSDKApi_Const.h	42;"	d
+CSPOTTER_ERR_BuildUserCommandFailed	.\CSpotterSDKApi_Const.h	38;"	d
+CSPOTTER_ERR_EXCEED_NR_BUFFER_SIZE	.\CSpotterSDKApi_Const.h	44;"	d
+CSPOTTER_ERR_EngineError	.\CSpotterSDKApi_Const.h	8;"	d
+CSPOTTER_ERR_Expired	.\CSpotterSDKApi_Const.h	47;"	d
+CSPOTTER_ERR_GetFunctionFailed	.\CSpotterSDKApi_Const.h	31;"	d
+CSPOTTER_ERR_IllegalHandle	.\CSpotterSDKApi_Const.h	26;"	d
+CSPOTTER_ERR_IllegalParam	.\CSpotterSDKApi_Const.h	27;"	d
+CSPOTTER_ERR_IllegalUserCommandFile	.\CSpotterSDKApi_Const.h	40;"	d
+CSPOTTER_ERR_IllegalWaveFile	.\CSpotterSDKApi_Const.h	41;"	d
+CSPOTTER_ERR_InitFixNRFailed	.\CSpotterSDKApi_Const.h	43;"	d
+CSPOTTER_ERR_InitWTFFailed	.\CSpotterSDKApi_Const.h	36;"	d
+CSPOTTER_ERR_LeaveNoMemory	.\CSpotterSDKApi_Const.h	28;"	d
+CSPOTTER_ERR_LexiconError	.\CSpotterSDKApi_Const.h	7;"	d
+CSPOTTER_ERR_LicenseFailed	.\CSpotterSDKApi_Const.h	48;"	d
+CSPOTTER_ERR_LoadDLLFailed	.\CSpotterSDKApi_Const.h	29;"	d
+CSPOTTER_ERR_LoadModelFailed	.\CSpotterSDKApi_Const.h	30;"	d
+CSPOTTER_ERR_MergeUserCommandFailed	.\CSpotterSDKApi_Const.h	39;"	d
+CSPOTTER_ERR_NeedMoreSample	.\CSpotterSDKApi_Const.h	34;"	d
+CSPOTTER_ERR_NoVoiceDetect	.\CSpotterSDKApi_Const.h	46;"	d
+CSPOTTER_ERR_OpenFileFailed	.\CSpotterSDKApi_Const.h	33;"	d
+CSPOTTER_ERR_ParseEINFailed	.\CSpotterSDKApi_Const.h	32;"	d
+CSPOTTER_ERR_Rejected	.\CSpotterSDKApi_Const.h	45;"	d
+CSPOTTER_ERR_SDKError	.\CSpotterSDKApi_Const.h	6;"	d
+CSPOTTER_ERR_Timeout	.\CSpotterSDKApi_Const.h	35;"	d
+CSPOTTER_RecogType_MissEndSyllalbe	.\CSpotterSDKApi_Const.h	18;"	d
+CSPOTTER_RecogType_MissStartSyllalbe	.\CSpotterSDKApi_Const.h	17;"	d
+CSPOTTER_RecogType_NotGoodEnough	.\CSpotterSDKApi_Const.h	16;"	d
+CSPOTTER_RecogType_Passed	.\CSpotterSDKApi_Const.h	15;"	d
+CSPOTTER_RecogType_Unknown	.\CSpotterSDKApi_Const.h	14;"	d
+CSPOTTER_SUCCESS	.\CSpotterSDKApi_Const.h	5;"	d
+HANDLE	.\CSpotterSDKApi.h	4;"	d
+S_VRONECMD_APP	.\VROneCmdApp.h	/^} S_VRONECMD_APP;																$/;"	t	typeref:struct:__anon1
+VOID	.\CSpotterSDKApi.h	/^typedef void VOID;$/;"	t
+VRONECMDAPP_IN_FRAME_NUM	.\VROneCmdApp.h	14;"	d
+VRONECMDAPP_IN_SAMPLES_PER_FRAME	.\VROneCmdApp.h	15;"	d
+VRONECMDAPP_MAX_CMD_GROUPS	.\VROneCmdApp.h	26;"	d
+VRONECMDAPP_MAX_CMD_TIME	.\VROneCmdApp.h	23;"	d
+VRONECMDAPP_SAMPLE_RATE	.\VROneCmdApp.h	28;"	d
+VRONECMDAPP_STATE_BUF_SIZE	.\VROneCmdApp.h	30;"	d
+VRONECMDAPP_WORK_BUF_SIZE	.\VROneCmdApp.h	17;"	d
+VROneCmdApp_GetCMDID	.\VROneCmdApp.c	/^INT32 VROneCmdApp_GetCMDID(S_VRONECMD_APP *psVRApp, INT16 *pi16PcmBuf, UINT16 u16SampleNum)$/;"	f
+VROneCmdApp_Initiate	.\VROneCmdApp.c	/^INT32 VROneCmdApp_Initiate(S_VRONECMD_APP *psVRApp)$/;"	f
+VROneCmdApp_UnInitiate	.\VROneCmdApp.h	/^void VROneCmdApp_UnInitiate(S_VRONECMD_APP *psVRApp)$/;"	f
+VROneCmdApp_UnpackBin	.\VROneCmdApp.c	/^UINT32 VROneCmdApp_UnpackBin(S_VRONECMD_APP *psVRApp, UINT32 u32BinStartAddr)$/;"	f
+__CSPOTTERSDK_API_H	.\CSpotterSDKApi.h	8;"	d
+__CSPOTTERSDTRAIN_API_H	.\CSpotterSDTrainApi.h	3;"	d
+__CSPOTTER_SDK_API_CONST_H__	.\CSpotterSDKApi_Const.h	2;"	d
+__VRONECMDAPP_H__	.\VROneCmdApp.h	2;"	d
+au32VRModel	.\VROneCmdApp.h	/^	UINT32 au32VRModel[VRONECMDAPP_MAX_CMD_GROUPS]; $/;"	m	struct:__anon1
+au32VRStateBuf	.\VROneCmdApp.h	/^	UINT32 au32VRStateBuf[(VRONECMDAPP_STATE_BUF_SIZE+3)\/4];$/;"	m	struct:__anon1
+au32VRWorkBuf	.\VROneCmdApp.h	/^	UINT32 au32VRWorkBuf[(VRONECMDAPP_WORK_BUF_SIZE+3)\/4];$/;"	m	struct:__anon1
+pVRHandle	.\VROneCmdApp.h	/^	void *pVRHandle;$/;"	m	struct:__anon1
+u8Stage	.\VROneCmdApp.h	/^	UINT8 u8Stage;$/;"	m	struct:__anon1
