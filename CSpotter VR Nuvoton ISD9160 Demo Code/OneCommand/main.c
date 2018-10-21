@@ -53,6 +53,7 @@ static UART_T	*g_pUART = UART0;                              /////modify 2017080
 
 uart_type ap_uart0;
 pwm_type pwm0;
+pwm_type pwm1;
 
 UINT8 SPIFlash_Initiate(void)
 { 
@@ -131,6 +132,29 @@ void pwm_init(void)
   PWM_EnableOutput(PWM0, 0x1);
 	// Enable PWM channel 0 period interrupt
   PWM0->INTEN = PWM_INTEN_PIEN0_Msk;
+  NVIC_EnableIRQ(PWM0_IRQn);
+    
+  PWM_Start(PWM0, 0x00);
+}
+
+void pwm_init_1(void)
+{
+	pwm1.period =200;
+	pwm1.Duty =50;
+	pwm1.rate = 30000;
+	
+	CLK_SetModuleClock(PWM0_MODULE, CLK_CLKSEL1_PWM0CH01SEL_HCLK, 0);
+	CLK_EnableModuleClock(PWM0_MODULE);
+	SYS_ResetModule(PWM0_MODULE);
+	
+	/* Set GPA multi-function pins for PWM0 Channel1 */
+	SYS->GPA_MFP  = (SYS->GPA_MFP & (~SYS_GPA_MFP_PA13MFP_Msk) ) | SYS_GPA_MFP_PA13MFP_PWM0CH1;
+	//set PWM0 channel 1 output configuration */
+  PWM_ConfigOutputChannel(PWM0, PWM_CH1, pwm1.rate, pwm1.Duty);
+  //Enable PWM Output path for PWM0 channel 1 */
+  PWM_EnableOutput(PWM0, 0x2);
+	// Enable PWM channel 1 period interrupt
+  PWM0->INTEN = PWM_INTEN_PIEN1_Msk;
   NVIC_EnableIRQ(PWM0_IRQn);
     
   PWM_Start(PWM0, 0x00);

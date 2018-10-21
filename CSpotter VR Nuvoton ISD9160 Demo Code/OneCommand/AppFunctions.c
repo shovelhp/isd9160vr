@@ -31,6 +31,7 @@
 //#include "OneCommandAllBinID.h"
 #include "AudioRes/Output/AudioRes_AudioInfo.h"
 #include "AudioRes/Output/AudioResText.h"
+//#include "DrvGPIO.h"
 
 UINT8 u8TotalAudioNum=0;
 
@@ -52,7 +53,8 @@ extern char * AudioResStr[];
 // Continue spk control.
 volatile UINT8 g_u8Con_Spk;
 
-
+extern pwm_type pwm0;
+extern pwm_type pwm1;
 
 
 //---------------------------------------------------------------------------------------------------------
@@ -258,88 +260,151 @@ void App_Process(void)
 				// Stop mic before play response
 				//MicGetApp_StopRec(&g_sApp.Mic_MD4.sMicGetApp);
 		
-			if(i32ID==0)	//»½ĞÑ´Ê
+			if(i32ID==0)	//å”¤é†’è¯ï¼šå°ä¸°åŒå­¦
 			{
 				vr_time=10000;
-				App_StartPlay(0);	//²¥·ÅÒôÀÖ
+				App_StartPlay(0);	//æ’­æ”¾å›ç­”å£°éŸ³
 				printf("\n");
 				printf("wake up!\n");
 			}
-			else if(vr_time)	//ÔÚ»½ĞÑ¼ÆÊ±ÄÚ
+			else if(vr_time)	//åœ¨å”¤é†’è®¡æ—¶å†…
 			{
 				vr_time=10000;
+				if (i32ID <= MAXIDNUM)
+				{
+					printf("Command is : %s\n", AudioResStr[i32ID]);
+				}
 				switch(i32ID)
 				{
-					case 1:	//Çë¿ªµÆ
+					case 1:	//å¼€é£æ‰‡
+						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | BIT4);
+						//printf("Fan on!\n");
+						//App_StartPlay(1);
+					break;
+					case 2:	//å…³é£æ‰‡
+						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~BIT4));
+						//printf("Fan off!\n");
+						//App_StartPlay(2);
+					break;
+					case 3:	//è¯·æ‘‡å¤´
+						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | BIT5);
+						// DrvGPIO_SetBit(PA, 5);
+						//printf("Wave start!\n");
+						//App_StartPlay(3);
+					break;
+					case 4:	//å…³æ‘‡å¤´
+						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~BIT5));
+						// DrvGPIO_ClrBit(PA, 5);
+						//printf("Wave stop!\n");
+						//App_StartPlay(4);
+					break;
+					case 5://ä½é€Ÿé£
+						pwm1.Breath_light =0;
+						pwm1.period =200;
+						pwm1.Duty =0;
+						PWM_Start(PWM0, 0x2);
+						//printf("Low Speed!\n");
+					break;
+					case 6://ä¸­é€Ÿé£
+						pwm1.Breath_light =0;
+						pwm1.period =200;
+						pwm1.Duty =50;
+						PWM_Start(PWM0, 0x2);
+						//printf("Mid Speed!\n");
+					break;
+					case 7://é«˜é€Ÿé£
+						pwm1.Breath_light =0;
+						pwm1.period =200;
+						pwm1.Duty =100;
+						PWM_Start(PWM0, 0x2);
+						//printf("High Speed!\n");
+					break;
+					case 8://å®šæ—¶è®¾ç½®
 						pwm0.Breath_light =0;
 						pwm0.period =200;
 						pwm0.Duty =50;
 						PWM_Start(PWM0, 0x1);
-						printf("Fan on!\n");
-						App_StartPlay(1);
+						//printf("Add Timer!\n");
 					break;
-					case 2:	//Çë¹ØµÆ
-						pwm0.Breath_light =0;
-						pwm0.Duty = pwm0.period;
-						PWM_Start(PWM0, 0x0);
-						printf("Fan off!\n");
-						App_StartPlay(2);
-					break;
-					case 3:	//ºôÎüµÆ
-						PWM_Start(PWM0, 0x1);
-						pwm0.Breath_light =1;
-						printf("Wave start!\n");
-						App_StartPlay(3);
-					break;
-					case 4:	//µ÷ÁÁÒ»µã
-						pwm0.Breath_light =0;
-						pwm0.Duty = pwm0.period;
-						PWM_Start(PWM0, 0x0);
-						printf("Wave stop!\n");
-						App_StartPlay(4);
-					break;
-					case 9:	//µ÷ÁÁÒ»µã
+					case 9:	//åŠ å®šæ—¶æ—¶é—´
 						pwm0.Breath_light =0;
 						pwm0.Duty /= 10;
 						pwm0.Duty *= 10;
-						if(pwm0.Duty)	//ÒÑµ÷ÁÁ
+						if(pwm0.Duty)	//å·²è°ƒäº®
 						{
 							PWM_Start(PWM0, 0x1);
 							pwm0.Duty -=10;
 							if(pwm0.Duty < 140)	pwm0.Duty =0;
-							App_StartPlay(9);
+							//App_StartPlay(9);
 						}
-						else App_StartPlay(9); //ÒÑ×îÁÁ
-						printf("Timer ++!\n");
+						else App_StartPlay(9); //å·²æœ€äº®
+						//printf("Timer ++!\n");
 					break;
-					case 10:	//µ÷°µÒ»µã
+					case 10:	//å‡å®šæ—¶æ—¶é—´
 						pwm0.Breath_light =0;
 						pwm0.Duty /= 10;
 						pwm0.Duty *= 10;
-						if(pwm0.Duty < pwm0.period)	//ÒÑµ÷°µ
+						if(pwm0.Duty < pwm0.period)	//å·²è°ƒæš—
 						{
 							PWM_Start(PWM0, 0x1);
 							pwm0.Duty +=10;
 							if(pwm0.Duty <140)	pwm0.Duty=140;
-							App_StartPlay(10);
+							//App_StartPlay(10);
 						}
-						else App_StartPlay(10); //ÒÑ×î°µ
-						printf("Timer --!\n");
+						else App_StartPlay(10); //å·²æœ€æš—
+						//printf("Timer --!\n");
+					break;
+					case 11://å®šæ—¶å…³é—­
+						pwm0.Breath_light =0;
+						pwm0.Duty = pwm0.period;
+						PWM_Start(PWM0, 0x0);
+						//printf("Close Timer!\n");
+					break;
+					case 12://å¼€è´Ÿç¦»å­
+						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | BIT6);
+						//printf("Anion On!\n");
+					break;
+					case 13://å…³è´Ÿç¦»å­
+						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~BIT6));
+						//printf("Anion Off!\n");
+					break;
+					case 14://å¼€å½©ç¯
+						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | BIT7);
+						// PWM_Start(PWM0, 0x1);
+						// pwm0.Breath_light =1;
+						//printf("Light On!\n");
+					break;
+					case 15://å…³å½©ç¯
+						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~BIT7));
+						// pwm0.Breath_light =0;
+						// pwm0.Duty = pwm0.period;
+						// PWM_Start(PWM0, 0x0);
+						//printf("Light Off!\n");
+					break;
+					case 16://ç¡çœ é£
+						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | BIT14);
+						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~BIT15));
+						//printf("Sleep Mode!\n");
+					break;
+					case 17://è‡ªç„¶é£
+						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | BIT15);
+						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~BIT14));
+						//printf("natural Wind!\n");
 					break;
 					default:
-						App_StartPlay(i32ID);
-						printf("%s\n", AudioResStr[i32ID]);
+						App_StartPlay(i32ID);//æ’­æ”¾å¯¹åº”å›åº”å£°éŸ³
+						printf("%s\n", AudioResStr[i32ID]);//ä¸²å£æ‰“å°å‘½ä»¤å†…å®¹
 					//break;
 				}
-				
-				//if(i32ID < 11)	 App_StartPlay(i32ID+1);	//²¥·Å
-				
+				if (i32ID <= MAXIDNUM)
+				{
+					App_StartPlay(i32ID);
+					printf("%s\n", AudioOptStr[i32ID]);
+				}
+				//if(i32ID < 11)	 App_StartPlay(i32ID+1);	//æ’­æ”¾
 				//uart_send(vr_uart_send(i32ID+32), 4);
 			}
 			else return;
-
-			
-			
 			
 		}
 	}

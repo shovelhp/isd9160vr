@@ -1,7 +1,7 @@
 Dependencies for Project 'VROneCmdApp', Target 'VoiceRecognition': (DO NOT MODIFY !)
 F (..\ReadMe.txt)(0x5AC3505F)()
 F (..\Readme_FileInfo.txt)(0x56B40320)()
-F (..\main.c)(0x5BC6EC4D)(-c --cpu Cortex-M0 -g -O2 --apcs=interwork --split_sections -I . -I ..\..\Library\Device\Nuvoton\ISD9100\Include -I ..\..\Library\Framework\inc -I ..\..\Library\IO\inc -I ..\..\Library\Audio\inc -I ..\..\Library\StdDriver\inc -I ..\..\Library\Storage\inc -I ..\..\Library\CMSIS\Include -I ..\ -I ..\..\Library\Device\Nuvoton\ISD9100\Include -I ..\..\Library\StdDriver\inc -I ..\Keil -I ..\..\OneCommand -I ..\VROneCmdApp-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="526" -D__ISD9100__-o .\vr\main.o --omf_browse .\vr\main.crf --depend .\vr\main.d)
+F (..\main.c)(0x5BCC9A7B)(-c --cpu Cortex-M0 -g -O2 --apcs=interwork --split_sections -I . -I ..\..\Library\Device\Nuvoton\ISD9100\Include -I ..\..\Library\Framework\inc -I ..\..\Library\IO\inc -I ..\..\Library\Audio\inc -I ..\..\Library\StdDriver\inc -I ..\..\Library\Storage\inc -I ..\..\Library\CMSIS\Include -I ..\ -I ..\..\Library\Device\Nuvoton\ISD9100\Include -I ..\..\Library\StdDriver\inc -I ..\Keil -I ..\..\OneCommand -I ..\VROneCmdApp-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="526" -D__ISD9100__-o .\vr\main.o --omf_browse .\vr\main.crf --depend .\vr\main.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
 I (..\App.h)(0x5BC55348)
 I (..\ConfigApp.h)(0x56B4031E)
@@ -54,13 +54,13 @@ I (..\VROneCmdApp/CSpotterSDKApi_Const.h)(0x56B40326)
 I (..\MicGetApp/MicGetApp.h)(0x56B40326)
 I (..\..\Library\Framework\inc\PlaybackRecord.h)(0x560516E8)
 I (..\..\Library\Framework\inc\VolumeCtrl.h)(0x560516EA)
-I (..\ConfigIO.h)(0x56B4031E)
+I (..\ConfigIO.h)(0x5BCC9502)
 I (..\Preload.h)(0x56B40320)
 I (..\ConfigSysClk.h)(0x56B4031E)
 I (..\..\Library\Framework\inc\SysClk.h)(0x560516EA)
 I (..\..\Library\Framework\inc\MicSpk.h)(0x560516E8)
-I (..\AudioRes/Output/AudioRes_AudioInfo.h)(0x5BCA9DA7)
-F (..\AppFunctions.c)(0x5BC6EC70)(-c --cpu Cortex-M0 -g -O2 --apcs=interwork --split_sections -I . -I ..\..\Library\Device\Nuvoton\ISD9100\Include -I ..\..\Library\Framework\inc -I ..\..\Library\IO\inc -I ..\..\Library\Audio\inc -I ..\..\Library\StdDriver\inc -I ..\..\Library\Storage\inc -I ..\..\Library\CMSIS\Include -I ..\ -I ..\..\Library\Device\Nuvoton\ISD9100\Include -I ..\..\Library\StdDriver\inc -I ..\Keil -I ..\..\OneCommand -I ..\VROneCmdApp-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="526" -D__ISD9100__-o .\vr\appfunctions.o --omf_browse .\vr\appfunctions.crf --depend .\vr\appfunctions.d)
+I (..\AudioRes/Output/AudioRes_AudioInfo.h)(0x5BCC9AA6)
+F (..\AppFunctions.c)(0x5BCC98C7)(-c --cpu Cortex-M0 -g -O2 --apcs=interwork --split_sections -I . -I ..\..\Library\Device\Nuvoton\ISD9100\Include -I ..\..\Library\Framework\inc -I ..\..\Library\IO\inc -I ..\..\Library\Audio\inc -I ..\..\Library\StdDriver\inc -I ..\..\Library\Storage\inc -I ..\..\Library\CMSIS\Include -I ..\ -I ..\..\Library\Device\Nuvoton\ISD9100\Include -I ..\..\Library\StdDriver\inc -I ..\Keil -I ..\..\OneCommand -I ..\VROneCmdApp-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="526" -D__ISD9100__-o .\vr\appfunctions.o --omf_browse .\vr\appfunctions.crf --depend .\vr\appfunctions.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
 I (..\App.h)(0x5BC55348)
 I (..\ConfigApp.h)(0x56B4031E)
@@ -113,12 +113,12 @@ I (..\VROneCmdApp/CSpotterSDKApi_Const.h)(0x56B40326)
 I (..\MicGetApp/MicGetApp.h)(0x56B40326)
 I (..\..\Library\Framework\inc\PlaybackRecord.h)(0x560516E8)
 I (..\..\Library\Framework\inc\VolumeCtrl.h)(0x560516EA)
-I (..\ConfigIO.h)(0x56B4031E)
+I (..\ConfigIO.h)(0x5BCC9502)
 I (..\Preload.h)(0x56B40320)
 I (..\..\Library\Framework\inc\MicSpk.h)(0x560516E8)
 I (..\..\Library\Framework\inc\AudioRom.h)(0x560516E6)
-I (..\AudioRes/Output/AudioRes_AudioInfo.h)(0x5BCA9DA7)
-I (..\AudioRes/Output/AudioResText.h)(0x5BC6EC17)
+I (..\AudioRes/Output/AudioRes_AudioInfo.h)(0x5BCC9AA6)
+I (..\AudioRes/Output/AudioResText.h)(0x5BCC9810)
 F (..\AppCallback.c)(0x56B4031E)(-c --cpu Cortex-M0 -g -O2 --apcs=interwork --split_sections -I . -I ..\..\Library\Device\Nuvoton\ISD9100\Include -I ..\..\Library\Framework\inc -I ..\..\Library\IO\inc -I ..\..\Library\Audio\inc -I ..\..\Library\StdDriver\inc -I ..\..\Library\Storage\inc -I ..\..\Library\CMSIS\Include -I ..\ -I ..\..\Library\Device\Nuvoton\ISD9100\Include -I ..\..\Library\StdDriver\inc -I ..\Keil -I ..\..\OneCommand -I ..\VROneCmdApp-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="526" -D__ISD9100__-o .\vr\appcallback.o --omf_browse .\vr\appcallback.crf --depend .\vr\appcallback.d)
 I (..\App.h)(0x5BC55348)
 I (..\ConfigApp.h)(0x56B4031E)
@@ -171,7 +171,7 @@ I (..\VROneCmdApp/CSpotterSDKApi_Const.h)(0x56B40326)
 I (..\MicGetApp/MicGetApp.h)(0x56B40326)
 I (..\..\Library\Framework\inc\PlaybackRecord.h)(0x560516E8)
 I (..\..\Library\Framework\inc\VolumeCtrl.h)(0x560516EA)
-I (..\ConfigIO.h)(0x56B4031E)
+I (..\ConfigIO.h)(0x5BCC9502)
 I (..\Preload.h)(0x56B40320)
 F (..\InputKeyActions.c)(0x59190B6C)(-c --cpu Cortex-M0 -g -O2 --apcs=interwork --split_sections -I . -I ..\..\Library\Device\Nuvoton\ISD9100\Include -I ..\..\Library\Framework\inc -I ..\..\Library\IO\inc -I ..\..\Library\Audio\inc -I ..\..\Library\StdDriver\inc -I ..\..\Library\Storage\inc -I ..\..\Library\CMSIS\Include -I ..\ -I ..\..\Library\Device\Nuvoton\ISD9100\Include -I ..\..\Library\StdDriver\inc -I ..\Keil -I ..\..\OneCommand -I ..\VROneCmdApp-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="526" -D__ISD9100__-o .\vr\inputkeyactions.o --omf_browse .\vr\inputkeyactions.crf --depend .\vr\inputkeyactions.d)
 I (..\App.h)(0x5BC55348)
@@ -225,7 +225,7 @@ I (..\VROneCmdApp/CSpotterSDKApi_Const.h)(0x56B40326)
 I (..\MicGetApp/MicGetApp.h)(0x56B40326)
 I (..\..\Library\Framework\inc\PlaybackRecord.h)(0x560516E8)
 I (..\..\Library\Framework\inc\VolumeCtrl.h)(0x560516EA)
-I (..\ConfigIO.h)(0x56B4031E)
+I (..\ConfigIO.h)(0x5BCC9502)
 I (..\Preload.h)(0x56B40320)
 F (..\InterruptHandler.c)(0x59A91F16)(-c --cpu Cortex-M0 -g -O2 --apcs=interwork --split_sections -I . -I ..\..\Library\Device\Nuvoton\ISD9100\Include -I ..\..\Library\Framework\inc -I ..\..\Library\IO\inc -I ..\..\Library\Audio\inc -I ..\..\Library\StdDriver\inc -I ..\..\Library\Storage\inc -I ..\..\Library\CMSIS\Include -I ..\ -I ..\..\Library\Device\Nuvoton\ISD9100\Include -I ..\..\Library\StdDriver\inc -I ..\Keil -I ..\..\OneCommand -I ..\VROneCmdApp-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="526" -D__ISD9100__-o .\vr\interrupthandler.o --omf_browse .\vr\interrupthandler.crf --depend .\vr\interrupthandler.d)
 I (..\..\Library\Framework\inc\Framework.h)(0x560516E8)
@@ -320,7 +320,7 @@ I (..\VROneCmdApp/CSpotterSDKApi_Const.h)(0x56B40326)
 I (..\MicGetApp/MicGetApp.h)(0x56B40326)
 I (..\..\Library\Framework\inc\PlaybackRecord.h)(0x560516E8)
 I (..\..\Library\Framework\inc\VolumeCtrl.h)(0x560516EA)
-I (..\ConfigIO.h)(0x56B4031E)
+I (..\ConfigIO.h)(0x5BCC9502)
 I (..\Preload.h)(0x56B40320)
 I (..\ConfigSysClk.h)(0x56B4031E)
 I (..\..\Library\Framework\inc\SysClk.h)(0x560516EA)
@@ -363,7 +363,7 @@ I (..\..\Library\Framework\inc\ModuleID.h)(0x560516E8)
 F (..\App.h)(0x5BC55348)()
 F (..\ConfigApp.h)(0x56B4031E)()
 F (..\ConfigSysClk.h)(0x56B4031E)()
-F (..\ConfigIO.h)(0x56B4031E)()
+F (..\ConfigIO.h)(0x5BCC9502)()
 F (..\ConfigIP.h)(0x598AEECC)()
 F (..\ConfigUltraIO.h)(0x56B4031E)()
 F (..\MicGetApp\MicGetApp.c)(0x56B40326)(-c --cpu Cortex-M0 -g -O2 --apcs=interwork --split_sections -I . -I ..\..\Library\Device\Nuvoton\ISD9100\Include -I ..\..\Library\Framework\inc -I ..\..\Library\IO\inc -I ..\..\Library\Audio\inc -I ..\..\Library\StdDriver\inc -I ..\..\Library\Storage\inc -I ..\..\Library\CMSIS\Include -I ..\ -I ..\..\Library\Device\Nuvoton\ISD9100\Include -I ..\..\Library\StdDriver\inc -I ..\Keil -I ..\..\OneCommand -I ..\VROneCmdApp-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="526" -D__ISD9100__-o .\vr\micgetapp.o --omf_browse .\vr\micgetapp.crf --depend .\vr\micgetapp.d)
@@ -521,7 +521,7 @@ I (..\..\Library\StdDriver\inc\talarm.h)(0x554826C0)
 I (..\..\Library\StdDriver\inc\timer.h)(0x554826C0)
 I (..\..\Library\StdDriver\inc\uart.h)(0x5928DC8A)
 I (..\..\Library\StdDriver\inc\wdt.h)(0x554826C0)
-F (..\..\Library\Device\Nuvoton\ISD9100\Source\ARM\startup_ISD9100.s)(0x57E4E750)(--cpu Cortex-M0 -g --apcs=interwork -IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 526" --pd "__ISD9100__ SETA 1"--list .\vr\startup_isd9100.lst --xref -o .\vr\startup_isd9100.o --depend .\vr\startup_isd9100.d)
+F (..\..\Library\Device\Nuvoton\ISD9100\Source\ARM\startup_ISD9100.s)(0x5BCC2E2A)(--cpu Cortex-M0 -g --apcs=interwork -IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 526" --pd "__ISD9100__ SETA 1"--list .\vr\startup_isd9100.lst --xref -o .\vr\startup_isd9100.o --depend .\vr\startup_isd9100.d)
 F (..\..\Library\Framework\src\SysClk.c)(0x560516EE)(-c --cpu Cortex-M0 -g -O2 --apcs=interwork --split_sections -I . -I ..\..\Library\Device\Nuvoton\ISD9100\Include -I ..\..\Library\Framework\inc -I ..\..\Library\IO\inc -I ..\..\Library\Audio\inc -I ..\..\Library\StdDriver\inc -I ..\..\Library\Storage\inc -I ..\..\Library\CMSIS\Include -I ..\ -I ..\..\Library\Device\Nuvoton\ISD9100\Include -I ..\..\Library\StdDriver\inc -I ..\Keil -I ..\..\OneCommand -I ..\VROneCmdApp-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="526" -D__ISD9100__-o .\vr\sysclk.o --omf_browse .\vr\sysclk.crf --depend .\vr\sysclk.d)
 I (..\..\Library\Device\Nuvoton\ISD9100\Include\Platform.h)(0x554826B6)
 I (..\..\Library\Device\Nuvoton\ISD9100\Include\ISD9100.h)(0x57E8D75A)
@@ -667,7 +667,7 @@ I (..\..\Library\Storage\inc\SPIFlash.h)(0x5631AEEC)
 I (..\..\Library\Framework\inc\SysInfra.h)(0x560516EA)
 I (..\..\Library\Framework\inc\ModuleID.h)(0x560516E8)
 I (..\..\Library\IO\inc\Keypad.h)(0x554826BC)
-I (..\ConfigIO.h)(0x56B4031E)
+I (..\ConfigIO.h)(0x5BCC9502)
 F (..\..\Library\Framework\src\BufCtrl.c)(0x560516EC)(-c --cpu Cortex-M0 -g -O2 --apcs=interwork --split_sections -I . -I ..\..\Library\Device\Nuvoton\ISD9100\Include -I ..\..\Library\Framework\inc -I ..\..\Library\IO\inc -I ..\..\Library\Audio\inc -I ..\..\Library\StdDriver\inc -I ..\..\Library\Storage\inc -I ..\..\Library\CMSIS\Include -I ..\ -I ..\..\Library\Device\Nuvoton\ISD9100\Include -I ..\..\Library\StdDriver\inc -I ..\Keil -I ..\..\OneCommand -I ..\VROneCmdApp-IC:\Keil_v5\ARM\RV31\INC-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="526" -D__ISD9100__-o .\vr\bufctrl.o --omf_browse .\vr\bufctrl.crf --depend .\vr\bufctrl.d)
 I (..\..\Library\Framework\inc\BufCtrl.h)(0x5644602E)
 I (..\..\Library\Device\Nuvoton\ISD9100\Include\Platform.h)(0x554826B6)
@@ -826,7 +826,7 @@ I (..\VROneCmdApp/CSpotterSDKApi_Const.h)(0x56B40326)
 I (..\MicGetApp/MicGetApp.h)(0x56B40326)
 I (..\..\Library\Framework\inc\PlaybackRecord.h)(0x560516E8)
 I (..\..\Library\Framework\inc\VolumeCtrl.h)(0x560516EA)
-I (..\ConfigIO.h)(0x56B4031E)
+I (..\ConfigIO.h)(0x5BCC9502)
 I (..\Preload.h)(0x56B40320)
 I (..\..\Library\Framework\inc\MicSpk.h)(0x560516E8)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x599EDB3C)
@@ -960,7 +960,7 @@ I (..\VROneCmdApp/CSpotterSDKApi_Const.h)(0x56B40326)
 I (..\MicGetApp/MicGetApp.h)(0x56B40326)
 I (..\..\Library\Framework\inc\PlaybackRecord.h)(0x560516E8)
 I (..\..\Library\Framework\inc\VolumeCtrl.h)(0x560516EA)
-I (..\ConfigIO.h)(0x56B4031E)
+I (..\ConfigIO.h)(0x5BCC9502)
 I (..\Preload.h)(0x56B40320)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x599EDB3C)
 I (..\..\Library\Framework\inc\MicSpk.h)(0x560516E8)

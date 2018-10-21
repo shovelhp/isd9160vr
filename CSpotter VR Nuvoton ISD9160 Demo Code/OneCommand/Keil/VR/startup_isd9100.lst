@@ -121,7 +121,7 @@ ARM Macro Assembler    Page 2
                                                             ; SPI0 interrupt 
    76 0000007C 00000000        DCD              Default_Handler ; Reserved
    77 00000080 00000000        DCD              Default_Handler ; Reserved 
-   78 00000084 00000000        DCD              Default_Handler ; Reserved 
+   78 00000084 00000000        DCD              Default_Handler ; Reserved `
    79 00000088 00000000        DCD              I2C0_IRQHandler 
                                                             ; I2C0 interrupt 
    80 0000008C 00000000        DCD              Default_Handler ; Reserved

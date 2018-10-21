@@ -17,3 +17,25 @@ char * AudioResStr[] ={"Xiao Feng Tong Xue ",
 					"Shui Mian Feng ",
 					"Zi Ran Feng "};
 
+char * AudioOptStr[] ={"Wake Up! ",
+					"Fan On! ",
+					"Fan Off! ",
+					"Wave Start! ",
+					"Wave Stop! ",
+					"Low Speed! ",
+					"Mid Speed! ",
+					"High Speed! ",
+					"Add Timer! ",
+					"Timer ++! ",
+					"Timer --! ",
+					"Close Timer! ",
+					"Anion On! ",
+					"Anion Off! ",
+					"Light On! ",
+					"Light Off! ",
+					"Sleep Mode! ",
+					"Natural Wind! "};
+
+
+#define MAXIDNUM 17
+

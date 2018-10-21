@@ -75,7 +75,7 @@ __Vectors       DCD     __initial_sp              ; Top of Stack
                 DCD     SPI0_IRQHandler           ; SPI0 interrupt 
                 DCD     Default_Handler           ; Reserved
                 DCD     Default_Handler           ; Reserved 
-                DCD     Default_Handler           ; Reserved 
+                DCD     Default_Handler           ; Reserved `
                 DCD     I2C0_IRQHandler           ; I2C0 interrupt 
                 DCD     Default_Handler           ; Reserved
                 DCD     Default_Handler           ; Reserved
