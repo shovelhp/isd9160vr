@@ -1,7 +1,7 @@
 .\vr\talarm.o: ..\..\Library\StdDriver\src\talarm.c
 .\vr\talarm.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\ISD9100.h
 .\vr\talarm.o: ..\..\Library\CMSIS\Include\core_cm0.h
-.\vr\talarm.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\vr\talarm.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\vr\talarm.o: ..\..\Library\CMSIS\Include\core_cmInstr.h
 .\vr\talarm.o: ..\..\Library\CMSIS\Include\core_cmFunc.h
 .\vr\talarm.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\system_ISD9100.h

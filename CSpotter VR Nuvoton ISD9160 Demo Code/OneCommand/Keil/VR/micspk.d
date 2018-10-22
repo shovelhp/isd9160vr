@@ -2,7 +2,7 @@
 .\vr\micspk.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\Platform.h
 .\vr\micspk.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\ISD9100.h
 .\vr\micspk.o: ..\..\Library\CMSIS\Include\core_cm0.h
-.\vr\micspk.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\vr\micspk.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\vr\micspk.o: ..\..\Library\CMSIS\Include\core_cmInstr.h
 .\vr\micspk.o: ..\..\Library\CMSIS\Include\core_cmFunc.h
 .\vr\micspk.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\system_ISD9100.h
@@ -30,7 +30,7 @@
 .\vr\micspk.o: ..\..\Library\StdDriver\inc\uart.h
 .\vr\micspk.o: ..\..\Library\StdDriver\inc\wdt.h
 .\vr\micspk.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\NVTTypes.h
-.\vr\micspk.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\vr\micspk.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\vr\micspk.o: ..\ConfigApp.h
 .\vr\micspk.o: ..\ConfigIP.h
 .\vr\micspk.o: ..\..\Library\Storage\inc\SPIFlash.h

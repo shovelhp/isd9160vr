@@ -2,7 +2,7 @@
 .\vr\audiorom.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\PlatForm.h
 .\vr\audiorom.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\ISD9100.h
 .\vr\audiorom.o: ..\..\Library\CMSIS\Include\core_cm0.h
-.\vr\audiorom.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\vr\audiorom.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\vr\audiorom.o: ..\..\Library\CMSIS\Include\core_cmInstr.h
 .\vr\audiorom.o: ..\..\Library\CMSIS\Include\core_cmFunc.h
 .\vr\audiorom.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\system_ISD9100.h
@@ -30,6 +30,6 @@
 .\vr\audiorom.o: ..\..\Library\StdDriver\inc\uart.h
 .\vr\audiorom.o: ..\..\Library\StdDriver\inc\wdt.h
 .\vr\audiorom.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\NVTTypes.h
-.\vr\audiorom.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\vr\audiorom.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\vr\audiorom.o: ..\..\Library\Framework\inc\AudioRom.h
 .\vr\audiorom.o: ..\..\Library\Audio\inc\AudioCommon.h

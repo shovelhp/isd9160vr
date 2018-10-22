@@ -4,7 +4,7 @@
 .\vr\powerdown.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\Platform.h
 .\vr\powerdown.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\ISD9100.h
 .\vr\powerdown.o: ..\..\Library\CMSIS\Include\core_cm0.h
-.\vr\powerdown.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\vr\powerdown.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\vr\powerdown.o: ..\..\Library\CMSIS\Include\core_cmInstr.h
 .\vr\powerdown.o: ..\..\Library\CMSIS\Include\core_cmFunc.h
 .\vr\powerdown.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\system_ISD9100.h
@@ -32,7 +32,7 @@
 .\vr\powerdown.o: ..\..\Library\StdDriver\inc\uart.h
 .\vr\powerdown.o: ..\..\Library\StdDriver\inc\wdt.h
 .\vr\powerdown.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\NVTTypes.h
-.\vr\powerdown.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\vr\powerdown.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\vr\powerdown.o: ..\ConfigIP.h
 .\vr\powerdown.o: ..\..\Library\Storage\inc\SPIFlash.h
 .\vr\powerdown.o: ..\..\Library\Framework\inc\SysInfra.h

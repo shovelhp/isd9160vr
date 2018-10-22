@@ -4,7 +4,7 @@
 .\vr\playback.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\Platform.h
 .\vr\playback.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\ISD9100.h
 .\vr\playback.o: ..\..\Library\CMSIS\Include\core_cm0.h
-.\vr\playback.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\vr\playback.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\vr\playback.o: ..\..\Library\CMSIS\Include\core_cmInstr.h
 .\vr\playback.o: ..\..\Library\CMSIS\Include\core_cmFunc.h
 .\vr\playback.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\system_ISD9100.h
@@ -32,7 +32,7 @@
 .\vr\playback.o: ..\..\Library\StdDriver\inc\uart.h
 .\vr\playback.o: ..\..\Library\StdDriver\inc\wdt.h
 .\vr\playback.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\NVTTypes.h
-.\vr\playback.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\vr\playback.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\vr\playback.o: ..\ConfigIP.h
 .\vr\playback.o: ..\..\Library\Storage\inc\SPIFlash.h
 .\vr\playback.o: ..\..\Library\Framework\inc\SysInfra.h
@@ -54,4 +54,4 @@
 .\vr\playback.o: ..\ConfigIO.h
 .\vr\playback.o: ..\Preload.h
 .\vr\playback.o: ..\..\Library\Framework\inc\MicSpk.h
-.\vr\playback.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\vr\playback.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\VR\VoiceRecognition.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\VR\VoiceRecognition.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Sun Oct 21 23:36:59 2018
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Mon Oct 22 17:15:12 2018
 <BR><P>
 <H3>Maximum Stack Usage =        704 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -359,7 +359,7 @@ Global Symbols
 
 <P><STRONG><a name="[181]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, aeabi_sdivfast.o(.text), UNUSED)
 
-<P><STRONG><a name="[68]"></a>__aeabi_uidivmod</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, aeabi_sdivfast.o(.text))
+<P><STRONG><a name="[67]"></a>__aeabi_uidivmod</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, aeabi_sdivfast.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[154]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Open
 <LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER_Open
 <LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysClk_InitiateRC
@@ -589,7 +589,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[24]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Default_KeyHandler
 </UL>
 
-<P><STRONG><a name="[60]"></a>App_Process</STRONG> (Thumb, 478 bytes, Stack size 24 bytes, appfunctions.o(i.App_Process))
+<P><STRONG><a name="[60]"></a>App_Process</STRONG> (Thumb, 506 bytes, Stack size 24 bytes, appfunctions.o(i.App_Process))
 <BR><BR>[Stack]<UL><LI>Max Depth = 608 + Unknown Stack Size
 <LI>Call Chain = App_Process &rArr; VROneCmdApp_GetCMDID &rArr; CSpotter_AddSample &rArr; NINJA_API_13 &rArr; NINJA_API_11 &rArr; BsrAsa &rArr; BsrCara &rArr; BsrBret
 </UL>
@@ -600,8 +600,8 @@ Global Symbols
 <LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
 <LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_StopPlay
 <LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_StartPlay
-<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM_Start
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM_Start
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 <LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -984,7 +984,7 @@ Global Symbols
 <P><STRONG><a name="[9f]"></a>BsrDina</STRONG> (Thumb, 586 bytes, Stack size 152 bytes, BsrJoy.o(i.BsrDina))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = BsrDina
 </UL>
-<BR>[Calls]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRay
 </UL>
@@ -1526,7 +1526,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = DPWM_SetSampleRate &rArr; SystemCoreClockUpdate
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemCoreClockUpdate
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPK_ChangeSR
 </UL>
@@ -1699,7 +1699,7 @@ Global Symbols
 <P><STRONG><a name="[f6]"></a>MIC_ChangeSR</STRONG> (Thumb, 108 bytes, Stack size 40 bytes, micspk.o(i.MIC_ChangeSR))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = MIC_ChangeSR
 </UL>
-<BR>[Calls]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Record_Add
 </UL>
@@ -1806,7 +1806,7 @@ Global Symbols
 <LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAmos
 <LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_11
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJose
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_AddSample
 </UL>
@@ -1940,7 +1940,7 @@ Global Symbols
 <LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_GetMemoryUsage_MultiWithSpeakerAndExtRejModel
 </UL>
 
-<P><STRONG><a name="[116]"></a>OutputPin_Initiate</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, configio.o(i.OutputPin_Initiate))
+<P><STRONG><a name="[116]"></a>OutputPin_Initiate</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, configio.o(i.OutputPin_Initiate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = OutputPin_Initiate &rArr; GPIO_SetMode
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetMode
@@ -2022,7 +2022,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemCoreClockUpdate
 <LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_GetHCLKFreq
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 <LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwm_init
@@ -2032,7 +2032,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwm_init
 </UL>
 
-<P><STRONG><a name="[67]"></a>PWM_Start</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, pwm.o(i.PWM_Start))
+<P><STRONG><a name="[68]"></a>PWM_Start</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, pwm.o(i.PWM_Start))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = PWM_Start
 </UL>
 <BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_Process
@@ -2410,7 +2410,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = SPI_GetBusClock &rArr; CLK_GetHCLKFreq &rArr; SystemCoreClockUpdate
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_GetHCLKFreq
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_Open
 </UL>
@@ -2429,7 +2429,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = SPI_SetBusClock &rArr; CLK_GetHCLKFreq &rArr; SystemCoreClockUpdate
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_GetHCLKFreq
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_Open
 </UL>
@@ -2438,7 +2438,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = SPI_SetVarClock &rArr; CLK_GetHCLKFreq &rArr; SystemCoreClockUpdate
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_GetHCLKFreq
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[146]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_Open
 </UL>
@@ -2447,7 +2447,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = SPK_ChangeSR &rArr; DPWM_SetSampleRate &rArr; SystemCoreClockUpdate
 </UL>
 <BR>[Calls]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DPWM_SetSampleRate
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_Add
 </UL>
@@ -2523,7 +2523,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_SetHCLK
 <LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_EnableXtalRC
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -2531,7 +2531,7 @@ Global Symbols
 <P><STRONG><a name="[c6]"></a>SystemCoreClockUpdate</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, system_isd9100.o(i.SystemCoreClockUpdate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SystemCoreClockUpdate
 </UL>
-<BR>[Calls]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM_ConfigOutputChannel
 <LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DPWM_SetSampleRate
@@ -2552,7 +2552,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = TIMER_GetWorkingFreq &rArr; TIMER_GetModuleClock
 </UL>
 <BR>[Calls]<UL><LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER_GetModuleClock
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InputKey_Initiate
 </UL>
@@ -2561,7 +2561,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = TIMER_Open &rArr; TIMER_GetModuleClock
 </UL>
 <BR>[Calls]<UL><LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER_GetModuleClock
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InputKey_Initiate
 <LI><a href="#[157]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time_init
@@ -2602,7 +2602,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = UART_Open &rArr; CLK_GetHCLKFreq &rArr; SystemCoreClockUpdate
 </UL>
 <BR>[Calls]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_GetHCLKFreq
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Init
 </UL>
@@ -2674,7 +2674,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> _printf_char_file.o(.text)
 </UL>
-<P><STRONG><a name="[34]"></a>main</STRONG> (Thumb, 80 bytes, Stack size 0 bytes, main.o(i.main))
+<P><STRONG><a name="[34]"></a>main</STRONG> (Thumb, 86 bytes, Stack size 0 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 680 + Unknown Stack Size
 <LI>Call Chain = main &rArr; App_Initiate &rArr; App_StartRecognize &rArr; VROneCmdApp_Initiate &rArr; CSpotter_Init_Sep &rArr; CSpotter_Init_MultiWithExtRejModel &rArr; NINJA_API_73 &rArr; BsrRay &rArr; BsrDina
 </UL>
@@ -2697,11 +2697,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
-<P><STRONG><a name="[158]"></a>pwm_init</STRONG> (Thumb, 148 bytes, Stack size 16 bytes, main.o(i.pwm_init))
+<P><STRONG><a name="[158]"></a>pwm_init</STRONG> (Thumb, 106 bytes, Stack size 16 bytes, main.o(i.pwm_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = pwm_init &rArr; PWM_ConfigOutputChannel &rArr; CLK_GetHCLKFreq &rArr; SystemCoreClockUpdate
 </UL>
 <BR>[Calls]<UL><LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYS_ResetModule
-<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM_Start
+<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM_Start
 <LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM_EnableOutput
 <LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM_ConfigOutputChannel
 <LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_SetModuleClock
@@ -2808,7 +2808,7 @@ Local Symbols
 <P><STRONG><a name="[9e]"></a>BsrJamii</STRONG> (Thumb, 226 bytes, Stack size 40 bytes, BsrJoy.o(i.BsrJamii))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = BsrJamii
 </UL>
-<BR>[Calls]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrDeon
 </UL>

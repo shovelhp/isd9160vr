@@ -2,7 +2,7 @@
 .\vr\keypad.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\Platform.h
 .\vr\keypad.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\ISD9100.h
 .\vr\keypad.o: ..\..\Library\CMSIS\Include\core_cm0.h
-.\vr\keypad.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\vr\keypad.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\vr\keypad.o: ..\..\Library\CMSIS\Include\core_cmInstr.h
 .\vr\keypad.o: ..\..\Library\CMSIS\Include\core_cmFunc.h
 .\vr\keypad.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\system_ISD9100.h
@@ -30,6 +30,6 @@
 .\vr\keypad.o: ..\..\Library\StdDriver\inc\uart.h
 .\vr\keypad.o: ..\..\Library\StdDriver\inc\wdt.h
 .\vr\keypad.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\NVTTypes.h
-.\vr\keypad.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\vr\keypad.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\vr\keypad.o: ..\..\Library\IO\inc\Keypad.h
-.\vr\keypad.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\vr\keypad.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

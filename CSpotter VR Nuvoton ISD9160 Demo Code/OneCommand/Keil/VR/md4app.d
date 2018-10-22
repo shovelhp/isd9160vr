@@ -1,11 +1,11 @@
 .\vr\md4app.o: ..\MD4App\MD4App.c
-.\vr\md4app.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\vr\md4app.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\vr\md4app.o: ..\MD4App\MD4App.h
 .\vr\md4app.o: ..\ConfigApp.h
 .\vr\md4app.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\Platform.h
 .\vr\md4app.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\ISD9100.h
 .\vr\md4app.o: ..\..\Library\CMSIS\Include\core_cm0.h
-.\vr\md4app.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\vr\md4app.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\vr\md4app.o: ..\..\Library\CMSIS\Include\core_cmInstr.h
 .\vr\md4app.o: ..\..\Library\CMSIS\Include\core_cmFunc.h
 .\vr\md4app.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\system_ISD9100.h
@@ -33,7 +33,7 @@
 .\vr\md4app.o: ..\..\Library\StdDriver\inc\uart.h
 .\vr\md4app.o: ..\..\Library\StdDriver\inc\wdt.h
 .\vr\md4app.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\NVTTypes.h
-.\vr\md4app.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\vr\md4app.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\vr\md4app.o: ..\ConfigIP.h
 .\vr\md4app.o: ..\..\Library\Storage\inc\SPIFlash.h
 .\vr\md4app.o: ..\..\Library\Framework\inc\SysInfra.h

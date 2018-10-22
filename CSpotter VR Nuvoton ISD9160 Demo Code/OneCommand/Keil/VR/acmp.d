@@ -1,7 +1,7 @@
 .\vr\acmp.o: ..\..\Library\StdDriver\src\acmp.c
 .\vr\acmp.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\ISD9100.h
 .\vr\acmp.o: ..\..\Library\CMSIS\Include\core_cm0.h
-.\vr\acmp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\vr\acmp.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\vr\acmp.o: ..\..\Library\CMSIS\Include\core_cmInstr.h
 .\vr\acmp.o: ..\..\Library\CMSIS\Include\core_cmFunc.h
 .\vr\acmp.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\system_ISD9100.h

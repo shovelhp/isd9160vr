@@ -1,5 +1,5 @@
 -c --cpu Cortex-M0 -g -O2 --apcs=interwork --split_sections -I . -I ..\..\Library\Device\Nuvoton\ISD9100\Include -I ..\..\Library\Framework\inc -I ..\..\Library\IO\inc -I ..\..\Library\Audio\inc -I ..\..\Library\StdDriver\inc -I ..\..\Library\Storage\inc -I ..\..\Library\CMSIS\Include -I ..\ -I ..\..\Library\Device\Nuvoton\ISD9100\Include -I ..\..\Library\StdDriver\inc -I ..\Keil -I ..\..\OneCommand -I ..\VROneCmdApp
--IC:\Keil_v5\ARM\RV31\INC
--IC:\Keil_v5\ARM\CMSIS\Include
--D__UVISION_VERSION="526" -D__ISD9100__
+-Id:\Keil_v5\ARM\RV31\INC
+-Id:\Keil_v5\ARM\CMSIS\Include
+-D__UVISION_VERSION="525" -D__ISD9100__
 -o .\vr\inputkeyactions.o --omf_browse .\vr\inputkeyactions.crf --depend .\vr\inputkeyactions.d "..\InputKeyActions.c"

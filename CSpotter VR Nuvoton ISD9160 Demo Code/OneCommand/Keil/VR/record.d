@@ -4,7 +4,7 @@
 .\vr\record.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\Platform.h
 .\vr\record.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\ISD9100.h
 .\vr\record.o: ..\..\Library\CMSIS\Include\core_cm0.h
-.\vr\record.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\vr\record.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\vr\record.o: ..\..\Library\CMSIS\Include\core_cmInstr.h
 .\vr\record.o: ..\..\Library\CMSIS\Include\core_cmFunc.h
 .\vr\record.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\system_ISD9100.h
@@ -32,7 +32,7 @@
 .\vr\record.o: ..\..\Library\StdDriver\inc\uart.h
 .\vr\record.o: ..\..\Library\StdDriver\inc\wdt.h
 .\vr\record.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\NVTTypes.h
-.\vr\record.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\vr\record.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\vr\record.o: ..\ConfigIP.h
 .\vr\record.o: ..\..\Library\Storage\inc\SPIFlash.h
 .\vr\record.o: ..\..\Library\Framework\inc\SysInfra.h
@@ -53,5 +53,5 @@
 .\vr\record.o: ..\..\Library\Framework\inc\VolumeCtrl.h
 .\vr\record.o: ..\ConfigIO.h
 .\vr\record.o: ..\Preload.h
-.\vr\record.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\vr\record.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\vr\record.o: ..\..\Library\Framework\inc\MicSpk.h

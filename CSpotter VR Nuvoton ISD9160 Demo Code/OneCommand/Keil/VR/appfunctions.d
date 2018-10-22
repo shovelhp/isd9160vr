@@ -1,11 +1,11 @@
 .\vr\appfunctions.o: ..\AppFunctions.c
-.\vr\appfunctions.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\vr\appfunctions.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\vr\appfunctions.o: ..\App.h
 .\vr\appfunctions.o: ..\ConfigApp.h
 .\vr\appfunctions.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\Platform.h
 .\vr\appfunctions.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\ISD9100.h
 .\vr\appfunctions.o: ..\..\Library\CMSIS\Include\core_cm0.h
-.\vr\appfunctions.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\vr\appfunctions.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\vr\appfunctions.o: ..\..\Library\CMSIS\Include\core_cmInstr.h
 .\vr\appfunctions.o: ..\..\Library\CMSIS\Include\core_cmFunc.h
 .\vr\appfunctions.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\system_ISD9100.h
@@ -33,7 +33,7 @@
 .\vr\appfunctions.o: ..\..\Library\StdDriver\inc\uart.h
 .\vr\appfunctions.o: ..\..\Library\StdDriver\inc\wdt.h
 .\vr\appfunctions.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\NVTTypes.h
-.\vr\appfunctions.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\vr\appfunctions.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\vr\appfunctions.o: ..\ConfigIP.h
 .\vr\appfunctions.o: ..\..\Library\Storage\inc\SPIFlash.h
 .\vr\appfunctions.o: ..\..\Library\Framework\inc\SysInfra.h

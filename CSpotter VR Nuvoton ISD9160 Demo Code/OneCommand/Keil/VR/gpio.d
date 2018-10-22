@@ -1,7 +1,7 @@
 .\vr\gpio.o: ..\..\Library\StdDriver\src\gpio.c
 .\vr\gpio.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\ISD9100.h
 .\vr\gpio.o: ..\..\Library\CMSIS\Include\core_cm0.h
-.\vr\gpio.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\vr\gpio.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\vr\gpio.o: ..\..\Library\CMSIS\Include\core_cmInstr.h
 .\vr\gpio.o: ..\..\Library\CMSIS\Include\core_cmFunc.h
 .\vr\gpio.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\system_ISD9100.h

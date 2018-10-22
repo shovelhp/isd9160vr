@@ -3,7 +3,7 @@
 .\vr\bufctrl.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\Platform.h
 .\vr\bufctrl.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\ISD9100.h
 .\vr\bufctrl.o: ..\..\Library\CMSIS\Include\core_cm0.h
-.\vr\bufctrl.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\vr\bufctrl.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\vr\bufctrl.o: ..\..\Library\CMSIS\Include\core_cmInstr.h
 .\vr\bufctrl.o: ..\..\Library\CMSIS\Include\core_cmFunc.h
 .\vr\bufctrl.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\system_ISD9100.h
@@ -31,5 +31,5 @@
 .\vr\bufctrl.o: ..\..\Library\StdDriver\inc\uart.h
 .\vr\bufctrl.o: ..\..\Library\StdDriver\inc\wdt.h
 .\vr\bufctrl.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\NVTTypes.h
-.\vr\bufctrl.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-.\vr\bufctrl.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\vr\bufctrl.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\vr\bufctrl.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

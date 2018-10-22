@@ -4,7 +4,7 @@
 .\vr\audiomixer.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\Platform.h
 .\vr\audiomixer.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\ISD9100.h
 .\vr\audiomixer.o: ..\..\Library\CMSIS\Include\core_cm0.h
-.\vr\audiomixer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\vr\audiomixer.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\vr\audiomixer.o: ..\..\Library\CMSIS\Include\core_cmInstr.h
 .\vr\audiomixer.o: ..\..\Library\CMSIS\Include\core_cmFunc.h
 .\vr\audiomixer.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\system_ISD9100.h
@@ -32,7 +32,7 @@
 .\vr\audiomixer.o: ..\..\Library\StdDriver\inc\uart.h
 .\vr\audiomixer.o: ..\..\Library\StdDriver\inc\wdt.h
 .\vr\audiomixer.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\NVTTypes.h
-.\vr\audiomixer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\vr\audiomixer.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\vr\audiomixer.o: ..\ConfigIP.h
 .\vr\audiomixer.o: ..\..\Library\Storage\inc\SPIFlash.h
 .\vr\audiomixer.o: ..\..\Library\Framework\inc\SysInfra.h

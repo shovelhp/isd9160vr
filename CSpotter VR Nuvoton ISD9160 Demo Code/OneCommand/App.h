@@ -115,9 +115,12 @@ typedef struct		//
 	uint8_t Breath_light; //ºôÎüµÆÊ¹ÄÜ
 }pwm_type;
 
-
-
-
+#define PWM_STEP 30
+#define PWM_LOW 40
+#define PWM_HIGH 190
+#define PWM_PERIOD 200
+#define PWM_DUTY_INIT 100
+#define PWM_RATE 30000
 
 #endif //#ifndef _APP_H_
 

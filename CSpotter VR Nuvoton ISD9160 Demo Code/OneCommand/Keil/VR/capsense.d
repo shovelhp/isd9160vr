@@ -1,8 +1,8 @@
 .\vr\capsense.o: ..\..\Library\StdDriver\src\capsense.c
-.\vr\capsense.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\vr\capsense.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\vr\capsense.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\ISD9100.h
 .\vr\capsense.o: ..\..\Library\CMSIS\Include\core_cm0.h
-.\vr\capsense.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\vr\capsense.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\vr\capsense.o: ..\..\Library\CMSIS\Include\core_cmInstr.h
 .\vr\capsense.o: ..\..\Library\CMSIS\Include\core_cmFunc.h
 .\vr\capsense.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\system_ISD9100.h

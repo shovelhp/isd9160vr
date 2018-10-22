@@ -1,7 +1,7 @@
 .\vr\timer.o: ..\..\Library\StdDriver\src\timer.c
 .\vr\timer.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\ISD9100.h
 .\vr\timer.o: ..\..\Library\CMSIS\Include\core_cm0.h
-.\vr\timer.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\vr\timer.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\vr\timer.o: ..\..\Library\CMSIS\Include\core_cmInstr.h
 .\vr\timer.o: ..\..\Library\CMSIS\Include\core_cmFunc.h
 .\vr\timer.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\system_ISD9100.h

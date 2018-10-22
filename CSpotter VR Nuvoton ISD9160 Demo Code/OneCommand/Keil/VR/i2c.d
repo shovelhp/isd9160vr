@@ -1,7 +1,7 @@
 .\vr\i2c.o: ..\..\Library\StdDriver\src\i2c.c
 .\vr\i2c.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\ISD9100.h
 .\vr\i2c.o: ..\..\Library\CMSIS\Include\core_cm0.h
-.\vr\i2c.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\vr\i2c.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\vr\i2c.o: ..\..\Library\CMSIS\Include\core_cmInstr.h
 .\vr\i2c.o: ..\..\Library\CMSIS\Include\core_cmFunc.h
 .\vr\i2c.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\system_ISD9100.h

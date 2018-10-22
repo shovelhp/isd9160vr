@@ -1,8 +1,8 @@
 .\vr\uart.o: ..\..\Library\StdDriver\src\uart.c
-.\vr\uart.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\vr\uart.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\vr\uart.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\ISD9100.h
 .\vr\uart.o: ..\..\Library\CMSIS\Include\core_cm0.h
-.\vr\uart.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\vr\uart.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\vr\uart.o: ..\..\Library\CMSIS\Include\core_cmInstr.h
 .\vr\uart.o: ..\..\Library\CMSIS\Include\core_cmFunc.h
 .\vr\uart.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\system_ISD9100.h

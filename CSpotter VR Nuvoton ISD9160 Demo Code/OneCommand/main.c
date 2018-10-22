@@ -116,35 +116,39 @@ void UART_Init(void)
 
 void pwm_init(void)
 {
-	pwm0.period =200;
-	pwm0.Duty =50;
-	pwm0.rate = 30000;
-	
-	pwm1.period =200;
-	pwm1.Duty =50;
-	pwm1.rate = 30000;
+	pwm0.period = PWM_PERIOD;
+	//pwm0.Duty = PWM_DUTY_INIT;
+	pwm0.Duty = 0;
+	pwm0.rate = PWM_RATE;
+	/*
+	pwm1.period = PWM_PERIOD;
+	pwm1.Duty = PWM_DUTY_INIT;
+	pwm1.rate = PWM_RATE;*/
 
 	CLK_SetModuleClock(PWM0_MODULE, CLK_CLKSEL1_PWM0CH01SEL_HCLK, 0);
 	CLK_EnableModuleClock(PWM0_MODULE);
 	SYS_ResetModule(PWM0_RST);
 	
-	/* Set GPA multi-function pins for PWM0 Channel0 */
+	// Set GPA multi-function pins for PWM0 Channel0
 	SYS->GPA_MFP  = (SYS->GPA_MFP & (~SYS_GPA_MFP_PA12MFP_Msk) ) | SYS_GPA_MFP_PA12MFP_PWM0CH0;
-	//set PWM0 channel 0 output configuration */
+	//set PWM0 channel 0 output configuration 
   PWM_ConfigOutputChannel(PWM0, PWM_CH0, pwm0.rate, pwm0.Duty);
-	/* Set GPA multi-function pins for PWM0 Channel1 */
+  //Enable PWM Output path for PWM0 channel 0 
+  PWM_EnableOutput(PWM0, 0x1);
+/*	// Set GPA multi-function pins for PWM0 Channel1
 	SYS->GPA_MFP  = (SYS->GPA_MFP & (~SYS_GPA_MFP_PA13MFP_Msk) ) | SYS_GPA_MFP_PA13MFP_PWM0CH1;
-	//set PWM0 channel 1 output configuration */
+	//set PWM0 channel 1 output configuration 
   PWM_ConfigOutputChannel(PWM0, PWM_CH1, pwm1.rate, pwm1.Duty);
-  //Enable PWM Output path for PWM0 channel 0 and channel 1 */
+  //Enable PWM Output path for PWM0 channel 0 and channel 1 
   PWM_EnableOutput(PWM0, 0x3);
+ 	// Enable PWM channel 1 period interrupt
+  //PWM0->INTEN |= PWM_INTEN_PIEN1_Msk;*/
 	// Enable PWM channel 0 period interrupt
   PWM0->INTEN = PWM_INTEN_PIEN0_Msk;
- 	// Enable PWM channel 1 period interrupt
-  PWM0->INTEN |= PWM_INTEN_PIEN1_Msk;
   NVIC_EnableIRQ(PWM0_IRQn);
     
-  PWM_Start(PWM0, 0x00);
+  PWM_Start(PWM0, 0x01);
+	//GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~BIT12));
 }
 /*
 void pwm_init_1(void)
@@ -297,6 +301,11 @@ void PWM0_IRQHandler(void)
     PWM_SET_CMR(PWM0, PWM_CH0, pwm0.Duty);
     // Clear channel 0 period interrupt flag
     PWM_ClearIntFlag(PWM0, 0);
+/*    // Update PWM0 channel 1 period and duty
+    PWM_SET_CNR(PWM0, PWM_CH1, pwm1.period);
+    PWM_SET_CMR(PWM0, PWM_CH1, pwm1.Duty);
+    // Clear channel 0 period interrupt flag
+    PWM_ClearIntFlag(PWM0, 1);*/
 }
 
 
@@ -357,6 +366,7 @@ INT32 main()
 	//App_StartPlay(0);
 	printf("\n\n");
 	printf("INIT Finished!\n");
+	printf("Starting VR...\n");
 	while (1)
 	{
 		

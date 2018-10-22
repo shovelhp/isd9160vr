@@ -4,7 +4,7 @@
 .\vr\appcallback.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\Platform.h
 .\vr\appcallback.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\ISD9100.h
 .\vr\appcallback.o: ..\..\Library\CMSIS\Include\core_cm0.h
-.\vr\appcallback.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\vr\appcallback.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\vr\appcallback.o: ..\..\Library\CMSIS\Include\core_cmInstr.h
 .\vr\appcallback.o: ..\..\Library\CMSIS\Include\core_cmFunc.h
 .\vr\appcallback.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\system_ISD9100.h
@@ -32,7 +32,7 @@
 .\vr\appcallback.o: ..\..\Library\StdDriver\inc\uart.h
 .\vr\appcallback.o: ..\..\Library\StdDriver\inc\wdt.h
 .\vr\appcallback.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\NVTTypes.h
-.\vr\appcallback.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\vr\appcallback.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\vr\appcallback.o: ..\ConfigIP.h
 .\vr\appcallback.o: ..\..\Library\Storage\inc\SPIFlash.h
 .\vr\appcallback.o: ..\..\Library\Framework\inc\SysInfra.h

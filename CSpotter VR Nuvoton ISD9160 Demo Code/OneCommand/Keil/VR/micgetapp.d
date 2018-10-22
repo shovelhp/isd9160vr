@@ -3,7 +3,7 @@
 .\vr\micgetapp.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\Platform.h
 .\vr\micgetapp.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\ISD9100.h
 .\vr\micgetapp.o: ..\..\Library\CMSIS\Include\core_cm0.h
-.\vr\micgetapp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\vr\micgetapp.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\vr\micgetapp.o: ..\..\Library\CMSIS\Include\core_cmInstr.h
 .\vr\micgetapp.o: ..\..\Library\CMSIS\Include\core_cmFunc.h
 .\vr\micgetapp.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\system_ISD9100.h
@@ -31,7 +31,7 @@
 .\vr\micgetapp.o: ..\..\Library\StdDriver\inc\uart.h
 .\vr\micgetapp.o: ..\..\Library\StdDriver\inc\wdt.h
 .\vr\micgetapp.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\NVTTypes.h
-.\vr\micgetapp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\vr\micgetapp.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\vr\micgetapp.o: ..\ConfigApp.h
 .\vr\micgetapp.o: ..\ConfigIP.h
 .\vr\micgetapp.o: ..\..\Library\Storage\inc\SPIFlash.h
@@ -40,4 +40,4 @@
 .\vr\micgetapp.o: ..\..\Library\Framework\inc\BufCtrl.h
 .\vr\micgetapp.o: ..\..\Library\Framework\inc\PlaybackRecord.h
 .\vr\micgetapp.o: ..\..\Library\Framework\inc\VolumeCtrl.h
-.\vr\micgetapp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\vr\micgetapp.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

@@ -340,8 +340,8 @@ ARM Macro Assembler    Page 6
               00000200 
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M0 --apcs=interw
-ork --depend=.\vr\startup_isd9100.d -o.\vr\startup_isd9100.o -IC:\Keil_v5\ARM\R
-V31\INC -IC:\Keil_v5\ARM\CMSIS\Include --predefine="__UVISION_VERSION SETA 526"
+ork --depend=.\vr\startup_isd9100.d -o.\vr\startup_isd9100.o -Id:\Keil_v5\ARM\R
+V31\INC -Id:\Keil_v5\ARM\CMSIS\Include --predefine="__UVISION_VERSION SETA 525"
  --predefine="__ISD9100__ SETA 1" --list=.\vr\startup_isd9100.lst ..\..\Library
 \Device\Nuvoton\ISD9100\Source\ARM\startup_ISD9100.s
 

@@ -1,10 +1,10 @@
 .\vr\vronecmdapp.o: ..\VROneCmdApp\VROneCmdApp.c
-.\vr\vronecmdapp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\vr\vronecmdapp.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\vr\vronecmdapp.o: ..\VROneCmdApp/VROneCmdApp.h
 .\vr\vronecmdapp.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\Platform.h
 .\vr\vronecmdapp.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\ISD9100.h
 .\vr\vronecmdapp.o: ..\..\Library\CMSIS\Include\core_cm0.h
-.\vr\vronecmdapp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\vr\vronecmdapp.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\vr\vronecmdapp.o: ..\..\Library\CMSIS\Include\core_cmInstr.h
 .\vr\vronecmdapp.o: ..\..\Library\CMSIS\Include\core_cmFunc.h
 .\vr\vronecmdapp.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\system_ISD9100.h
@@ -32,6 +32,6 @@
 .\vr\vronecmdapp.o: ..\..\Library\StdDriver\inc\uart.h
 .\vr\vronecmdapp.o: ..\..\Library\StdDriver\inc\wdt.h
 .\vr\vronecmdapp.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\NVTTypes.h
-.\vr\vronecmdapp.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\vr\vronecmdapp.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\vr\vronecmdapp.o: ..\VROneCmdApp/CSpotterSDKApi.h
 .\vr\vronecmdapp.o: ..\VROneCmdApp/CSpotterSDKApi_Const.h

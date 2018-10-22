@@ -3,7 +3,7 @@
 .\vr\spiflash.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\Platform.h
 .\vr\spiflash.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\ISD9100.h
 .\vr\spiflash.o: ..\..\Library\CMSIS\Include\core_cm0.h
-.\vr\spiflash.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\vr\spiflash.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\vr\spiflash.o: ..\..\Library\CMSIS\Include\core_cmInstr.h
 .\vr\spiflash.o: ..\..\Library\CMSIS\Include\core_cmFunc.h
 .\vr\spiflash.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\system_ISD9100.h
@@ -31,7 +31,7 @@
 .\vr\spiflash.o: ..\..\Library\StdDriver\inc\uart.h
 .\vr\spiflash.o: ..\..\Library\StdDriver\inc\wdt.h
 .\vr\spiflash.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\NVTTypes.h
-.\vr\spiflash.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\vr\spiflash.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\vr\spiflash.o: ..\..\Library\Framework\inc\SysInfra.h
 .\vr\spiflash.o: ..\..\Library\Framework\inc\ModuleID.h
-.\vr\spiflash.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\vr\spiflash.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

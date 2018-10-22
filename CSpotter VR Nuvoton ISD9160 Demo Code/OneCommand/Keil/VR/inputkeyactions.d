@@ -4,7 +4,7 @@
 .\vr\inputkeyactions.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\Platform.h
 .\vr\inputkeyactions.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\ISD9100.h
 .\vr\inputkeyactions.o: ..\..\Library\CMSIS\Include\core_cm0.h
-.\vr\inputkeyactions.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\vr\inputkeyactions.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\vr\inputkeyactions.o: ..\..\Library\CMSIS\Include\core_cmInstr.h
 .\vr\inputkeyactions.o: ..\..\Library\CMSIS\Include\core_cmFunc.h
 .\vr\inputkeyactions.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\system_ISD9100.h
@@ -32,7 +32,7 @@
 .\vr\inputkeyactions.o: ..\..\Library\StdDriver\inc\uart.h
 .\vr\inputkeyactions.o: ..\..\Library\StdDriver\inc\wdt.h
 .\vr\inputkeyactions.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\NVTTypes.h
-.\vr\inputkeyactions.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\vr\inputkeyactions.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\vr\inputkeyactions.o: ..\ConfigIP.h
 .\vr\inputkeyactions.o: ..\..\Library\Storage\inc\SPIFlash.h
 .\vr\inputkeyactions.o: ..\..\Library\Framework\inc\SysInfra.h

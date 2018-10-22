@@ -3,7 +3,7 @@
 .\vr\preload.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\Platform.h
 .\vr\preload.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\ISD9100.h
 .\vr\preload.o: ..\..\Library\CMSIS\Include\core_cm0.h
-.\vr\preload.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\vr\preload.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\vr\preload.o: ..\..\Library\CMSIS\Include\core_cmInstr.h
 .\vr\preload.o: ..\..\Library\CMSIS\Include\core_cmFunc.h
 .\vr\preload.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\system_ISD9100.h
@@ -31,7 +31,7 @@
 .\vr\preload.o: ..\..\Library\StdDriver\inc\uart.h
 .\vr\preload.o: ..\..\Library\StdDriver\inc\wdt.h
 .\vr\preload.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\NVTTypes.h
-.\vr\preload.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\vr\preload.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 .\vr\preload.o: ..\..\Library\Storage\inc\SPIFlash.h
 .\vr\preload.o: ..\..\Library\Framework\inc\SysInfra.h
 .\vr\preload.o: ..\..\Library\Framework\inc\ModuleID.h

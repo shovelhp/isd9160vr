@@ -3,7 +3,7 @@
 .\vr\pdmactrl.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\Platform.h
 .\vr\pdmactrl.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\ISD9100.h
 .\vr\pdmactrl.o: ..\..\Library\CMSIS\Include\core_cm0.h
-.\vr\pdmactrl.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\vr\pdmactrl.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\vr\pdmactrl.o: ..\..\Library\CMSIS\Include\core_cmInstr.h
 .\vr\pdmactrl.o: ..\..\Library\CMSIS\Include\core_cmFunc.h
 .\vr\pdmactrl.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\system_ISD9100.h
@@ -31,4 +31,4 @@
 .\vr\pdmactrl.o: ..\..\Library\StdDriver\inc\uart.h
 .\vr\pdmactrl.o: ..\..\Library\StdDriver\inc\wdt.h
 .\vr\pdmactrl.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\NVTTypes.h
-.\vr\pdmactrl.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\vr\pdmactrl.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h

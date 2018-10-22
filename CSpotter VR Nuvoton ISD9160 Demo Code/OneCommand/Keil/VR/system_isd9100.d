@@ -1,5 +1,5 @@
 .\vr\system_isd9100.o: ..\..\Library\Device\Nuvoton\ISD9100\Source\system_ISD9100.c
-.\vr\system_isd9100.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\vr\system_isd9100.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\vr\system_isd9100.o: ..\..\Library\Device\Nuvoton\ISD9100\Include\ISD9100.h
 .\vr\system_isd9100.o: ..\..\Library\CMSIS\Include\core_cm0.h
 .\vr\system_isd9100.o: ..\..\Library\CMSIS\Include\core_cmInstr.h
