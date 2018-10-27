@@ -122,5 +122,20 @@ typedef struct		//
 #define PWM_DUTY_INIT 100
 #define PWM_RATE 30000
 
+#define FANON BIT15
+#define WAVEON BIT14
+#define WINDUP BIT7
+#define WINDDOWN BIT6
+#define TIMEADD BIT5
+#define TIMESUB BIT4
+#define HIGHSPEED BIT6
+#define MIDSPEED BIT5
+#define LOWSPEED BIT4
+#define ANIONON BIT7
+#define COLORLIGHT BIT13
+#define SLEEPWIND BIT11
+#define NATURALWIND BIT10
+#define TIMERON BIT12
+
 #endif //#ifndef _APP_H_
 

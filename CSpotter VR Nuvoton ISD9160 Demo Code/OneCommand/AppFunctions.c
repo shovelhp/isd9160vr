@@ -278,32 +278,32 @@ void App_Process(void)
 				switch(i32ID)
 				{
 					case 1:	//开风扇
-						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | BIT15);
+						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | FANON);
 						//printf("Fan on!\n");
 						//App_StartPlay(1);
 					break;
 					case 2:	//关风扇
-						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~BIT15));
+						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~FANON));
 						GPIO_SET_OUT_DATA(PA, 0);
 						//printf("Fan off!\n");
 						//App_StartPlay(2);
 					break;
 					case 3:	//请摇头
-						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | BIT14);
+						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | WAVEON);
 						// DrvGPIO_SetBit(PA, 5);
 						//printf("Wave start!\n");
 						//App_StartPlay(3);
 					break;
 					case 4:	//关摇头
-						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~BIT14));
+						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~WAVEON));
 						// DrvGPIO_ClrBit(PA, 5);
 						//printf("Wave stop!\n");
 						//App_StartPlay(4);
 					break;
 					case 5://低速风
-						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | BIT4);
-						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~BIT5));
-						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~BIT6));
+						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | LOWSPEED);
+						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~MIDSPEED));
+						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~HIGHSPEED));
 						/*pwm1.Breath_light =0;
 						pwm1.period =200;
 						pwm1.Duty =0;
@@ -311,9 +311,9 @@ void App_Process(void)
 						//printf("Low Speed!\n");
 					break;
 					case 6://中速风
-						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | BIT5);
-						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~BIT4));
-						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~BIT6));
+						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | MIDSPEED);
+						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~LOWSPEED));
+						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~HIGHSPEED));
 						/*pwm1.Breath_light =0;
 						pwm1.period =200;
 						pwm1.Duty =50;
@@ -321,9 +321,9 @@ void App_Process(void)
 						//printf("Mid Speed!\n");
 					break;
 					case 7://高速风
-						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | BIT6);
-						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~BIT5));
-						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~BIT4));
+						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | HIGHSPEED);
+						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~MIDSPEED));
+						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~LOWSPEED));
 						/*pwm1.Breath_light =0;
 						pwm1.period =200;
 						pwm1.Duty =100;
@@ -372,7 +372,7 @@ void App_Process(void)
 						//GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~BIT12));
 						//printf("Close Timer!\n");
 					break;
-					case 12://开负离子
+/*					case 12://开负离子
 						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | BIT7);
 						//printf("Anion On!\n");
 					break;
@@ -403,7 +403,7 @@ void App_Process(void)
 						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~BIT11));
 						//printf("natural Wind!\n");
 					break;
-					default:
+*/					default:
 						App_StartPlay(i32ID);//播放对应回应声音
 						printf("%s\n", AudioResStr[i32ID]);//串口打印命令内容
 					//break;

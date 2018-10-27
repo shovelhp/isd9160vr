@@ -145,6 +145,7 @@ void pwm_init(void)
   //PWM0->INTEN |= PWM_INTEN_PIEN1_Msk;*/
 	// Enable PWM channel 0 period interrupt
   PWM0->INTEN = PWM_INTEN_PIEN0_Msk;
+  // PWM_DisableDeadZone(PWN0, 0);
   NVIC_EnableIRQ(PWM0_IRQn);
     
   PWM_Start(PWM0, 0x01);
