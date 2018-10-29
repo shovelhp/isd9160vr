@@ -20,6 +20,15 @@
 ; VR group1 response
 ;defaud OK<ext=0,format=MD4>
 ;defaud command0<ext=0,format=MD4>
+;defaud cmd10jiandingshishijian<ext=0,format=MD4>
+;defaud cmd11dingshiguanbi<ext=0,format=MD4>
+;defaud cmd12kaifulizi<ext=0,format=MD4>
+;defaud cmd13guanfulizi<ext=0,format=MD4>
+;defaud cmd14kaicaideng<ext=0,format=MD4>
+;defaud cmd15guancaideng<ext=0,format=MD4>
+;defaud cmd16shuimianfeng<ext=0,format=MD4>
+;defaud cmd17ziranfeng<ext=0,format=MD4>
+;defaud command5<ext=0,format=MD4>;14
 ;defaud command6<ext=0,format=MD4>
 ;defaud huxideng<ext=0,format=MD4>
 ;defaud yitiaoliang<ext=0,format=MD4>
@@ -29,24 +38,15 @@
 ; VR group2 response
 
 [AUDIO]
-DEFAUD cmd00xiaofengtongxue <FIX=1, EXT=0, FORMAT=MD4>
-DEFAUD cmd01kaifengshan <FIX=1, EXT=0, FORMAT=MD4>
-DEFAUD cmd02guanfengshan <FIX=1, EXT=0, FORMAT=MD4>
-DEFAUD cmd03qingyaotou <FIX=1, EXT=0, FORMAT=MD4>
-DEFAUD cmd04guanyaotou <FIX=1, EXT=0, FORMAT=MD4>
-DEFAUD cmd05disufeng <FIX=1, EXT=0, FORMAT=MD4>
-DEFAUD cmd06zhongsufeng <FIX=1, EXT=0, FORMAT=MD4>
-DEFAUD cmd07gaosufeng <FIX=1, EXT=0, FORMAT=MD4>
-DEFAUD cmd08dingshishezhi <FIX=1, EXT=0, FORMAT=MD4>
-DEFAUD cmd09jiadingshishijian <FIX=1, EXT=0, FORMAT=MD4>
-DEFAUD cmd10jiandingshishijian <FIX=1, EXT=0, FORMAT=MD4>
-DEFAUD cmd11dingshiguanbi <FIX=1, EXT=0, FORMAT=MD4>
-DEFAUD cmd12kaifulizi <FIX=1, EXT=0, FORMAT=MD4>
-DEFAUD cmd13guanfulizi <FIX=1, EXT=0, FORMAT=MD4>
-DEFAUD cmd14kaicaideng <FIX=1, EXT=0, FORMAT=MD4>
-DEFAUD cmd15guancaideng <FIX=1, EXT=0, FORMAT=MD4>
-DEFAUD cmd16shuimianfeng <FIX=1, EXT=0, FORMAT=MD4>
-DEFAUD cmd17ziranfeng <FIX=1, EXT=0, FORMAT=MD4>  ; defaud command5<ext=0,format=MD4>;14
+DEFAUD cmd00zhinengdianshan <FIX=1, EXT=0, FORMAT=MD4>
+DEFAUD cmd01dakaidianshan <FIX=1, EXT=0, FORMAT=MD4>
+DEFAUD cmd02guanbidianshan <FIX=1, EXT=0, FORMAT=MD4>
+DEFAUD cmd03dakaiyaotou <FIX=1, EXT=0, FORMAT=MD4>
+DEFAUD cmd04guanbiyaotou <FIX=1, EXT=0, FORMAT=MD4>
+DEFAUD cmd05zengjiafengliang <FIX=1, EXT=0, FORMAT=MD4>
+DEFAUD cmd06jianshaofengliang <FIX=1, EXT=0, FORMAT=MD4>
+DEFAUD cmd07zengjiadingshi <FIX=1, EXT=0, FORMAT=MD4>
+DEFAUD cmd08jianshaodingshi <FIX=1, EXT=0, FORMAT=MD4>  ; defaud cmd09jiadingshishijian<ext=0,format=MD4>
 
 
 

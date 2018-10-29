@@ -72,50 +72,50 @@ void App_Initiate(void)
 {
 
 	g_u8AppCtrl = APPCTRL_NO_ACTION;
-	
+
 	// Initiate the audio playback.
 	Playback_Initiate();
-	
+
 	// Initiate the buffer control from MIC.
 	MicGetApp_Initiate(&g_sApp.Mic_MD4.sMicGetApp);
-	
+
 	#if ( ULTRAIO_FW_CURVE_ENABLE )
 	NVIC_SetPriority(ULTRAIO_TMR_IRQ, 0);
-	#endif	
-	
+	#endif
+
 	u8TotalAudioNum= AudioRom_GetAudioNum( SPIFlash_ReadDataCallback, 0 );
 
 	g_sApp.u32AudioStartAddr=0;
-		
+
 
 //	SPIFlash_ReadDataCallback((PUINT8) &g_sApp.u32AudioStartAddr, 8 + (8*AudioRes_AudioInfoMerge), 4);
 	// Read VR model start address in SPIFlash
 //	SPIFlash_ReadDataCallback((PUINT8) &g_sApp.u32VRModelStartAddr, 8 + (8*VRModelsMerged), 4);
-	
+
 //	if (PreLoad_VRBin((UINT32)VRCMD_START_ADDR, VRCMD_MAX_SIZE, g_sApp.u32VRModelStartAddr, N570C_VR_Wakeup_pack) == FALSE)
 //		while(1);
 
 
-	
-	//??VR bin ???		//Must adjust parameter with model amount			  
-	if (VROneCmdApp_UnpackBin(&g_sApp.sVRapp, (uint32_t)VRCMD_START_ADDR) == 0)		   
+
+	//??VR bin ???		//Must adjust parameter with model amount
+	if (VROneCmdApp_UnpackBin(&g_sApp.sVRapp, (uint32_t)VRCMD_START_ADDR) == 0)
 		while(1);
 
 	// Light stand by(PA14) led for initial ready().
 //	OUT3(0);
-	
+
 	// Light (PA12) led for load VR model group1.
 //	OUT1(0);
 //    OUT1(1);
 //    OUT2(1);
-	
+
 	App_StartRecognize();
 }
 
 //---------------------------------------------------------------------------------------------------------
 // Function: App_StartRecognize
 //
-// Description:                                                                                           
+// Description:
 //	Start to recognize.
 //
 // Return:
@@ -127,16 +127,16 @@ BOOL App_StartRecognize(void)
 	// Initiate the voice recognition.
 	if (VROneCmdApp_Initiate(&g_sApp.sVRapp) == NULL )
 		return FALSE;
-	
+
 	MicGetApp_StartRec(&g_sApp.Mic_MD4.sMicGetApp, VRONECMDAPP_SAMPLE_RATE);
-	
+
 	return TRUE;
 }
 
 //---------------------------------------------------------------------------------------------------------
 // Function: App_StartRecognize
 //
-// Description:                                                                                           
+// Description:
 //	Stop to recognize.
 //
 // Return:
@@ -151,7 +151,7 @@ void App_StopRecognize(void)
 //---------------------------------------------------------------------------------------------------------
 // Function: App_StartPlayMIDI
 //
-// Description:                                                                                           
+// Description:
 //	Start MD4 audio playback.
 //
 // Return:
@@ -163,26 +163,26 @@ BOOL App_StartPlay(UINT32 u32PlayID)
 	// Start MD4 decode lib to decode MD4 file stored from current audio id and played from audio channel 0.
 	// The ROM file is placed on SPI Flash address "g_sApp.u32AudioStartAddr".
 	// And decode the first frame of PCMs.
-	
+
 	MicGetApp_StopRec(&g_sApp.Mic_MD4.sMicGetApp);	//2017-9-5 hwh  stop mic
-	
+
 	MD4App_DecodeInitiate(&g_sApp.Mic_MD4.asMD4App, NULL, 0);
-	
+
 	if ( MD4App_DecodeStartPlayByID(&g_sApp.Mic_MD4.asMD4App, u32PlayID, g_sApp.u32AudioStartAddr, 0) == FALSE )
 		return FALSE;
-	
+
 	// Start Ultraio Timer & HW pwm for UltraIO curve output
 	ULTRAIO_START();
-	
-	// Start to playback audio. 
+
+	// Start to playback audio.
 	Playback_StartPlay();
-	
-	return TRUE;	
+
+	return TRUE;
 }
 
 //---------------------------------------------------------------------------------------------------------
-// Description:                                                                                            
-//	Stop audio playback.                                                                             
+// Description:
+//	Stop audio playback.
 //
 // Return:
 // 	FALSE: fail
@@ -192,12 +192,12 @@ BOOL App_StopPlay(void)
 {
 	// Stop speaker.
 	Playback_StopPlay();
-	
+
 	MD4App_DecodeStopPlay(&g_sApp.Mic_MD4.asMD4App);
-	
+
 	// Stop Ultraio Timer & HW pwm.
 	ULTRAIO_STOP();
-	
+
 	return TRUE;
 }
 
@@ -212,7 +212,7 @@ uint8_t *vr_uart_send(uint8_t num)
 	re_data[1] =0x11;
 	re_data[2] =num;
 	re_data[3] =(re_data[0] + re_data[1]+ re_data[2]);
-		
+
 	return re_data;
 }
 
@@ -220,29 +220,29 @@ uint8_t *vr_uart_send(uint8_t num)
 //---------------------------------------------------------------------------------------------------------
 // Function: App_Process
 //
-// Description:                                                                                            
+// Description:
 //   Produce PCM data for audio playback; Voice recognition
 //
 // Return:
-//	void                                 
+//	void
 //---------------------------------------------------------------------------------------------------------
 extern uint16_t vr_time;
 extern pwm_type pwm0;
 extern void uart_send(uint8_t *dara, uint16_t len);
 	uint8_t i32ID = 0;
 void App_Process(void)
-{	
+{
 	INT16 *pi16BuffAddr;
 
 	UINT16 u16GetSamples = 0;
 //	static BOOL VR_flag = FALSE;
-	
+
 	// Play response
 	if( g_u8AppCtrl&APPCTRL_PLAY )
 	{
 		if (MD4App_DecodeProcess(&g_sApp.Mic_MD4.asMD4App) == FALSE )
 		{
-			// Stop to decode audio data from ROM file for stoping to play audio codec. 
+			// Stop to decode audio data from ROM file for stoping to play audio codec.
 			// Remove audio codec output buffer from play channel.
 			App_StopPlay();
 			// Start mic after play response
@@ -259,7 +259,7 @@ void App_Process(void)
 		{
 				// Stop mic before play response
 				//MicGetApp_StopRec(&g_sApp.Mic_MD4.sMicGetApp);
-		
+
 			if(i32ID==0)	//唤醒词：小丰同学
 			{
 				vr_time=10000;
@@ -300,37 +300,43 @@ void App_Process(void)
 						//printf("Wave stop!\n");
 						//App_StartPlay(4);
 					break;
-					case 5://低速风
-						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | LOWSPEED);
-						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~MIDSPEED));
-						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~HIGHSPEED));
+					case 5://增加风量
+						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | WINDUP);
+						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~WINDDOWN));
 						/*pwm1.Breath_light =0;
 						pwm1.period =200;
 						pwm1.Duty =0;
 						PWM_Start(PWM0, 0x2);*/
 						//printf("Low Speed!\n");
 					break;
-					case 6://中速风
-						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | MIDSPEED);
-						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~LOWSPEED));
-						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~HIGHSPEED));
+					case 6://减少风量
+						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | WINDDOWN);
+						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~WINDUP));
 						/*pwm1.Breath_light =0;
 						pwm1.period =200;
 						pwm1.Duty =50;
 						PWM_Start(PWM0, 0x2);*/
 						//printf("Mid Speed!\n");
 					break;
-					case 7://高速风
-						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | HIGHSPEED);
-						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~MIDSPEED));
-						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~LOWSPEED));
+					case 7://增加定时
+						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | TIMEADD);
+						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~TIMESUB));
 						/*pwm1.Breath_light =0;
 						pwm1.period =200;
-						pwm1.Duty =100;
+						pwm1.Duty =0;
 						PWM_Start(PWM0, 0x2);*/
-						//printf("High Speed!\n");
+						//printf("Low Speed!\n");
 					break;
-					case 8://定时设置
+					case 8://减少定时
+						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | TIMESUB);
+						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~TIMEADD));
+						/*pwm1.Breath_light =0;
+						pwm1.period =200;
+						pwm1.Duty =50;
+						PWM_Start(PWM0, 0x2);*/
+						//printf("Mid Speed!\n");
+					break;
+/*					case 8://定时设置
 						pwm0.Breath_light =0;
 						pwm0.period = PWM_PERIOD;
 						pwm0.Duty = PWM_DUTY_INIT;
@@ -372,7 +378,7 @@ void App_Process(void)
 						//GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~BIT12));
 						//printf("Close Timer!\n");
 					break;
-/*					case 12://开负离子
+					case 12://开负离子
 						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | BIT7);
 						//printf("Anion On!\n");
 					break;
@@ -417,7 +423,7 @@ void App_Process(void)
 				//uart_send(vr_uart_send(i32ID+32), 4);
 			}
 			else return;
-			
+
 		}
 	}
 
@@ -428,7 +434,7 @@ void App_Process(void)
 //---------------------------------------------------------------------------------------------------------
 // Function: App_PowerDown
 //
-// Description:                                                                                            
+// Description:
 //   Process flow of power-down for application. Include,
 //   1. App_PowerDownProcess:Pre-process befor entering power-down.
 //   2. PowerDown:Power down base process(PowerDown.c).
@@ -439,7 +445,7 @@ void App_PowerDown(void)
 {
 	App_StopRecognize();
 	App_StopPlay();
-	
+
 	#if(POWERDOWN_ENABLE)
 	PowerDown_Enter();
 	PowerDown();
@@ -447,15 +453,15 @@ void App_PowerDown(void)
 	#endif
 	// Initiate the audio playback.
 	Playback_Initiate();
-	
+
 	// Initiate the buffer control from MIC.
 	MicGetApp_Initiate(&g_sApp.Mic_MD4.sMicGetApp);
-	
+
 	App_StartRecognize();
-	
+
 //	if (g_sApp.u8VRModelID == ISD9160C_Demo_Group1_pack)
 //		OUT1(0);
 //	else
 //		OUT2(0);
-	
+
 }

@@ -1,21 +1,12 @@
-char * AudioResStr[] ={"Xiao Feng Tong Xue ",
-					"Kai Feng Shan ",
-					"Guan Feng Shan ",
-					"Qing Yao Tou ",
-					"Guan Yao Tou ",
-					"Di Su Feng ",
-					"Zhong Su Feng ",
-					"Gao Su Feng ",
-					"Ding Shi She Zhi ",
-					"Jia Ding Shi Shi Jian ",
-					"Jian Ding Shi Shi Jian ",
-					"Ding Shi Guan Bi ",
-					"Kai Fu Li Zi ",
-					"Guan Fu Li Zi ",
-					"Kai Cai Deng ",
-					"Guan Cai Deng ",
-					"Shui Mian Feng ",
-					"Zi Ran Feng "};
+char * AudioResStr[] ={"Zhi Neng Dian Shan ",
+					"Da Kai Dian Shan ",
+					"Guan Bi Dian Shan ",
+					"Da Kai Yao Tou ",
+					"Guan Bi Yao Tou ",
+					"Zeng Jia Feng Liang ",
+					"Jian Shao Feng Liang ",
+					"Zeng Jia Ding Shi ",
+					"Jian Shao Ding Shi "};
 /*
 char * AudioResStrCHS[] ={"小丰同学 ",
 					"开风扇 ",
@@ -41,20 +32,10 @@ char * AudioOptStr[] ={"Wake Up! ",
 					"Fan Off! ",
 					"Wave Start! ",
 					"Wave Stop! ",
-					"Low Speed! ",
-					"Mid Speed! ",
-					"High Speed! ",
-					"Add Timer! ",
+					"Speed Up! ",
+					"Speed Down! ",
 					"Timer ++! ",
-					"Timer --! ",
-					"Close Timer! ",
-					"Anion On! ",
-					"Anion Off! ",
-					"Light On! ",
-					"Light Off! ",
-					"Sleep Mode! ",
-					"Natural Wind! "};
+					"Timer --! "};
 
 
-#define MAXIDNUM 17
-
+#define MAXIDNUM 8
