@@ -290,51 +290,89 @@ void App_Process(void)
 					break;
 					case 3:	//请摇头
 						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | WAVEON);
-						// DrvGPIO_SetBit(PA, 5);
 						//printf("Wave start!\n");
 						//App_StartPlay(3);
 					break;
 					case 4:	//关摇头
 						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~WAVEON));
-						// DrvGPIO_ClrBit(PA, 5);
 						//printf("Wave stop!\n");
 						//App_StartPlay(4);
 					break;
 					case 5://增加风量
 						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | WINDUP);
 						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~WINDDOWN));
-						/*pwm1.Breath_light =0;
-						pwm1.period =200;
-						pwm1.Duty =0;
-						PWM_Start(PWM0, 0x2);*/
-						//printf("Low Speed!\n");
+					  	if (USE_PWM1)
+					  	{
+							pwm1.Breath_light =0;
+							pwm1.Duty /= 10;
+							pwm1.Duty *= 10;
+							if(pwm1.Duty < pwm1.period)	//已调暗
+							{
+								PWM_Start(PWM0, 0x2);
+								pwm1.Duty += PWM_STEP;
+								if(pwm1.Duty > PWM_HIGH)	
+									pwm1.Duty= PWM_HIGH;
+							//App_StartPlay(9);
+							}
+					  	}
+						//printf("Wind Speed Up!\n");
 					break;
 					case 6://减少风量
 						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | WINDDOWN);
 						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~WINDUP));
-						/*pwm1.Breath_light =0;
-						pwm1.period =200;
-						pwm1.Duty =50;
-						PWM_Start(PWM0, 0x2);*/
-						//printf("Mid Speed!\n");
+					  	if (USE_PWM1)
+					  	{
+							pwm1.Breath_light =0;
+							pwm1.Duty /= 10;
+							pwm1.Duty *= 10;
+							if(pwm1.Duty)	//已调亮
+							{
+								PWM_Start(PWM0, 0x2);
+								pwm1.Duty -= PWM_STEP;
+								if(pwm1.Duty < PWM_LOW)	
+									pwm1.Duty = PWM_LOW;
+								//App_StartPlay(10);
+							}
+						}
+						//printf("Wind Speed Down!\n");
 					break;
 					case 7://增加定时
 						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | TIMEADD);
 						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~TIMESUB));
-						/*pwm1.Breath_light =0;
-						pwm1.period =200;
-						pwm1.Duty =0;
-						PWM_Start(PWM0, 0x2);*/
-						//printf("Low Speed!\n");
+					  	if (USE_PWM0)
+					  	{
+							pwm0.Breath_light =0;
+							pwm0.Duty /= 10;
+							pwm0.Duty *= 10;
+							if(pwm0.Duty < pwm0.period)	//已调暗
+							{
+								PWM_Start(PWM0, 0x1);
+								pwm0.Duty += PWM_STEP;
+								if(pwm0.Duty > PWM_HIGH)	pwm0.Duty= PWM_HIGH;
+								//App_StartPlay(9);
+							}
+						}
+						//else App_StartPlay(9); //已最暗
+						//printf("Timer ++!\n");
 					break;
 					case 8://减少定时
 						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | TIMESUB);
 						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~TIMEADD));
-						/*pwm1.Breath_light =0;
-						pwm1.period =200;
-						pwm1.Duty =50;
-						PWM_Start(PWM0, 0x2);*/
-						//printf("Mid Speed!\n");
+					  	if (USE_PWM0)
+					  	{
+							pwm0.Breath_light =0;
+							pwm0.Duty /= 10;
+							pwm0.Duty *= 10;
+							if(pwm0.Duty)	//已调亮
+							{
+								PWM_Start(PWM0, 0x1);
+								pwm0.Duty -= PWM_STEP;
+								if(pwm0.Duty < PWM_LOW)	pwm0.Duty = PWM_LOW;
+								//App_StartPlay(10);
+							}
+						}
+						//else App_StartPlay(10); //已最亮
+						//printf("Timer --!\n");
 					break;
 /*					case 8://定时设置
 						pwm0.Breath_light =0;

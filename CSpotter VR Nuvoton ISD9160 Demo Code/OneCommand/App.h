@@ -121,6 +121,8 @@ typedef struct		//
 #define PWM_PERIOD 200
 #define PWM_DUTY_INIT 100
 #define PWM_RATE 30000
+#define USE_PWM0 1
+#define USE_PWM1 1
 
 #define FANON BIT15
 #define WAVEON BIT14
