@@ -262,7 +262,7 @@ void App_Process(void)
 
 			if(i32ID==0)	//唤醒词：小丰同学
 			{
-				vr_time=10000;
+				vr_time=VRTIME;
 				App_StartPlay(0);	//播放回答声音
 				printf("\n");
 				printf("Command is : %s\n", AudioResStr[i32ID]);
@@ -270,7 +270,7 @@ void App_Process(void)
 			}
 			else if(vr_time)	//在唤醒计时内
 			{
-				vr_time=10000;
+				vr_time=VRTIME;
 				if (i32ID <= MAXIDNUM)
 				{
 					printf("Command is : %s\n", AudioResStr[i32ID]);
@@ -279,12 +279,16 @@ void App_Process(void)
 				{
 					case 1:	//开风扇
 						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | FANON);
+						pwm1.Duty = PWM_DUTY_INIT;
+						pwm0.Duty = PWM_DUTY_INIT;
 						//printf("Fan on!\n");
 						//App_StartPlay(1);
 					break;
 					case 2:	//关风扇
 						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~FANON));
 						GPIO_SET_OUT_DATA(PA, 0);
+						pwm1.Duty = 0;
+						pwm0.Duty = 0;
 						//printf("Fan off!\n");
 						//App_StartPlay(2);
 					break;
@@ -304,8 +308,8 @@ void App_Process(void)
 					  	if (USE_PWM1)
 					  	{
 							pwm1.Breath_light =0;
-							pwm1.Duty /= 10;
-							pwm1.Duty *= 10;
+							pwm1.Duty /= PWM_INT;
+							pwm1.Duty *= PWM_INT;
 							if(pwm1.Duty < pwm1.period)	//已调暗
 							{
 								PWM_Start(PWM0, 0x2);
@@ -323,8 +327,8 @@ void App_Process(void)
 					  	if (USE_PWM1)
 					  	{
 							pwm1.Breath_light =0;
-							pwm1.Duty /= 10;
-							pwm1.Duty *= 10;
+							pwm1.Duty /= PWM_INT;
+							pwm1.Duty *= PWM_INT;
 							if(pwm1.Duty)	//已调亮
 							{
 								PWM_Start(PWM0, 0x2);
@@ -342,8 +346,8 @@ void App_Process(void)
 					  	if (USE_PWM0)
 					  	{
 							pwm0.Breath_light =0;
-							pwm0.Duty /= 10;
-							pwm0.Duty *= 10;
+							pwm0.Duty /= PWM_INT;
+							pwm0.Duty *= PWM_INT;
 							if(pwm0.Duty < pwm0.period)	//已调暗
 							{
 								PWM_Start(PWM0, 0x1);
@@ -361,8 +365,8 @@ void App_Process(void)
 					  	if (USE_PWM0)
 					  	{
 							pwm0.Breath_light =0;
-							pwm0.Duty /= 10;
-							pwm0.Duty *= 10;
+							pwm0.Duty /= PWM_INT;
+							pwm0.Duty *= PWM_INT;
 							if(pwm0.Duty)	//已调亮
 							{
 								PWM_Start(PWM0, 0x1);

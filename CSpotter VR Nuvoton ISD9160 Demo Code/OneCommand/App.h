@@ -115,11 +115,13 @@ typedef struct		//
 	uint8_t Breath_light; //ºôÎüµÆÊ¹ÄÜ
 }pwm_type;
 
-#define PWM_STEP 30
-#define PWM_LOW 40
-#define PWM_HIGH 190
-#define PWM_PERIOD 200
-#define PWM_DUTY_INIT 100
+#define MUL 10
+#define PWM_INT 10*MUL
+#define PWM_STEP 50*MUL
+#define PWM_LOW 50*MUL
+#define PWM_HIGH 200*MUL
+#define PWM_PERIOD 200*MUL
+#define PWM_DUTY_INIT 100*MUL
 #define PWM_RATE 30000
 #define USE_PWM0 1
 #define USE_PWM1 1
@@ -138,6 +140,8 @@ typedef struct		//
 #define SLEEPWIND BIT11
 #define NATURALWIND BIT10
 #define TIMERON BIT12
+
+#define VRTIME 10000
 
 #endif //#ifndef _APP_H_
 

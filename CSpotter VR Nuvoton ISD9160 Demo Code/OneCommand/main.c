@@ -103,30 +103,31 @@ void UART_Init(void)
 	SYS->GPA_MFP  = (SYS->GPA_MFP & (~SYS_GPA_MFP_PA8MFP_Msk) ) | SYS_GPA_MFP_PA8MFP_UART_TX;
 	SYS->GPA_MFP  = (SYS->GPA_MFP & (~SYS_GPA_MFP_PA9MFP_Msk) ) | SYS_GPA_MFP_PA9MFP_UART_RX;
 	
-	CLK_EnableModuleClock(UART_MODULE);//Ê¹ÄÜUARTÍâÉèÊ±ÖÓ
+	CLK_EnableModuleClock(UART_MODULE);//ä½¿èƒ½UARTå¤–è®¾æ—¶é’Ÿ
 	
   UART_Open(UART0, 115200);
 	UART_ClearIntFlag(UART0,UART_INTSTS_BUFERRINT_Msk);
 	UART_ClearIntFlag(UART0,UART_INTSTS_RLSINT_Msk);
 	UART_ClearIntFlag(UART0,UART_INTSTS_MODEMINT_Msk);
 	UART_ClearIntFlag(UART0,UART_INTSTS_RXTOINT_Msk);
-	UART0->INTEN |=(1<<0); //Ê¹ÄÜ½ÓÊÕÖÐ¶Ï
+	UART0->INTEN |=(1<<0); //ä½¿èƒ½æŽ¥æ”¶ä¸­æ–­
   NVIC_EnableIRQ(UART0_IRQn);                      ////modify 20170804 
 }
 
 void pwm_init(void)
 {
 	pwm0.period = PWM_PERIOD;
-	pwm0.Duty = PWM_DUTY_INIT;
-  	if (USE_PWM0)
+	pwm0.rate = PWM_RATE;
+	pwm0.Duty = 0;
+/*  	if (USE_PWM0)
   	{
-		pwm0.rate = PWM_RATE;
+		pwm0.Duty = PWM_DUTY_INIT;
 	}
 	else
 	{
 		pwm0.Duty = 0;
 	}
-	
+*/	
 
 	CLK_SetModuleClock(PWM0_MODULE, CLK_CLKSEL1_PWM0CH01SEL_HCLK, 0);
 	CLK_EnableModuleClock(PWM0_MODULE);
@@ -147,8 +148,8 @@ void pwm_init(void)
   	if (USE_PWM1)
   	{
 		pwm1.period = PWM_PERIOD;
-		pwm1.Duty = PWM_DUTY_INIT;
-		// pwm1.Duty = 0;
+		// pwm1.Duty = PWM_DUTY_INIT;
+		pwm1.Duty = 0;
 		pwm1.rate = PWM_RATE;
 		PWM_DisableDeadZone(PWM0, 0);
 		// Set GPA multi-function pins for PWM0 Channel1
@@ -190,7 +191,7 @@ void pwm_init_1(void)
 
 void time_init(void)
 {
-	CLK_EnableModuleClock(TMR0_MODULE);  //Ê¹ÄÜtime0ÍâÉèÊ±ÖÓ
+	CLK_EnableModuleClock(TMR0_MODULE);  //ä½¿èƒ½time0å¤–è®¾æ—¶é’Ÿ
 	CLK_SetModuleClock(TMR0_MODULE, CLK_CLKSEL1_TMR0SEL_HCLK, 0);   /////modify 20170804
 	TIMER_Open(TIMER0, TIMER_PERIODIC_MODE, 1000);
 	NVIC_EnableIRQ(TMR0_IRQn);
@@ -250,14 +251,14 @@ void UART0_IRQHandler(void)   ////modify 20170804
 	uint32_t  u32IntStatus;
 	u32IntStatus= UART0->INTSTS;
 	
-if(u32IntStatus & (1<<0))	//½ÓÊÕÖÐ¶Ï
+if(u32IntStatus & (1<<0))	//æŽ¥æ”¶ä¸­æ–­
 	{
 		ap_uart0.uart_rx_data[ap_uart0.uart_rx_len] = UART0->DAT;
-		if((ap_uart0.uart_rx_len+1) <UART_DA)	ap_uart0.uart_rx_len ++;	//Ô¤·ÀÔ½½ç
+		if((ap_uart0.uart_rx_len+1) <UART_DA)	ap_uart0.uart_rx_len ++;	//é¢„é˜²è¶Šç•Œ
 		
 		ap_uart0.uart_rx_time = UART_TT;
 	}
-	else if(u32IntStatus & (1<<1))	//·¢ËÍ»º³å¿ÕÖÐ¶Ï
+	else if(u32IntStatus & (1<<1))	//å‘é€ç¼“å†²ç©ºä¸­æ–­
 	{
 		UART0->INTEN &= ~(1<<1);     /////THREIEN
 		if(ap_uart0.uart_tx_len)
@@ -270,7 +271,7 @@ if(u32IntStatus & (1<<0))	//½ÓÊÕÖÐ¶Ï
 		else
 		{
 			ap_uart0.uart_tx_per =0;
-			UART0->INTEN &= ~(1<<1);		//·¢ËÍÍê±Ï£¬¹Ø±Õ·¢ËÍÖÐ¶Ï
+			UART0->INTEN &= ~(1<<1);		//å‘é€å®Œæ¯•ï¼Œå…³é—­å‘é€ä¸­æ–­
 			//UART0->INTEN |=(1<<1);
 		}
 	}
@@ -288,19 +289,19 @@ void uart_send(uint8_t *dara, uint16_t len)
 	ap_uart0.uart_tx_len =len;
 	if(ap_uart0.uart_tx_len==0)	return;
 	while((g_pUART->FIFOSTS &(1<<22)) == 0)	;
-	g_pUART->DAT= ap_uart0.uart_tx_data[0];//·¢ËÍ
+	g_pUART->DAT= ap_uart0.uart_tx_data[0];//å‘é€
 	ap_uart0.uart_tx_per++;
 	ap_uart0.uart_tx_len --;
-	UART0->INTEN |=(1<<1);	//´ò¿ª·¢ËÍÖÐ¶Ï
+	UART0->INTEN |=(1<<1);	//æ‰“å¼€å‘é€ä¸­æ–­
 }
 
 
 void uart_rev_task(void)
 {
-	if((ap_uart0.uart_rx_time==0)&&(ap_uart0.uart_rx_len))//ÓÐ½ÓÊÕµ½Êý¾Ý
+	if((ap_uart0.uart_rx_time==0)&&(ap_uart0.uart_rx_len))//æœ‰æŽ¥æ”¶åˆ°æ•°æ®
 	{
 
-		//uart_send(ap_uart0.uart_rx_data	, ap_uart0.uart_rx_len);	//·¢ËÍ½ÓÊÕµ½µÄÊý¾Ý
+		//uart_send(ap_uart0.uart_rx_data	, ap_uart0.uart_rx_len);	//å‘é€æŽ¥æ”¶åˆ°çš„æ•°æ®
 
 		ap_uart0.uart_rx_len =0;
 	}
@@ -393,11 +394,11 @@ INT32 main()
 	while (1)
 	{
 		
-		App_Process();	//ÓïÒôÊ¶±ð
-		uart_rev_task();	//uartÈÎÎñ
+		App_Process();	//è¯­éŸ³è¯†åˆ«
+		uart_rev_task();	//uartä»»åŠ¡
 		
 		
-		//if((g_u8AppCtrl & APPCTRL_PLAY)==0)	 App_StartPlay(1);	//ÅÐ¶Ïµ±Ç°ÊÇ·ñ²¥·ÅÍê±Ï
+		//if((g_u8AppCtrl & APPCTRL_PLAY)==0)	 App_StartPlay(1);	//åˆ¤æ–­å½“å‰æ˜¯å¦æ’­æ”¾å®Œæ¯•
 		
 		
 //		TRIGGER_KEY_CHECK();		// Check and execute direct trigger key actions defined in "InputKeyActions.c"
