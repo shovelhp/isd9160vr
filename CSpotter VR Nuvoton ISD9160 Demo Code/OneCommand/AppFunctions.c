@@ -238,6 +238,10 @@ void App_Process(void)
 //	static BOOL VR_flag = FALSE;
 
 	// Play response
+	if (vr_time<=0)
+	{
+		GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~VRTIMELED));
+	}
 	if( g_u8AppCtrl&APPCTRL_PLAY )
 	{
 		if (MD4App_DecodeProcess(&g_sApp.Mic_MD4.asMD4App) == FALSE )
@@ -263,6 +267,7 @@ void App_Process(void)
 			if(i32ID==0)	//唤醒词：小丰同学
 			{
 				vr_time=VRTIME;
+				GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | VRTIMELED);
 				App_StartPlay(0);	//播放回答声音
 				printf("\n");
 				printf("Command is : %s\n", AudioResStr[i32ID]);
@@ -314,8 +319,8 @@ void App_Process(void)
 							{
 								PWM_Start(PWM0, 0x2);
 								pwm1.Duty += PWM_STEP;
-								if(pwm1.Duty > PWM_HIGH)	
-									pwm1.Duty= PWM_HIGH;
+								if(pwm1.Duty >= PWM_HIGH)	
+									pwm1.Duty = PWM_HIGH;
 							//App_StartPlay(9);
 							}
 					  	}
@@ -332,9 +337,10 @@ void App_Process(void)
 							if(pwm1.Duty)	//已调亮
 							{
 								PWM_Start(PWM0, 0x2);
-								pwm1.Duty -= PWM_STEP;
-								if(pwm1.Duty < PWM_LOW)	
+								if(pwm1.Duty <= PWM_LOW)	
 									pwm1.Duty = PWM_LOW;
+								else
+									pwm1.Duty -= PWM_STEP;
 								//App_StartPlay(10);
 							}
 						}
@@ -352,7 +358,8 @@ void App_Process(void)
 							{
 								PWM_Start(PWM0, 0x1);
 								pwm0.Duty += PWM_STEP;
-								if(pwm0.Duty > PWM_HIGH)	pwm0.Duty= PWM_HIGH;
+								if(pwm0.Duty >= PWM_HIGH)	
+									pwm0.Duty = PWM_HIGH;
 								//App_StartPlay(9);
 							}
 						}
@@ -370,8 +377,10 @@ void App_Process(void)
 							if(pwm0.Duty)	//已调亮
 							{
 								PWM_Start(PWM0, 0x1);
-								pwm0.Duty -= PWM_STEP;
-								if(pwm0.Duty < PWM_LOW)	pwm0.Duty = PWM_LOW;
+								if(pwm0.Duty <= PWM_LOW)	
+									pwm0.Duty = PWM_LOW;
+								else
+									pwm0.Duty -= PWM_STEP;
 								//App_StartPlay(10);
 							}
 						}
@@ -468,7 +477,6 @@ void App_Process(void)
 
 		}
 	}
-
 }
 
 

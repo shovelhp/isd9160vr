@@ -117,9 +117,9 @@ typedef struct		//
 
 #define MUL 10
 #define PWM_INT 10*MUL
-#define PWM_STEP 50*MUL
-#define PWM_LOW 50*MUL
-#define PWM_HIGH 200*MUL
+#define PWM_STEP 30*MUL
+#define PWM_LOW 10*MUL
+#define PWM_HIGH 100*MUL
 #define PWM_PERIOD 200*MUL
 #define PWM_DUTY_INIT 100*MUL
 #define PWM_RATE 30000
@@ -142,6 +142,7 @@ typedef struct		//
 #define TIMERON BIT12
 
 #define VRTIME 10000
+#define VRTIMELED BIT10
 
 #endif //#ifndef _APP_H_
 
