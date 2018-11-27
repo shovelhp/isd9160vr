@@ -55,6 +55,7 @@ volatile UINT8 g_u8Con_Spk;
 
 extern pwm_type pwm0;
 extern pwm_type pwm1;
+extern uint8_t Fan_Stauts;
 
 
 //---------------------------------------------------------------------------------------------------------
@@ -87,6 +88,7 @@ void App_Initiate(void)
 
 	g_sApp.u32AudioStartAddr=0;
 
+	Fan_Stauts = FAN_CLOSED;
 
 //	SPIFlash_ReadDataCallback((PUINT8) &g_sApp.u32AudioStartAddr, 8 + (8*AudioRes_AudioInfoMerge), 4);
 	// Read VR model start address in SPIFlash
@@ -264,17 +266,41 @@ void App_Process(void)
 				// Stop mic before play response
 				//MicGetApp_StopRec(&g_sApp.Mic_MD4.sMicGetApp);
 
-			if(i32ID==0)	//唤醒词：小丰同学
+			if(i32ID==0)	//唤醒词：智能电扇
 			{
-				vr_time=VRTIME;
+				if(Fan_Stauts == FAN_RUNING)
+				{
+					vr_time=VRTIME;
+					App_StartPlay(0);	//播放回答声音
+				}
+				else
+				{
+					vr_time=VRTIMEON;
+				}
 				GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | VRTIMELED);
-				App_StartPlay(0);	//播放回答声音
 				printf("\n");
 				printf("Command is : %s\n", AudioResStr[i32ID]);
 				printf("%s\n", AudioOptStr[i32ID]);
 			}
 			else if(vr_time)	//在唤醒计时内
 			{
+				if(Fan_Stauts == FAN_CLOSED)
+				{
+					if (i32ID == 1)
+					{
+						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | FANON);
+						pwm1.Duty = PWM_DUTY_INIT;
+						pwm0.Duty = PWM_DUTY_INIT;
+						//printf("Fan on!\n");
+						//App_StartPlay(1);
+						printf("Command is : %s\n", AudioResStr[i32ID]);
+						SendCMD(i32ID);
+						Fan_Stauts = FAN_RUNING;
+						vr_time = 0;
+					}
+				}
+				else
+				{
 				vr_time=VRTIME;
 				if (i32ID <= MAXIDNUM)
 				{
@@ -282,22 +308,25 @@ void App_Process(void)
 				}
 				switch(i32ID)
 				{
-					case 1:	//开风扇
+/*					case 1:	//开风扇
 						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | FANON);
 						pwm1.Duty = PWM_DUTY_INIT;
 						pwm0.Duty = PWM_DUTY_INIT;
 						//printf("Fan on!\n");
 						//App_StartPlay(1);
-					break;
+					break;*/
 					case 2:	//关风扇
 						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~FANON));
-						GPIO_SET_OUT_DATA(PA, 0);
+						//GPIO_SET_OUT_DATA(PA, 0);
 						pwm1.Duty = 0;
 						pwm0.Duty = 0;
+						vr_time = 0;
+						SendCMD(i32ID);
+						Fan_Stauts = FAN_CLOSED;
 						//printf("Fan off!\n");
 						//App_StartPlay(2);
 					break;
-					case 3:	//请摇头
+/*					case 3:	//请摇头
 						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | WAVEON);
 						//printf("Wave start!\n");
 						//App_StartPlay(3);
@@ -386,7 +415,7 @@ void App_Process(void)
 						}
 						//else App_StartPlay(10); //已最亮
 						//printf("Timer --!\n");
-					break;
+					break;*/
 /*					case 8://定时设置
 						pwm0.Breath_light =0;
 						pwm0.period = PWM_PERIOD;
@@ -461,13 +490,14 @@ void App_Process(void)
 						//printf("natural Wind!\n");
 					break;
 */					default:
-						App_StartPlay(i32ID);//播放对应回应声音
+						//App_StartPlay(i32ID);//播放对应回应声音
 						printf("%s\n", AudioResStr[i32ID]);//串口打印命令内容
 					//break;
 				}
+			}
 				if (i32ID <= MAXIDNUM)
 				{
-					App_StartPlay(i32ID);
+					//App_StartPlay(i32ID);
 					printf("%s\n", AudioOptStr[i32ID]);
 				}
 				//if(i32ID < 11)	 App_StartPlay(i32ID+1);	//播放
@@ -514,4 +544,11 @@ void App_PowerDown(void)
 //	else
 //		OUT2(0);
 
+}
+
+void SendCMD(uint8_t CMDid)
+{
+	App_StartPlay(CMDid);
+	printf("%s\n", AudioOptStr[CMDid]);
+	return;
 }

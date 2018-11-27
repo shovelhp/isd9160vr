@@ -54,6 +54,7 @@ static UART_T	*g_pUART = UART0;                              /////modify 2017080
 uart_type ap_uart0;
 pwm_type pwm0;
 pwm_type pwm1;
+UINT8 Fan_Stauts = 0;
 
 UINT8 SPIFlash_Initiate(void)
 { 

@@ -143,6 +143,12 @@ typedef struct		//
 
 #define VRTIME 10000
 #define VRTIMELED BIT10
+#define VRTIMEON 5000
+
+#define FAN_RUNING 1
+#define FAN_CLOSED 0
+
+void SendCMD(uint8_t CMDid);
 
 #endif //#ifndef _APP_H_
 
