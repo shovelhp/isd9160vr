@@ -12,6 +12,7 @@
 #include "Keypad.h"
 #include "ConfigIO.h"
 #include "ConfigIP.h"
+#include "App.h"
 
 DECLARE_MATRIX_KEY()
 
@@ -83,6 +84,7 @@ void OutputPin_Initiate(void)
 	GPIO_SetMode(PA, OUTPUT_PORTA_PINS_MASK,GPIO_MODE_OUTPUT);
 	GPIO_SetMode(PB, OUTPUT_PORTB_PINS_MASK,GPIO_MODE_OUTPUT);
 	GPIO_SET_OUT_DATA(PA, 0);
+	GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | SCMDLINE);
 }
 
 void OutputPin_Set(GPIO_T *pPort, UINT16 u16PinMask, UINT8 u8Value)

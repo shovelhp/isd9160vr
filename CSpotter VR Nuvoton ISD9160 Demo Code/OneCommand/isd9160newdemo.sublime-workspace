@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"uint",
+				"uint8_t"
+			],
+			[
+				"cmd",
+				"CMDid"
+			],
+			[
+				"uin",
+				"uint8_t"
+			],
+			[
 				"Fan",
 				"Fan_Stauts"
 			],
@@ -104,16 +116,8 @@
 				"default"
 			],
 			[
-				"uint",
-				"uint8_t"
-			],
-			[
 				"cha",
 				"changetype"
-			],
-			[
-				"uin",
-				"uint8_t"
 			],
 			[
 				"un",
@@ -510,10 +514,6 @@
 			[
 				"fre_",
 				"fre_delta"
-			],
-			[
-				"r_ppm",
-				"r_ppm_esti_data_in"
 			]
 		]
 	},
@@ -527,7 +527,6 @@
 			"settings":
 			{
 				"buffer_size": 12095,
-				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -535,7 +534,7 @@
 			"file": "AppFunctions.c",
 			"settings":
 			{
-				"buffer_size": 15251,
+				"buffer_size": 17130,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -599,20 +598,31 @@
 	"expanded_folders":
 	[
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code",
-		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library",
-		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver",
-		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/src",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand"
 	],
 	"file_history":
 	[
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/inc/Framework.h",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/src/ConfigIO.c",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/AppFunctions.c",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/Powerdown.c",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/src/clk.c",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Device/Nuvoton/ISD9100/Include/system_ISD9100.h",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/App.h.dump",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/App.h",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/inc/gpio.h",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/src/timer.c",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/ConfigSysClk.h",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/src/SysClk.c",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Device/Nuvoton/ISD9100/Source/system_ISD9100.c",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Device/Nuvoton/ISD9100/Include/ISD9100.h",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/inc/timer.h",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/inc/clk.h",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/inc/SysClk.h",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/AppCallback.c",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Storage/inc/SPIFlash.h",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/src/AudioRom.c",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/MD4App/MD4App.c",
-		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Device/Nuvoton/ISD9100/Include/ISD9100.h",
 		"/E/shovelhpwork/hinoc/id_rsa.lyuyi.pub",
 		"/E/shovelhpwork/hinoc/interface_128M/interface/cache.v",
 		"/E/shovelhpwork/hinoc/interface_128M/interface/interface_top.v",
@@ -622,8 +632,6 @@
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/inc/pwm.h",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/main.c",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/AudioRes/Output/AudioResText.h",
-		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/inc/clk.h",
-		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/src/clk.c",
 		"/C/Nuvoton/ISD91XX_SDK/NuvotonPlatform_Keil/Sample/Driver/Smpl_DrvPWM/Smpl_DrvPWM.c",
 		"/C/Nuvoton ISD9100 SDS/V5.02.001/SampleCode/StdDriver/PWM/KEIL/startup_ISD9100.s",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/ConfigUltraIO.h",
@@ -721,19 +729,7 @@
 		"/Z/ghp/Dr/amcc/logPON/sweep_cl15to30_ratio18to30_rate100to500_len16x_nofec.log",
 		"/Z/ghp/Dr/amcc/logAMCC/sweep_amcc_fec_rcos_speed.log",
 		"/Z/ghp/Dr/amcc/logPON/testdata2.txt",
-		"/Z/ghp/Dr/amcc/logPON/testdata.txt",
-		"/R/PON1/SCFDE_PON_SSB.vtmu_pack/Reports/sweep_ratio_20to50_lpf_1to3_len8x4096x32_newlaser.log",
-		"/Z/ghp/Dr/amcc/logPON/sweep_power_ratio_len4096x32_newlaser.log",
-		"/Z/ghp/Dr/amcc/logPON/vpilogtodata.m",
-		"/Z/ghp/Dr/amcc/logPON/sweep_ratio_20to50_len32x4096x32.log",
-		"/Z/ghp/Dr/amcc/logAMCC/sweep_ratio_20to50_lpf_1to3_len4096x32.log",
-		"/E/shovelhpwork/Dr/amcc/sweep_ratio_30to50.log",
-		"/F/softwares/专业软件/Matlab2015a/matlab_crack/license_standalone.lic",
-		"/Z/Tools/Linux/Matlab/Mathworks.Matlab.R2012a.UNIX.ISO-TBE/tbe.nfo",
-		"/E/shovelhpwork/matlab/amcc/PON/SCFDE/Rx_SCFDE/Rx_SCFDE.m",
-		"/E/shovelhpwork/matlab/amcc/PON/SCFDE/Rx_SCFDE/Frm_Sync.m",
-		"/E/shovelhpwork/matlab/amcc/PON/SCFDE/AMCC/genrandidata.m",
-		"/E/shovelhpwork/matlab/amcc/PON/SCFDE/AMCC/amccdecode.m"
+		"/Z/ghp/Dr/amcc/logPON/testdata.txt"
 	],
 	"find":
 	{
@@ -785,19 +781,19 @@
 						"selection":
 						[
 							[
-								9017,
-								9017
+								9777,
+								9777
 							]
 						],
 						"settings":
 						{
-							"is_init_dirty_state": false,
+							"is_init_dirty_state": true,
 							"origin_encoding": "UTF-8",
 							"syntax": "Packages/C++/C.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 5301.0,
+						"translation.y": 5598.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -809,26 +805,24 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 15251,
+						"buffer_size": 17130,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7739,
-								7739
+								367,
+								367
 							]
 						],
 						"settings":
 						{
-							"is_init_dirty_state": false,
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/C++/C++.tmLanguage",
+							"syntax": "Packages/C++/C.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3779.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

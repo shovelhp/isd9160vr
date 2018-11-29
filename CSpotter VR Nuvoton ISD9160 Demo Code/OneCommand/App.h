@@ -140,6 +140,7 @@ typedef struct		//
 #define SLEEPWIND BIT11
 #define NATURALWIND BIT10
 #define TIMERON BIT12
+#define SCMDLINE BIT11
 
 #define VRTIME 10000
 #define VRTIMELED BIT10
@@ -148,7 +149,19 @@ typedef struct		//
 #define FAN_RUNING 1
 #define FAN_CLOSED 0
 
-void SendCMD(uint8_t CMDid);
+#define MSCNT 48000
+#define USCNT 48
+
+void delay1p25ms(void);
+void delayms(uint32_t ms);
+//void delayus(uint32_t us);
+//void delay50us(void);
+void SendCMDByte(uint8_t u8CMDByte);
+void SendCMD(uint16_t u16CMDforMCU);
+
+#define SET_GPIO_PA_BIT_HIGH(sbit)	GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | sbit);
+#define SET_GPIO_PA_BIT_LOW(sbit)	GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~sbit));
+
 
 #endif //#ifndef _APP_H_
 

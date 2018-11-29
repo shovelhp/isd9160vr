@@ -237,6 +237,7 @@ void App_Process(void)
 	INT16 *pi16BuffAddr;
 
 	UINT16 u16GetSamples = 0;
+	uint16_t u16CMDforMCU = 0;
 //	static BOOL VR_flag = FALSE;
 
 	// Play response
@@ -294,9 +295,12 @@ void App_Process(void)
 						//printf("Fan on!\n");
 						//App_StartPlay(1);
 						printf("Command is : %s\n", AudioResStr[i32ID]);
-						SendCMD(i32ID);
+						u16CMDforMCU = i32ID;
+						SendCMD(u16CMDforMCU);
 						Fan_Stauts = FAN_RUNING;
 						vr_time = 0;
+						App_StartPlay(i32ID);
+						printf("%s\n", AudioOptStr[i32ID]);
 					}
 				}
 				else
@@ -321,8 +325,11 @@ void App_Process(void)
 						pwm1.Duty = 0;
 						pwm0.Duty = 0;
 						vr_time = 0;
-						SendCMD(i32ID);
+						u16CMDforMCU = i32ID;
+						SendCMD(u16CMDforMCU);
 						Fan_Stauts = FAN_CLOSED;
+						App_StartPlay(i32ID);
+						printf("%s\n", AudioOptStr[i32ID]);
 						//printf("Fan off!\n");
 						//App_StartPlay(2);
 					break;
@@ -546,9 +553,102 @@ void App_PowerDown(void)
 
 }
 
-void SendCMD(uint8_t CMDid)
+void delay1p25ms(void)
 {
-	App_StartPlay(CMDid);
-	printf("%s\n", AudioOptStr[CMDid]);
+	uint32_t loopi = 0;
+	uint32_t loopj = 0;
+	for (loopi = 0; loopi < 1250; ++loopi)
+	{
+		for (loopj = 0; loopj < USCNT; ++loopj);
+	}
 	return;
 }
+
+void delayms(uint32_t ms)
+{
+	uint32_t loopi = 0;
+	uint32_t loopj = 0;
+	for (loopi = 0; loopi < ms; ++loopi)
+	{
+		for (loopj = 0; loopj < MSCNT; ++loopj);
+	}
+	return;
+}
+
+/*
+void delayms(uint32_t ms)
+{
+	uint32_t SysFreq = CLK_GetHCLKFreq() / 1000;
+	uint32_t count = ms * SysFreq;
+	for (loopi = 0; loopi < count; ++loopi);
+	return;
+}
+*/
+/*
+void delayus(uint32_t us)
+{
+	uint32_t loopi = 0;
+	for (loopi = 0; loopi < us; ++loopi)
+	{
+		for (loopj = 0; loopj < USCNT; ++loopj)
+		{
+			// code 
+		}
+	}
+	return;
+}
+
+void delay50us(void)
+{
+	uint32_t loopi = 0;
+	for (loopi = 0; loopi < 50; ++loopi)
+	{
+		for (loopj = 0; loopj < USCNT; ++loopj)
+		{
+			// code 
+		}
+	}
+	return;
+}
+*/
+
+
+void SendCMDByte(uint8_t u8CMDByte)
+{
+	uint32_t loopi = 0;
+	GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | SCMDLINE);
+	delay1p25ms();
+	GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~SCMDLINE));
+	delayms(20);
+	GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | SCMDLINE);
+	delay1p25ms();
+	for(loopi = 0; loopi < 8; ++loopi)
+	{
+		GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~SCMDLINE));
+		delay1p25ms();
+		if (u8CMDByte && 0x1)
+		{
+			delay1p25ms();
+		}
+		GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | SCMDLINE);
+		delay1p25ms();
+		u8CMDByte = u8CMDByte >> 1;
+	}
+		delay1p25ms();
+	return;
+}
+
+void SendCMD(uint16_t u16CMDforMCU)
+{
+	uint8_t u8CMD0 = 0;
+	uint8_t u8CMD1 = 0;
+	uint8_t u8CRC = 0;
+	u8CMD0 = (u16CMDforMCU & 0x0F) | (0xC0) | (1 << 4);
+	SendCMDByte(u8CMD0);
+	u8CMD1 = ((u16CMDforMCU >> 8) & 0x0F) | (0xC0) | (2 << 4);
+	SendCMDByte(u8CMD1);
+	u8CRC = u8CMD0 + u8CMD1;
+	SendCMDByte(u8CRC);
+	return;
+}
+
