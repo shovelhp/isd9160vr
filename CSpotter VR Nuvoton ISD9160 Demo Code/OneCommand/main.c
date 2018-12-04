@@ -54,7 +54,7 @@ static UART_T	*g_pUART = UART0;                              /////modify 2017080
 uart_type ap_uart0;
 pwm_type pwm0;
 pwm_type pwm1;
-UINT8 Fan_Stauts = 0;
+uint8_t flag_1p25 = 0;
 
 UINT8 SPIFlash_Initiate(void)
 { 
@@ -199,6 +199,12 @@ void time_init(void)
 	TIMER_Start(TIMER0);
 	TIMER_EnableInt(TIMER0);
 	
+	CLK_EnableModuleClock(TMR1_MODULE);  //使能time1外设时钟
+	CLK_SetModuleClock(TMR1_MODULE, CLK_CLKSEL1_TMR1SEL_HCLK, 0);
+	TIMER_Open(TIMER1, TIMER_PERIODIC_MODE, TIMER1FREQ);
+	NVIC_EnableIRQ(TMR1_IRQn);
+	TIMER_Start(TIMER1);
+	TIMER_EnableInt(TIMER1);
 }
 
 uint16_t vr_time=0;
@@ -245,6 +251,24 @@ void TMR0_IRQHandler(void)
     //printf("Timer IRQ handler test #%d/3.\n", ++u8Counter );
     TIMER_ClearIntFlag(TIMER0);	
 	if(vr_time)	vr_time--;
+}
+
+void TMR1_IRQHandler(void)
+{
+	static uint8_t time_1p25ms = 0;
+	uint32_t PAdata = 0;
+	if(time_1p25ms)	
+		time_1p25ms--;
+	else
+	{
+		time_1p25ms = 10;
+		flag_1p25 = 1;
+		PAdata = GPIO_GET_OUT_DATA(PA) & (~BIT4);
+		PAdata |= (~GPIO_GET_OUT_DATA(PA) & BIT4);
+		GPIO_SET_OUT_DATA(PA, PAdata);
+	}
+    TIMER_ClearIntFlag(TIMER1);	
+	
 }
 
 void UART0_IRQHandler(void)   ////modify 20170804
@@ -338,6 +362,7 @@ void PWM0_IRQHandler(void)
 uint8_t spk_add=0;
 uint8_t key_spk;
 uint8_t io_aa;
+uint8_t Fan_Stauts = 0;
 //---------------------------------------------------------------------------------------------------------
 // Main Function                                                           
 //---------------------------------------------------------------------------------------------------------
@@ -359,7 +384,7 @@ INT32 main()
 	ULTRAIO_INITIATE();								// Initiate ultraio output configurations.
 																		// The ultraio output pin configurations are defined in "ConfigUltraIO.h"
 
-	KEYPAD_INITIATE();								// Initiate keypad configurations including direct trigger key and matrix key
+//	KEYPAD_INITIATE();								// Initiate keypad configurations including direct trigger key and matrix key
 																		// The keypad configurations are defined in "ConfigIO.h".
 
 	PDMA_INITIATE();									// Initiate PDMA.

@@ -520,13 +520,11 @@
 	"buffers":
 	[
 		{
-			"contents": "/*---------------------------------------------------------------------------------------------------------*/\n/*                                                                                                         */\n/* Copyright(c) Nuvoton Technology Corp. All rights reserved.                                              */\n/*                                                                                                         */\n/*---------------------------------------------------------------------------------------------------------*/\t\t \n\n// ---------------------------------------------------------------------------------------------------------\n//\tFunctions:\n//\t\t- System clock configuration.\n//\t\t- Keypad configuration.\n//\t\t- SPI Flash configuration.\n//\t\t- Speaker configuration.\n//\t\t- MIC configuration.\n//\t\t- Output pin configuration.\n//\t\t- UltraIO configuration.\n//\t\t- Application Initiation.\n//\t\t- Processing loop:\n//\t\t\t* Codec processing(use functions in \"AppFunctions.c\").\n//\t\t\t* Voice effect processing(use functions in \"AppFunctions.c\").\n//\t\t\t* Keypad check and execution actions(use functions in \"InputKeyActions.c\").\n//\t\t\t* Etc.\n//\t\n//\tReference \"Readme.txt\" for more information.\n// ---------------------------------------------------------------------------------------------------------\n\n#include <stdio.h>\n#include \"App.h\"\n#include \"Framework.h\"\n#include \"Keypad.h\"\n#include \"ConfigSysClk.h\"\n#include \"MicSpk.h\"\n\n#include \"AudioRes/Output/AudioRes_AudioInfo.h\"\n\n//#include \"N5162S.h\"\n//#include \"gpio_spi.h\"\n\n#if( !defined(__CHIP_SERIES__) )\n#error \"Please update SDS version >= v5.0.\"\n#endif\n\n// SPI flash handler.\nS_SPIFLASH_HANDLER g_sSpiFlash;\n\n// Application control.\nvolatile UINT8 g_u8AppCtrl;\n\n// Application handler.\nS_APP g_sApp;\n\nstatic UART_T\t*g_pUART = UART0;                              /////modify 20170804\n\n\nuart_type ap_uart0;\npwm_type pwm0;\npwm_type pwm1;\n\nUINT8 SPIFlash_Initiate(void)\n{ \n\tUINT16 ui16Temp;\n\tUINT32 ui32Temp;\n\tUINT32 u32Count;\n\n\t// SPI0: GPA1=SSB00, GPA2=SCLK0, GPA3=MISO0, GPA4=MOSI0 \n\tSYS->GPA_MFP  = \n\t\t(SYS->GPA_MFP & (~(SYS_GPA_MFP_PA0MFP_Msk|SYS_GPA_MFP_PA1MFP_Msk|SYS_GPA_MFP_PA2MFP_Msk|SYS_GPA_MFP_PA3MFP_Msk)) )\n\t\t| (SYS_GPA_MFP_PA0MFP_SPI_MOSI0|SYS_GPA_MFP_PA1MFP_SPI_SCLK|SYS_GPA_MFP_PA2MFP_SPI_SSB0|SYS_GPA_MFP_PA3MFP_SPI_MISO0);\t\n\t\n\t// Reset IP module\n\tCLK_EnableModuleClock(SPI0_MODULE);\n\tSYS_ResetModule(SPI0_RST);\n\tSPIFlash_Open(SPI0, SPI_SS0, SPI0_CLOCK, &g_sSpiFlash );\n\n\t// Make SPI flash leave power down mode if some where or some time had made it entring power down mode\n\tSPIFlash_PowerDown(&g_sSpiFlash, FALSE);\n\t\n\t// Check SPI flash is ready for accessing\n\tu32Count = ui32Temp = 0;\n\twhile(u32Count!=100)\n\t{\n\t\tSPIFlash_Read(&g_sSpiFlash, 0, (PUINT8) &ui16Temp, 2);\n\t\tif ( ui32Temp != (UINT32)ui16Temp )\n\t\t{\n\t\t\tui32Temp = (UINT32)ui16Temp;\n\t\t\tu32Count = 0;\n\t\t}\n\t\telse\n\t\t\tu32Count++;\n\t}\n\n\t// The following code can be remove to save code if the flash size is not necessary for this application\n\tSPIFlash_GetChipInfo(&g_sSpiFlash);\n\tif (g_sSpiFlash.u32FlashSize == 0)\n\t\treturn 0;\n\t\n\t// The above code can be remove to save code if the flash size is not necessary for this application\n\treturn 1;\n}\n\nvoid UART_Init(void)\n{\n   /* Init UART to 115200-8n1 for print message */\n\tSYS->GPA_MFP  = (SYS->GPA_MFP & (~SYS_GPA_MFP_PA8MFP_Msk) ) | SYS_GPA_MFP_PA8MFP_UART_TX;\n\tSYS->GPA_MFP  = (SYS->GPA_MFP & (~SYS_GPA_MFP_PA9MFP_Msk) ) | SYS_GPA_MFP_PA9MFP_UART_RX;\n\t\n\tCLK_EnableModuleClock(UART_MODULE);//使能UART外设时钟\n\t\n  UART_Open(UART0, 115200);\n\tUART_ClearIntFlag(UART0,UART_INTSTS_BUFERRINT_Msk);\n\tUART_ClearIntFlag(UART0,UART_INTSTS_RLSINT_Msk);\n\tUART_ClearIntFlag(UART0,UART_INTSTS_MODEMINT_Msk);\n\tUART_ClearIntFlag(UART0,UART_INTSTS_RXTOINT_Msk);\n\tUART0->INTEN |=(1<<0); //使能接收中断\n  NVIC_EnableIRQ(UART0_IRQn);                      ////modify 20170804 \n}\n\nvoid pwm_init(void)\n{\n\tpwm0.period = PWM_PERIOD;\n\tpwm0.rate = PWM_RATE;\n\tpwm0.Duty = 0;\n/*  \tif (USE_PWM0)\n  \t{\n\t\tpwm0.Duty = PWM_DUTY_INIT;\n\t}\n\telse\n\t{\n\t\tpwm0.Duty = 0;\n\t}\n*/\t\n\n\tCLK_SetModuleClock(PWM0_MODULE, CLK_CLKSEL1_PWM0CH01SEL_HCLK, 0);\n\tCLK_EnableModuleClock(PWM0_MODULE);\n\tSYS_ResetModule(PWM0_RST);\n\t\n\t// Set GPA multi-function pins for PWM0 Channel0\n\tSYS->GPA_MFP  = (SYS->GPA_MFP & (~SYS_GPA_MFP_PA12MFP_Msk) ) | SYS_GPA_MFP_PA12MFP_PWM0CH0;\n\t//set PWM0 channel 0 output configuration \n  \tPWM_ConfigOutputChannel(PWM0, PWM_CH0, pwm0.rate, pwm0.Duty);\n  \t//Enable PWM Output path for PWM0 channel 0 \n  \tPWM_EnableOutput(PWM0, 0x1);\n\t// Enable PWM channel 0 period interrupt\n\tPWM0->INTEN |= PWM_INTEN_PIEN0_Msk;\n\tNVIC_EnableIRQ(PWM0_IRQn);\n\t  \n\tPWM_Start(PWM0, 0x01);\n\n  \tif (USE_PWM1)\n  \t{\n\t\tpwm1.period = PWM_PERIOD;\n\t\t// pwm1.Duty = PWM_DUTY_INIT;\n\t\tpwm1.Duty = 0;\n\t\tpwm1.rate = PWM_RATE;\n\t\tPWM_DisableDeadZone(PWM0, 0);\n\t\t// Set GPA multi-function pins for PWM0 Channel1\n\t\tSYS->GPA_MFP  = (SYS->GPA_MFP & (~SYS_GPA_MFP_PA13MFP_Msk) ) | SYS_GPA_MFP_PA13MFP_PWM0CH1;\n\t\t//set PWM0 channel 1 output configuration \n\t\tPWM_ConfigOutputChannel(PWM0, PWM_CH1, pwm1.rate, pwm1.Duty);\n\t\t//Enable PWM Output path for PWM0 channel 0 and channel 1 \n\t\tPWM_EnableOutput(PWM0, 0x2);\n\t\t// Enable PWM channel 1 period interrupt\n\t\tPWM0->INTEN |= PWM_INTEN_PIEN1_Msk;\n\t\tPWM_Start(PWM0, 0x02);\n  \t}\n\t// PWM_Start(PWM0, 0x03);\n\t//GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~BIT12));\n}\n/*\nvoid pwm_init_1(void)\n{\n\tpwm1.period =200;\n\tpwm1.Duty =50;\n\tpwm1.rate = 30000;\n\t\n\tCLK_SetModuleClock(PWM0_MODULE, CLK_CLKSEL1_PWM0CH01SEL_HCLK, 0);\n\tCLK_EnableModuleClock(PWM0_MODULE);\n\tSYS_ResetModule(PWM0_MODULE);\n\t\n\t// Set GPA multi-function pins for PWM0 Channel1 \n\tSYS->GPA_MFP  = (SYS->GPA_MFP & (~SYS_GPA_MFP_PA13MFP_Msk) ) | SYS_GPA_MFP_PA13MFP_PWM0CH1;\n\t//set PWM0 channel 1 output configuration \n  PWM_ConfigOutputChannel(PWM0, PWM_CH1, pwm1.rate, pwm1.Duty);\n  //Enable PWM Output path for PWM0 channel 1 \n  PWM_EnableOutput(PWM0, 0x2);\n\t// Enable PWM channel 1 period interrupt\n  PWM0->INTEN = PWM_INTEN_PIEN1_Msk;\n  NVIC_EnableIRQ(PWM0_IRQn);\n    \n  PWM_Start(PWM0, 0x00);\n}*/\n\nvoid time_init(void)\n{\n\tCLK_EnableModuleClock(TMR0_MODULE);  //使能time0外设时钟\n\tCLK_SetModuleClock(TMR0_MODULE, CLK_CLKSEL1_TMR0SEL_HCLK, 0);   /////modify 20170804\n\tTIMER_Open(TIMER0, TIMER_PERIODIC_MODE, 1000);\n\tNVIC_EnableIRQ(TMR0_IRQn);\n\tTIMER_Start(TIMER0);\n\tTIMER_EnableInt(TIMER0);\n\t\n}\n\nuint16_t vr_time=0;\nuint16_t main_init_time=2000;\nuint8_t spk_sta=0;\nuint16_t PB_PIN_STA=0;\nvoid TMR0_IRQHandler(void)\n{\n\tstatic uint8_t time_10ms=0;\n\n\tstatic uint16_t tt=0;\n\tstatic uint8_t ll=0;\n\tif(pwm0.Breath_light)\n\t{\n\t\ttt++;\n\t\tif(tt>10)\n\t\t{\n\t\t\ttt =0;\n\t\t\tif(ll==0)\n\t\t\t{\n\t\t\t\tpwm0.Duty ++;\n\t\t\t\tif((pwm0.Duty)>= pwm0.period) ll=1;\n\t\t\t}\n\t\t\telse\n\t\t\t{\n\t\t\t\tif(pwm0.Duty)\tpwm0.Duty--;\n\t\t\t\telse ll=0;\n\t\t\t}\n\t\t}\n\t}\n\t\n\tif(time_10ms)\ttime_10ms--;\n\telse\n\t{\n\t\ttime_10ms=10;\n\t\t\n\t\tPB_PIN_STA <<=1;\n\t\tif(((PB->PIN)&(1<<6))==0)\tPB_PIN_STA+=1;\n\t\t\n\t\tif (PB_PIN_STA==0xfF00)\tspk_sta++;\n\t}\n\t\n\tif(ap_uart0.uart_rx_time)\tap_uart0.uart_rx_time --;\n    //printf(\"Timer IRQ handler test #%d/3.\\n\", ++u8Counter );\n    TIMER_ClearIntFlag(TIMER0);\t\n\tif(vr_time)\tvr_time--;\n}\n\nvoid UART0_IRQHandler(void)   ////modify 20170804\n{\n\tuint32_t  u32IntStatus;\n\tu32IntStatus= UART0->INTSTS;\n\t\nif(u32IntStatus & (1<<0))\t//接收中断\n\t{\n\t\tap_uart0.uart_rx_data[ap_uart0.uart_rx_len] = UART0->DAT;\n\t\tif((ap_uart0.uart_rx_len+1) <UART_DA)\tap_uart0.uart_rx_len ++;\t//预防越界\n\t\t\n\t\tap_uart0.uart_rx_time = UART_TT;\n\t}\n\telse if(u32IntStatus & (1<<1))\t//发送缓冲空中断\n\t{\n\t\tUART0->INTEN &= ~(1<<1);     /////THREIEN\n\t\tif(ap_uart0.uart_tx_len)\n\t\t{\n\t\t\tUART0->DAT= ap_uart0.uart_tx_data[ap_uart0.uart_tx_per]  ;\n\t\t\tap_uart0.uart_tx_len--;\n\t\t\tap_uart0.uart_tx_per ++;\n\t\t\tUART0->INTEN |=(1<<1);\n\t\t}\n\t\telse\n\t\t{\n\t\t\tap_uart0.uart_tx_per =0;\n\t\t\tUART0->INTEN &= ~(1<<1);\t\t//发送完毕，关闭发送中断\n\t\t\t//UART0->INTEN |=(1<<1);\n\t\t}\n\t}\n\n} \n\nvoid uart_send(uint8_t *dara, uint16_t len)\n{\n\tuint16_t ii;\n\tUART0->INTEN |=(1<<1);\n\tfor(ii=0; ii<len; ii++)\n\t{\n\t\tap_uart0.uart_tx_data[ii] = *dara++;\n\t}\n\tap_uart0.uart_tx_len =len;\n\tif(ap_uart0.uart_tx_len==0)\treturn;\n\twhile((g_pUART->FIFOSTS &(1<<22)) == 0)\t;\n\tg_pUART->DAT= ap_uart0.uart_tx_data[0];//发送\n\tap_uart0.uart_tx_per++;\n\tap_uart0.uart_tx_len --;\n\tUART0->INTEN |=(1<<1);\t//打开发送中断\n}\n\n\nvoid uart_rev_task(void)\n{\n\tif((ap_uart0.uart_rx_time==0)&&(ap_uart0.uart_rx_len))//有接收到数据\n\t{\n\n\t\t//uart_send(ap_uart0.uart_rx_data\t, ap_uart0.uart_rx_len);\t//发送接收到的数据\n\n\t\tap_uart0.uart_rx_len =0;\n\t}\n}\n\n\n\nvoid PWM0_IRQHandler(void)\n{\n\tif (PWM_GetIntFlag(PWM0, PWM_CH0))\n\t{\n    \t// Update PWM0 channel 0 period and duty\n    \tPWM_SET_CNR(PWM0, PWM_CH0, pwm0.period);\n    \tPWM_SET_CMR(PWM0, PWM_CH0, pwm0.Duty);\n    \t// Clear channel 0 period interrupt flag\n    \tPWM_ClearIntFlag(PWM0, PWM_CH0);\n\t}\n\tif(USE_PWM1)\n\t{\n\t\tif (PWM_GetIntFlag(PWM0, PWM_CH1))\n\t\t{\n\t    \t// Update PWM0 channel 1 period and duty\n\t    \tPWM_SET_CNR(PWM0, PWM_CH1, pwm1.period);\n\t    \tPWM_SET_CMR(PWM0, PWM_CH1, pwm1.Duty);\n\t    \t// Clear channel 0 period interrupt flag\n\t    \tPWM_ClearIntFlag(PWM0, PWM_CH1);\n\t\t}\n\t}\n}\n\n\n\nuint8_t spk_add=0;\nuint8_t key_spk;\nuint8_t io_aa;\nuint8_t Fan_Stauts = 0;\n//---------------------------------------------------------------------------------------------------------\n// Main Function                                                           \n//---------------------------------------------------------------------------------------------------------\nINT32 main()\n{\n\n\tSYSCLK_INITIATE();\t\t\t\t\t\t\t\t// Configure CPU clock source and operation clock frequency.\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t// The configuration functions are in \"ConfigSysClk.h\"\n\n\tCLK_EnableLDO(CLK_LDOSEL_3_3V);\t\t// Enable interl 3.3 LDO.\n\n\tif (! SPIFlash_Initiate())\t\t\t\t// Initiate SPI interface and checking flows for accessing SPI flash.\n\twhile(1); \t\t\t\t\t\t\t\t\t\t\t\t// loop here for easy debug\n\t\n\n\tOUTPUTPIN_INITIATE();\t\t\t\t\t\t\t// Initiate output pin configuration.\n//\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t// The output pins configurations are defined in \"ConfigIO.h\".\n\n\tULTRAIO_INITIATE();\t\t\t\t\t\t\t\t// Initiate ultraio output configurations.\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t// The ultraio output pin configurations are defined in \"ConfigUltraIO.h\"\n\n\tKEYPAD_INITIATE();\t\t\t\t\t\t\t\t// Initiate keypad configurations including direct trigger key and matrix key\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t// The keypad configurations are defined in \"ConfigIO.h\".\n\n\tPDMA_INITIATE();\t\t\t\t\t\t\t\t\t// Initiate PDMA.\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t// After initiation, the PDMA engine clock NVIC are enabled.\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t// Use PdmaCtrl_Open() to set PDMA service channel for desired IP.\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t// Use PdmaCtrl_Start() to trigger PDMA operation.\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t// Reference \"PdmaCtrl.h\" for PDMA related APIs.\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t// PDMA_INITIATE() must be call before SPK_INITIATE() and MIC_INITIATE(), if open MIC or speaker.\n\n\tSPK_INITIATE();\t\t\t\t\t\t\t\t\t\t// Initiate speaker including pop-sound canceling.\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t// After initiation, the APU is paused.\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t// Use SPK_Resume(0) to start APU operation.\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t// Reference \"MicSpk.h\" for speaker related APIs.\n\n\tMIC_INITIATE();\t\t\t\t\t\t\t\t\t\t// Initiate MIC.\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t// After initiation, the ADC is paused.\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t// Use ADC_Resume() to start ADC operation.\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t// Reference \"MicSpk.h\" for MIC related APIs.\n\n\n\tUART_Init();   \n\ttime_init();\n\tpwm_init();\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n//\t\t\t\n\tApp_Initiate();\t\t\t\t\t\t\t\t\t\t// Initiate application for audio decode.\n\t\n//\tGPIO_SetMode(PA, 12, GPIO_MODE_OUTPUT);\n\t\n\t//App_StartPlay(0);\n\tprintf(\"\\n\\n\");\n\tprintf(\"INIT Finished!\\n\");\n\tprintf(\"Starting VR...\\n\");\n\twhile (1)\n\t{\n\t\t\n\t\tApp_Process();\t//语音识别\n\t\tuart_rev_task();\t//uart任务\n\t\t\n\t\t\n\t\t//if((g_u8AppCtrl & APPCTRL_PLAY)==0)\t App_StartPlay(1);\t//判断当前是否播放完毕\n\t\t\n\t\t\n//\t\tTRIGGER_KEY_CHECK();\t\t// Check and execute direct trigger key actions defined in \"InputKeyActions.c\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t// Default trigger key handler is \"Default_KeyHandler()\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t// The trigger key configurations are defined in \"ConfigIO.h\".\n\t\t\n//\t\tMATRIX_KEY_CHECK();\t\t\t// Check and execute matrix key actions defined in \"InputKeyActions.c\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t// Default matrix key handler is \"Default_KeyHandler()\"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t// The matrix key configurations are defined in \"ConfigIO.h\".\n\t}\n\n}\n\n",
 			"file": "main.c",
-			"file_size": 12672,
-			"file_write_time": 131877557145829736,
 			"settings":
 			{
-				"buffer_size": 12095,
+				"buffer_size": 12693,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -534,7 +532,16 @@
 			"file": "AppFunctions.c",
 			"settings":
 			{
-				"buffer_size": 17130,
+				"buffer_size": 17282,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "App.h.dump",
+			"settings":
+			{
+				"buffer_size": 5508,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -598,27 +605,35 @@
 	"expanded_folders":
 	[
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Device",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Device/Nuvoton",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Device/Nuvoton/ISD9100",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Device/Nuvoton/ISD9100/Include",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand"
 	],
 	"file_history":
 	[
-		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/inc/Framework.h",
-		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/src/ConfigIO.c",
-		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/AppFunctions.c",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/inc/gpio.h",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Device/Nuvoton/ISD9100/Include/ISD9100.h",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/Powerdown.c",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/inc/Framework.h",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/src/UltraIO.c",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/src/gpio.c",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/src/adc.c",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/src/clk.c",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/inc/clk.h",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/src/ConfigIO.c",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/ConfigSysClk.h",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/inc/SysClk.h",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/src/SysClk.c",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/App.h",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/AppFunctions.c",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Device/Nuvoton/ISD9100/Include/system_ISD9100.h",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/App.h.dump",
-		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/App.h",
-		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/inc/gpio.h",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/src/timer.c",
-		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/ConfigSysClk.h",
-		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/src/SysClk.c",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Device/Nuvoton/ISD9100/Source/system_ISD9100.c",
-		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Device/Nuvoton/ISD9100/Include/ISD9100.h",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/inc/timer.h",
-		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/inc/clk.h",
-		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/inc/SysClk.h",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/AppCallback.c",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Storage/inc/SPIFlash.h",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/src/AudioRom.c",
@@ -726,14 +741,11 @@
 		"/Z/ghp/Dr/amcc/logPON/sweep_cl30to35_ratio18to30_rate100to500_len8x_nofec_hpf30k.log",
 		"/Z/ghp/Dr/amcc/logPON/sweep_cl9to35_ratio18to30_rate100to500_len8x_nofec_hpf30k.log",
 		"/Z/ghp/Dr/amcc/logAMCC/sweep_apd_cl9to35_ratio18to27_speed_len16x_fec0_hpf30k.log",
-		"/Z/ghp/Dr/amcc/logPON/sweep_cl15to30_ratio18to30_rate100to500_len16x_nofec.log",
-		"/Z/ghp/Dr/amcc/logAMCC/sweep_amcc_fec_rcos_speed.log",
-		"/Z/ghp/Dr/amcc/logPON/testdata2.txt",
-		"/Z/ghp/Dr/amcc/logPON/testdata.txt"
+		"/Z/ghp/Dr/amcc/logPON/sweep_cl15to30_ratio18to30_rate100to500_len16x_nofec.log"
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -747,6 +759,9 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"Px",
+			"Pxy",
+			"PA",
 			"DZI"
 		],
 		"highlight": true,
@@ -774,15 +789,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 12095,
+						"buffer_size": 12693,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								9777,
-								9777
+								7498,
+								7498
 							]
 						],
 						"settings":
@@ -793,10 +808,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 5598.0,
+						"translation.y": 5936.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -805,27 +820,58 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 17130,
+						"buffer_size": 17282,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								367,
-								367
+								15738,
+								15738
 							]
 						],
 						"settings":
 						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
 							"syntax": "Packages/C++/C.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 9918.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "App.h.dump",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5508,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4927,
+								4927
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1493.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]

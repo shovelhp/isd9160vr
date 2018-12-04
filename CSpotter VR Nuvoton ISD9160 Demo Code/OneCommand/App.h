@@ -149,8 +149,10 @@ typedef struct		//
 #define FAN_RUNING 1
 #define FAN_CLOSED 0
 
-#define MSCNT 48000
-#define USCNT 48
+#define MS1P25CNT 4000
+#define MSCNT 3000
+#define USCNT 3
+#define TIMER1FREQ 8772
 
 void delay1p25ms(void);
 void delayms(uint32_t ms);

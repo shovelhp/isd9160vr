@@ -56,6 +56,7 @@ volatile UINT8 g_u8Con_Spk;
 extern pwm_type pwm0;
 extern pwm_type pwm1;
 extern uint8_t Fan_Stauts;
+extern uint8_t flag_1p25;
 
 
 //---------------------------------------------------------------------------------------------------------
@@ -552,18 +553,23 @@ void App_PowerDown(void)
 //		OUT2(0);
 
 }
-
+/*
 void delay1p25ms(void)
 {
 	uint32_t loopi = 0;
-	uint32_t loopj = 0;
-	for (loopi = 0; loopi < 1250; ++loopi)
-	{
-		for (loopj = 0; loopj < USCNT; ++loopj);
-	}
+	//uint32_t loopj = 0;
+	for (loopi = 0; loopi < MS1P25CNT; ++loopi);
 	return;
 }
-
+*/
+void delay1p25ms(void)
+{
+	uint32_t loopi = 0;
+	uint32_t count = CLK_GetHCLKFreq() / 800;
+	for (loopi = 0; loopi < count; ++loopi);
+	return;
+}
+/*
 void delayms(uint32_t ms)
 {
 	uint32_t loopi = 0;
@@ -574,16 +580,16 @@ void delayms(uint32_t ms)
 	}
 	return;
 }
-
-/*
+*/
 void delayms(uint32_t ms)
 {
+	uint32_t loopi = 0;
 	uint32_t SysFreq = CLK_GetHCLKFreq() / 1000;
 	uint32_t count = ms * SysFreq;
 	for (loopi = 0; loopi < count; ++loopi);
 	return;
 }
-*/
+
 /*
 void delayus(uint32_t us)
 {
