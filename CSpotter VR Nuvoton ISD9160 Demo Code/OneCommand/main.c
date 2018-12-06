@@ -54,7 +54,8 @@ static UART_T	*g_pUART = UART0;                              /////modify 2017080
 uart_type ap_uart0;
 pwm_type pwm0;
 pwm_type pwm1;
-uint8_t flag_1p25 = 0;
+volatile uint8_t flag_1p25ms = 0;
+volatile uint8_t sendbline = 1;
 
 UINT8 SPIFlash_Initiate(void)
 { 
@@ -256,19 +257,22 @@ void TMR0_IRQHandler(void)
 void TMR1_IRQHandler(void)
 {
 	static uint8_t time_1p25ms = 0;
-	uint32_t PAdata = 0;
+	//uint32_t PAdata = 0;
 	if(time_1p25ms)	
 		time_1p25ms--;
 	else
 	{
 		time_1p25ms = 10;
-		flag_1p25 = 1;
-		PAdata = GPIO_GET_OUT_DATA(PA) & (~BIT4);
+		flag_1p25ms = 1;
+		/*PAdata = GPIO_GET_OUT_DATA(PA) & (~BIT4);
 		PAdata |= (~GPIO_GET_OUT_DATA(PA) & BIT4);
-		GPIO_SET_OUT_DATA(PA, PAdata);
+		GPIO_SET_OUT_DATA(PA, PAdata);*/
+		if(sendbline)
+			GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | SCMDLINE1);
+		else
+			GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~SCMDLINE1));
 	}
     TIMER_ClearIntFlag(TIMER1);	
-	
 }
 
 void UART0_IRQHandler(void)   ////modify 20170804

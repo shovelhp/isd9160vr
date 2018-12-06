@@ -56,8 +56,8 @@ volatile UINT8 g_u8Con_Spk;
 extern pwm_type pwm0;
 extern pwm_type pwm1;
 extern uint8_t Fan_Stauts;
-extern uint8_t flag_1p25;
-
+extern volatile uint8_t flag_1p25ms;
+extern volatile uint8_t sendbline;
 
 //---------------------------------------------------------------------------------------------------------
 // Function: App_Initiate
@@ -238,7 +238,8 @@ void App_Process(void)
 	INT16 *pi16BuffAddr;
 
 	UINT16 u16GetSamples = 0;
-	uint16_t u16CMDforMCU = 0;
+	//uint16_t u16CMDforMCU = 0;
+	uint8_t u8CMDforMCU = 0;
 //	static BOOL VR_flag = FALSE;
 
 	// Play response
@@ -296,8 +297,9 @@ void App_Process(void)
 						//printf("Fan on!\n");
 						//App_StartPlay(1);
 						printf("Command is : %s\n", AudioResStr[i32ID]);
-						u16CMDforMCU = i32ID;
-						SendCMD(u16CMDforMCU);
+						//u16CMDforMCU = i32ID;
+						u8CMDforMCU = i32ID;
+						SendCMD(u8CMDforMCU);
 						Fan_Stauts = FAN_RUNING;
 						vr_time = 0;
 						App_StartPlay(i32ID);
@@ -326,8 +328,8 @@ void App_Process(void)
 						pwm1.Duty = 0;
 						pwm0.Duty = 0;
 						vr_time = 0;
-						u16CMDforMCU = i32ID;
-						SendCMD(u16CMDforMCU);
+						u8CMDforMCU = i32ID;
+						SendCMD(u8CMDforMCU);
 						Fan_Stauts = FAN_CLOSED;
 						App_StartPlay(i32ID);
 						printf("%s\n", AudioOptStr[i32ID]);
@@ -644,17 +646,65 @@ void SendCMDByte(uint8_t u8CMDByte)
 	return;
 }
 
-void SendCMD(uint16_t u16CMDforMCU)
+void SetSignalLine(uint32_t SignalLine, uint8_t Val)
+{
+	uint32_t PAdata = GPIO_GET_OUT_DATA(PA) & (~SignalLine);
+	GPIO_SET_OUT_DATA(PA, PAdata | (Val << SignalLine));
+	return;
+}
+
+void SendCMDByteTimer(uint8_t u8CMDByte)
+{
+	uint8_t time20ms = 16;
+	uint8_t loopi = 0;
+	uint8_t sendbit = 1;
+	flag_1p25ms = 0;
+	sendbline = 1;
+	//TIMER_Start(TIMER1);
+	while(!flag_1p25ms);
+	while(time20ms--)
+	{
+		sendbline = 0;
+		flag_1p25ms = 0;
+		while(!flag_1p25ms);
+		//time20ms--;
+	}
+	sendbline = 1;
+	flag_1p25ms = 0;
+	for(loopi = 0; loopi < 8; loopi++)
+	{
+		sendbit = (u8CMDByte >> loopi) & 0x1;
+		while(!flag_1p25ms);
+			flag_1p25ms = 0;	
+			sendbline = 0;
+		if(sendbit)
+		{
+			while(!flag_1p25ms);
+			sendbline = 0;
+			flag_1p25ms = 0;	
+		}
+		while(!flag_1p25ms);
+		sendbline = 1;
+		flag_1p25ms = 0;
+	}
+	while(!flag_1p25ms);
+	sendbline = 1;
+	flag_1p25ms = 0;
+	//TIMER_Stop(TIMER1);
+	return;
+}
+
+void SendCMD(uint8_t u8CMDforMCU)
 {
 	uint8_t u8CMD0 = 0;
 	uint8_t u8CMD1 = 0;
 	uint8_t u8CRC = 0;
-	u8CMD0 = (u16CMDforMCU & 0x0F) | (0xC0) | (1 << 4);
-	SendCMDByte(u8CMD0);
-	u8CMD1 = ((u16CMDforMCU >> 8) & 0x0F) | (0xC0) | (2 << 4);
-	SendCMDByte(u8CMD1);
+	u8CMD0 = (u8CMDforMCU & 0x0F) | (CMDPRE << CMDPREBIT) | (1 << CMDNUMBIT);
+	SendCMDByteTimer(u8CMD0);
+	u8CMD1 = ((u8CMDforMCU >> 4) & 0x0F) | (CMDPRE << CMDPREBIT) | (2 << CMDNUMBIT);
+	SendCMDByteTimer(u8CMD1);
 	u8CRC = u8CMD0 + u8CMD1;
-	SendCMDByte(u8CRC);
+	SendCMDByteTimer(u8CRC);
 	return;
 }
 
