@@ -159,6 +159,8 @@ typedef struct		//
 #define CMDPREBIT 6
 #define CMDNUMBIT 4
 #define LOW4BIT 0x0F
+#define SENDTIMEOFFSET 4
+#define SENDCMDTIMES 3
 
 void delay1p25ms(void);
 void delayms(uint32_t ms);
@@ -167,6 +169,7 @@ void delayms(uint32_t ms);
 void SendCMDByte(uint8_t u8CMDByte);
 void SendCMD(uint8_t u8CMDforMCU);
 void SendCMDByteTimer(uint8_t u8CMDByte);
+void SendCMD1time(uint8_t u8CMDforMCU, uint8_t u8SendTimes);
 
 #define SET_GPIO_PA_BIT_HIGH(sbit)	GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | sbit);
 #define SET_GPIO_PA_BIT_LOW(sbit)	GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~sbit));

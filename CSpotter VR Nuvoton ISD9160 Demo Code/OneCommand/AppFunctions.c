@@ -564,11 +564,19 @@ void delay1p25ms(void)
 	return;
 }
 */
+/*
 void delay1p25ms(void)
 {
 	uint32_t loopi = 0;
 	uint32_t count = CLK_GetHCLKFreq() / 800;
 	for (loopi = 0; loopi < count; ++loopi);
+	return;
+}
+*/
+void delay1p25ms(void)
+{
+	flag_1p25ms = 0;
+	while(!flag_1p25ms);
 	return;
 }
 /*
@@ -583,6 +591,7 @@ void delayms(uint32_t ms)
 	return;
 }
 */
+/*
 void delayms(uint32_t ms)
 {
 	uint32_t loopi = 0;
@@ -591,7 +600,17 @@ void delayms(uint32_t ms)
 	for (loopi = 0; loopi < count; ++loopi);
 	return;
 }
-
+*/
+void delayms(uint32_t ms)
+{
+	uint32_t loop = ms * 4 / 5;
+	while(loop--)
+	{
+		flag_1p25ms = 0;
+		while(!flag_1p25ms);
+	}
+	return;
+}
 /*
 void delayus(uint32_t us)
 {
@@ -694,17 +713,27 @@ void SendCMDByteTimer(uint8_t u8CMDByte)
 	return;
 }
 
-void SendCMD(uint8_t u8CMDforMCU)
+void SendCMD1time(uint8_t u8CMDforMCU, uint8_t u8SendTimes)
 {
 	uint8_t u8CMD0 = 0;
 	uint8_t u8CMD1 = 0;
 	uint8_t u8CRC = 0;
-	u8CMD0 = (u8CMDforMCU & 0x0F) | (CMDPRE << CMDPREBIT) | (1 << CMDNUMBIT);
+	u8CMD0 |= (1 << (u8SendTimes-1)) << SENDTIMEOFFSET;
 	SendCMDByteTimer(u8CMD0);
-	u8CMD1 = ((u8CMDforMCU >> 4) & 0x0F) | (CMDPRE << CMDPREBIT) | (2 << CMDNUMBIT);
+	u8CMD1 = u8CMDforMCU;
 	SendCMDByteTimer(u8CMD1);
 	u8CRC = u8CMD0 + u8CMD1;
 	SendCMDByteTimer(u8CRC);
 	return;
 }
 
+void SendCMD(uint8_t u8CMDforMCU)
+{
+	uint8_t u8SendTimes = 1;
+	for (u8SendTimes = 1; u8SendTimes <= SENDCMDTIMES ; u8SendTimes++)
+	{
+		SendCMD1time(u8CMDforMCU, u8SendTimes);
+		delayms(50);
+	}
+	return;
+}

@@ -105,8 +105,8 @@
       </MaxPosition>
       <NormalPosition>
         <Top>26</Top>
-        <Left>25</Left>
-        <Right>985</Right>
+        <Left>21</Left>
+        <Right>981</Right>
         <Bottom>743</Bottom>
       </NormalPosition>
     </WindowPosition>
@@ -3609,9 +3609,9 @@
       <ActiveTab>0</ActiveTab>
       <Doc>
         <Name>..\main.c</Name>
-        <ColumnNumber>0</ColumnNumber>
-        <TopLine>255</TopLine>
-        <CurrentLine>270</CurrentLine>
+        <ColumnNumber>20</ColumnNumber>
+        <TopLine>254</TopLine>
+        <CurrentLine>266</CurrentLine>
         <Folding>1</Folding>
         <ContractedFolders></ContractedFolders>
         <PaneID>0</PaneID>
@@ -3628,7 +3628,7 @@
       <Doc>
         <Name>..\App.h</Name>
         <ColumnNumber>22</ColumnNumber>
-        <TopLine>137</TopLine>
+        <TopLine>123</TopLine>
         <CurrentLine>144</CurrentLine>
         <Folding>1</Folding>
         <ContractedFolders></ContractedFolders>
