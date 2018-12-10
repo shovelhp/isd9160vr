@@ -126,8 +126,8 @@ typedef struct		//
 #define USE_PWM0 0
 #define USE_PWM1 0
 
-#define FANON BIT15
-#define WAVEON BIT14
+#define FANON BIT14
+#define WAVEON BIT15
 #define WINDUP BIT7
 #define WINDDOWN BIT6
 #define TIMEADD BIT5
@@ -140,8 +140,8 @@ typedef struct		//
 #define SLEEPWIND BIT11
 #define NATURALWIND BIT10
 #define TIMERON BIT12
-#define SCMDLINE BIT11
-#define SCMDLINE1 BIT14
+#define SCMDLINE BIT7
+#define SCMDLINE1 BIT11
 
 #define VRTIME 10000
 #define VRTIMELED BIT10
@@ -161,6 +161,8 @@ typedef struct		//
 #define LOW4BIT 0x0F
 #define SENDTIMEOFFSET 4
 #define SENDCMDTIMES 3
+
+#define USEFLASH 1
 
 void delay1p25ms(void);
 void delayms(uint32_t ms);

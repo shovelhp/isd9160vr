@@ -135,17 +135,20 @@ void pwm_init(void)
 	CLK_EnableModuleClock(PWM0_MODULE);
 	SYS_ResetModule(PWM0_RST);
 	
-	// Set GPA multi-function pins for PWM0 Channel0
-	SYS->GPA_MFP  = (SYS->GPA_MFP & (~SYS_GPA_MFP_PA12MFP_Msk) ) | SYS_GPA_MFP_PA12MFP_PWM0CH0;
-	//set PWM0 channel 0 output configuration 
-  	PWM_ConfigOutputChannel(PWM0, PWM_CH0, pwm0.rate, pwm0.Duty);
-  	//Enable PWM Output path for PWM0 channel 0 
-  	PWM_EnableOutput(PWM0, 0x1);
-	// Enable PWM channel 0 period interrupt
-	PWM0->INTEN |= PWM_INTEN_PIEN0_Msk;
-	NVIC_EnableIRQ(PWM0_IRQn);
-	  
-	PWM_Start(PWM0, 0x01);
+  	if (USE_PWM0)
+  	{
+		// Set GPA multi-function pins for PWM0 Channel0
+		SYS->GPA_MFP  = (SYS->GPA_MFP & (~SYS_GPA_MFP_PA12MFP_Msk) ) | SYS_GPA_MFP_PA12MFP_PWM0CH0;
+		//set PWM0 channel 0 output configuration 
+  		PWM_ConfigOutputChannel(PWM0, PWM_CH0, pwm0.rate, pwm0.Duty);
+  		//Enable PWM Output path for PWM0 channel 0 
+  		PWM_EnableOutput(PWM0, 0x1);
+		// Enable PWM channel 0 period interrupt
+		PWM0->INTEN |= PWM_INTEN_PIEN0_Msk;
+		NVIC_EnableIRQ(PWM0_IRQn);
+		  
+		PWM_Start(PWM0, 0x01);
+	}
 
   	if (USE_PWM1)
   	{
@@ -379,7 +382,7 @@ INT32 main()
 	CLK_EnableLDO(CLK_LDOSEL_3_3V);		// Enable interl 3.3 LDO.
 
 	if (! SPIFlash_Initiate())				// Initiate SPI interface and checking flows for accessing SPI flash.
-	while(1); 												// loop here for easy debug
+	while(USEFLASH); 												// loop here for easy debug
 	
 
 	OUTPUTPIN_INITIATE();							// Initiate output pin configuration.

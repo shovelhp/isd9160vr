@@ -78,7 +78,7 @@
             <nStopB2X>0</nStopB2X>
           </BeforeMake>
           <AfterMake>
-            <RunUserProg1>0</RunUserProg1>
+            <RunUserProg1>1</RunUserProg1>
             <RunUserProg2>0</RunUserProg2>
             <UserProg1Name>fromelf --bincombined --output "$L@L.bin" "$L@L.axf"</UserProg1Name>
             <UserProg2Name>"C:\Nuvoton NuVoice Tool\Utility\PadFile.exe" --size=0x24400 --pad=0xff  "$L@L.bin"</UserProg2Name>

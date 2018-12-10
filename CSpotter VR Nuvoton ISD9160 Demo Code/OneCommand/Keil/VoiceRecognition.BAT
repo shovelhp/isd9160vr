@@ -53,3 +53,4 @@ SET CPU_CLOCK=0x02EE0000
 "d:\Keil_v5\ARM\ARMCC\Bin\ArmCC" --Via ".\vr\retarget.__i"
 "d:\Keil_v5\ARM\ARMCC\Bin\ArmLink" --Via ".\VR\VoiceRecognition.lnp"
 "d:\Keil_v5\ARM\ARMCC\Bin\fromelf.exe" ".\VR\VoiceRecognition.axf" --i32combined --output ".\VR\VoiceRecognition.hex"
+fromelf --bincombined --output "F:\shovelhp\Documents\GitHub\isd9160vr\CSpotter VR Nuvoton ISD9160 Demo Code\OneCommand\Keil\VR\VoiceRecognition.bin" "F:\shovelhp\Documents\GitHub\isd9160vr\CSpotter VR Nuvoton ISD9160 Demo Code\OneCommand\Keil\VR\VoiceRecognition.axf"
