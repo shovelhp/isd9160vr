@@ -245,7 +245,8 @@ void App_Process(void)
 	// Play response
 	if (vr_time<=0)
 	{
-		GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~VRTIMELED));
+		//GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~VRTIMELED));
+		GPIO_CLR_BIT(PA, VRTIMELED);
 	}
 	if( g_u8AppCtrl&APPCTRL_PLAY )
 	{
@@ -280,7 +281,8 @@ void App_Process(void)
 				{
 					vr_time=VRTIMEON;
 				}
-				GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | VRTIMELED);
+				// GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | VRTIMELED);
+				GPIO_SET_BIT(PA, VRTIMELED);
 				printf("\n");
 				printf("Command is : %s\n", AudioResStr[i32ID]);
 				printf("%s\n", AudioOptStr[i32ID]);
@@ -325,6 +327,7 @@ void App_Process(void)
 						case 2:	//关风扇
 							printf("Command is : %s\n", AudioResStr[i32ID]);
 							GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~FANON));
+							GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~WAVEON));
 							//GPIO_SET_OUT_DATA(PA, 0);
 							pwm1.Duty = 0;
 							pwm0.Duty = 0;
@@ -335,7 +338,7 @@ void App_Process(void)
 							App_StartPlay(i32ID);
 							printf("%s\n", AudioOptStr[i32ID]);
 						break;
-#ifndef USEALLCMD
+#ifdef USEALLCMD
 						case 3:	//请摇头
 							GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | WAVEON);
 							// vr_time = 0;
