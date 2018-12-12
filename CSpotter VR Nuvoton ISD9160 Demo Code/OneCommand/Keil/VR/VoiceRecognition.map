@@ -90,6 +90,7 @@ Section Cross References
     appfunctions.o(i.App_Process) refers to micgetapp.o(i.MicGetApp_StartRec) for MicGetApp_StartRec
     appfunctions.o(i.App_Process) refers to micgetapp.o(i.MicGetApp_ProcessRec) for MicGetApp_ProcessRec
     appfunctions.o(i.App_Process) refers to vronecmdapp.o(i.VROneCmdApp_GetCMDID) for VROneCmdApp_GetCMDID
+    appfunctions.o(i.App_Process) refers to appfunctions.o(i.__ARM_common_switch8) for __ARM_common_switch8
     appfunctions.o(i.App_Process) refers to noretval__2printf.o(.text) for __2printf
     appfunctions.o(i.App_Process) refers to appfunctions.o(i.App_StartPlay) for App_StartPlay
     appfunctions.o(i.App_Process) refers to appfunctions.o(i.SendCMD) for SendCMD
@@ -534,7 +535,7 @@ Section Cross References
     i2s.o(i.I2S_GetSourceClockFreq) refers to clk.o(i.CLK_GetHCLKFreq) for CLK_GetHCLKFreq
     i2s.o(i.I2S_Open) refers to i2s.o(i.I2S_GetSourceClockFreq) for I2S_GetSourceClockFreq
     i2s.o(i.I2S_Open) refers to aeabi_sdivfast.o(.text) for __aeabi_uidivmod
-    pdma.o(i.PDMA_SetTransferMode) refers to pdma.o(i.__ARM_common_switch8) for __ARM_common_switch8
+    pdma.o(i.PDMA_SetTransferMode) refers to appfunctions.o(i.__ARM_common_switch8) for __ARM_common_switch8
     pwm.o(i.PWM_ConfigCaptureChannel) refers to rt_memcpy.o(.emb_text) for __aeabi_memcpy4
     pwm.o(i.PWM_ConfigCaptureChannel) refers to aeabi_sdivfast.o(.text) for __aeabi_uidivmod
     pwm.o(i.PWM_ConfigCaptureChannel) refers to system_isd9100.o(i.SystemCoreClockUpdate) for SystemCoreClockUpdate
@@ -624,7 +625,7 @@ Section Cross References
     md4decode.o(i.MD4_DecodeInitiate) refers to rt_memclr.o(.text) for __aeabi_memclr4
     md4decode.o(i.MD4_DecodeProcess) refers to rt_memclr.o(.text) for __aeabi_memclr
     md4decode.o(i.MD4_DecodeProcess) refers to md4decode.o(i.MD4_CheckResLdr) for MD4_CheckResLdr
-    md4decode.o(i.MD4_DecodeProcess) refers to pdma.o(i.__ARM_common_switch8) for __ARM_common_switch8
+    md4decode.o(i.MD4_DecodeProcess) refers to appfunctions.o(i.__ARM_common_switch8) for __ARM_common_switch8
     md4decode.o(i.MD4_DecodeProcess) refers to md4decode.o(i.MD4_DecodeFrame) for MD4_DecodeFrame
     CSpotterSDKApi.o(i.CSpotter_AddSample) refers to BsrGo.o(i.NINJA_API_13) for NINJA_API_13
     CSpotterSDKApi.o(i.CSpotter_AddSample) refers to BsrGo.o(i.NINJA_API_15) for NINJA_API_15
@@ -1606,89 +1607,89 @@ Image Symbol Table
     Symbol Name                              Value     Ov Type        Size  Object(Section)
 
     RESET                                    0x00000000   Section      192  startup_isd9100.o(RESET)
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardshut.o ABSOLUTE
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit1.o ABSOLUTE
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit2.o ABSOLUTE
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit3.o ABSOLUTE
-    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardshut.o ABSOLUTE
-    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_copy.o ABSOLUTE
     ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_zi.o ABSOLUTE
-    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit2.o ABSOLUTE
-    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry.o ABSOLUTE
-    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry4.o ABSOLUTE
+    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_copy.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit2.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry2.o ABSOLUTE
-    ../clib/angel/rt.s                       0x00000000   Number         0  rt_div0.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry4.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry.o ABSOLUTE
     ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
     ../clib/angel/rt.s                       0x00000000   Number         0  aeabi_idiv0_sigfpe.o ABSOLUTE
     ../clib/angel/rt.s                       0x00000000   Number         0  aeabi_idiv0.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_div0.o ABSOLUTE
     ../clib/angel/scatterp.s                 0x00000000   Number         0  __scatter.o ABSOLUTE
     ../clib/angel/startup.s                  0x00000000   Number         0  __main.o ABSOLUTE
-    ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi.o ABSOLUTE
     ../clib/angel/sys.s                      0x00000000   Number         0  indicate_semi.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  tempstk.o ABSOLUTE
     ../clib/angel/sys.s                      0x00000000   Number         0  libspace.o ABSOLUTE
     ../clib/angel/sys.s                      0x00000000   Number         0  sys_stackheap_outer.o ABSOLUTE
-    ../clib/angel/sys.s                      0x00000000   Number         0  tempstk.o ABSOLUTE
-    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_exit.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi.o ABSOLUTE
     ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command.o ABSOLUTE
-    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
-    ../clib/armsys.c                         0x00000000   Number         0  _get_argv_nomalloc.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_exit.o ABSOLUTE
     ../clib/armsys.c                         0x00000000   Number         0  no_argv.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  _get_argv_nomalloc.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
     ../clib/division.s                       0x00000000   Number         0  aeabi_sdivfast.o ABSOLUTE
     ../clib/division.s                       0x00000000   Number         0  aeabi_sdivfast_div0.o ABSOLUTE
     ../clib/heapalloc.c                      0x00000000   Number         0  hrguard.o ABSOLUTE
     ../clib/heapaux.c                        0x00000000   Number         0  heapauxi.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libinit.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
-    ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
     ../clib/longlong.c                       0x00000000   Number         0  llmul.o ABSOLUTE
     ../clib/memcpset.c                       0x00000000   Number         0  rt_memcpy.o ABSOLUTE
     ../clib/memcpset.c                       0x00000000   Number         0  rt_memclr.o ABSOLUTE
     ../clib/memcpset.c                       0x00000000   Number         0  rt_memcpy.o ABSOLUTE
     ../clib/misc.s                           0x00000000   Number         0  printf_stubs.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf_wp.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_int_ll.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_char.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_ll.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf_ss.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_ptr.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_int_ptr.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf_flags_ss.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_ll_ptr.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf_flags_wp.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf_nopercent.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_int_ll_ptr.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf_ss_wp.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf_flags_ss_wp.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  __2printf.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_char_common.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  noretval__2printf.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_nopercent.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  _printf_str.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_ll.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  _printf_hex_int.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_intcommon.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_char_file.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_int_ll.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_char_common.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_int_ptr.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_ll_ptr.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_int_ll_ptr.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  __printf_flags.o ABSOLUTE
-    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_x.o ABSOLUTE
-    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_percent.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_ss.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_wp.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_flags_wp.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_ss_wp.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_ptr.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_char_file.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_char.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_flags_ss.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_flags_ss_wp.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_intcommon.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_percent_end.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_s.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_formal.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_cppl_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
+    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_percent.o ABSOLUTE
+    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_x.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_formal.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_cppl_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_general.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
     ../clib/signal.s                         0x00000000   Number         0  defsig.o ABSOLUTE
     ../clib/stdlib.c                         0x00000000   Number         0  exit.o ABSOLUTE
     ../fplib/cfplib/dmul.c                   0x00000000   Number         0  dmul.o ABSOLUTE
@@ -1880,270 +1881,270 @@ Image Symbol Table
     i.ADC_SetPGAGaindB                       0x00000748   Section        0  adc.o(i.ADC_SetPGAGaindB)
     i.App_Initiate                           0x00000780   Section        0  appfunctions.o(i.App_Initiate)
     i.App_Process                            0x000007d8   Section        0  appfunctions.o(i.App_Process)
-    i.App_StartPlay                          0x00000934   Section        0  appfunctions.o(i.App_StartPlay)
-    i.App_StartRecognize                     0x0000096c   Section        0  appfunctions.o(i.App_StartRecognize)
-    i.App_StopPlay                           0x00000990   Section        0  appfunctions.o(i.App_StopPlay)
-    i.AudioRom_GetAudioChunkInfo             0x000009a4   Section        0  audiorom.o(i.AudioRom_GetAudioChunkInfo)
-    i.AudioRom_GetAudioNum                   0x000009d2   Section        0  audiorom.o(i.AudioRom_GetAudioNum)
-    i.AudioRom_GetRomHeader                  0x000009e0   Section        0  audiorom.o(i.AudioRom_GetRomHeader)
-    i.BIQFilter_Setting                      0x000009fc   Section        0  micspk.o(i.BIQFilter_Setting)
-    BIQFilter_Setting                        0x000009fd   Thumb Code    40  micspk.o(i.BIQFilter_Setting)
-    i.BIQ_Reset                              0x00000a2c   Section        0  biq.o(i.BIQ_Reset)
-    i.BIQ_SetCoeff                           0x00000a48   Section        0  biq.o(i.BIQ_SetCoeff)
-    i.BsrAbby                                0x00000a8c   Section        0  BsrJoe.o(i.BsrAbby)
-    i.BsrAbel                                0x00000ab8   Section        0  BsrJoe.o(i.BsrAbel)
-    i.BsrAdam                                0x00000b36   Section        0  BsrJoe.o(i.BsrAdam)
-    i.BsrAlma                                0x00000bfe   Section        0  BsrDon.o(i.BsrAlma)
-    i.BsrAmir                                0x00000cd0   Section        0  BsrDon.o(i.BsrAmir)
-    i.BsrAmos                                0x00000ce8   Section        0  BsrDon.o(i.BsrAmos)
-    i.BsrAna                                 0x00000e0e   Section        0  BsrJim.o(i.BsrAna)
-    i.BsrAnna                                0x00000e38   Section        0  BsrDon.o(i.BsrAnna)
-    i.BsrAnne                                0x00000e5e   Section        0  BsrDon.o(i.BsrAnne)
-    i.BsrAnnie                               0x00000e76   Section        0  BsrDon.o(i.BsrAnnie)
-    i.BsrAri                                 0x00000e94   Section        0  BsrJim.o(i.BsrAri)
-    i.BsrAsa                                 0x00000f44   Section        0  BsrJim.o(i.BsrAsa)
-    i.BsrAvea                                0x00001038   Section        0  BsrJim.o(i.BsrAvea)
-    i.BsrAyla                                0x000010e2   Section        0  BsrDon.o(i.BsrAyla)
-    i.BsrBaby                                0x000010fc   Section        0  BsrDon.o(i.BsrBaby)
-    i.BsrBen                                 0x0000110a   Section        0  BsrJim.o(i.BsrBen)
-    BsrBen                                   0x0000110b   Thumb Code   172  BsrJim.o(i.BsrBen)
-    i.BsrBrad                                0x000011b8   Section        0  BsrBen.o(i.BsrBrad)
-    i.BsrBret                                0x000011f4   Section        0  BsrJay.o(i.BsrBret)
-    BsrBret                                  0x000011f5   Thumb Code   324  BsrJay.o(i.BsrBret)
-    i.BsrCade                                0x00001344   Section        0  BsrJay.o(i.BsrCade)
-    i.BsrCadea                               0x000014d0   Section        0  BsrJay.o(i.BsrCadea)
-    i.BsrCale                                0x000015d4   Section        0  BsrJay.o(i.BsrCale)
-    i.BsrCara                                0x00001618   Section        0  BsrJay.o(i.BsrCara)
-    i.BsrCarae                               0x00001a00   Section        0  BsrJay.o(i.BsrCarae)
-    i.BsrChad                                0x00001acc   Section        0  BsrJay.o(i.BsrChad)
-    i.BsrChada                               0x00001b88   Section        0  BsrJay.o(i.BsrChada)
-    i.BsrChaz                                0x00001bd0   Section        0  BsrJay.o(i.BsrChaz)
-    i.BsrChaza                               0x00001cb0   Section        0  BsrJay.o(i.BsrChaza)
-    i.BsrChaze                               0x00001d6c   Section        0  BsrJay.o(i.BsrChaze)
-    i.BsrChazi                               0x00001e3c   Section        0  BsrJay.o(i.BsrChazi)
-    i.BsrClay                                0x00001f0c   Section        0  BsrJay.o(i.BsrClay)
-    i.BsrCory                                0x00002474   Section        0  BsrJoy.o(i.BsrCory)
-    i.BsrCoty                                0x00002660   Section        0  BsrJoy.o(i.BsrCoty)
-    i.BsrDan                                 0x00002684   Section        0  BsrJim.o(i.BsrDan)
-    i.BsrDane                                0x000026dc   Section        0  BsrJoy.o(i.BsrDane)
-    i.BsrDawn                                0x000026e4   Section        0  BsrJoy.o(i.BsrDawn)
-    i.BsrDeja                                0x000026ec   Section        0  BsrJoy.o(i.BsrDeja)
-    i.BsrDemi                                0x00002758   Section        0  BsrJoy.o(i.BsrDemi)
-    i.BsrDeon                                0x000028d8   Section        0  BsrJoy.o(i.BsrDeon)
-    i.BsrDina                                0x00002a4e   Section        0  BsrJoy.o(i.BsrDina)
-    i.BsrDion                                0x00002c98   Section        0  BsrJoy.o(i.BsrDion)
-    i.BsrEden                                0x00002d74   Section        0  BsrEva.o(i.BsrEden)
-    i.BsrEli                                 0x00002ed8   Section        0  BsrJim.o(i.BsrEli)
-    i.BsrElla                                0x00002f30   Section        0  BsrEva.o(i.BsrElla)
-    i.BsrElsa                                0x000030e0   Section        0  BsrEva.o(i.BsrElsa)
-    i.BsrEmma                                0x00003258   Section        0  BsrEli.o(i.BsrEmma)
-    i.BsrEric                                0x00003330   Section        0  BsrEli.o(i.BsrEric)
-    i.BsrErica                               0x000033b4   Section        0  BsrEli.o(i.BsrErica)
-    i.BsrErik                                0x000034f0   Section        0  BsrEli.o(i.BsrErik)
-    i.BsrErin                                0x0000351e   Section        0  BsrEli.o(i.BsrErin)
-    i.BsrEva                                 0x00003604   Section        0  BsrJim.o(i.BsrEva)
-    i.BsrEvan                                0x00003626   Section        0  BsrEli.o(i.BsrEvan)
-    i.BsrGary                                0x00003660   Section        0  BsrAna.o(i.BsrGary)
-    i.BsrGreg                                0x00003720   Section        0  BsrAnn.o(i.BsrGreg)
-    i.BsrGuy                                 0x000038ec   Section        0  BsrJim.o(i.BsrGuy)
-    i.BsrHugo                                0x00003924   Section        0  BsrGuy.o(i.BsrHugo)
-    i.BsrIris                                0x000039d4   Section        0  BsrGuy.o(i.BsrIris)
-    i.BsrIrma                                0x00003a0c   Section        0  BsrGuy.o(i.BsrIrma)
-    i.BsrIsai                                0x00003a60   Section        0  BsrGuy.o(i.BsrIsai)
-    i.BsrIvy                                 0x00003a8e   Section        0  BsrJim.o(i.BsrIvy)
-    i.BsrJamii                               0x00003b4a   Section        0  BsrJoy.o(i.BsrJamii)
-    BsrJamii                                 0x00003b4b   Thumb Code   226  BsrJoy.o(i.BsrJamii)
-    i.BsrJan                                 0x00003c2c   Section        0  BsrJim.o(i.BsrJan)
-    i.BsrJeni                                0x00003c44   Section        0  BsrJay.o(i.BsrJeni)
-    BsrJeni                                  0x00003c45   Thumb Code   390  BsrJay.o(i.BsrJeni)
-    i.BsrJoan                                0x00003dd0   Section        0  BsrKai.o(i.BsrJoan)
-    BsrJoan                                  0x00003dd1   Thumb Code   366  BsrKai.o(i.BsrJoan)
-    i.BsrJohn                                0x00003f3e   Section        0  BsrAli.o(i.BsrJohn)
-    i.BsrJose                                0x00003f68   Section        0  BsrAli.o(i.BsrJose)
-    i.BsrJosh                                0x00003f9e   Section        0  BsrAli.o(i.BsrJosh)
-    i.BsrJoyci                               0x00004044   Section        0  BsrJim.o(i.BsrJoyci)
-    i.BsrJuanitez                            0x00004124   Section        0  BsrEva.o(i.BsrJuanitez)
-    BsrJuanitez                              0x00004125   Thumb Code    52  BsrEva.o(i.BsrJuanitez)
-    i.BsrLei                                 0x00004158   Section        0  BsrJim.o(i.BsrLei)
-    i.BsrMaxi                                0x00004170   Section        0  BsrJim.o(i.BsrMaxi)
-    i.BsrMichael                             0x000041ea   Section        0  BsrJim.o(i.BsrMichael)
-    i.BsrMichelle                            0x00004760   Section        0  BsrJim.o(i.BsrMichelle)
-    i.BsrMike                                0x00004768   Section        0  BsrJim.o(i.BsrMike)
-    i.BsrMya                                 0x00004814   Section        0  BsrKai.o(i.BsrMya)
-    i.BsrNia                                 0x0000489c   Section        0  BsrKai.o(i.BsrNia)
-    i.BsrRay                                 0x000048ce   Section        0  BsrKai.o(i.BsrRay)
-    i.BsrRex                                 0x00004a04   Section        0  BsrKai.o(i.BsrRex)
-    i.BsrRey                                 0x00004a16   Section        0  BsrKai.o(i.BsrRey)
-    i.BsrRon                                 0x00004a26   Section        0  BsrKai.o(i.BsrRon)
-    i.BsrRoy                                 0x00004ec8   Section        0  BsrKai.o(i.BsrRoy)
-    i.BsrTed                                 0x00004ef4   Section        0  BsrKai.o(i.BsrTed)
-    i.BsrTia                                 0x00004f04   Section        0  BsrKai.o(i.BsrTia)
-    i.BsrTom                                 0x00004f6c   Section        0  BsrKai.o(i.BsrTom)
-    i.BsrTop                                 0x00004ffe   Section        0  BsrKai.o(i.BsrTop)
-    i.BsrTre                                 0x0000505c   Section        0  BsrKai.o(i.BsrTre)
-    i.BsrZoe                                 0x0000506e   Section        0  BsrJoe.o(i.BsrZoe)
-    i.BufCtrl_UpdateReadWithCount            0x00005072   Section        0  bufctrl.o(i.BufCtrl_UpdateReadWithCount)
-    i.BufCtrl_UpdateWriteWithCount           0x00005090   Section        0  bufctrl.o(i.BufCtrl_UpdateWriteWithCount)
-    i.CAPS_IRQHandler                        0x000050b0   Section        0  interrupthandler.o(i.CAPS_IRQHandler)
-    i.CLK_EnableLDO                          0x000050c0   Section        0  clk.o(i.CLK_EnableLDO)
-    i.CLK_EnableModuleClock                  0x000050f4   Section        0  clk.o(i.CLK_EnableModuleClock)
-    i.CLK_EnableXtalRC                       0x00005110   Section        0  clk.o(i.CLK_EnableXtalRC)
-    i.CLK_GetHCLKFreq                        0x0000512c   Section        0  clk.o(i.CLK_GetHCLKFreq)
-    i.CLK_SetHCLK                            0x0000513c   Section        0  clk.o(i.CLK_SetHCLK)
-    i.CLK_SetModuleClock                     0x00005178   Section        0  clk.o(i.CLK_SetModuleClock)
-    i.CSpotter_AddSample                     0x000051c8   Section        0  CSpotterSDKApi.o(i.CSpotter_AddSample)
-    i.CSpotter_GetMemoryUsage_MultiWithSpeakerAndExtRejModel 0x0000522c   Section        0  CSpotterSDKApi.o(i.CSpotter_GetMemoryUsage_MultiWithSpeakerAndExtRejModel)
-    i.CSpotter_GetMemoryUsage_Sep            0x000052e8   Section        0  CSpotterSDKApi.o(i.CSpotter_GetMemoryUsage_Sep)
-    i.CSpotter_GetResult                     0x00005300   Section        0  CSpotterSDKApi.o(i.CSpotter_GetResult)
-    i.CSpotter_Init_MultiWithExtRejModel     0x00005324   Section        0  CSpotterSDKApi.o(i.CSpotter_Init_MultiWithExtRejModel)
-    i.CSpotter_Init_Sep                      0x00005528   Section        0  CSpotterSDKApi.o(i.CSpotter_Init_Sep)
-    i.CSpotter_Reset                         0x0000554c   Section        0  CSpotterSDKApi.o(i.CSpotter_Reset)
-    i.DPWM_Open                              0x00005580   Section        0  dpwm.o(i.DPWM_Open)
-    i.DPWM_SetSampleRate                     0x00005584   Section        0  dpwm.o(i.DPWM_SetSampleRate)
-    i.GPAB_IRQHandler                        0x000055c0   Section        0  interrupthandler.o(i.GPAB_IRQHandler)
-    i.GPIO_SetMode                           0x000055dc   Section        0  gpio.o(i.GPIO_SetMode)
-    i.MD4App_DecodeInitiate                  0x00005604   Section        0  md4app.o(i.MD4App_DecodeInitiate)
-    i.MD4App_DecodeProcess                   0x00005628   Section        0  md4app.o(i.MD4App_DecodeProcess)
-    i.MD4App_DecodeStartPlayByAddr           0x000056b0   Section        0  md4app.o(i.MD4App_DecodeStartPlayByAddr)
-    i.MD4App_DecodeStartPlayByID             0x00005720   Section        0  md4app.o(i.MD4App_DecodeStartPlayByID)
-    i.MD4App_DecodeStopPlay                  0x00005750   Section        0  md4app.o(i.MD4App_DecodeStopPlay)
-    i.MD4_CheckResLdr                        0x0000576a   Section        0  md4decode.o(i.MD4_CheckResLdr)
-    MD4_CheckResLdr                          0x0000576b   Thumb Code    32  md4decode.o(i.MD4_CheckResLdr)
-    i.MD4_DecodeFrame                        0x0000578c   Section        0  md4decode.o(i.MD4_DecodeFrame)
-    MD4_DecodeFrame                          0x0000578d   Thumb Code   190  md4decode.o(i.MD4_DecodeFrame)
-    i.MD4_DecodeInitiate                     0x00005854   Section        0  md4decode.o(i.MD4_DecodeInitiate)
-    i.MD4_DecodeIsEnd                        0x000058f4   Section        0  md4decode.o(i.MD4_DecodeIsEnd)
-    i.MD4_DecodeProcess                      0x0000590a   Section        0  md4decode.o(i.MD4_DecodeProcess)
-    i.MIC_ChangeSR                           0x00005a0c   Section        0  micspk.o(i.MIC_ChangeSR)
-    i.MIC_Open                               0x00005a8c   Section        0  micspk.o(i.MIC_Open)
-    i.MIC_Start                              0x00005b8c   Section        0  micspk.o(i.MIC_Start)
-    i.MIC_Stop                               0x00005b98   Section        0  micspk.o(i.MIC_Stop)
-    i.MicGetApp_Initiate                     0x00005ba8   Section        0  micgetapp.o(i.MicGetApp_Initiate)
-    i.MicGetApp_ProcessRec                   0x00005bbe   Section        0  micgetapp.o(i.MicGetApp_ProcessRec)
-    i.MicGetApp_StartRec                     0x00005be6   Section        0  micgetapp.o(i.MicGetApp_StartRec)
-    i.MicGetApp_StopRec                      0x00005c0e   Section        0  micgetapp.o(i.MicGetApp_StopRec)
-    i.NINJA_API_1                            0x00005c1e   Section        0  BsrGo.o(i.NINJA_API_1)
-    i.NINJA_API_11                           0x00005c84   Section        0  BsrGo.o(i.NINJA_API_11)
-    i.NINJA_API_13                           0x00005f04   Section        0  BsrGo.o(i.NINJA_API_13)
-    i.NINJA_API_15                           0x00006074   Section        0  BsrGo.o(i.NINJA_API_15)
-    i.NINJA_API_19                           0x00006092   Section        0  BsrGo.o(i.NINJA_API_19)
-    i.NINJA_API_2                            0x000060b0   Section        0  BsrGo.o(i.NINJA_API_2)
-    i.NINJA_API_23                           0x000060d8   Section        0  BsrGo.o(i.NINJA_API_23)
-    i.NINJA_API_26                           0x000060fe   Section        0  BsrGo.o(i.NINJA_API_26)
-    i.NINJA_API_3                            0x0000612e   Section        0  BsrGo.o(i.NINJA_API_3)
-    i.NINJA_API_47                           0x00006152   Section        0  BsrGo.o(i.NINJA_API_47)
-    i.NINJA_API_48                           0x000061c2   Section        0  BsrGo.o(i.NINJA_API_48)
-    i.NINJA_API_55                           0x00006240   Section        0  BsrGo.o(i.NINJA_API_55)
-    i.NINJA_API_56                           0x0000627c   Section        0  BsrGo.o(i.NINJA_API_56)
-    i.NINJA_API_73                           0x000062a8   Section        0  BsrGo.o(i.NINJA_API_73)
-    i.NINJA_API_75                           0x00006688   Section        0  BsrGo.o(i.NINJA_API_75)
-    i.OutputPin_Initiate                     0x0000673c   Section        0  configio.o(i.OutputPin_Initiate)
-    i.PDMA_DisableInt                        0x0000676c   Section        0  pdma.o(i.PDMA_DisableInt)
-    i.PDMA_EnableInt                         0x00006780   Section        0  pdma.o(i.PDMA_EnableInt)
-    i.PDMA_IRQHandler                        0x00006794   Section        0  interrupthandler.o(i.PDMA_IRQHandler)
-    i.PDMA_Open                              0x000067cc   Section        0  pdma.o(i.PDMA_Open)
-    i.PDMA_SetTransferAddr                   0x000067dc   Section        0  pdma.o(i.PDMA_SetTransferAddr)
-    i.PDMA_SetTransferCnt                    0x000067fc   Section        0  pdma.o(i.PDMA_SetTransferCnt)
-    i.PDMA_SetTransferDirection              0x00006834   Section        0  pdma.o(i.PDMA_SetTransferDirection)
-    i.PDMA_SetTransferMode                   0x0000684c   Section        0  pdma.o(i.PDMA_SetTransferMode)
-    i.PDMA_Trigger                           0x000068e4   Section        0  pdma.o(i.PDMA_Trigger)
-    i.PWM0_IRQHandler                        0x000068fc   Section        0  main.o(i.PWM0_IRQHandler)
-    i.PWM_ClearIntFlag                       0x00006928   Section        0  pwm.o(i.PWM_ClearIntFlag)
-    i.PWM_GetIntFlag                         0x00006930   Section        0  pwm.o(i.PWM_GetIntFlag)
-    i.PdmaCtrl_Init                          0x00006940   Section        0  pdmactrl.o(i.PdmaCtrl_Init)
-    i.PdmaCtrl_Open                          0x00006964   Section        0  pdmactrl.o(i.PdmaCtrl_Open)
-    i.PdmaCtrl_Start                         0x000069f0   Section        0  pdmactrl.o(i.PdmaCtrl_Start)
-    i.PdmaCtrl_Stop                          0x00006a30   Section        0  pdmactrl.o(i.PdmaCtrl_Stop)
-    i.Playback_Add                           0x00006a44   Section        0  playback.o(i.Playback_Add)
-    i.Playback_Initiate                      0x00006a78   Section        0  playback.o(i.Playback_Initiate)
-    i.Playback_Process                       0x00006a84   Section        0  playback.o(i.Playback_Process)
-    i.Playback_Remove                        0x00006b50   Section        0  playback.o(i.Playback_Remove)
-    i.Playback_ResetChannelVolume            0x00006b70   Section        0  playback.o(i.Playback_ResetChannelVolume)
-    i.Playback_SetOutputBuf                  0x00006b84   Section        0  playback.o(i.Playback_SetOutputBuf)
-    i.Playback_StartPlay                     0x00006bac   Section        0  playback.o(i.Playback_StartPlay)
-    i.Playback_StopPlay                      0x00006c04   Section        0  playback.o(i.Playback_StopPlay)
-    i.RTC_IRQHandler                         0x00006c50   Section        0  interrupthandler.o(i.RTC_IRQHandler)
-    i.Record_Add                             0x00006c54   Section        0  record.o(i.Record_Add)
-    i.Record_Process                         0x00006c6c   Section        0  record.o(i.Record_Process)
-    i.Record_SetInBufRecord                  0x00006cb0   Section        0  record.o(i.Record_SetInBufRecord)
-    i.Record_StartRec                        0x00006cd4   Section        0  record.o(i.Record_StartRec)
-    i.Record_StopRec                         0x00006d1c   Section        0  record.o(i.Record_StopRec)
-    i.SPIFlash_3ByteAddr_Cmd                 0x00006d38   Section        0  spiflash.o(i.SPIFlash_3ByteAddr_Cmd)
-    i.SPIFlash_GetChipInfo                   0x00006d68   Section        0  spiflash.o(i.SPIFlash_GetChipInfo)
-    i.SPIFlash_Initiate                      0x00006d94   Section        0  main.o(i.SPIFlash_Initiate)
-    i.SPIFlash_Open                          0x00006e10   Section        0  spiflash.o(i.SPIFlash_Open)
-    i.SPIFlash_PowerDown                     0x00006e80   Section        0  spiflash.o(i.SPIFlash_PowerDown)
-    i.SPIFlash_Read                          0x00006e94   Section        0  spiflash.o(i.SPIFlash_Read)
-    i.SPIFlash_ReadData                      0x00006eb2   Section        0  spiflash.o(i.SPIFlash_ReadData)
-    i.SPIFlash_ReadDataCallback              0x00006f88   Section        0  appcallback.o(i.SPIFlash_ReadDataCallback)
-    i.SPIFlash_ReadEnd                       0x00006fa0   Section        0  spiflash.o(i.SPIFlash_ReadEnd)
-    i.SPIFlash_ReadStart                     0x00006fb8   Section        0  spiflash.o(i.SPIFlash_ReadStart)
-    i.SPIFlash_SendRecOneData                0x00007006   Section        0  spiflash.o(i.SPIFlash_SendRecOneData)
-    i.SPI_GetBusClock                        0x00007058   Section        0  spi.o(i.SPI_GetBusClock)
-    i.SPI_Open                               0x0000706e   Section        0  spi.o(i.SPI_Open)
-    i.SPI_SetBusClock                        0x00007094   Section        0  spi.o(i.SPI_SetBusClock)
-    i.SPI_SetVarClock                        0x000070e4   Section        0  spi.o(i.SPI_SetVarClock)
-    i.SPK_ChangeSR                           0x00007124   Section        0  micspk.o(i.SPK_ChangeSR)
-    i.SPK_Open                               0x0000715c   Section        0  micspk.o(i.SPK_Open)
-    i.SPK_Start                              0x000071a4   Section        0  micspk.o(i.SPK_Start)
-    i.SPK_Stop                               0x000071c4   Section        0  micspk.o(i.SPK_Stop)
-    i.SYS_Lock                               0x000071d4   Section        0  sys.o(i.SYS_Lock)
-    i.SYS_ResetModule                        0x000071e4   Section        0  sys.o(i.SYS_ResetModule)
-    i.SYS_Unlock                             0x00007200   Section        0  sys.o(i.SYS_Unlock)
-    i.SendCMD                                0x0000722c   Section        0  appfunctions.o(i.SendCMD)
-    i.SendCMD1time                           0x0000724a   Section        0  appfunctions.o(i.SendCMD1time)
-    i.SendCMDByteTimer                       0x00007270   Section        0  appfunctions.o(i.SendCMDByteTimer)
-    i.SendChar_ToUART                        0x000072e8   Section        0  retarget.o(i.SendChar_ToUART)
-    i.SysClk_InitiateRC                      0x00007308   Section        0  sysclk.o(i.SysClk_InitiateRC)
-    i.SystemCoreClockUpdate                  0x0000735c   Section        0  system_isd9100.o(i.SystemCoreClockUpdate)
-    i.TIMER_GetModuleClock                   0x000073ac   Section        0  timer.o(i.TIMER_GetModuleClock)
-    i.TIMER_Open                             0x00007404   Section        0  timer.o(i.TIMER_Open)
-    i.TMR0_IRQHandler                        0x00007464   Section        0  main.o(i.TMR0_IRQHandler)
-    i.TMR1_IRQHandler                        0x0000750c   Section        0  main.o(i.TMR1_IRQHandler)
-    i.UART0_IRQHandler                       0x0000754c   Section        0  main.o(i.UART0_IRQHandler)
-    i.UART_ClearIntFlag                      0x000075b4   Section        0  uart.o(i.UART_ClearIntFlag)
-    i.UART_Init                              0x000075ec   Section        0  main.o(i.UART_Init)
-    i.UART_Open                              0x00007664   Section        0  uart.o(i.UART_Open)
-    i.UserEvent_ProcessCallback              0x000076c0   Section        0  appcallback.o(i.UserEvent_ProcessCallback)
-    i.VROneCmdApp_GetCMDID                   0x000076c4   Section        0  vronecmdapp.o(i.VROneCmdApp_GetCMDID)
-    i.VROneCmdApp_Initiate                   0x000076ee   Section        0  vronecmdapp.o(i.VROneCmdApp_Initiate)
-    i.VROneCmdApp_UnpackBin                  0x00007736   Section        0  vronecmdapp.o(i.VROneCmdApp_UnpackBin)
-    i.VolumeCtrl_Reset                       0x0000776e   Section        0  volumectrl.o(i.VolumeCtrl_Reset)
-    i.VolumeCtrl_VolumeFade                  0x00007784   Section        0  volumectrl.o(i.VolumeCtrl_VolumeFade)
-    i.WDT_IRQHandler                         0x000077a8   Section        0  interrupthandler.o(i.WDT_IRQHandler)
-    i.__ARM_common_switch8                   0x000077aa   Section        0  pdma.o(i.__ARM_common_switch8)
-    i._is_digit                              0x000077c4   Section        0  __printf_wp.o(i._is_digit)
-    i.delayms                                0x000077d4   Section        0  appfunctions.o(i.delayms)
-    i.ferror                                 0x000077f8   Section        0  retarget.o(i.ferror)
-    i.fputc                                  0x000077fe   Section        0  retarget.o(i.fputc)
-    i.main                                   0x0000780c   Section        0  main.o(i.main)
-    i.pwm_init                               0x00007888   Section        0  main.o(i.pwm_init)
-    i.time_init                              0x000078c8   Section        0  main.o(i.time_init)
-    i.uart_rev_task                          0x0000794c   Section        0  main.o(i.uart_rev_task)
-    .constdata                               0x00007968   Section       16  appcallback.o(.constdata)
-    .constdata                               0x00007978   Section       68  micspk.o(.constdata)
-    .constdata                               0x000079bc   Section       26  volumectrl.o(.constdata)
-    .constdata                               0x000079d8   Section       20  timer.o(.constdata)
-    .constdata                               0x000079ec   Section       48  md4decode.o(.constdata)
-    .constdata                               0x00007a1c   Section     2324  BsrGo.o(.constdata)
-    BSR_1                                    0x00007a1c   Data          80  BsrGo.o(.constdata)
-    BsrLori                                  0x00007a6c   Data        2180  BsrGo.o(.constdata)
-    BsrLori_1                                0x000082f0   Data          64  BsrGo.o(.constdata)
-    .constdata                               0x00008330   Section     2048  BsrBen.o(.constdata)
-    BsrKade                                  0x00008330   Data        2048  BsrBen.o(.constdata)
-    .constdata                               0x00008b30   Section      100  BsrEli.o(.constdata)
-    BsrKory                                  0x00008b30   Data         100  BsrEli.o(.constdata)
-    .constdata                               0x00008b94   Section        9  BsrJoy.o(.constdata)
-    BsrJudy                                  0x00008b94   Data           9  BsrJoy.o(.constdata)
-    .constdata                               0x00008b9e   Section      644  BsrAna.o(.constdata)
-    BsrKala                                  0x00008b9e   Data         644  BsrAna.o(.constdata)
-    .constdata                               0x00008e22   Section     1028  BsrAnn.o(.constdata)
-    BsrKira                                  0x00008e22   Data         258  BsrAnn.o(.constdata)
-    BsrKirk                                  0x00008f24   Data         258  BsrAnn.o(.constdata)
-    BsrKobe                                  0x00009026   Data         512  BsrAnn.o(.constdata)
-    .constdata                               0x00009228   Section      512  BsrGuy.o(.constdata)
-    BsrKyla                                  0x00009228   Data         512  BsrGuy.o(.constdata)
-    .conststring                             0x00009428   Section      300  appfunctions.o(.conststring)
+    i.App_StartPlay                          0x0000096c   Section        0  appfunctions.o(i.App_StartPlay)
+    i.App_StartRecognize                     0x000009a4   Section        0  appfunctions.o(i.App_StartRecognize)
+    i.App_StopPlay                           0x000009c8   Section        0  appfunctions.o(i.App_StopPlay)
+    i.AudioRom_GetAudioChunkInfo             0x000009dc   Section        0  audiorom.o(i.AudioRom_GetAudioChunkInfo)
+    i.AudioRom_GetAudioNum                   0x00000a0a   Section        0  audiorom.o(i.AudioRom_GetAudioNum)
+    i.AudioRom_GetRomHeader                  0x00000a18   Section        0  audiorom.o(i.AudioRom_GetRomHeader)
+    i.BIQFilter_Setting                      0x00000a34   Section        0  micspk.o(i.BIQFilter_Setting)
+    BIQFilter_Setting                        0x00000a35   Thumb Code    40  micspk.o(i.BIQFilter_Setting)
+    i.BIQ_Reset                              0x00000a64   Section        0  biq.o(i.BIQ_Reset)
+    i.BIQ_SetCoeff                           0x00000a80   Section        0  biq.o(i.BIQ_SetCoeff)
+    i.BsrAbby                                0x00000ac4   Section        0  BsrJoe.o(i.BsrAbby)
+    i.BsrAbel                                0x00000af0   Section        0  BsrJoe.o(i.BsrAbel)
+    i.BsrAdam                                0x00000b6e   Section        0  BsrJoe.o(i.BsrAdam)
+    i.BsrAlma                                0x00000c36   Section        0  BsrDon.o(i.BsrAlma)
+    i.BsrAmir                                0x00000d08   Section        0  BsrDon.o(i.BsrAmir)
+    i.BsrAmos                                0x00000d20   Section        0  BsrDon.o(i.BsrAmos)
+    i.BsrAna                                 0x00000e46   Section        0  BsrJim.o(i.BsrAna)
+    i.BsrAnna                                0x00000e70   Section        0  BsrDon.o(i.BsrAnna)
+    i.BsrAnne                                0x00000e96   Section        0  BsrDon.o(i.BsrAnne)
+    i.BsrAnnie                               0x00000eae   Section        0  BsrDon.o(i.BsrAnnie)
+    i.BsrAri                                 0x00000ecc   Section        0  BsrJim.o(i.BsrAri)
+    i.BsrAsa                                 0x00000f7c   Section        0  BsrJim.o(i.BsrAsa)
+    i.BsrAvea                                0x00001070   Section        0  BsrJim.o(i.BsrAvea)
+    i.BsrAyla                                0x0000111a   Section        0  BsrDon.o(i.BsrAyla)
+    i.BsrBaby                                0x00001134   Section        0  BsrDon.o(i.BsrBaby)
+    i.BsrBen                                 0x00001142   Section        0  BsrJim.o(i.BsrBen)
+    BsrBen                                   0x00001143   Thumb Code   172  BsrJim.o(i.BsrBen)
+    i.BsrBrad                                0x000011f0   Section        0  BsrBen.o(i.BsrBrad)
+    i.BsrBret                                0x0000122c   Section        0  BsrJay.o(i.BsrBret)
+    BsrBret                                  0x0000122d   Thumb Code   324  BsrJay.o(i.BsrBret)
+    i.BsrCade                                0x0000137c   Section        0  BsrJay.o(i.BsrCade)
+    i.BsrCadea                               0x00001508   Section        0  BsrJay.o(i.BsrCadea)
+    i.BsrCale                                0x0000160c   Section        0  BsrJay.o(i.BsrCale)
+    i.BsrCara                                0x00001650   Section        0  BsrJay.o(i.BsrCara)
+    i.BsrCarae                               0x00001a38   Section        0  BsrJay.o(i.BsrCarae)
+    i.BsrChad                                0x00001b04   Section        0  BsrJay.o(i.BsrChad)
+    i.BsrChada                               0x00001bc0   Section        0  BsrJay.o(i.BsrChada)
+    i.BsrChaz                                0x00001c08   Section        0  BsrJay.o(i.BsrChaz)
+    i.BsrChaza                               0x00001ce8   Section        0  BsrJay.o(i.BsrChaza)
+    i.BsrChaze                               0x00001da4   Section        0  BsrJay.o(i.BsrChaze)
+    i.BsrChazi                               0x00001e74   Section        0  BsrJay.o(i.BsrChazi)
+    i.BsrClay                                0x00001f44   Section        0  BsrJay.o(i.BsrClay)
+    i.BsrCory                                0x000024ac   Section        0  BsrJoy.o(i.BsrCory)
+    i.BsrCoty                                0x00002698   Section        0  BsrJoy.o(i.BsrCoty)
+    i.BsrDan                                 0x000026bc   Section        0  BsrJim.o(i.BsrDan)
+    i.BsrDane                                0x00002714   Section        0  BsrJoy.o(i.BsrDane)
+    i.BsrDawn                                0x0000271c   Section        0  BsrJoy.o(i.BsrDawn)
+    i.BsrDeja                                0x00002724   Section        0  BsrJoy.o(i.BsrDeja)
+    i.BsrDemi                                0x00002790   Section        0  BsrJoy.o(i.BsrDemi)
+    i.BsrDeon                                0x00002910   Section        0  BsrJoy.o(i.BsrDeon)
+    i.BsrDina                                0x00002a86   Section        0  BsrJoy.o(i.BsrDina)
+    i.BsrDion                                0x00002cd0   Section        0  BsrJoy.o(i.BsrDion)
+    i.BsrEden                                0x00002dac   Section        0  BsrEva.o(i.BsrEden)
+    i.BsrEli                                 0x00002f10   Section        0  BsrJim.o(i.BsrEli)
+    i.BsrElla                                0x00002f68   Section        0  BsrEva.o(i.BsrElla)
+    i.BsrElsa                                0x00003118   Section        0  BsrEva.o(i.BsrElsa)
+    i.BsrEmma                                0x00003290   Section        0  BsrEli.o(i.BsrEmma)
+    i.BsrEric                                0x00003368   Section        0  BsrEli.o(i.BsrEric)
+    i.BsrErica                               0x000033ec   Section        0  BsrEli.o(i.BsrErica)
+    i.BsrErik                                0x00003528   Section        0  BsrEli.o(i.BsrErik)
+    i.BsrErin                                0x00003556   Section        0  BsrEli.o(i.BsrErin)
+    i.BsrEva                                 0x0000363c   Section        0  BsrJim.o(i.BsrEva)
+    i.BsrEvan                                0x0000365e   Section        0  BsrEli.o(i.BsrEvan)
+    i.BsrGary                                0x00003698   Section        0  BsrAna.o(i.BsrGary)
+    i.BsrGreg                                0x00003758   Section        0  BsrAnn.o(i.BsrGreg)
+    i.BsrGuy                                 0x00003924   Section        0  BsrJim.o(i.BsrGuy)
+    i.BsrHugo                                0x0000395c   Section        0  BsrGuy.o(i.BsrHugo)
+    i.BsrIris                                0x00003a0c   Section        0  BsrGuy.o(i.BsrIris)
+    i.BsrIrma                                0x00003a44   Section        0  BsrGuy.o(i.BsrIrma)
+    i.BsrIsai                                0x00003a98   Section        0  BsrGuy.o(i.BsrIsai)
+    i.BsrIvy                                 0x00003ac6   Section        0  BsrJim.o(i.BsrIvy)
+    i.BsrJamii                               0x00003b82   Section        0  BsrJoy.o(i.BsrJamii)
+    BsrJamii                                 0x00003b83   Thumb Code   226  BsrJoy.o(i.BsrJamii)
+    i.BsrJan                                 0x00003c64   Section        0  BsrJim.o(i.BsrJan)
+    i.BsrJeni                                0x00003c7c   Section        0  BsrJay.o(i.BsrJeni)
+    BsrJeni                                  0x00003c7d   Thumb Code   390  BsrJay.o(i.BsrJeni)
+    i.BsrJoan                                0x00003e08   Section        0  BsrKai.o(i.BsrJoan)
+    BsrJoan                                  0x00003e09   Thumb Code   366  BsrKai.o(i.BsrJoan)
+    i.BsrJohn                                0x00003f76   Section        0  BsrAli.o(i.BsrJohn)
+    i.BsrJose                                0x00003fa0   Section        0  BsrAli.o(i.BsrJose)
+    i.BsrJosh                                0x00003fd6   Section        0  BsrAli.o(i.BsrJosh)
+    i.BsrJoyci                               0x0000407c   Section        0  BsrJim.o(i.BsrJoyci)
+    i.BsrJuanitez                            0x0000415c   Section        0  BsrEva.o(i.BsrJuanitez)
+    BsrJuanitez                              0x0000415d   Thumb Code    52  BsrEva.o(i.BsrJuanitez)
+    i.BsrLei                                 0x00004190   Section        0  BsrJim.o(i.BsrLei)
+    i.BsrMaxi                                0x000041a8   Section        0  BsrJim.o(i.BsrMaxi)
+    i.BsrMichael                             0x00004222   Section        0  BsrJim.o(i.BsrMichael)
+    i.BsrMichelle                            0x00004798   Section        0  BsrJim.o(i.BsrMichelle)
+    i.BsrMike                                0x000047a0   Section        0  BsrJim.o(i.BsrMike)
+    i.BsrMya                                 0x0000484c   Section        0  BsrKai.o(i.BsrMya)
+    i.BsrNia                                 0x000048d4   Section        0  BsrKai.o(i.BsrNia)
+    i.BsrRay                                 0x00004906   Section        0  BsrKai.o(i.BsrRay)
+    i.BsrRex                                 0x00004a3c   Section        0  BsrKai.o(i.BsrRex)
+    i.BsrRey                                 0x00004a4e   Section        0  BsrKai.o(i.BsrRey)
+    i.BsrRon                                 0x00004a5e   Section        0  BsrKai.o(i.BsrRon)
+    i.BsrRoy                                 0x00004f00   Section        0  BsrKai.o(i.BsrRoy)
+    i.BsrTed                                 0x00004f2c   Section        0  BsrKai.o(i.BsrTed)
+    i.BsrTia                                 0x00004f3c   Section        0  BsrKai.o(i.BsrTia)
+    i.BsrTom                                 0x00004fa4   Section        0  BsrKai.o(i.BsrTom)
+    i.BsrTop                                 0x00005036   Section        0  BsrKai.o(i.BsrTop)
+    i.BsrTre                                 0x00005094   Section        0  BsrKai.o(i.BsrTre)
+    i.BsrZoe                                 0x000050a6   Section        0  BsrJoe.o(i.BsrZoe)
+    i.BufCtrl_UpdateReadWithCount            0x000050aa   Section        0  bufctrl.o(i.BufCtrl_UpdateReadWithCount)
+    i.BufCtrl_UpdateWriteWithCount           0x000050c8   Section        0  bufctrl.o(i.BufCtrl_UpdateWriteWithCount)
+    i.CAPS_IRQHandler                        0x000050e8   Section        0  interrupthandler.o(i.CAPS_IRQHandler)
+    i.CLK_EnableLDO                          0x000050f8   Section        0  clk.o(i.CLK_EnableLDO)
+    i.CLK_EnableModuleClock                  0x0000512c   Section        0  clk.o(i.CLK_EnableModuleClock)
+    i.CLK_EnableXtalRC                       0x00005148   Section        0  clk.o(i.CLK_EnableXtalRC)
+    i.CLK_GetHCLKFreq                        0x00005164   Section        0  clk.o(i.CLK_GetHCLKFreq)
+    i.CLK_SetHCLK                            0x00005174   Section        0  clk.o(i.CLK_SetHCLK)
+    i.CLK_SetModuleClock                     0x000051b0   Section        0  clk.o(i.CLK_SetModuleClock)
+    i.CSpotter_AddSample                     0x00005200   Section        0  CSpotterSDKApi.o(i.CSpotter_AddSample)
+    i.CSpotter_GetMemoryUsage_MultiWithSpeakerAndExtRejModel 0x00005264   Section        0  CSpotterSDKApi.o(i.CSpotter_GetMemoryUsage_MultiWithSpeakerAndExtRejModel)
+    i.CSpotter_GetMemoryUsage_Sep            0x00005320   Section        0  CSpotterSDKApi.o(i.CSpotter_GetMemoryUsage_Sep)
+    i.CSpotter_GetResult                     0x00005338   Section        0  CSpotterSDKApi.o(i.CSpotter_GetResult)
+    i.CSpotter_Init_MultiWithExtRejModel     0x0000535c   Section        0  CSpotterSDKApi.o(i.CSpotter_Init_MultiWithExtRejModel)
+    i.CSpotter_Init_Sep                      0x00005560   Section        0  CSpotterSDKApi.o(i.CSpotter_Init_Sep)
+    i.CSpotter_Reset                         0x00005584   Section        0  CSpotterSDKApi.o(i.CSpotter_Reset)
+    i.DPWM_Open                              0x000055b8   Section        0  dpwm.o(i.DPWM_Open)
+    i.DPWM_SetSampleRate                     0x000055bc   Section        0  dpwm.o(i.DPWM_SetSampleRate)
+    i.GPAB_IRQHandler                        0x000055f8   Section        0  interrupthandler.o(i.GPAB_IRQHandler)
+    i.GPIO_SetMode                           0x00005614   Section        0  gpio.o(i.GPIO_SetMode)
+    i.MD4App_DecodeInitiate                  0x0000563c   Section        0  md4app.o(i.MD4App_DecodeInitiate)
+    i.MD4App_DecodeProcess                   0x00005660   Section        0  md4app.o(i.MD4App_DecodeProcess)
+    i.MD4App_DecodeStartPlayByAddr           0x000056e8   Section        0  md4app.o(i.MD4App_DecodeStartPlayByAddr)
+    i.MD4App_DecodeStartPlayByID             0x00005758   Section        0  md4app.o(i.MD4App_DecodeStartPlayByID)
+    i.MD4App_DecodeStopPlay                  0x00005788   Section        0  md4app.o(i.MD4App_DecodeStopPlay)
+    i.MD4_CheckResLdr                        0x000057a2   Section        0  md4decode.o(i.MD4_CheckResLdr)
+    MD4_CheckResLdr                          0x000057a3   Thumb Code    32  md4decode.o(i.MD4_CheckResLdr)
+    i.MD4_DecodeFrame                        0x000057c4   Section        0  md4decode.o(i.MD4_DecodeFrame)
+    MD4_DecodeFrame                          0x000057c5   Thumb Code   190  md4decode.o(i.MD4_DecodeFrame)
+    i.MD4_DecodeInitiate                     0x0000588c   Section        0  md4decode.o(i.MD4_DecodeInitiate)
+    i.MD4_DecodeIsEnd                        0x0000592c   Section        0  md4decode.o(i.MD4_DecodeIsEnd)
+    i.MD4_DecodeProcess                      0x00005942   Section        0  md4decode.o(i.MD4_DecodeProcess)
+    i.MIC_ChangeSR                           0x00005a44   Section        0  micspk.o(i.MIC_ChangeSR)
+    i.MIC_Open                               0x00005ac4   Section        0  micspk.o(i.MIC_Open)
+    i.MIC_Start                              0x00005bc4   Section        0  micspk.o(i.MIC_Start)
+    i.MIC_Stop                               0x00005bd0   Section        0  micspk.o(i.MIC_Stop)
+    i.MicGetApp_Initiate                     0x00005be0   Section        0  micgetapp.o(i.MicGetApp_Initiate)
+    i.MicGetApp_ProcessRec                   0x00005bf6   Section        0  micgetapp.o(i.MicGetApp_ProcessRec)
+    i.MicGetApp_StartRec                     0x00005c1e   Section        0  micgetapp.o(i.MicGetApp_StartRec)
+    i.MicGetApp_StopRec                      0x00005c46   Section        0  micgetapp.o(i.MicGetApp_StopRec)
+    i.NINJA_API_1                            0x00005c56   Section        0  BsrGo.o(i.NINJA_API_1)
+    i.NINJA_API_11                           0x00005cbc   Section        0  BsrGo.o(i.NINJA_API_11)
+    i.NINJA_API_13                           0x00005f3c   Section        0  BsrGo.o(i.NINJA_API_13)
+    i.NINJA_API_15                           0x000060ac   Section        0  BsrGo.o(i.NINJA_API_15)
+    i.NINJA_API_19                           0x000060ca   Section        0  BsrGo.o(i.NINJA_API_19)
+    i.NINJA_API_2                            0x000060e8   Section        0  BsrGo.o(i.NINJA_API_2)
+    i.NINJA_API_23                           0x00006110   Section        0  BsrGo.o(i.NINJA_API_23)
+    i.NINJA_API_26                           0x00006136   Section        0  BsrGo.o(i.NINJA_API_26)
+    i.NINJA_API_3                            0x00006166   Section        0  BsrGo.o(i.NINJA_API_3)
+    i.NINJA_API_47                           0x0000618a   Section        0  BsrGo.o(i.NINJA_API_47)
+    i.NINJA_API_48                           0x000061fa   Section        0  BsrGo.o(i.NINJA_API_48)
+    i.NINJA_API_55                           0x00006278   Section        0  BsrGo.o(i.NINJA_API_55)
+    i.NINJA_API_56                           0x000062b4   Section        0  BsrGo.o(i.NINJA_API_56)
+    i.NINJA_API_73                           0x000062e0   Section        0  BsrGo.o(i.NINJA_API_73)
+    i.NINJA_API_75                           0x000066c0   Section        0  BsrGo.o(i.NINJA_API_75)
+    i.OutputPin_Initiate                     0x00006774   Section        0  configio.o(i.OutputPin_Initiate)
+    i.PDMA_DisableInt                        0x000067a4   Section        0  pdma.o(i.PDMA_DisableInt)
+    i.PDMA_EnableInt                         0x000067b8   Section        0  pdma.o(i.PDMA_EnableInt)
+    i.PDMA_IRQHandler                        0x000067cc   Section        0  interrupthandler.o(i.PDMA_IRQHandler)
+    i.PDMA_Open                              0x00006804   Section        0  pdma.o(i.PDMA_Open)
+    i.PDMA_SetTransferAddr                   0x00006814   Section        0  pdma.o(i.PDMA_SetTransferAddr)
+    i.PDMA_SetTransferCnt                    0x00006834   Section        0  pdma.o(i.PDMA_SetTransferCnt)
+    i.PDMA_SetTransferDirection              0x0000686c   Section        0  pdma.o(i.PDMA_SetTransferDirection)
+    i.PDMA_SetTransferMode                   0x00006884   Section        0  pdma.o(i.PDMA_SetTransferMode)
+    i.PDMA_Trigger                           0x0000691c   Section        0  pdma.o(i.PDMA_Trigger)
+    i.PWM0_IRQHandler                        0x00006934   Section        0  main.o(i.PWM0_IRQHandler)
+    i.PWM_ClearIntFlag                       0x00006960   Section        0  pwm.o(i.PWM_ClearIntFlag)
+    i.PWM_GetIntFlag                         0x00006968   Section        0  pwm.o(i.PWM_GetIntFlag)
+    i.PdmaCtrl_Init                          0x00006978   Section        0  pdmactrl.o(i.PdmaCtrl_Init)
+    i.PdmaCtrl_Open                          0x0000699c   Section        0  pdmactrl.o(i.PdmaCtrl_Open)
+    i.PdmaCtrl_Start                         0x00006a28   Section        0  pdmactrl.o(i.PdmaCtrl_Start)
+    i.PdmaCtrl_Stop                          0x00006a68   Section        0  pdmactrl.o(i.PdmaCtrl_Stop)
+    i.Playback_Add                           0x00006a7c   Section        0  playback.o(i.Playback_Add)
+    i.Playback_Initiate                      0x00006ab0   Section        0  playback.o(i.Playback_Initiate)
+    i.Playback_Process                       0x00006abc   Section        0  playback.o(i.Playback_Process)
+    i.Playback_Remove                        0x00006b88   Section        0  playback.o(i.Playback_Remove)
+    i.Playback_ResetChannelVolume            0x00006ba8   Section        0  playback.o(i.Playback_ResetChannelVolume)
+    i.Playback_SetOutputBuf                  0x00006bbc   Section        0  playback.o(i.Playback_SetOutputBuf)
+    i.Playback_StartPlay                     0x00006be4   Section        0  playback.o(i.Playback_StartPlay)
+    i.Playback_StopPlay                      0x00006c3c   Section        0  playback.o(i.Playback_StopPlay)
+    i.RTC_IRQHandler                         0x00006c88   Section        0  interrupthandler.o(i.RTC_IRQHandler)
+    i.Record_Add                             0x00006c8c   Section        0  record.o(i.Record_Add)
+    i.Record_Process                         0x00006ca4   Section        0  record.o(i.Record_Process)
+    i.Record_SetInBufRecord                  0x00006ce8   Section        0  record.o(i.Record_SetInBufRecord)
+    i.Record_StartRec                        0x00006d0c   Section        0  record.o(i.Record_StartRec)
+    i.Record_StopRec                         0x00006d54   Section        0  record.o(i.Record_StopRec)
+    i.SPIFlash_3ByteAddr_Cmd                 0x00006d70   Section        0  spiflash.o(i.SPIFlash_3ByteAddr_Cmd)
+    i.SPIFlash_GetChipInfo                   0x00006da0   Section        0  spiflash.o(i.SPIFlash_GetChipInfo)
+    i.SPIFlash_Initiate                      0x00006dcc   Section        0  main.o(i.SPIFlash_Initiate)
+    i.SPIFlash_Open                          0x00006e48   Section        0  spiflash.o(i.SPIFlash_Open)
+    i.SPIFlash_PowerDown                     0x00006eb8   Section        0  spiflash.o(i.SPIFlash_PowerDown)
+    i.SPIFlash_Read                          0x00006ecc   Section        0  spiflash.o(i.SPIFlash_Read)
+    i.SPIFlash_ReadData                      0x00006eea   Section        0  spiflash.o(i.SPIFlash_ReadData)
+    i.SPIFlash_ReadDataCallback              0x00006fc0   Section        0  appcallback.o(i.SPIFlash_ReadDataCallback)
+    i.SPIFlash_ReadEnd                       0x00006fd8   Section        0  spiflash.o(i.SPIFlash_ReadEnd)
+    i.SPIFlash_ReadStart                     0x00006ff0   Section        0  spiflash.o(i.SPIFlash_ReadStart)
+    i.SPIFlash_SendRecOneData                0x0000703e   Section        0  spiflash.o(i.SPIFlash_SendRecOneData)
+    i.SPI_GetBusClock                        0x00007090   Section        0  spi.o(i.SPI_GetBusClock)
+    i.SPI_Open                               0x000070a6   Section        0  spi.o(i.SPI_Open)
+    i.SPI_SetBusClock                        0x000070cc   Section        0  spi.o(i.SPI_SetBusClock)
+    i.SPI_SetVarClock                        0x0000711c   Section        0  spi.o(i.SPI_SetVarClock)
+    i.SPK_ChangeSR                           0x0000715c   Section        0  micspk.o(i.SPK_ChangeSR)
+    i.SPK_Open                               0x00007194   Section        0  micspk.o(i.SPK_Open)
+    i.SPK_Start                              0x000071dc   Section        0  micspk.o(i.SPK_Start)
+    i.SPK_Stop                               0x000071fc   Section        0  micspk.o(i.SPK_Stop)
+    i.SYS_Lock                               0x0000720c   Section        0  sys.o(i.SYS_Lock)
+    i.SYS_ResetModule                        0x0000721c   Section        0  sys.o(i.SYS_ResetModule)
+    i.SYS_Unlock                             0x00007238   Section        0  sys.o(i.SYS_Unlock)
+    i.SendCMD                                0x00007264   Section        0  appfunctions.o(i.SendCMD)
+    i.SendCMD1time                           0x00007282   Section        0  appfunctions.o(i.SendCMD1time)
+    i.SendCMDByteTimer                       0x000072a8   Section        0  appfunctions.o(i.SendCMDByteTimer)
+    i.SendChar_ToUART                        0x00007320   Section        0  retarget.o(i.SendChar_ToUART)
+    i.SysClk_InitiateRC                      0x00007340   Section        0  sysclk.o(i.SysClk_InitiateRC)
+    i.SystemCoreClockUpdate                  0x00007394   Section        0  system_isd9100.o(i.SystemCoreClockUpdate)
+    i.TIMER_GetModuleClock                   0x000073e4   Section        0  timer.o(i.TIMER_GetModuleClock)
+    i.TIMER_Open                             0x0000743c   Section        0  timer.o(i.TIMER_Open)
+    i.TMR0_IRQHandler                        0x0000749c   Section        0  main.o(i.TMR0_IRQHandler)
+    i.TMR1_IRQHandler                        0x00007544   Section        0  main.o(i.TMR1_IRQHandler)
+    i.UART0_IRQHandler                       0x00007584   Section        0  main.o(i.UART0_IRQHandler)
+    i.UART_ClearIntFlag                      0x000075ec   Section        0  uart.o(i.UART_ClearIntFlag)
+    i.UART_Init                              0x00007624   Section        0  main.o(i.UART_Init)
+    i.UART_Open                              0x0000769c   Section        0  uart.o(i.UART_Open)
+    i.UserEvent_ProcessCallback              0x000076f8   Section        0  appcallback.o(i.UserEvent_ProcessCallback)
+    i.VROneCmdApp_GetCMDID                   0x000076fc   Section        0  vronecmdapp.o(i.VROneCmdApp_GetCMDID)
+    i.VROneCmdApp_Initiate                   0x00007726   Section        0  vronecmdapp.o(i.VROneCmdApp_Initiate)
+    i.VROneCmdApp_UnpackBin                  0x0000776e   Section        0  vronecmdapp.o(i.VROneCmdApp_UnpackBin)
+    i.VolumeCtrl_Reset                       0x000077a6   Section        0  volumectrl.o(i.VolumeCtrl_Reset)
+    i.VolumeCtrl_VolumeFade                  0x000077bc   Section        0  volumectrl.o(i.VolumeCtrl_VolumeFade)
+    i.WDT_IRQHandler                         0x000077e0   Section        0  interrupthandler.o(i.WDT_IRQHandler)
+    i.__ARM_common_switch8                   0x000077e2   Section        0  appfunctions.o(i.__ARM_common_switch8)
+    i._is_digit                              0x000077fc   Section        0  __printf_wp.o(i._is_digit)
+    i.delayms                                0x0000780c   Section        0  appfunctions.o(i.delayms)
+    i.ferror                                 0x00007830   Section        0  retarget.o(i.ferror)
+    i.fputc                                  0x00007836   Section        0  retarget.o(i.fputc)
+    i.main                                   0x00007844   Section        0  main.o(i.main)
+    i.pwm_init                               0x000078c0   Section        0  main.o(i.pwm_init)
+    i.time_init                              0x00007900   Section        0  main.o(i.time_init)
+    i.uart_rev_task                          0x00007984   Section        0  main.o(i.uart_rev_task)
+    .constdata                               0x000079a0   Section       16  appcallback.o(.constdata)
+    .constdata                               0x000079b0   Section       68  micspk.o(.constdata)
+    .constdata                               0x000079f4   Section       26  volumectrl.o(.constdata)
+    .constdata                               0x00007a10   Section       20  timer.o(.constdata)
+    .constdata                               0x00007a24   Section       48  md4decode.o(.constdata)
+    .constdata                               0x00007a54   Section     2324  BsrGo.o(.constdata)
+    BSR_1                                    0x00007a54   Data          80  BsrGo.o(.constdata)
+    BsrLori                                  0x00007aa4   Data        2180  BsrGo.o(.constdata)
+    BsrLori_1                                0x00008328   Data          64  BsrGo.o(.constdata)
+    .constdata                               0x00008368   Section     2048  BsrBen.o(.constdata)
+    BsrKade                                  0x00008368   Data        2048  BsrBen.o(.constdata)
+    .constdata                               0x00008b68   Section      100  BsrEli.o(.constdata)
+    BsrKory                                  0x00008b68   Data         100  BsrEli.o(.constdata)
+    .constdata                               0x00008bcc   Section        9  BsrJoy.o(.constdata)
+    BsrJudy                                  0x00008bcc   Data           9  BsrJoy.o(.constdata)
+    .constdata                               0x00008bd6   Section      644  BsrAna.o(.constdata)
+    BsrKala                                  0x00008bd6   Data         644  BsrAna.o(.constdata)
+    .constdata                               0x00008e5a   Section     1028  BsrAnn.o(.constdata)
+    BsrKira                                  0x00008e5a   Data         258  BsrAnn.o(.constdata)
+    BsrKirk                                  0x00008f5c   Data         258  BsrAnn.o(.constdata)
+    BsrKobe                                  0x0000905e   Data         512  BsrAnn.o(.constdata)
+    .constdata                               0x00009260   Section      512  BsrGuy.o(.constdata)
+    BsrKyla                                  0x00009260   Data         512  BsrGuy.o(.constdata)
+    .conststring                             0x00009460   Section      300  appfunctions.o(.conststring)
     .data                                    0x20000000   Section       16  main.o(.data)
     time_10ms                                0x20000003   Data           1  main.o(.data)
     ll                                       0x20000004   Data           1  main.o(.data)
@@ -2323,236 +2324,236 @@ Image Symbol Table
     ADC_SetAMUX                              0x000006fd   Thumb Code    66  adc.o(i.ADC_SetAMUX)
     ADC_SetPGAGaindB                         0x00000749   Thumb Code    42  adc.o(i.ADC_SetPGAGaindB)
     App_Initiate                             0x00000781   Thumb Code    60  appfunctions.o(i.App_Initiate)
-    App_Process                              0x000007d9   Thumb Code   274  appfunctions.o(i.App_Process)
-    App_StartPlay                            0x00000935   Thumb Code    46  appfunctions.o(i.App_StartPlay)
-    App_StartRecognize                       0x0000096d   Thumb Code    26  appfunctions.o(i.App_StartRecognize)
-    App_StopPlay                             0x00000991   Thumb Code    16  appfunctions.o(i.App_StopPlay)
-    AudioRom_GetAudioChunkInfo               0x000009a5   Thumb Code    46  audiorom.o(i.AudioRom_GetAudioChunkInfo)
-    AudioRom_GetAudioNum                     0x000009d3   Thumb Code    14  audiorom.o(i.AudioRom_GetAudioNum)
-    AudioRom_GetRomHeader                    0x000009e1   Thumb Code    28  audiorom.o(i.AudioRom_GetRomHeader)
-    BIQ_Reset                                0x00000a2d   Thumb Code    22  biq.o(i.BIQ_Reset)
-    BIQ_SetCoeff                             0x00000a49   Thumb Code    62  biq.o(i.BIQ_SetCoeff)
-    BsrAbby                                  0x00000a8d   Thumb Code    44  BsrJoe.o(i.BsrAbby)
-    BsrAbel                                  0x00000ab9   Thumb Code   126  BsrJoe.o(i.BsrAbel)
-    BsrAdam                                  0x00000b37   Thumb Code   200  BsrJoe.o(i.BsrAdam)
-    BsrAlma                                  0x00000bff   Thumb Code   210  BsrDon.o(i.BsrAlma)
-    BsrAmir                                  0x00000cd1   Thumb Code    24  BsrDon.o(i.BsrAmir)
-    BsrAmos                                  0x00000ce9   Thumb Code   294  BsrDon.o(i.BsrAmos)
-    BsrAna                                   0x00000e0f   Thumb Code    42  BsrJim.o(i.BsrAna)
-    BsrAnna                                  0x00000e39   Thumb Code    38  BsrDon.o(i.BsrAnna)
-    BsrAnne                                  0x00000e5f   Thumb Code    24  BsrDon.o(i.BsrAnne)
-    BsrAnnie                                 0x00000e77   Thumb Code    28  BsrDon.o(i.BsrAnnie)
-    BsrAri                                   0x00000e95   Thumb Code   172  BsrJim.o(i.BsrAri)
-    BsrAsa                                   0x00000f45   Thumb Code   238  BsrJim.o(i.BsrAsa)
-    BsrAvea                                  0x00001039   Thumb Code   170  BsrJim.o(i.BsrAvea)
-    BsrAyla                                  0x000010e3   Thumb Code    26  BsrDon.o(i.BsrAyla)
-    BsrBaby                                  0x000010fd   Thumb Code    14  BsrDon.o(i.BsrBaby)
-    BsrBrad                                  0x000011b9   Thumb Code    54  BsrBen.o(i.BsrBrad)
-    BsrCade                                  0x00001345   Thumb Code   394  BsrJay.o(i.BsrCade)
-    BsrCadea                                 0x000014d1   Thumb Code   254  BsrJay.o(i.BsrCadea)
-    BsrCale                                  0x000015d5   Thumb Code    68  BsrJay.o(i.BsrCale)
-    BsrCara                                  0x00001619   Thumb Code  1000  BsrJay.o(i.BsrCara)
-    BsrCarae                                 0x00001a01   Thumb Code   198  BsrJay.o(i.BsrCarae)
-    BsrChad                                  0x00001acd   Thumb Code   182  BsrJay.o(i.BsrChad)
-    BsrChada                                 0x00001b89   Thumb Code    68  BsrJay.o(i.BsrChada)
-    BsrChaz                                  0x00001bd1   Thumb Code   218  BsrJay.o(i.BsrChaz)
-    BsrChaza                                 0x00001cb1   Thumb Code   182  BsrJay.o(i.BsrChaza)
-    BsrChaze                                 0x00001d6d   Thumb Code   204  BsrJay.o(i.BsrChaze)
-    BsrChazi                                 0x00001e3d   Thumb Code   206  BsrJay.o(i.BsrChazi)
-    BsrClay                                  0x00001f0d   Thumb Code  1378  BsrJay.o(i.BsrClay)
-    BsrCory                                  0x00002475   Thumb Code   488  BsrJoy.o(i.BsrCory)
-    BsrCoty                                  0x00002661   Thumb Code    34  BsrJoy.o(i.BsrCoty)
-    BsrDan                                   0x00002685   Thumb Code    82  BsrJim.o(i.BsrDan)
-    BsrDane                                  0x000026dd   Thumb Code     8  BsrJoy.o(i.BsrDane)
-    BsrDawn                                  0x000026e5   Thumb Code     8  BsrJoy.o(i.BsrDawn)
-    BsrDeja                                  0x000026ed   Thumb Code   108  BsrJoy.o(i.BsrDeja)
-    BsrDemi                                  0x00002759   Thumb Code   374  BsrJoy.o(i.BsrDemi)
-    BsrDeon                                  0x000028d9   Thumb Code   374  BsrJoy.o(i.BsrDeon)
-    BsrDina                                  0x00002a4f   Thumb Code   586  BsrJoy.o(i.BsrDina)
-    BsrDion                                  0x00002c99   Thumb Code   214  BsrJoy.o(i.BsrDion)
-    BsrEden                                  0x00002d75   Thumb Code   350  BsrEva.o(i.BsrEden)
-    BsrEli                                   0x00002ed9   Thumb Code    88  BsrJim.o(i.BsrEli)
-    BsrElla                                  0x00002f31   Thumb Code   426  BsrEva.o(i.BsrElla)
-    BsrElsa                                  0x000030e1   Thumb Code   370  BsrEva.o(i.BsrElsa)
-    BsrEmma                                  0x00003259   Thumb Code   212  BsrEli.o(i.BsrEmma)
-    BsrEric                                  0x00003331   Thumb Code   130  BsrEli.o(i.BsrEric)
-    BsrErica                                 0x000033b5   Thumb Code   306  BsrEli.o(i.BsrErica)
-    BsrErik                                  0x000034f1   Thumb Code    46  BsrEli.o(i.BsrErik)
-    BsrErin                                  0x0000351f   Thumb Code   230  BsrEli.o(i.BsrErin)
-    BsrEva                                   0x00003605   Thumb Code    34  BsrJim.o(i.BsrEva)
-    BsrEvan                                  0x00003627   Thumb Code    58  BsrEli.o(i.BsrEvan)
-    BsrGary                                  0x00003661   Thumb Code   188  BsrAna.o(i.BsrGary)
-    BsrGreg                                  0x00003721   Thumb Code   448  BsrAnn.o(i.BsrGreg)
-    BsrGuy                                   0x000038ed   Thumb Code    54  BsrJim.o(i.BsrGuy)
-    BsrHugo                                  0x00003925   Thumb Code   170  BsrGuy.o(i.BsrHugo)
-    BsrIris                                  0x000039d5   Thumb Code    54  BsrGuy.o(i.BsrIris)
-    BsrIrma                                  0x00003a0d   Thumb Code    80  BsrGuy.o(i.BsrIrma)
-    BsrIsai                                  0x00003a61   Thumb Code    46  BsrGuy.o(i.BsrIsai)
-    BsrIvy                                   0x00003a8f   Thumb Code   188  BsrJim.o(i.BsrIvy)
-    BsrJan                                   0x00003c2d   Thumb Code    24  BsrJim.o(i.BsrJan)
-    BsrJohn                                  0x00003f3f   Thumb Code    42  BsrAli.o(i.BsrJohn)
-    BsrJose                                  0x00003f69   Thumb Code    54  BsrAli.o(i.BsrJose)
-    BsrJosh                                  0x00003f9f   Thumb Code   164  BsrAli.o(i.BsrJosh)
-    BsrJoyci                                 0x00004045   Thumb Code   218  BsrJim.o(i.BsrJoyci)
-    BsrLei                                   0x00004159   Thumb Code    24  BsrJim.o(i.BsrLei)
-    BsrMaxi                                  0x00004171   Thumb Code   122  BsrJim.o(i.BsrMaxi)
-    BsrMichael                               0x000041eb   Thumb Code  1398  BsrJim.o(i.BsrMichael)
-    BsrMichelle                              0x00004761   Thumb Code     8  BsrJim.o(i.BsrMichelle)
-    BsrMike                                  0x00004769   Thumb Code   172  BsrJim.o(i.BsrMike)
-    BsrMya                                   0x00004815   Thumb Code   136  BsrKai.o(i.BsrMya)
-    BsrNia                                   0x0000489d   Thumb Code    50  BsrKai.o(i.BsrNia)
-    BsrRay                                   0x000048cf   Thumb Code   310  BsrKai.o(i.BsrRay)
-    BsrRex                                   0x00004a05   Thumb Code    18  BsrKai.o(i.BsrRex)
-    BsrRey                                   0x00004a17   Thumb Code    16  BsrKai.o(i.BsrRey)
-    BsrRon                                   0x00004a27   Thumb Code  1186  BsrKai.o(i.BsrRon)
-    BsrRoy                                   0x00004ec9   Thumb Code    44  BsrKai.o(i.BsrRoy)
-    BsrTed                                   0x00004ef5   Thumb Code    16  BsrKai.o(i.BsrTed)
-    BsrTia                                   0x00004f05   Thumb Code   104  BsrKai.o(i.BsrTia)
-    BsrTom                                   0x00004f6d   Thumb Code   146  BsrKai.o(i.BsrTom)
-    BsrTop                                   0x00004fff   Thumb Code    94  BsrKai.o(i.BsrTop)
-    BsrTre                                   0x0000505d   Thumb Code    18  BsrKai.o(i.BsrTre)
-    BsrZoe                                   0x0000506f   Thumb Code     4  BsrJoe.o(i.BsrZoe)
-    BufCtrl_UpdateReadWithCount              0x00005073   Thumb Code    30  bufctrl.o(i.BufCtrl_UpdateReadWithCount)
-    BufCtrl_UpdateWriteWithCount             0x00005091   Thumb Code    30  bufctrl.o(i.BufCtrl_UpdateWriteWithCount)
-    CAPS_IRQHandler                          0x000050b1   Thumb Code    12  interrupthandler.o(i.CAPS_IRQHandler)
-    CLK_EnableLDO                            0x000050c1   Thumb Code    44  clk.o(i.CLK_EnableLDO)
-    CLK_EnableModuleClock                    0x000050f5   Thumb Code    24  clk.o(i.CLK_EnableModuleClock)
-    CLK_EnableXtalRC                         0x00005111   Thumb Code    22  clk.o(i.CLK_EnableXtalRC)
-    CLK_GetHCLKFreq                          0x0000512d   Thumb Code    12  clk.o(i.CLK_GetHCLKFreq)
-    CLK_SetHCLK                              0x0000513d   Thumb Code    56  clk.o(i.CLK_SetHCLK)
-    CLK_SetModuleClock                       0x00005179   Thumb Code    74  clk.o(i.CLK_SetModuleClock)
-    CSpotter_AddSample                       0x000051c9   Thumb Code    82  CSpotterSDKApi.o(i.CSpotter_AddSample)
-    CSpotter_GetMemoryUsage_MultiWithSpeakerAndExtRejModel 0x0000522d   Thumb Code   178  CSpotterSDKApi.o(i.CSpotter_GetMemoryUsage_MultiWithSpeakerAndExtRejModel)
-    CSpotter_GetMemoryUsage_Sep              0x000052e9   Thumb Code    24  CSpotterSDKApi.o(i.CSpotter_GetMemoryUsage_Sep)
-    CSpotter_GetResult                       0x00005301   Thumb Code    30  CSpotterSDKApi.o(i.CSpotter_GetResult)
-    CSpotter_Init_MultiWithExtRejModel       0x00005325   Thumb Code   488  CSpotterSDKApi.o(i.CSpotter_Init_MultiWithExtRejModel)
-    CSpotter_Init_Sep                        0x00005529   Thumb Code    36  CSpotterSDKApi.o(i.CSpotter_Init_Sep)
-    CSpotter_Reset                           0x0000554d   Thumb Code    40  CSpotterSDKApi.o(i.CSpotter_Reset)
-    DPWM_Open                                0x00005581   Thumb Code     2  dpwm.o(i.DPWM_Open)
-    DPWM_SetSampleRate                       0x00005585   Thumb Code    50  dpwm.o(i.DPWM_SetSampleRate)
-    GPAB_IRQHandler                          0x000055c1   Thumb Code    18  interrupthandler.o(i.GPAB_IRQHandler)
-    GPIO_SetMode                             0x000055dd   Thumb Code    40  gpio.o(i.GPIO_SetMode)
-    MD4App_DecodeInitiate                    0x00005605   Thumb Code    34  md4app.o(i.MD4App_DecodeInitiate)
-    MD4App_DecodeProcess                     0x00005629   Thumb Code   132  md4app.o(i.MD4App_DecodeProcess)
-    MD4App_DecodeStartPlayByAddr             0x000056b1   Thumb Code   108  md4app.o(i.MD4App_DecodeStartPlayByAddr)
-    MD4App_DecodeStartPlayByID               0x00005721   Thumb Code    42  md4app.o(i.MD4App_DecodeStartPlayByID)
-    MD4App_DecodeStopPlay                    0x00005751   Thumb Code    26  md4app.o(i.MD4App_DecodeStopPlay)
-    MD4_DecodeInitiate                       0x00005855   Thumb Code   154  md4decode.o(i.MD4_DecodeInitiate)
-    MD4_DecodeIsEnd                          0x000058f5   Thumb Code    22  md4decode.o(i.MD4_DecodeIsEnd)
-    MD4_DecodeProcess                        0x0000590b   Thumb Code   256  md4decode.o(i.MD4_DecodeProcess)
-    MIC_ChangeSR                             0x00005a0d   Thumb Code   108  micspk.o(i.MIC_ChangeSR)
-    MIC_Open                                 0x00005a8d   Thumb Code   216  micspk.o(i.MIC_Open)
-    MIC_Start                                0x00005b8d   Thumb Code     8  micspk.o(i.MIC_Start)
-    MIC_Stop                                 0x00005b99   Thumb Code    10  micspk.o(i.MIC_Stop)
-    MicGetApp_Initiate                       0x00005ba9   Thumb Code    22  micgetapp.o(i.MicGetApp_Initiate)
-    MicGetApp_ProcessRec                     0x00005bbf   Thumb Code    40  micgetapp.o(i.MicGetApp_ProcessRec)
-    MicGetApp_StartRec                       0x00005be7   Thumb Code    40  micgetapp.o(i.MicGetApp_StartRec)
-    MicGetApp_StopRec                        0x00005c0f   Thumb Code    16  micgetapp.o(i.MicGetApp_StopRec)
-    NINJA_API_1                              0x00005c1f   Thumb Code   102  BsrGo.o(i.NINJA_API_1)
-    NINJA_API_11                             0x00005c85   Thumb Code   634  BsrGo.o(i.NINJA_API_11)
-    NINJA_API_13                             0x00005f05   Thumb Code   358  BsrGo.o(i.NINJA_API_13)
-    NINJA_API_15                             0x00006075   Thumb Code    30  BsrGo.o(i.NINJA_API_15)
-    NINJA_API_19                             0x00006093   Thumb Code    30  BsrGo.o(i.NINJA_API_19)
-    NINJA_API_2                              0x000060b1   Thumb Code    40  BsrGo.o(i.NINJA_API_2)
-    NINJA_API_23                             0x000060d9   Thumb Code    38  BsrGo.o(i.NINJA_API_23)
-    NINJA_API_26                             0x000060ff   Thumb Code    48  BsrGo.o(i.NINJA_API_26)
-    NINJA_API_3                              0x0000612f   Thumb Code    36  BsrGo.o(i.NINJA_API_3)
-    NINJA_API_47                             0x00006153   Thumb Code   112  BsrGo.o(i.NINJA_API_47)
-    NINJA_API_48                             0x000061c3   Thumb Code   126  BsrGo.o(i.NINJA_API_48)
-    NINJA_API_55                             0x00006241   Thumb Code    60  BsrGo.o(i.NINJA_API_55)
-    NINJA_API_56                             0x0000627d   Thumb Code    42  BsrGo.o(i.NINJA_API_56)
-    NINJA_API_73                             0x000062a9   Thumb Code   978  BsrGo.o(i.NINJA_API_73)
-    NINJA_API_75                             0x00006689   Thumb Code   174  BsrGo.o(i.NINJA_API_75)
-    OutputPin_Initiate                       0x0000673d   Thumb Code    40  configio.o(i.OutputPin_Initiate)
-    PDMA_DisableInt                          0x0000676d   Thumb Code    14  pdma.o(i.PDMA_DisableInt)
-    PDMA_EnableInt                           0x00006781   Thumb Code    14  pdma.o(i.PDMA_EnableInt)
-    PDMA_IRQHandler                          0x00006795   Thumb Code    42  interrupthandler.o(i.PDMA_IRQHandler)
-    PDMA_Open                                0x000067cd   Thumb Code    12  pdma.o(i.PDMA_Open)
-    PDMA_SetTransferAddr                     0x000067dd   Thumb Code    28  pdma.o(i.PDMA_SetTransferAddr)
-    PDMA_SetTransferCnt                      0x000067fd   Thumb Code    50  pdma.o(i.PDMA_SetTransferCnt)
-    PDMA_SetTransferDirection                0x00006835   Thumb Code    18  pdma.o(i.PDMA_SetTransferDirection)
-    PDMA_SetTransferMode                     0x0000684d   Thumb Code   148  pdma.o(i.PDMA_SetTransferMode)
-    PDMA_Trigger                             0x000068e5   Thumb Code    16  pdma.o(i.PDMA_Trigger)
-    PWM0_IRQHandler                          0x000068fd   Thumb Code    36  main.o(i.PWM0_IRQHandler)
-    PWM_ClearIntFlag                         0x00006929   Thumb Code     8  pwm.o(i.PWM_ClearIntFlag)
-    PWM_GetIntFlag                           0x00006931   Thumb Code    14  pwm.o(i.PWM_GetIntFlag)
-    PdmaCtrl_Init                            0x00006941   Thumb Code    28  pdmactrl.o(i.PdmaCtrl_Init)
-    PdmaCtrl_Open                            0x00006965   Thumb Code   132  pdmactrl.o(i.PdmaCtrl_Open)
-    PdmaCtrl_Start                           0x000069f1   Thumb Code    60  pdmactrl.o(i.PdmaCtrl_Start)
-    PdmaCtrl_Stop                            0x00006a31   Thumb Code    16  pdmactrl.o(i.PdmaCtrl_Stop)
-    Playback_Add                             0x00006a45   Thumb Code    48  playback.o(i.Playback_Add)
-    Playback_Initiate                        0x00006a79   Thumb Code    10  playback.o(i.Playback_Initiate)
-    Playback_Process                         0x00006a85   Thumb Code   190  playback.o(i.Playback_Process)
-    Playback_Remove                          0x00006b51   Thumb Code    26  playback.o(i.Playback_Remove)
-    Playback_ResetChannelVolume              0x00006b71   Thumb Code    14  playback.o(i.Playback_ResetChannelVolume)
-    Playback_SetOutputBuf                    0x00006b85   Thumb Code    40  playback.o(i.Playback_SetOutputBuf)
-    Playback_StartPlay                       0x00006bad   Thumb Code    72  playback.o(i.Playback_StartPlay)
-    Playback_StopPlay                        0x00006c05   Thumb Code    68  playback.o(i.Playback_StopPlay)
-    RTC_IRQHandler                           0x00006c51   Thumb Code     2  interrupthandler.o(i.RTC_IRQHandler)
-    Record_Add                               0x00006c55   Thumb Code    18  record.o(i.Record_Add)
-    Record_Process                           0x00006c6d   Thumb Code    58  record.o(i.Record_Process)
-    Record_SetInBufRecord                    0x00006cb1   Thumb Code    34  record.o(i.Record_SetInBufRecord)
-    Record_StartRec                          0x00006cd5   Thumb Code    54  record.o(i.Record_StartRec)
-    Record_StopRec                           0x00006d1d   Thumb Code    24  record.o(i.Record_StopRec)
-    SPIFlash_3ByteAddr_Cmd                   0x00006d39   Thumb Code    48  spiflash.o(i.SPIFlash_3ByteAddr_Cmd)
-    SPIFlash_GetChipInfo                     0x00006d69   Thumb Code    44  spiflash.o(i.SPIFlash_GetChipInfo)
-    SPIFlash_Initiate                        0x00006d95   Thumb Code   102  main.o(i.SPIFlash_Initiate)
-    SPIFlash_Open                            0x00006e11   Thumb Code   112  spiflash.o(i.SPIFlash_Open)
-    SPIFlash_PowerDown                       0x00006e81   Thumb Code    20  spiflash.o(i.SPIFlash_PowerDown)
-    SPIFlash_Read                            0x00006e95   Thumb Code    30  spiflash.o(i.SPIFlash_Read)
-    SPIFlash_ReadData                        0x00006eb3   Thumb Code   212  spiflash.o(i.SPIFlash_ReadData)
-    SPIFlash_ReadDataCallback                0x00006f89   Thumb Code    18  appcallback.o(i.SPIFlash_ReadDataCallback)
-    SPIFlash_ReadEnd                         0x00006fa1   Thumb Code    24  spiflash.o(i.SPIFlash_ReadEnd)
-    SPIFlash_ReadStart                       0x00006fb9   Thumb Code    78  spiflash.o(i.SPIFlash_ReadStart)
-    SPIFlash_SendRecOneData                  0x00007007   Thumb Code    82  spiflash.o(i.SPIFlash_SendRecOneData)
-    SPI_GetBusClock                          0x00007059   Thumb Code    22  spi.o(i.SPI_GetBusClock)
-    SPI_Open                                 0x0000706f   Thumb Code    36  spi.o(i.SPI_Open)
-    SPI_SetBusClock                          0x00007095   Thumb Code    74  spi.o(i.SPI_SetBusClock)
-    SPI_SetVarClock                          0x000070e5   Thumb Code    58  spi.o(i.SPI_SetVarClock)
-    SPK_ChangeSR                             0x00007125   Thumb Code    42  micspk.o(i.SPK_ChangeSR)
-    SPK_Open                                 0x0000715d   Thumb Code    56  micspk.o(i.SPK_Open)
-    SPK_Start                                0x000071a5   Thumb Code    26  micspk.o(i.SPK_Start)
-    SPK_Stop                                 0x000071c5   Thumb Code    12  micspk.o(i.SPK_Stop)
-    SYS_Lock                                 0x000071d5   Thumb Code    12  sys.o(i.SYS_Lock)
-    SYS_ResetModule                          0x000071e5   Thumb Code    26  sys.o(i.SYS_ResetModule)
-    SYS_Unlock                               0x00007201   Thumb Code    38  sys.o(i.SYS_Unlock)
-    SendCMD                                  0x0000722d   Thumb Code    30  appfunctions.o(i.SendCMD)
-    SendCMD1time                             0x0000724b   Thumb Code    36  appfunctions.o(i.SendCMD1time)
-    SendCMDByteTimer                         0x00007271   Thumb Code   112  appfunctions.o(i.SendCMDByteTimer)
-    SendChar_ToUART                          0x000072e9   Thumb Code    26  retarget.o(i.SendChar_ToUART)
-    SysClk_InitiateRC                        0x00007309   Thumb Code    76  sysclk.o(i.SysClk_InitiateRC)
-    SystemCoreClockUpdate                    0x0000735d   Thumb Code    62  system_isd9100.o(i.SystemCoreClockUpdate)
-    TIMER_GetModuleClock                     0x000073ad   Thumb Code    70  timer.o(i.TIMER_GetModuleClock)
-    TIMER_Open                               0x00007405   Thumb Code    94  timer.o(i.TIMER_Open)
-    TMR0_IRQHandler                          0x00007465   Thumb Code   150  main.o(i.TMR0_IRQHandler)
-    TMR1_IRQHandler                          0x0000750d   Thumb Code    50  main.o(i.TMR1_IRQHandler)
-    UART0_IRQHandler                         0x0000754d   Thumb Code    96  main.o(i.UART0_IRQHandler)
-    UART_ClearIntFlag                        0x000075b5   Thumb Code    50  uart.o(i.UART_ClearIntFlag)
-    UART_Init                                0x000075ed   Thumb Code   108  main.o(i.UART_Init)
-    UART_Open                                0x00007665   Thumb Code    84  uart.o(i.UART_Open)
-    UserEvent_ProcessCallback                0x000076c1   Thumb Code     4  appcallback.o(i.UserEvent_ProcessCallback)
-    VROneCmdApp_GetCMDID                     0x000076c5   Thumb Code    42  vronecmdapp.o(i.VROneCmdApp_GetCMDID)
-    VROneCmdApp_Initiate                     0x000076ef   Thumb Code    72  vronecmdapp.o(i.VROneCmdApp_Initiate)
-    VROneCmdApp_UnpackBin                    0x00007737   Thumb Code    56  vronecmdapp.o(i.VROneCmdApp_UnpackBin)
-    VolumeCtrl_Reset                         0x0000776f   Thumb Code    22  volumectrl.o(i.VolumeCtrl_Reset)
-    VolumeCtrl_VolumeFade                    0x00007785   Thumb Code    32  volumectrl.o(i.VolumeCtrl_VolumeFade)
-    WDT_IRQHandler                           0x000077a9   Thumb Code     2  interrupthandler.o(i.WDT_IRQHandler)
-    __ARM_common_switch8                     0x000077ab   Thumb Code    26  pdma.o(i.__ARM_common_switch8)
-    _is_digit                                0x000077c5   Thumb Code    14  __printf_wp.o(i._is_digit)
-    delayms                                  0x000077d5   Thumb Code    30  appfunctions.o(i.delayms)
-    ferror                                   0x000077f9   Thumb Code     6  retarget.o(i.ferror)
-    fputc                                    0x000077ff   Thumb Code    12  retarget.o(i.fputc)
-    main                                     0x0000780d   Thumb Code    82  main.o(i.main)
-    pwm_init                                 0x00007889   Thumb Code    46  main.o(i.pwm_init)
-    time_init                                0x000078c9   Thumb Code   110  main.o(i.time_init)
-    uart_rev_task                            0x0000794d   Thumb Code    24  main.o(i.uart_rev_task)
-    g_asAppCallBack                          0x00007968   Data          16  appcallback.o(.constdata)
-    g_u32BiqCoeff                            0x00007980   Data          60  micspk.o(.constdata)
-    g_u16Playback_Volume_DB_Table            0x000079bc   Data          26  volumectrl.o(.constdata)
-    au16MD4StepAry                           0x000079ec   Data          32  md4decode.o(.constdata)
-    ai8MD4CoefTable                          0x00007a0c   Data          16  md4decode.o(.constdata)
-    Region$$Table$$Base                      0x00009554   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x00009574   Number         0  anon$$obj.o(Region$$Table)
+    App_Process                              0x000007d9   Thumb Code   330  appfunctions.o(i.App_Process)
+    App_StartPlay                            0x0000096d   Thumb Code    46  appfunctions.o(i.App_StartPlay)
+    App_StartRecognize                       0x000009a5   Thumb Code    26  appfunctions.o(i.App_StartRecognize)
+    App_StopPlay                             0x000009c9   Thumb Code    16  appfunctions.o(i.App_StopPlay)
+    AudioRom_GetAudioChunkInfo               0x000009dd   Thumb Code    46  audiorom.o(i.AudioRom_GetAudioChunkInfo)
+    AudioRom_GetAudioNum                     0x00000a0b   Thumb Code    14  audiorom.o(i.AudioRom_GetAudioNum)
+    AudioRom_GetRomHeader                    0x00000a19   Thumb Code    28  audiorom.o(i.AudioRom_GetRomHeader)
+    BIQ_Reset                                0x00000a65   Thumb Code    22  biq.o(i.BIQ_Reset)
+    BIQ_SetCoeff                             0x00000a81   Thumb Code    62  biq.o(i.BIQ_SetCoeff)
+    BsrAbby                                  0x00000ac5   Thumb Code    44  BsrJoe.o(i.BsrAbby)
+    BsrAbel                                  0x00000af1   Thumb Code   126  BsrJoe.o(i.BsrAbel)
+    BsrAdam                                  0x00000b6f   Thumb Code   200  BsrJoe.o(i.BsrAdam)
+    BsrAlma                                  0x00000c37   Thumb Code   210  BsrDon.o(i.BsrAlma)
+    BsrAmir                                  0x00000d09   Thumb Code    24  BsrDon.o(i.BsrAmir)
+    BsrAmos                                  0x00000d21   Thumb Code   294  BsrDon.o(i.BsrAmos)
+    BsrAna                                   0x00000e47   Thumb Code    42  BsrJim.o(i.BsrAna)
+    BsrAnna                                  0x00000e71   Thumb Code    38  BsrDon.o(i.BsrAnna)
+    BsrAnne                                  0x00000e97   Thumb Code    24  BsrDon.o(i.BsrAnne)
+    BsrAnnie                                 0x00000eaf   Thumb Code    28  BsrDon.o(i.BsrAnnie)
+    BsrAri                                   0x00000ecd   Thumb Code   172  BsrJim.o(i.BsrAri)
+    BsrAsa                                   0x00000f7d   Thumb Code   238  BsrJim.o(i.BsrAsa)
+    BsrAvea                                  0x00001071   Thumb Code   170  BsrJim.o(i.BsrAvea)
+    BsrAyla                                  0x0000111b   Thumb Code    26  BsrDon.o(i.BsrAyla)
+    BsrBaby                                  0x00001135   Thumb Code    14  BsrDon.o(i.BsrBaby)
+    BsrBrad                                  0x000011f1   Thumb Code    54  BsrBen.o(i.BsrBrad)
+    BsrCade                                  0x0000137d   Thumb Code   394  BsrJay.o(i.BsrCade)
+    BsrCadea                                 0x00001509   Thumb Code   254  BsrJay.o(i.BsrCadea)
+    BsrCale                                  0x0000160d   Thumb Code    68  BsrJay.o(i.BsrCale)
+    BsrCara                                  0x00001651   Thumb Code  1000  BsrJay.o(i.BsrCara)
+    BsrCarae                                 0x00001a39   Thumb Code   198  BsrJay.o(i.BsrCarae)
+    BsrChad                                  0x00001b05   Thumb Code   182  BsrJay.o(i.BsrChad)
+    BsrChada                                 0x00001bc1   Thumb Code    68  BsrJay.o(i.BsrChada)
+    BsrChaz                                  0x00001c09   Thumb Code   218  BsrJay.o(i.BsrChaz)
+    BsrChaza                                 0x00001ce9   Thumb Code   182  BsrJay.o(i.BsrChaza)
+    BsrChaze                                 0x00001da5   Thumb Code   204  BsrJay.o(i.BsrChaze)
+    BsrChazi                                 0x00001e75   Thumb Code   206  BsrJay.o(i.BsrChazi)
+    BsrClay                                  0x00001f45   Thumb Code  1378  BsrJay.o(i.BsrClay)
+    BsrCory                                  0x000024ad   Thumb Code   488  BsrJoy.o(i.BsrCory)
+    BsrCoty                                  0x00002699   Thumb Code    34  BsrJoy.o(i.BsrCoty)
+    BsrDan                                   0x000026bd   Thumb Code    82  BsrJim.o(i.BsrDan)
+    BsrDane                                  0x00002715   Thumb Code     8  BsrJoy.o(i.BsrDane)
+    BsrDawn                                  0x0000271d   Thumb Code     8  BsrJoy.o(i.BsrDawn)
+    BsrDeja                                  0x00002725   Thumb Code   108  BsrJoy.o(i.BsrDeja)
+    BsrDemi                                  0x00002791   Thumb Code   374  BsrJoy.o(i.BsrDemi)
+    BsrDeon                                  0x00002911   Thumb Code   374  BsrJoy.o(i.BsrDeon)
+    BsrDina                                  0x00002a87   Thumb Code   586  BsrJoy.o(i.BsrDina)
+    BsrDion                                  0x00002cd1   Thumb Code   214  BsrJoy.o(i.BsrDion)
+    BsrEden                                  0x00002dad   Thumb Code   350  BsrEva.o(i.BsrEden)
+    BsrEli                                   0x00002f11   Thumb Code    88  BsrJim.o(i.BsrEli)
+    BsrElla                                  0x00002f69   Thumb Code   426  BsrEva.o(i.BsrElla)
+    BsrElsa                                  0x00003119   Thumb Code   370  BsrEva.o(i.BsrElsa)
+    BsrEmma                                  0x00003291   Thumb Code   212  BsrEli.o(i.BsrEmma)
+    BsrEric                                  0x00003369   Thumb Code   130  BsrEli.o(i.BsrEric)
+    BsrErica                                 0x000033ed   Thumb Code   306  BsrEli.o(i.BsrErica)
+    BsrErik                                  0x00003529   Thumb Code    46  BsrEli.o(i.BsrErik)
+    BsrErin                                  0x00003557   Thumb Code   230  BsrEli.o(i.BsrErin)
+    BsrEva                                   0x0000363d   Thumb Code    34  BsrJim.o(i.BsrEva)
+    BsrEvan                                  0x0000365f   Thumb Code    58  BsrEli.o(i.BsrEvan)
+    BsrGary                                  0x00003699   Thumb Code   188  BsrAna.o(i.BsrGary)
+    BsrGreg                                  0x00003759   Thumb Code   448  BsrAnn.o(i.BsrGreg)
+    BsrGuy                                   0x00003925   Thumb Code    54  BsrJim.o(i.BsrGuy)
+    BsrHugo                                  0x0000395d   Thumb Code   170  BsrGuy.o(i.BsrHugo)
+    BsrIris                                  0x00003a0d   Thumb Code    54  BsrGuy.o(i.BsrIris)
+    BsrIrma                                  0x00003a45   Thumb Code    80  BsrGuy.o(i.BsrIrma)
+    BsrIsai                                  0x00003a99   Thumb Code    46  BsrGuy.o(i.BsrIsai)
+    BsrIvy                                   0x00003ac7   Thumb Code   188  BsrJim.o(i.BsrIvy)
+    BsrJan                                   0x00003c65   Thumb Code    24  BsrJim.o(i.BsrJan)
+    BsrJohn                                  0x00003f77   Thumb Code    42  BsrAli.o(i.BsrJohn)
+    BsrJose                                  0x00003fa1   Thumb Code    54  BsrAli.o(i.BsrJose)
+    BsrJosh                                  0x00003fd7   Thumb Code   164  BsrAli.o(i.BsrJosh)
+    BsrJoyci                                 0x0000407d   Thumb Code   218  BsrJim.o(i.BsrJoyci)
+    BsrLei                                   0x00004191   Thumb Code    24  BsrJim.o(i.BsrLei)
+    BsrMaxi                                  0x000041a9   Thumb Code   122  BsrJim.o(i.BsrMaxi)
+    BsrMichael                               0x00004223   Thumb Code  1398  BsrJim.o(i.BsrMichael)
+    BsrMichelle                              0x00004799   Thumb Code     8  BsrJim.o(i.BsrMichelle)
+    BsrMike                                  0x000047a1   Thumb Code   172  BsrJim.o(i.BsrMike)
+    BsrMya                                   0x0000484d   Thumb Code   136  BsrKai.o(i.BsrMya)
+    BsrNia                                   0x000048d5   Thumb Code    50  BsrKai.o(i.BsrNia)
+    BsrRay                                   0x00004907   Thumb Code   310  BsrKai.o(i.BsrRay)
+    BsrRex                                   0x00004a3d   Thumb Code    18  BsrKai.o(i.BsrRex)
+    BsrRey                                   0x00004a4f   Thumb Code    16  BsrKai.o(i.BsrRey)
+    BsrRon                                   0x00004a5f   Thumb Code  1186  BsrKai.o(i.BsrRon)
+    BsrRoy                                   0x00004f01   Thumb Code    44  BsrKai.o(i.BsrRoy)
+    BsrTed                                   0x00004f2d   Thumb Code    16  BsrKai.o(i.BsrTed)
+    BsrTia                                   0x00004f3d   Thumb Code   104  BsrKai.o(i.BsrTia)
+    BsrTom                                   0x00004fa5   Thumb Code   146  BsrKai.o(i.BsrTom)
+    BsrTop                                   0x00005037   Thumb Code    94  BsrKai.o(i.BsrTop)
+    BsrTre                                   0x00005095   Thumb Code    18  BsrKai.o(i.BsrTre)
+    BsrZoe                                   0x000050a7   Thumb Code     4  BsrJoe.o(i.BsrZoe)
+    BufCtrl_UpdateReadWithCount              0x000050ab   Thumb Code    30  bufctrl.o(i.BufCtrl_UpdateReadWithCount)
+    BufCtrl_UpdateWriteWithCount             0x000050c9   Thumb Code    30  bufctrl.o(i.BufCtrl_UpdateWriteWithCount)
+    CAPS_IRQHandler                          0x000050e9   Thumb Code    12  interrupthandler.o(i.CAPS_IRQHandler)
+    CLK_EnableLDO                            0x000050f9   Thumb Code    44  clk.o(i.CLK_EnableLDO)
+    CLK_EnableModuleClock                    0x0000512d   Thumb Code    24  clk.o(i.CLK_EnableModuleClock)
+    CLK_EnableXtalRC                         0x00005149   Thumb Code    22  clk.o(i.CLK_EnableXtalRC)
+    CLK_GetHCLKFreq                          0x00005165   Thumb Code    12  clk.o(i.CLK_GetHCLKFreq)
+    CLK_SetHCLK                              0x00005175   Thumb Code    56  clk.o(i.CLK_SetHCLK)
+    CLK_SetModuleClock                       0x000051b1   Thumb Code    74  clk.o(i.CLK_SetModuleClock)
+    CSpotter_AddSample                       0x00005201   Thumb Code    82  CSpotterSDKApi.o(i.CSpotter_AddSample)
+    CSpotter_GetMemoryUsage_MultiWithSpeakerAndExtRejModel 0x00005265   Thumb Code   178  CSpotterSDKApi.o(i.CSpotter_GetMemoryUsage_MultiWithSpeakerAndExtRejModel)
+    CSpotter_GetMemoryUsage_Sep              0x00005321   Thumb Code    24  CSpotterSDKApi.o(i.CSpotter_GetMemoryUsage_Sep)
+    CSpotter_GetResult                       0x00005339   Thumb Code    30  CSpotterSDKApi.o(i.CSpotter_GetResult)
+    CSpotter_Init_MultiWithExtRejModel       0x0000535d   Thumb Code   488  CSpotterSDKApi.o(i.CSpotter_Init_MultiWithExtRejModel)
+    CSpotter_Init_Sep                        0x00005561   Thumb Code    36  CSpotterSDKApi.o(i.CSpotter_Init_Sep)
+    CSpotter_Reset                           0x00005585   Thumb Code    40  CSpotterSDKApi.o(i.CSpotter_Reset)
+    DPWM_Open                                0x000055b9   Thumb Code     2  dpwm.o(i.DPWM_Open)
+    DPWM_SetSampleRate                       0x000055bd   Thumb Code    50  dpwm.o(i.DPWM_SetSampleRate)
+    GPAB_IRQHandler                          0x000055f9   Thumb Code    18  interrupthandler.o(i.GPAB_IRQHandler)
+    GPIO_SetMode                             0x00005615   Thumb Code    40  gpio.o(i.GPIO_SetMode)
+    MD4App_DecodeInitiate                    0x0000563d   Thumb Code    34  md4app.o(i.MD4App_DecodeInitiate)
+    MD4App_DecodeProcess                     0x00005661   Thumb Code   132  md4app.o(i.MD4App_DecodeProcess)
+    MD4App_DecodeStartPlayByAddr             0x000056e9   Thumb Code   108  md4app.o(i.MD4App_DecodeStartPlayByAddr)
+    MD4App_DecodeStartPlayByID               0x00005759   Thumb Code    42  md4app.o(i.MD4App_DecodeStartPlayByID)
+    MD4App_DecodeStopPlay                    0x00005789   Thumb Code    26  md4app.o(i.MD4App_DecodeStopPlay)
+    MD4_DecodeInitiate                       0x0000588d   Thumb Code   154  md4decode.o(i.MD4_DecodeInitiate)
+    MD4_DecodeIsEnd                          0x0000592d   Thumb Code    22  md4decode.o(i.MD4_DecodeIsEnd)
+    MD4_DecodeProcess                        0x00005943   Thumb Code   256  md4decode.o(i.MD4_DecodeProcess)
+    MIC_ChangeSR                             0x00005a45   Thumb Code   108  micspk.o(i.MIC_ChangeSR)
+    MIC_Open                                 0x00005ac5   Thumb Code   216  micspk.o(i.MIC_Open)
+    MIC_Start                                0x00005bc5   Thumb Code     8  micspk.o(i.MIC_Start)
+    MIC_Stop                                 0x00005bd1   Thumb Code    10  micspk.o(i.MIC_Stop)
+    MicGetApp_Initiate                       0x00005be1   Thumb Code    22  micgetapp.o(i.MicGetApp_Initiate)
+    MicGetApp_ProcessRec                     0x00005bf7   Thumb Code    40  micgetapp.o(i.MicGetApp_ProcessRec)
+    MicGetApp_StartRec                       0x00005c1f   Thumb Code    40  micgetapp.o(i.MicGetApp_StartRec)
+    MicGetApp_StopRec                        0x00005c47   Thumb Code    16  micgetapp.o(i.MicGetApp_StopRec)
+    NINJA_API_1                              0x00005c57   Thumb Code   102  BsrGo.o(i.NINJA_API_1)
+    NINJA_API_11                             0x00005cbd   Thumb Code   634  BsrGo.o(i.NINJA_API_11)
+    NINJA_API_13                             0x00005f3d   Thumb Code   358  BsrGo.o(i.NINJA_API_13)
+    NINJA_API_15                             0x000060ad   Thumb Code    30  BsrGo.o(i.NINJA_API_15)
+    NINJA_API_19                             0x000060cb   Thumb Code    30  BsrGo.o(i.NINJA_API_19)
+    NINJA_API_2                              0x000060e9   Thumb Code    40  BsrGo.o(i.NINJA_API_2)
+    NINJA_API_23                             0x00006111   Thumb Code    38  BsrGo.o(i.NINJA_API_23)
+    NINJA_API_26                             0x00006137   Thumb Code    48  BsrGo.o(i.NINJA_API_26)
+    NINJA_API_3                              0x00006167   Thumb Code    36  BsrGo.o(i.NINJA_API_3)
+    NINJA_API_47                             0x0000618b   Thumb Code   112  BsrGo.o(i.NINJA_API_47)
+    NINJA_API_48                             0x000061fb   Thumb Code   126  BsrGo.o(i.NINJA_API_48)
+    NINJA_API_55                             0x00006279   Thumb Code    60  BsrGo.o(i.NINJA_API_55)
+    NINJA_API_56                             0x000062b5   Thumb Code    42  BsrGo.o(i.NINJA_API_56)
+    NINJA_API_73                             0x000062e1   Thumb Code   978  BsrGo.o(i.NINJA_API_73)
+    NINJA_API_75                             0x000066c1   Thumb Code   174  BsrGo.o(i.NINJA_API_75)
+    OutputPin_Initiate                       0x00006775   Thumb Code    40  configio.o(i.OutputPin_Initiate)
+    PDMA_DisableInt                          0x000067a5   Thumb Code    14  pdma.o(i.PDMA_DisableInt)
+    PDMA_EnableInt                           0x000067b9   Thumb Code    14  pdma.o(i.PDMA_EnableInt)
+    PDMA_IRQHandler                          0x000067cd   Thumb Code    42  interrupthandler.o(i.PDMA_IRQHandler)
+    PDMA_Open                                0x00006805   Thumb Code    12  pdma.o(i.PDMA_Open)
+    PDMA_SetTransferAddr                     0x00006815   Thumb Code    28  pdma.o(i.PDMA_SetTransferAddr)
+    PDMA_SetTransferCnt                      0x00006835   Thumb Code    50  pdma.o(i.PDMA_SetTransferCnt)
+    PDMA_SetTransferDirection                0x0000686d   Thumb Code    18  pdma.o(i.PDMA_SetTransferDirection)
+    PDMA_SetTransferMode                     0x00006885   Thumb Code   148  pdma.o(i.PDMA_SetTransferMode)
+    PDMA_Trigger                             0x0000691d   Thumb Code    16  pdma.o(i.PDMA_Trigger)
+    PWM0_IRQHandler                          0x00006935   Thumb Code    36  main.o(i.PWM0_IRQHandler)
+    PWM_ClearIntFlag                         0x00006961   Thumb Code     8  pwm.o(i.PWM_ClearIntFlag)
+    PWM_GetIntFlag                           0x00006969   Thumb Code    14  pwm.o(i.PWM_GetIntFlag)
+    PdmaCtrl_Init                            0x00006979   Thumb Code    28  pdmactrl.o(i.PdmaCtrl_Init)
+    PdmaCtrl_Open                            0x0000699d   Thumb Code   132  pdmactrl.o(i.PdmaCtrl_Open)
+    PdmaCtrl_Start                           0x00006a29   Thumb Code    60  pdmactrl.o(i.PdmaCtrl_Start)
+    PdmaCtrl_Stop                            0x00006a69   Thumb Code    16  pdmactrl.o(i.PdmaCtrl_Stop)
+    Playback_Add                             0x00006a7d   Thumb Code    48  playback.o(i.Playback_Add)
+    Playback_Initiate                        0x00006ab1   Thumb Code    10  playback.o(i.Playback_Initiate)
+    Playback_Process                         0x00006abd   Thumb Code   190  playback.o(i.Playback_Process)
+    Playback_Remove                          0x00006b89   Thumb Code    26  playback.o(i.Playback_Remove)
+    Playback_ResetChannelVolume              0x00006ba9   Thumb Code    14  playback.o(i.Playback_ResetChannelVolume)
+    Playback_SetOutputBuf                    0x00006bbd   Thumb Code    40  playback.o(i.Playback_SetOutputBuf)
+    Playback_StartPlay                       0x00006be5   Thumb Code    72  playback.o(i.Playback_StartPlay)
+    Playback_StopPlay                        0x00006c3d   Thumb Code    68  playback.o(i.Playback_StopPlay)
+    RTC_IRQHandler                           0x00006c89   Thumb Code     2  interrupthandler.o(i.RTC_IRQHandler)
+    Record_Add                               0x00006c8d   Thumb Code    18  record.o(i.Record_Add)
+    Record_Process                           0x00006ca5   Thumb Code    58  record.o(i.Record_Process)
+    Record_SetInBufRecord                    0x00006ce9   Thumb Code    34  record.o(i.Record_SetInBufRecord)
+    Record_StartRec                          0x00006d0d   Thumb Code    54  record.o(i.Record_StartRec)
+    Record_StopRec                           0x00006d55   Thumb Code    24  record.o(i.Record_StopRec)
+    SPIFlash_3ByteAddr_Cmd                   0x00006d71   Thumb Code    48  spiflash.o(i.SPIFlash_3ByteAddr_Cmd)
+    SPIFlash_GetChipInfo                     0x00006da1   Thumb Code    44  spiflash.o(i.SPIFlash_GetChipInfo)
+    SPIFlash_Initiate                        0x00006dcd   Thumb Code   102  main.o(i.SPIFlash_Initiate)
+    SPIFlash_Open                            0x00006e49   Thumb Code   112  spiflash.o(i.SPIFlash_Open)
+    SPIFlash_PowerDown                       0x00006eb9   Thumb Code    20  spiflash.o(i.SPIFlash_PowerDown)
+    SPIFlash_Read                            0x00006ecd   Thumb Code    30  spiflash.o(i.SPIFlash_Read)
+    SPIFlash_ReadData                        0x00006eeb   Thumb Code   212  spiflash.o(i.SPIFlash_ReadData)
+    SPIFlash_ReadDataCallback                0x00006fc1   Thumb Code    18  appcallback.o(i.SPIFlash_ReadDataCallback)
+    SPIFlash_ReadEnd                         0x00006fd9   Thumb Code    24  spiflash.o(i.SPIFlash_ReadEnd)
+    SPIFlash_ReadStart                       0x00006ff1   Thumb Code    78  spiflash.o(i.SPIFlash_ReadStart)
+    SPIFlash_SendRecOneData                  0x0000703f   Thumb Code    82  spiflash.o(i.SPIFlash_SendRecOneData)
+    SPI_GetBusClock                          0x00007091   Thumb Code    22  spi.o(i.SPI_GetBusClock)
+    SPI_Open                                 0x000070a7   Thumb Code    36  spi.o(i.SPI_Open)
+    SPI_SetBusClock                          0x000070cd   Thumb Code    74  spi.o(i.SPI_SetBusClock)
+    SPI_SetVarClock                          0x0000711d   Thumb Code    58  spi.o(i.SPI_SetVarClock)
+    SPK_ChangeSR                             0x0000715d   Thumb Code    42  micspk.o(i.SPK_ChangeSR)
+    SPK_Open                                 0x00007195   Thumb Code    56  micspk.o(i.SPK_Open)
+    SPK_Start                                0x000071dd   Thumb Code    26  micspk.o(i.SPK_Start)
+    SPK_Stop                                 0x000071fd   Thumb Code    12  micspk.o(i.SPK_Stop)
+    SYS_Lock                                 0x0000720d   Thumb Code    12  sys.o(i.SYS_Lock)
+    SYS_ResetModule                          0x0000721d   Thumb Code    26  sys.o(i.SYS_ResetModule)
+    SYS_Unlock                               0x00007239   Thumb Code    38  sys.o(i.SYS_Unlock)
+    SendCMD                                  0x00007265   Thumb Code    30  appfunctions.o(i.SendCMD)
+    SendCMD1time                             0x00007283   Thumb Code    36  appfunctions.o(i.SendCMD1time)
+    SendCMDByteTimer                         0x000072a9   Thumb Code   112  appfunctions.o(i.SendCMDByteTimer)
+    SendChar_ToUART                          0x00007321   Thumb Code    26  retarget.o(i.SendChar_ToUART)
+    SysClk_InitiateRC                        0x00007341   Thumb Code    76  sysclk.o(i.SysClk_InitiateRC)
+    SystemCoreClockUpdate                    0x00007395   Thumb Code    62  system_isd9100.o(i.SystemCoreClockUpdate)
+    TIMER_GetModuleClock                     0x000073e5   Thumb Code    70  timer.o(i.TIMER_GetModuleClock)
+    TIMER_Open                               0x0000743d   Thumb Code    94  timer.o(i.TIMER_Open)
+    TMR0_IRQHandler                          0x0000749d   Thumb Code   150  main.o(i.TMR0_IRQHandler)
+    TMR1_IRQHandler                          0x00007545   Thumb Code    50  main.o(i.TMR1_IRQHandler)
+    UART0_IRQHandler                         0x00007585   Thumb Code    96  main.o(i.UART0_IRQHandler)
+    UART_ClearIntFlag                        0x000075ed   Thumb Code    50  uart.o(i.UART_ClearIntFlag)
+    UART_Init                                0x00007625   Thumb Code   108  main.o(i.UART_Init)
+    UART_Open                                0x0000769d   Thumb Code    84  uart.o(i.UART_Open)
+    UserEvent_ProcessCallback                0x000076f9   Thumb Code     4  appcallback.o(i.UserEvent_ProcessCallback)
+    VROneCmdApp_GetCMDID                     0x000076fd   Thumb Code    42  vronecmdapp.o(i.VROneCmdApp_GetCMDID)
+    VROneCmdApp_Initiate                     0x00007727   Thumb Code    72  vronecmdapp.o(i.VROneCmdApp_Initiate)
+    VROneCmdApp_UnpackBin                    0x0000776f   Thumb Code    56  vronecmdapp.o(i.VROneCmdApp_UnpackBin)
+    VolumeCtrl_Reset                         0x000077a7   Thumb Code    22  volumectrl.o(i.VolumeCtrl_Reset)
+    VolumeCtrl_VolumeFade                    0x000077bd   Thumb Code    32  volumectrl.o(i.VolumeCtrl_VolumeFade)
+    WDT_IRQHandler                           0x000077e1   Thumb Code     2  interrupthandler.o(i.WDT_IRQHandler)
+    __ARM_common_switch8                     0x000077e3   Thumb Code    26  appfunctions.o(i.__ARM_common_switch8)
+    _is_digit                                0x000077fd   Thumb Code    14  __printf_wp.o(i._is_digit)
+    delayms                                  0x0000780d   Thumb Code    30  appfunctions.o(i.delayms)
+    ferror                                   0x00007831   Thumb Code     6  retarget.o(i.ferror)
+    fputc                                    0x00007837   Thumb Code    12  retarget.o(i.fputc)
+    main                                     0x00007845   Thumb Code    82  main.o(i.main)
+    pwm_init                                 0x000078c1   Thumb Code    46  main.o(i.pwm_init)
+    time_init                                0x00007901   Thumb Code   110  main.o(i.time_init)
+    uart_rev_task                            0x00007985   Thumb Code    24  main.o(i.uart_rev_task)
+    g_asAppCallBack                          0x000079a0   Data          16  appcallback.o(.constdata)
+    g_u32BiqCoeff                            0x000079b8   Data          60  micspk.o(.constdata)
+    g_u16Playback_Volume_DB_Table            0x000079f4   Data          26  volumectrl.o(.constdata)
+    au16MD4StepAry                           0x00007a24   Data          32  md4decode.o(.constdata)
+    ai8MD4CoefTable                          0x00007a44   Data          16  md4decode.o(.constdata)
+    Region$$Table$$Base                      0x0000958c   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x000095ac   Number         0  anon$$obj.o(Region$$Table)
     flag_1p25ms                              0x20000000   Data           1  main.o(.data)
     sendbline                                0x20000001   Data           1  main.o(.data)
     spk_sta                                  0x20000002   Data           1  main.o(.data)
@@ -2591,13 +2592,13 @@ Memory Map of the image
 
   Image Entry point : 0x000001ad
 
-  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00009614, Max: 0x00023400, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x0000964c, Max: 0x00023400, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00009574, Max: 0x00023400, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x000095ac, Max: 0x00023400, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x00000000   0x00000000   0x000000c0   Data   RO          892    RESET               startup_isd9100.o
+    0x00000000   0x00000000   0x000000c0   Data   RO          894    RESET               startup_isd9100.o
     0x000000c0   0x000000c0   0x00000008   Code   RO         3961  * !!!main             c_p.l(__main.o)
     0x000000c8   0x000000c8   0x0000003c   Code   RO         4146    !!!scatter          c_p.l(__scatter.o)
     0x00000104   0x00000104   0x0000001a   Code   RO         4148    !!handler_copy      c_p.l(__scatter_copy.o)
@@ -2649,7 +2650,7 @@ Memory Map of the image
     0x0000016c   0x0000016c   0x00000006   Code   RO         4080    .ARM.Collect$$rtexit$$00000004  c_p.l(rtexit2.o)
     0x00000172   0x00000172   0x00000002   PAD
     0x00000174   0x00000174   0x00000038   Code   RO         3949    .emb_text           c_p.l(rt_memcpy.o)
-    0x000001ac   0x000001ac   0x00000060   Code   RO          893  * .text               startup_isd9100.o
+    0x000001ac   0x000001ac   0x00000060   Code   RO          895  * .text               startup_isd9100.o
     0x0000020c   0x0000020c   0x0000001c   Code   RO         3899    .text               c_p.l(noretval__2printf.o)
     0x00000228   0x00000228   0x00000052   Code   RO         3903    .text               c_p.l(_printf_str.o)
     0x0000027a   0x0000027a   0x0000010e   Code   RO         3934    .text               c_p.l(__printf_wp.o)
@@ -2667,312 +2668,312 @@ Memory Map of the image
     0x000006a0   0x000006a0   0x00000002   Code   RO         4092    .text               c_p.l(use_no_semi.o)
     0x000006a2   0x000006a2   0x00000000   Code   RO         4094    .text               c_p.l(indicate_semi.o)
     0x000006a2   0x000006a2   0x00000002   PAD
-    0x000006a4   0x000006a4   0x00000010   Code   RO         1929    i.ADC_EnableMICBias  adc.o
-    0x000006b4   0x000006b4   0x00000002   Code   RO         1933    i.ADC_Open          adc.o
+    0x000006a4   0x000006a4   0x00000010   Code   RO         1931    i.ADC_EnableMICBias  adc.o
+    0x000006b4   0x000006b4   0x00000002   Code   RO         1935    i.ADC_Open          adc.o
     0x000006b6   0x000006b6   0x00000002   PAD
-    0x000006b8   0x000006b8   0x00000044   Code   RO         1936    i.ADC_SetALCTargetLevel  adc.o
-    0x000006fc   0x000006fc   0x0000004c   Code   RO         1937    i.ADC_SetAMUX       adc.o
-    0x00000748   0x00000748   0x00000038   Code   RO         1939    i.ADC_SetPGAGaindB  adc.o
+    0x000006b8   0x000006b8   0x00000044   Code   RO         1938    i.ADC_SetALCTargetLevel  adc.o
+    0x000006fc   0x000006fc   0x0000004c   Code   RO         1939    i.ADC_SetAMUX       adc.o
+    0x00000748   0x00000748   0x00000038   Code   RO         1941    i.ADC_SetPGAGaindB  adc.o
     0x00000780   0x00000780   0x00000058   Code   RO          274    i.App_Initiate      appfunctions.o
-    0x000007d8   0x000007d8   0x0000015c   Code   RO          276    i.App_Process       appfunctions.o
-    0x00000934   0x00000934   0x00000038   Code   RO          277    i.App_StartPlay     appfunctions.o
-    0x0000096c   0x0000096c   0x00000024   Code   RO          278    i.App_StartRecognize  appfunctions.o
-    0x00000990   0x00000990   0x00000014   Code   RO          279    i.App_StopPlay      appfunctions.o
-    0x000009a4   0x000009a4   0x0000002e   Code   RO          967    i.AudioRom_GetAudioChunkInfo  audiorom.o
-    0x000009d2   0x000009d2   0x0000000e   Code   RO          968    i.AudioRom_GetAudioNum  audiorom.o
-    0x000009e0   0x000009e0   0x0000001c   Code   RO          969    i.AudioRom_GetRomHeader  audiorom.o
-    0x000009fc   0x000009fc   0x00000030   Code   RO         1119    i.BIQFilter_Setting  micspk.o
-    0x00000a2c   0x00000a2c   0x0000001c   Code   RO         2034    i.BIQ_Reset         biq.o
-    0x00000a48   0x00000a48   0x00000044   Code   RO         2035    i.BIQ_SetCoeff      biq.o
-    0x00000a8c   0x00000a8c   0x0000002c   Code   RO         3744    i.BsrAbby           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoe.o)
-    0x00000ab8   0x00000ab8   0x0000007e   Code   RO         3745    i.BsrAbel           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoe.o)
-    0x00000b36   0x00000b36   0x000000c8   Code   RO         3746    i.BsrAdam           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoe.o)
-    0x00000bfe   0x00000bfe   0x000000d2   Code   RO         3618    i.BsrAlma           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrDon.o)
-    0x00000cd0   0x00000cd0   0x00000018   Code   RO         3619    i.BsrAmir           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrDon.o)
-    0x00000ce8   0x00000ce8   0x00000126   Code   RO         3620    i.BsrAmos           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrDon.o)
-    0x00000e0e   0x00000e0e   0x0000002a   Code   RO         3654    i.BsrAna            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
-    0x00000e38   0x00000e38   0x00000026   Code   RO         3622    i.BsrAnna           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrDon.o)
-    0x00000e5e   0x00000e5e   0x00000018   Code   RO         3623    i.BsrAnne           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrDon.o)
-    0x00000e76   0x00000e76   0x0000001c   Code   RO         3624    i.BsrAnnie          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrDon.o)
-    0x00000e92   0x00000e92   0x00000002   PAD
-    0x00000e94   0x00000e94   0x000000b0   Code   RO         3655    i.BsrAri            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
-    0x00000f44   0x00000f44   0x000000f4   Code   RO         3656    i.BsrAsa            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
-    0x00001038   0x00001038   0x000000aa   Code   RO         3658    i.BsrAvea           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
-    0x000010e2   0x000010e2   0x0000001a   Code   RO         3630    i.BsrAyla           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrDon.o)
-    0x000010fc   0x000010fc   0x0000000e   Code   RO         3631    i.BsrBaby           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrDon.o)
-    0x0000110a   0x0000110a   0x000000ac   Code   RO         3659    i.BsrBen            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
-    0x000011b6   0x000011b6   0x00000002   PAD
-    0x000011b8   0x000011b8   0x0000003c   Code   RO         3615    i.BsrBrad           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrBen.o)
-    0x000011f4   0x000011f4   0x00000150   Code   RO         3813    i.BsrBret           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
-    0x00001344   0x00001344   0x0000018a   Code   RO         3814    i.BsrCade           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
-    0x000014ce   0x000014ce   0x00000002   PAD
-    0x000014d0   0x000014d0   0x00000104   Code   RO         3815    i.BsrCadea          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
-    0x000015d4   0x000015d4   0x00000044   Code   RO         3816    i.BsrCale           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
-    0x00001618   0x00001618   0x000003e8   Code   RO         3817    i.BsrCara           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
-    0x00001a00   0x00001a00   0x000000cc   Code   RO         3818    i.BsrCarae          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
-    0x00001acc   0x00001acc   0x000000bc   Code   RO         3819    i.BsrChad           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
-    0x00001b88   0x00001b88   0x00000048   Code   RO         3820    i.BsrChada          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
-    0x00001bd0   0x00001bd0   0x000000e0   Code   RO         3821    i.BsrChaz           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
-    0x00001cb0   0x00001cb0   0x000000bc   Code   RO         3822    i.BsrChaza          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
-    0x00001d6c   0x00001d6c   0x000000d0   Code   RO         3823    i.BsrChaze          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
-    0x00001e3c   0x00001e3c   0x000000ce   Code   RO         3824    i.BsrChazi          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
-    0x00001f0a   0x00001f0a   0x00000002   PAD
-    0x00001f0c   0x00001f0c   0x00000568   Code   RO         3825    i.BsrClay           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
-    0x00002474   0x00002474   0x000001ec   Code   RO         3841    i.BsrCory           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
-    0x00002660   0x00002660   0x00000022   Code   RO         3842    i.BsrCoty           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
-    0x00002682   0x00002682   0x00000002   PAD
-    0x00002684   0x00002684   0x00000058   Code   RO         3661    i.BsrDan            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
-    0x000026dc   0x000026dc   0x00000008   Code   RO         3846    i.BsrDane           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
-    0x000026e4   0x000026e4   0x00000008   Code   RO         3848    i.BsrDawn           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
-    0x000026ec   0x000026ec   0x0000006c   Code   RO         3849    i.BsrDeja           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
-    0x00002758   0x00002758   0x00000180   Code   RO         3850    i.BsrDemi           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
-    0x000028d8   0x000028d8   0x00000176   Code   RO         3851    i.BsrDeon           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
-    0x00002a4e   0x00002a4e   0x0000024a   Code   RO         3852    i.BsrDina           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
-    0x00002c98   0x00002c98   0x000000dc   Code   RO         3853    i.BsrDion           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
-    0x00002d74   0x00002d74   0x00000164   Code   RO         3805    i.BsrEden           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEva.o)
-    0x00002ed8   0x00002ed8   0x00000058   Code   RO         3664    i.BsrEli            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
-    0x00002f30   0x00002f30   0x000001b0   Code   RO         3806    i.BsrElla           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEva.o)
-    0x000030e0   0x000030e0   0x00000178   Code   RO         3807    i.BsrElsa           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEva.o)
-    0x00003258   0x00003258   0x000000d8   Code   RO         3792    i.BsrEmma           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEli.o)
-    0x00003330   0x00003330   0x00000082   Code   RO         3793    i.BsrEric           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEli.o)
-    0x000033b2   0x000033b2   0x00000002   PAD
-    0x000033b4   0x000033b4   0x0000013c   Code   RO         3794    i.BsrErica          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEli.o)
-    0x000034f0   0x000034f0   0x0000002e   Code   RO         3795    i.BsrErik           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEli.o)
-    0x0000351e   0x0000351e   0x000000e6   Code   RO         3796    i.BsrErin           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEli.o)
-    0x00003604   0x00003604   0x00000022   Code   RO         3665    i.BsrEva            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
-    0x00003626   0x00003626   0x0000003a   Code   RO         3797    i.BsrEvan           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEli.o)
-    0x00003660   0x00003660   0x000000c0   Code   RO         3872    i.BsrGary           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrAna.o)
-    0x00003720   0x00003720   0x000001cc   Code   RO         3877    i.BsrGreg           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrAnn.o)
-    0x000038ec   0x000038ec   0x00000036   Code   RO         3667    i.BsrGuy            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
-    0x00003922   0x00003922   0x00000002   PAD
-    0x00003924   0x00003924   0x000000b0   Code   RO         3886    i.BsrHugo           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGuy.o)
-    0x000039d4   0x000039d4   0x00000036   Code   RO         3887    i.BsrIris           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGuy.o)
-    0x00003a0a   0x00003a0a   0x00000002   PAD
-    0x00003a0c   0x00003a0c   0x00000054   Code   RO         3888    i.BsrIrma           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGuy.o)
-    0x00003a60   0x00003a60   0x0000002e   Code   RO         3889    i.BsrIsai           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGuy.o)
-    0x00003a8e   0x00003a8e   0x000000bc   Code   RO         3669    i.BsrIvy            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
-    0x00003b4a   0x00003b4a   0x000000e2   Code   RO         3855    i.BsrJamii          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
-    0x00003c2c   0x00003c2c   0x00000018   Code   RO         3670    i.BsrJan            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
-    0x00003c44   0x00003c44   0x0000018c   Code   RO         3826    i.BsrJeni           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
-    0x00003dd0   0x00003dd0   0x0000016e   Code   RO         3760    i.BsrJoan           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
-    0x00003f3e   0x00003f3e   0x0000002a   Code   RO         3474    i.BsrJohn           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrAli.o)
-    0x00003f68   0x00003f68   0x00000036   Code   RO         3475    i.BsrJose           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrAli.o)
-    0x00003f9e   0x00003f9e   0x000000a4   Code   RO         3476    i.BsrJosh           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrAli.o)
-    0x00004042   0x00004042   0x00000002   PAD
-    0x00004044   0x00004044   0x000000e0   Code   RO         3681    i.BsrJoyci          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
-    0x00004124   0x00004124   0x00000034   Code   RO         3808    i.BsrJuanitez       libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEva.o)
-    0x00004158   0x00004158   0x00000018   Code   RO         3686    i.BsrLei            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
-    0x00004170   0x00004170   0x0000007a   Code   RO         3691    i.BsrMaxi           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
-    0x000041ea   0x000041ea   0x00000576   Code   RO         3692    i.BsrMichael        libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
-    0x00004760   0x00004760   0x00000008   Code   RO         3693    i.BsrMichelle       libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
-    0x00004768   0x00004768   0x000000ac   Code   RO         3695    i.BsrMike           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
-    0x00004814   0x00004814   0x00000088   Code   RO         3762    i.BsrMya            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
-    0x0000489c   0x0000489c   0x00000032   Code   RO         3763    i.BsrNia            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
-    0x000048ce   0x000048ce   0x00000136   Code   RO         3766    i.BsrRay            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
-    0x00004a04   0x00004a04   0x00000012   Code   RO         3767    i.BsrRex            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
-    0x00004a16   0x00004a16   0x00000010   Code   RO         3768    i.BsrRey            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
-    0x00004a26   0x00004a26   0x000004a2   Code   RO         3769    i.BsrRon            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
-    0x00004ec8   0x00004ec8   0x0000002c   Code   RO         3770    i.BsrRoy            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
-    0x00004ef4   0x00004ef4   0x00000010   Code   RO         3771    i.BsrTed            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
-    0x00004f04   0x00004f04   0x00000068   Code   RO         3772    i.BsrTia            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
-    0x00004f6c   0x00004f6c   0x00000092   Code   RO         3773    i.BsrTom            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
-    0x00004ffe   0x00004ffe   0x0000005e   Code   RO         3774    i.BsrTop            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
-    0x0000505c   0x0000505c   0x00000012   Code   RO         3775    i.BsrTre            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
-    0x0000506e   0x0000506e   0x00000004   Code   RO         3751    i.BsrZoe            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoe.o)
-    0x00005072   0x00005072   0x0000001e   Code   RO         1069    i.BufCtrl_UpdateReadWithCount  bufctrl.o
-    0x00005090   0x00005090   0x0000001e   Code   RO         1070    i.BufCtrl_UpdateWriteWithCount  bufctrl.o
-    0x000050ae   0x000050ae   0x00000002   PAD
-    0x000050b0   0x000050b0   0x00000010   Code   RO          495    i.CAPS_IRQHandler   interrupthandler.o
-    0x000050c0   0x000050c0   0x00000034   Code   RO         2135    i.CLK_EnableLDO     clk.o
-    0x000050f4   0x000050f4   0x0000001c   Code   RO         2136    i.CLK_EnableModuleClock  clk.o
-    0x00005110   0x00005110   0x0000001c   Code   RO         2137    i.CLK_EnableXtalRC  clk.o
-    0x0000512c   0x0000512c   0x00000010   Code   RO         2138    i.CLK_GetHCLKFreq   clk.o
-    0x0000513c   0x0000513c   0x0000003c   Code   RO         2141    i.CLK_SetHCLK       clk.o
-    0x00005178   0x00005178   0x00000050   Code   RO         2142    i.CLK_SetModuleClock  clk.o
-    0x000051c8   0x000051c8   0x00000064   Code   RO         3388    i.CSpotter_AddSample  libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(CSpotterSDKApi.o)
-    0x0000522c   0x0000522c   0x000000bc   Code   RO         3392    i.CSpotter_GetMemoryUsage_MultiWithSpeakerAndExtRejModel  libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(CSpotterSDKApi.o)
-    0x000052e8   0x000052e8   0x00000018   Code   RO         3393    i.CSpotter_GetMemoryUsage_Sep  libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(CSpotterSDKApi.o)
-    0x00005300   0x00005300   0x00000024   Code   RO         3399    i.CSpotter_GetResult  libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(CSpotterSDKApi.o)
-    0x00005324   0x00005324   0x00000204   Code   RO         3407    i.CSpotter_Init_MultiWithExtRejModel  libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(CSpotterSDKApi.o)
-    0x00005528   0x00005528   0x00000024   Code   RO         3408    i.CSpotter_Init_Sep  libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(CSpotterSDKApi.o)
-    0x0000554c   0x0000554c   0x00000034   Code   RO         3413    i.CSpotter_Reset    libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(CSpotterSDKApi.o)
-    0x00005580   0x00005580   0x00000002   Code   RO         2286    i.DPWM_Open         dpwm.o
-    0x00005582   0x00005582   0x00000002   PAD
-    0x00005584   0x00005584   0x0000003c   Code   RO         2287    i.DPWM_SetSampleRate  dpwm.o
-    0x000055c0   0x000055c0   0x0000001c   Code   RO          496    i.GPAB_IRQHandler   interrupthandler.o
-    0x000055dc   0x000055dc   0x00000028   Code   RO         2440    i.GPIO_SetMode      gpio.o
-    0x00005604   0x00005604   0x00000022   Code   RO          756    i.MD4App_DecodeInitiate  md4app.o
-    0x00005626   0x00005626   0x00000002   PAD
-    0x00005628   0x00005628   0x00000088   Code   RO          757    i.MD4App_DecodeProcess  md4app.o
-    0x000056b0   0x000056b0   0x00000070   Code   RO          758    i.MD4App_DecodeStartPlayByAddr  md4app.o
-    0x00005720   0x00005720   0x00000030   Code   RO          759    i.MD4App_DecodeStartPlayByID  md4app.o
-    0x00005750   0x00005750   0x0000001a   Code   RO          760    i.MD4App_DecodeStopPlay  md4app.o
-    0x0000576a   0x0000576a   0x00000020   Code   RO         3371    i.MD4_CheckResLdr   MD4_Keil.lib(md4decode.o)
-    0x0000578a   0x0000578a   0x00000002   PAD
-    0x0000578c   0x0000578c   0x000000c8   Code   RO         3372    i.MD4_DecodeFrame   MD4_Keil.lib(md4decode.o)
-    0x00005854   0x00005854   0x000000a0   Code   RO         3373    i.MD4_DecodeInitiate  MD4_Keil.lib(md4decode.o)
-    0x000058f4   0x000058f4   0x00000016   Code   RO         3374    i.MD4_DecodeIsEnd   MD4_Keil.lib(md4decode.o)
-    0x0000590a   0x0000590a   0x00000100   Code   RO         3375    i.MD4_DecodeProcess  MD4_Keil.lib(md4decode.o)
-    0x00005a0a   0x00005a0a   0x00000002   PAD
-    0x00005a0c   0x00005a0c   0x00000080   Code   RO         1120    i.MIC_ChangeSR      micspk.o
-    0x00005a8c   0x00005a8c   0x00000100   Code   RO         1122    i.MIC_Open          micspk.o
-    0x00005b8c   0x00005b8c   0x0000000c   Code   RO         1123    i.MIC_Start         micspk.o
-    0x00005b98   0x00005b98   0x00000010   Code   RO         1124    i.MIC_Stop          micspk.o
-    0x00005ba8   0x00005ba8   0x00000016   Code   RO          700    i.MicGetApp_Initiate  micgetapp.o
-    0x00005bbe   0x00005bbe   0x00000028   Code   RO          701    i.MicGetApp_ProcessRec  micgetapp.o
-    0x00005be6   0x00005be6   0x00000028   Code   RO          702    i.MicGetApp_StartRec  micgetapp.o
-    0x00005c0e   0x00005c0e   0x00000010   Code   RO          703    i.MicGetApp_StopRec  micgetapp.o
-    0x00005c1e   0x00005c1e   0x00000066   Code   RO         3482    i.NINJA_API_1       libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
-    0x00005c84   0x00005c84   0x00000280   Code   RO         3484    i.NINJA_API_11      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
-    0x00005f04   0x00005f04   0x00000170   Code   RO         3486    i.NINJA_API_13      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
-    0x00006074   0x00006074   0x0000001e   Code   RO         3488    i.NINJA_API_15      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
-    0x00006092   0x00006092   0x0000001e   Code   RO         3492    i.NINJA_API_19      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
-    0x000060b0   0x000060b0   0x00000028   Code   RO         3493    i.NINJA_API_2       libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
-    0x000060d8   0x000060d8   0x00000026   Code   RO         3496    i.NINJA_API_23      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
-    0x000060fe   0x000060fe   0x00000030   Code   RO         3499    i.NINJA_API_26      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
-    0x0000612e   0x0000612e   0x00000024   Code   RO         3503    i.NINJA_API_3       libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
-    0x00006152   0x00006152   0x00000070   Code   RO         3520    i.NINJA_API_47      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
-    0x000061c2   0x000061c2   0x0000007e   Code   RO         3521    i.NINJA_API_48      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
-    0x00006240   0x00006240   0x0000003c   Code   RO         3526    i.NINJA_API_55      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
-    0x0000627c   0x0000627c   0x0000002a   Code   RO         3527    i.NINJA_API_56      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
-    0x000062a6   0x000062a6   0x00000002   PAD
-    0x000062a8   0x000062a8   0x000003e0   Code   RO         3542    i.NINJA_API_73      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
-    0x00006688   0x00006688   0x000000b4   Code   RO         3544    i.NINJA_API_75      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
-    0x0000673c   0x0000673c   0x00000030   Code   RO         1004    i.OutputPin_Initiate  configio.o
-    0x0000676c   0x0000676c   0x00000014   Code   RO         2639    i.PDMA_DisableInt   pdma.o
-    0x00006780   0x00006780   0x00000014   Code   RO         2640    i.PDMA_EnableInt    pdma.o
-    0x00006794   0x00006794   0x00000038   Code   RO          497    i.PDMA_IRQHandler   interrupthandler.o
-    0x000067cc   0x000067cc   0x00000010   Code   RO         2641    i.PDMA_Open         pdma.o
-    0x000067dc   0x000067dc   0x00000020   Code   RO         2642    i.PDMA_SetTransferAddr  pdma.o
-    0x000067fc   0x000067fc   0x00000038   Code   RO         2643    i.PDMA_SetTransferCnt  pdma.o
-    0x00006834   0x00006834   0x00000018   Code   RO         2644    i.PDMA_SetTransferDirection  pdma.o
-    0x0000684c   0x0000684c   0x00000098   Code   RO         2645    i.PDMA_SetTransferMode  pdma.o
-    0x000068e4   0x000068e4   0x00000018   Code   RO         2646    i.PDMA_Trigger      pdma.o
-    0x000068fc   0x000068fc   0x0000002c   Code   RO            3    i.PWM0_IRQHandler   main.o
-    0x00006928   0x00006928   0x00000008   Code   RO         2709    i.PWM_ClearIntFlag  pwm.o
-    0x00006930   0x00006930   0x0000000e   Code   RO         2724    i.PWM_GetIntFlag    pwm.o
-    0x0000693e   0x0000693e   0x00000002   PAD
-    0x00006940   0x00006940   0x00000024   Code   RO         1214    i.PdmaCtrl_Init     pdmactrl.o
-    0x00006964   0x00006964   0x0000008c   Code   RO         1215    i.PdmaCtrl_Open     pdmactrl.o
-    0x000069f0   0x000069f0   0x00000040   Code   RO         1216    i.PdmaCtrl_Start    pdmactrl.o
-    0x00006a30   0x00006a30   0x00000014   Code   RO         1217    i.PdmaCtrl_Stop     pdmactrl.o
-    0x00006a44   0x00006a44   0x00000034   Code   RO         1263    i.Playback_Add      playback.o
-    0x00006a78   0x00006a78   0x0000000a   Code   RO         1265    i.Playback_Initiate  playback.o
-    0x00006a82   0x00006a82   0x00000002   PAD
-    0x00006a84   0x00006a84   0x000000cc   Code   RO         1269    i.Playback_Process  playback.o
-    0x00006b50   0x00006b50   0x00000020   Code   RO         1270    i.Playback_Remove   playback.o
-    0x00006b70   0x00006b70   0x00000014   Code   RO         1271    i.Playback_ResetChannelVolume  playback.o
-    0x00006b84   0x00006b84   0x00000028   Code   RO         1272    i.Playback_SetOutputBuf  playback.o
-    0x00006bac   0x00006bac   0x00000058   Code   RO         1275    i.Playback_StartPlay  playback.o
-    0x00006c04   0x00006c04   0x0000004c   Code   RO         1276    i.Playback_StopPlay  playback.o
-    0x00006c50   0x00006c50   0x00000002   Code   RO          498    i.RTC_IRQHandler    interrupthandler.o
-    0x00006c52   0x00006c52   0x00000002   PAD
-    0x00006c54   0x00006c54   0x00000018   Code   RO         1511    i.Record_Add        record.o
-    0x00006c6c   0x00006c6c   0x00000044   Code   RO         1512    i.Record_Process    record.o
-    0x00006cb0   0x00006cb0   0x00000022   Code   RO         1514    i.Record_SetInBufRecord  record.o
-    0x00006cd2   0x00006cd2   0x00000002   PAD
-    0x00006cd4   0x00006cd4   0x00000048   Code   RO         1515    i.Record_StartRec   record.o
-    0x00006d1c   0x00006d1c   0x0000001c   Code   RO         1516    i.Record_StopRec    record.o
-    0x00006d38   0x00006d38   0x00000030   Code   RO         1565    i.SPIFlash_3ByteAddr_Cmd  spiflash.o
-    0x00006d68   0x00006d68   0x0000002c   Code   RO         1573    i.SPIFlash_GetChipInfo  spiflash.o
-    0x00006d94   0x00006d94   0x0000007c   Code   RO            4    i.SPIFlash_Initiate  main.o
-    0x00006e10   0x00006e10   0x00000070   Code   RO         1576    i.SPIFlash_Open     spiflash.o
-    0x00006e80   0x00006e80   0x00000014   Code   RO         1577    i.SPIFlash_PowerDown  spiflash.o
-    0x00006e94   0x00006e94   0x0000001e   Code   RO         1578    i.SPIFlash_Read     spiflash.o
-    0x00006eb2   0x00006eb2   0x000000d4   Code   RO         1579    i.SPIFlash_ReadData  spiflash.o
-    0x00006f86   0x00006f86   0x00000002   PAD
-    0x00006f88   0x00006f88   0x00000018   Code   RO          385    i.SPIFlash_ReadDataCallback  appcallback.o
-    0x00006fa0   0x00006fa0   0x00000018   Code   RO         1581    i.SPIFlash_ReadEnd  spiflash.o
-    0x00006fb8   0x00006fb8   0x0000004e   Code   RO         1582    i.SPIFlash_ReadStart  spiflash.o
-    0x00007006   0x00007006   0x00000052   Code   RO         1584    i.SPIFlash_SendRecOneData  spiflash.o
-    0x00007058   0x00007058   0x00000016   Code   RO         2956    i.SPI_GetBusClock   spi.o
-    0x0000706e   0x0000706e   0x00000024   Code   RO         2958    i.SPI_Open          spi.o
-    0x00007092   0x00007092   0x00000002   PAD
-    0x00007094   0x00007094   0x00000050   Code   RO         2959    i.SPI_SetBusClock   spi.o
-    0x000070e4   0x000070e4   0x00000040   Code   RO         2960    i.SPI_SetVarClock   spi.o
-    0x00007124   0x00007124   0x00000038   Code   RO         1125    i.SPK_ChangeSR      micspk.o
-    0x0000715c   0x0000715c   0x00000048   Code   RO         1127    i.SPK_Open          micspk.o
-    0x000071a4   0x000071a4   0x00000020   Code   RO         1130    i.SPK_Start         micspk.o
-    0x000071c4   0x000071c4   0x00000010   Code   RO         1131    i.SPK_Stop          micspk.o
-    0x000071d4   0x000071d4   0x00000010   Code   RO         3008    i.SYS_Lock          sys.o
-    0x000071e4   0x000071e4   0x0000001a   Code   RO         3013    i.SYS_ResetModule   sys.o
-    0x000071fe   0x000071fe   0x00000002   PAD
-    0x00007200   0x00007200   0x0000002c   Code   RO         3014    i.SYS_Unlock        sys.o
-    0x0000722c   0x0000722c   0x0000001e   Code   RO          281    i.SendCMD           appfunctions.o
-    0x0000724a   0x0000724a   0x00000024   Code   RO          282    i.SendCMD1time      appfunctions.o
-    0x0000726e   0x0000726e   0x00000002   PAD
-    0x00007270   0x00007270   0x00000078   Code   RO          283    i.SendCMDByteTimer  appfunctions.o
-    0x000072e8   0x000072e8   0x00000020   Code   RO         3290    i.SendChar_ToUART   retarget.o
-    0x00007308   0x00007308   0x00000054   Code   RO          899    i.SysClk_InitiateRC  sysclk.o
-    0x0000735c   0x0000735c   0x00000050   Code   RO          860    i.SystemCoreClockUpdate  system_isd9100.o
-    0x000073ac   0x000073ac   0x00000058   Code   RO         3113    i.TIMER_GetModuleClock  timer.o
-    0x00007404   0x00007404   0x0000005e   Code   RO         3115    i.TIMER_Open        timer.o
-    0x00007462   0x00007462   0x00000002   PAD
-    0x00007464   0x00007464   0x000000a8   Code   RO            5    i.TMR0_IRQHandler   main.o
-    0x0000750c   0x0000750c   0x00000040   Code   RO            6    i.TMR1_IRQHandler   main.o
-    0x0000754c   0x0000754c   0x00000068   Code   RO            7    i.UART0_IRQHandler  main.o
-    0x000075b4   0x000075b4   0x00000038   Code   RO         3156    i.UART_ClearIntFlag  uart.o
-    0x000075ec   0x000075ec   0x00000078   Code   RO            8    i.UART_Init         main.o
-    0x00007664   0x00007664   0x0000005c   Code   RO         3160    i.UART_Open         uart.o
-    0x000076c0   0x000076c0   0x00000004   Code   RO          386    i.UserEvent_ProcessCallback  appcallback.o
-    0x000076c4   0x000076c4   0x0000002a   Code   RO          828    i.VROneCmdApp_GetCMDID  vronecmdapp.o
-    0x000076ee   0x000076ee   0x00000048   Code   RO          829    i.VROneCmdApp_Initiate  vronecmdapp.o
-    0x00007736   0x00007736   0x00000038   Code   RO          830    i.VROneCmdApp_UnpackBin  vronecmdapp.o
-    0x0000776e   0x0000776e   0x00000016   Code   RO         1434    i.VolumeCtrl_Reset  volumectrl.o
-    0x00007784   0x00007784   0x00000024   Code   RO         1436    i.VolumeCtrl_VolumeFade  volumectrl.o
-    0x000077a8   0x000077a8   0x00000002   Code   RO          499    i.WDT_IRQHandler    interrupthandler.o
-    0x000077aa   0x000077aa   0x0000001a   Code   RO         2701    i.__ARM_common_switch8  pdma.o
-    0x000077c4   0x000077c4   0x0000000e   Code   RO         3936    i._is_digit         c_p.l(__printf_wp.o)
-    0x000077d2   0x000077d2   0x00000002   PAD
-    0x000077d4   0x000077d4   0x00000024   Code   RO          285    i.delayms           appfunctions.o
-    0x000077f8   0x000077f8   0x00000006   Code   RO         3292    i.ferror            retarget.o
-    0x000077fe   0x000077fe   0x0000000c   Code   RO         3294    i.fputc             retarget.o
+    0x000007d8   0x000007d8   0x00000194   Code   RO          276    i.App_Process       appfunctions.o
+    0x0000096c   0x0000096c   0x00000038   Code   RO          277    i.App_StartPlay     appfunctions.o
+    0x000009a4   0x000009a4   0x00000024   Code   RO          278    i.App_StartRecognize  appfunctions.o
+    0x000009c8   0x000009c8   0x00000014   Code   RO          279    i.App_StopPlay      appfunctions.o
+    0x000009dc   0x000009dc   0x0000002e   Code   RO          969    i.AudioRom_GetAudioChunkInfo  audiorom.o
+    0x00000a0a   0x00000a0a   0x0000000e   Code   RO          970    i.AudioRom_GetAudioNum  audiorom.o
+    0x00000a18   0x00000a18   0x0000001c   Code   RO          971    i.AudioRom_GetRomHeader  audiorom.o
+    0x00000a34   0x00000a34   0x00000030   Code   RO         1121    i.BIQFilter_Setting  micspk.o
+    0x00000a64   0x00000a64   0x0000001c   Code   RO         2036    i.BIQ_Reset         biq.o
+    0x00000a80   0x00000a80   0x00000044   Code   RO         2037    i.BIQ_SetCoeff      biq.o
+    0x00000ac4   0x00000ac4   0x0000002c   Code   RO         3744    i.BsrAbby           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoe.o)
+    0x00000af0   0x00000af0   0x0000007e   Code   RO         3745    i.BsrAbel           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoe.o)
+    0x00000b6e   0x00000b6e   0x000000c8   Code   RO         3746    i.BsrAdam           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoe.o)
+    0x00000c36   0x00000c36   0x000000d2   Code   RO         3618    i.BsrAlma           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrDon.o)
+    0x00000d08   0x00000d08   0x00000018   Code   RO         3619    i.BsrAmir           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrDon.o)
+    0x00000d20   0x00000d20   0x00000126   Code   RO         3620    i.BsrAmos           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrDon.o)
+    0x00000e46   0x00000e46   0x0000002a   Code   RO         3654    i.BsrAna            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
+    0x00000e70   0x00000e70   0x00000026   Code   RO         3622    i.BsrAnna           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrDon.o)
+    0x00000e96   0x00000e96   0x00000018   Code   RO         3623    i.BsrAnne           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrDon.o)
+    0x00000eae   0x00000eae   0x0000001c   Code   RO         3624    i.BsrAnnie          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrDon.o)
+    0x00000eca   0x00000eca   0x00000002   PAD
+    0x00000ecc   0x00000ecc   0x000000b0   Code   RO         3655    i.BsrAri            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
+    0x00000f7c   0x00000f7c   0x000000f4   Code   RO         3656    i.BsrAsa            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
+    0x00001070   0x00001070   0x000000aa   Code   RO         3658    i.BsrAvea           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
+    0x0000111a   0x0000111a   0x0000001a   Code   RO         3630    i.BsrAyla           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrDon.o)
+    0x00001134   0x00001134   0x0000000e   Code   RO         3631    i.BsrBaby           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrDon.o)
+    0x00001142   0x00001142   0x000000ac   Code   RO         3659    i.BsrBen            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
+    0x000011ee   0x000011ee   0x00000002   PAD
+    0x000011f0   0x000011f0   0x0000003c   Code   RO         3615    i.BsrBrad           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrBen.o)
+    0x0000122c   0x0000122c   0x00000150   Code   RO         3813    i.BsrBret           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
+    0x0000137c   0x0000137c   0x0000018a   Code   RO         3814    i.BsrCade           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
+    0x00001506   0x00001506   0x00000002   PAD
+    0x00001508   0x00001508   0x00000104   Code   RO         3815    i.BsrCadea          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
+    0x0000160c   0x0000160c   0x00000044   Code   RO         3816    i.BsrCale           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
+    0x00001650   0x00001650   0x000003e8   Code   RO         3817    i.BsrCara           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
+    0x00001a38   0x00001a38   0x000000cc   Code   RO         3818    i.BsrCarae          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
+    0x00001b04   0x00001b04   0x000000bc   Code   RO         3819    i.BsrChad           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
+    0x00001bc0   0x00001bc0   0x00000048   Code   RO         3820    i.BsrChada          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
+    0x00001c08   0x00001c08   0x000000e0   Code   RO         3821    i.BsrChaz           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
+    0x00001ce8   0x00001ce8   0x000000bc   Code   RO         3822    i.BsrChaza          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
+    0x00001da4   0x00001da4   0x000000d0   Code   RO         3823    i.BsrChaze          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
+    0x00001e74   0x00001e74   0x000000ce   Code   RO         3824    i.BsrChazi          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
+    0x00001f42   0x00001f42   0x00000002   PAD
+    0x00001f44   0x00001f44   0x00000568   Code   RO         3825    i.BsrClay           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
+    0x000024ac   0x000024ac   0x000001ec   Code   RO         3841    i.BsrCory           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
+    0x00002698   0x00002698   0x00000022   Code   RO         3842    i.BsrCoty           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
+    0x000026ba   0x000026ba   0x00000002   PAD
+    0x000026bc   0x000026bc   0x00000058   Code   RO         3661    i.BsrDan            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
+    0x00002714   0x00002714   0x00000008   Code   RO         3846    i.BsrDane           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
+    0x0000271c   0x0000271c   0x00000008   Code   RO         3848    i.BsrDawn           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
+    0x00002724   0x00002724   0x0000006c   Code   RO         3849    i.BsrDeja           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
+    0x00002790   0x00002790   0x00000180   Code   RO         3850    i.BsrDemi           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
+    0x00002910   0x00002910   0x00000176   Code   RO         3851    i.BsrDeon           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
+    0x00002a86   0x00002a86   0x0000024a   Code   RO         3852    i.BsrDina           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
+    0x00002cd0   0x00002cd0   0x000000dc   Code   RO         3853    i.BsrDion           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
+    0x00002dac   0x00002dac   0x00000164   Code   RO         3805    i.BsrEden           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEva.o)
+    0x00002f10   0x00002f10   0x00000058   Code   RO         3664    i.BsrEli            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
+    0x00002f68   0x00002f68   0x000001b0   Code   RO         3806    i.BsrElla           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEva.o)
+    0x00003118   0x00003118   0x00000178   Code   RO         3807    i.BsrElsa           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEva.o)
+    0x00003290   0x00003290   0x000000d8   Code   RO         3792    i.BsrEmma           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEli.o)
+    0x00003368   0x00003368   0x00000082   Code   RO         3793    i.BsrEric           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEli.o)
+    0x000033ea   0x000033ea   0x00000002   PAD
+    0x000033ec   0x000033ec   0x0000013c   Code   RO         3794    i.BsrErica          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEli.o)
+    0x00003528   0x00003528   0x0000002e   Code   RO         3795    i.BsrErik           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEli.o)
+    0x00003556   0x00003556   0x000000e6   Code   RO         3796    i.BsrErin           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEli.o)
+    0x0000363c   0x0000363c   0x00000022   Code   RO         3665    i.BsrEva            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
+    0x0000365e   0x0000365e   0x0000003a   Code   RO         3797    i.BsrEvan           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEli.o)
+    0x00003698   0x00003698   0x000000c0   Code   RO         3872    i.BsrGary           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrAna.o)
+    0x00003758   0x00003758   0x000001cc   Code   RO         3877    i.BsrGreg           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrAnn.o)
+    0x00003924   0x00003924   0x00000036   Code   RO         3667    i.BsrGuy            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
+    0x0000395a   0x0000395a   0x00000002   PAD
+    0x0000395c   0x0000395c   0x000000b0   Code   RO         3886    i.BsrHugo           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGuy.o)
+    0x00003a0c   0x00003a0c   0x00000036   Code   RO         3887    i.BsrIris           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGuy.o)
+    0x00003a42   0x00003a42   0x00000002   PAD
+    0x00003a44   0x00003a44   0x00000054   Code   RO         3888    i.BsrIrma           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGuy.o)
+    0x00003a98   0x00003a98   0x0000002e   Code   RO         3889    i.BsrIsai           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGuy.o)
+    0x00003ac6   0x00003ac6   0x000000bc   Code   RO         3669    i.BsrIvy            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
+    0x00003b82   0x00003b82   0x000000e2   Code   RO         3855    i.BsrJamii          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
+    0x00003c64   0x00003c64   0x00000018   Code   RO         3670    i.BsrJan            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
+    0x00003c7c   0x00003c7c   0x0000018c   Code   RO         3826    i.BsrJeni           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
+    0x00003e08   0x00003e08   0x0000016e   Code   RO         3760    i.BsrJoan           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
+    0x00003f76   0x00003f76   0x0000002a   Code   RO         3474    i.BsrJohn           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrAli.o)
+    0x00003fa0   0x00003fa0   0x00000036   Code   RO         3475    i.BsrJose           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrAli.o)
+    0x00003fd6   0x00003fd6   0x000000a4   Code   RO         3476    i.BsrJosh           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrAli.o)
+    0x0000407a   0x0000407a   0x00000002   PAD
+    0x0000407c   0x0000407c   0x000000e0   Code   RO         3681    i.BsrJoyci          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
+    0x0000415c   0x0000415c   0x00000034   Code   RO         3808    i.BsrJuanitez       libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEva.o)
+    0x00004190   0x00004190   0x00000018   Code   RO         3686    i.BsrLei            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
+    0x000041a8   0x000041a8   0x0000007a   Code   RO         3691    i.BsrMaxi           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
+    0x00004222   0x00004222   0x00000576   Code   RO         3692    i.BsrMichael        libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
+    0x00004798   0x00004798   0x00000008   Code   RO         3693    i.BsrMichelle       libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
+    0x000047a0   0x000047a0   0x000000ac   Code   RO         3695    i.BsrMike           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
+    0x0000484c   0x0000484c   0x00000088   Code   RO         3762    i.BsrMya            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
+    0x000048d4   0x000048d4   0x00000032   Code   RO         3763    i.BsrNia            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
+    0x00004906   0x00004906   0x00000136   Code   RO         3766    i.BsrRay            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
+    0x00004a3c   0x00004a3c   0x00000012   Code   RO         3767    i.BsrRex            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
+    0x00004a4e   0x00004a4e   0x00000010   Code   RO         3768    i.BsrRey            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
+    0x00004a5e   0x00004a5e   0x000004a2   Code   RO         3769    i.BsrRon            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
+    0x00004f00   0x00004f00   0x0000002c   Code   RO         3770    i.BsrRoy            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
+    0x00004f2c   0x00004f2c   0x00000010   Code   RO         3771    i.BsrTed            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
+    0x00004f3c   0x00004f3c   0x00000068   Code   RO         3772    i.BsrTia            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
+    0x00004fa4   0x00004fa4   0x00000092   Code   RO         3773    i.BsrTom            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
+    0x00005036   0x00005036   0x0000005e   Code   RO         3774    i.BsrTop            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
+    0x00005094   0x00005094   0x00000012   Code   RO         3775    i.BsrTre            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
+    0x000050a6   0x000050a6   0x00000004   Code   RO         3751    i.BsrZoe            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoe.o)
+    0x000050aa   0x000050aa   0x0000001e   Code   RO         1071    i.BufCtrl_UpdateReadWithCount  bufctrl.o
+    0x000050c8   0x000050c8   0x0000001e   Code   RO         1072    i.BufCtrl_UpdateWriteWithCount  bufctrl.o
+    0x000050e6   0x000050e6   0x00000002   PAD
+    0x000050e8   0x000050e8   0x00000010   Code   RO          497    i.CAPS_IRQHandler   interrupthandler.o
+    0x000050f8   0x000050f8   0x00000034   Code   RO         2137    i.CLK_EnableLDO     clk.o
+    0x0000512c   0x0000512c   0x0000001c   Code   RO         2138    i.CLK_EnableModuleClock  clk.o
+    0x00005148   0x00005148   0x0000001c   Code   RO         2139    i.CLK_EnableXtalRC  clk.o
+    0x00005164   0x00005164   0x00000010   Code   RO         2140    i.CLK_GetHCLKFreq   clk.o
+    0x00005174   0x00005174   0x0000003c   Code   RO         2143    i.CLK_SetHCLK       clk.o
+    0x000051b0   0x000051b0   0x00000050   Code   RO         2144    i.CLK_SetModuleClock  clk.o
+    0x00005200   0x00005200   0x00000064   Code   RO         3388    i.CSpotter_AddSample  libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(CSpotterSDKApi.o)
+    0x00005264   0x00005264   0x000000bc   Code   RO         3392    i.CSpotter_GetMemoryUsage_MultiWithSpeakerAndExtRejModel  libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(CSpotterSDKApi.o)
+    0x00005320   0x00005320   0x00000018   Code   RO         3393    i.CSpotter_GetMemoryUsage_Sep  libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(CSpotterSDKApi.o)
+    0x00005338   0x00005338   0x00000024   Code   RO         3399    i.CSpotter_GetResult  libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(CSpotterSDKApi.o)
+    0x0000535c   0x0000535c   0x00000204   Code   RO         3407    i.CSpotter_Init_MultiWithExtRejModel  libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(CSpotterSDKApi.o)
+    0x00005560   0x00005560   0x00000024   Code   RO         3408    i.CSpotter_Init_Sep  libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(CSpotterSDKApi.o)
+    0x00005584   0x00005584   0x00000034   Code   RO         3413    i.CSpotter_Reset    libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(CSpotterSDKApi.o)
+    0x000055b8   0x000055b8   0x00000002   Code   RO         2288    i.DPWM_Open         dpwm.o
+    0x000055ba   0x000055ba   0x00000002   PAD
+    0x000055bc   0x000055bc   0x0000003c   Code   RO         2289    i.DPWM_SetSampleRate  dpwm.o
+    0x000055f8   0x000055f8   0x0000001c   Code   RO          498    i.GPAB_IRQHandler   interrupthandler.o
+    0x00005614   0x00005614   0x00000028   Code   RO         2442    i.GPIO_SetMode      gpio.o
+    0x0000563c   0x0000563c   0x00000022   Code   RO          758    i.MD4App_DecodeInitiate  md4app.o
+    0x0000565e   0x0000565e   0x00000002   PAD
+    0x00005660   0x00005660   0x00000088   Code   RO          759    i.MD4App_DecodeProcess  md4app.o
+    0x000056e8   0x000056e8   0x00000070   Code   RO          760    i.MD4App_DecodeStartPlayByAddr  md4app.o
+    0x00005758   0x00005758   0x00000030   Code   RO          761    i.MD4App_DecodeStartPlayByID  md4app.o
+    0x00005788   0x00005788   0x0000001a   Code   RO          762    i.MD4App_DecodeStopPlay  md4app.o
+    0x000057a2   0x000057a2   0x00000020   Code   RO         3371    i.MD4_CheckResLdr   MD4_Keil.lib(md4decode.o)
+    0x000057c2   0x000057c2   0x00000002   PAD
+    0x000057c4   0x000057c4   0x000000c8   Code   RO         3372    i.MD4_DecodeFrame   MD4_Keil.lib(md4decode.o)
+    0x0000588c   0x0000588c   0x000000a0   Code   RO         3373    i.MD4_DecodeInitiate  MD4_Keil.lib(md4decode.o)
+    0x0000592c   0x0000592c   0x00000016   Code   RO         3374    i.MD4_DecodeIsEnd   MD4_Keil.lib(md4decode.o)
+    0x00005942   0x00005942   0x00000100   Code   RO         3375    i.MD4_DecodeProcess  MD4_Keil.lib(md4decode.o)
+    0x00005a42   0x00005a42   0x00000002   PAD
+    0x00005a44   0x00005a44   0x00000080   Code   RO         1122    i.MIC_ChangeSR      micspk.o
+    0x00005ac4   0x00005ac4   0x00000100   Code   RO         1124    i.MIC_Open          micspk.o
+    0x00005bc4   0x00005bc4   0x0000000c   Code   RO         1125    i.MIC_Start         micspk.o
+    0x00005bd0   0x00005bd0   0x00000010   Code   RO         1126    i.MIC_Stop          micspk.o
+    0x00005be0   0x00005be0   0x00000016   Code   RO          702    i.MicGetApp_Initiate  micgetapp.o
+    0x00005bf6   0x00005bf6   0x00000028   Code   RO          703    i.MicGetApp_ProcessRec  micgetapp.o
+    0x00005c1e   0x00005c1e   0x00000028   Code   RO          704    i.MicGetApp_StartRec  micgetapp.o
+    0x00005c46   0x00005c46   0x00000010   Code   RO          705    i.MicGetApp_StopRec  micgetapp.o
+    0x00005c56   0x00005c56   0x00000066   Code   RO         3482    i.NINJA_API_1       libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
+    0x00005cbc   0x00005cbc   0x00000280   Code   RO         3484    i.NINJA_API_11      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
+    0x00005f3c   0x00005f3c   0x00000170   Code   RO         3486    i.NINJA_API_13      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
+    0x000060ac   0x000060ac   0x0000001e   Code   RO         3488    i.NINJA_API_15      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
+    0x000060ca   0x000060ca   0x0000001e   Code   RO         3492    i.NINJA_API_19      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
+    0x000060e8   0x000060e8   0x00000028   Code   RO         3493    i.NINJA_API_2       libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
+    0x00006110   0x00006110   0x00000026   Code   RO         3496    i.NINJA_API_23      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
+    0x00006136   0x00006136   0x00000030   Code   RO         3499    i.NINJA_API_26      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
+    0x00006166   0x00006166   0x00000024   Code   RO         3503    i.NINJA_API_3       libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
+    0x0000618a   0x0000618a   0x00000070   Code   RO         3520    i.NINJA_API_47      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
+    0x000061fa   0x000061fa   0x0000007e   Code   RO         3521    i.NINJA_API_48      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
+    0x00006278   0x00006278   0x0000003c   Code   RO         3526    i.NINJA_API_55      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
+    0x000062b4   0x000062b4   0x0000002a   Code   RO         3527    i.NINJA_API_56      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
+    0x000062de   0x000062de   0x00000002   PAD
+    0x000062e0   0x000062e0   0x000003e0   Code   RO         3542    i.NINJA_API_73      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
+    0x000066c0   0x000066c0   0x000000b4   Code   RO         3544    i.NINJA_API_75      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
+    0x00006774   0x00006774   0x00000030   Code   RO         1006    i.OutputPin_Initiate  configio.o
+    0x000067a4   0x000067a4   0x00000014   Code   RO         2641    i.PDMA_DisableInt   pdma.o
+    0x000067b8   0x000067b8   0x00000014   Code   RO         2642    i.PDMA_EnableInt    pdma.o
+    0x000067cc   0x000067cc   0x00000038   Code   RO          499    i.PDMA_IRQHandler   interrupthandler.o
+    0x00006804   0x00006804   0x00000010   Code   RO         2643    i.PDMA_Open         pdma.o
+    0x00006814   0x00006814   0x00000020   Code   RO         2644    i.PDMA_SetTransferAddr  pdma.o
+    0x00006834   0x00006834   0x00000038   Code   RO         2645    i.PDMA_SetTransferCnt  pdma.o
+    0x0000686c   0x0000686c   0x00000018   Code   RO         2646    i.PDMA_SetTransferDirection  pdma.o
+    0x00006884   0x00006884   0x00000098   Code   RO         2647    i.PDMA_SetTransferMode  pdma.o
+    0x0000691c   0x0000691c   0x00000018   Code   RO         2648    i.PDMA_Trigger      pdma.o
+    0x00006934   0x00006934   0x0000002c   Code   RO            3    i.PWM0_IRQHandler   main.o
+    0x00006960   0x00006960   0x00000008   Code   RO         2709    i.PWM_ClearIntFlag  pwm.o
+    0x00006968   0x00006968   0x0000000e   Code   RO         2724    i.PWM_GetIntFlag    pwm.o
+    0x00006976   0x00006976   0x00000002   PAD
+    0x00006978   0x00006978   0x00000024   Code   RO         1216    i.PdmaCtrl_Init     pdmactrl.o
+    0x0000699c   0x0000699c   0x0000008c   Code   RO         1217    i.PdmaCtrl_Open     pdmactrl.o
+    0x00006a28   0x00006a28   0x00000040   Code   RO         1218    i.PdmaCtrl_Start    pdmactrl.o
+    0x00006a68   0x00006a68   0x00000014   Code   RO         1219    i.PdmaCtrl_Stop     pdmactrl.o
+    0x00006a7c   0x00006a7c   0x00000034   Code   RO         1265    i.Playback_Add      playback.o
+    0x00006ab0   0x00006ab0   0x0000000a   Code   RO         1267    i.Playback_Initiate  playback.o
+    0x00006aba   0x00006aba   0x00000002   PAD
+    0x00006abc   0x00006abc   0x000000cc   Code   RO         1271    i.Playback_Process  playback.o
+    0x00006b88   0x00006b88   0x00000020   Code   RO         1272    i.Playback_Remove   playback.o
+    0x00006ba8   0x00006ba8   0x00000014   Code   RO         1273    i.Playback_ResetChannelVolume  playback.o
+    0x00006bbc   0x00006bbc   0x00000028   Code   RO         1274    i.Playback_SetOutputBuf  playback.o
+    0x00006be4   0x00006be4   0x00000058   Code   RO         1277    i.Playback_StartPlay  playback.o
+    0x00006c3c   0x00006c3c   0x0000004c   Code   RO         1278    i.Playback_StopPlay  playback.o
+    0x00006c88   0x00006c88   0x00000002   Code   RO          500    i.RTC_IRQHandler    interrupthandler.o
+    0x00006c8a   0x00006c8a   0x00000002   PAD
+    0x00006c8c   0x00006c8c   0x00000018   Code   RO         1513    i.Record_Add        record.o
+    0x00006ca4   0x00006ca4   0x00000044   Code   RO         1514    i.Record_Process    record.o
+    0x00006ce8   0x00006ce8   0x00000022   Code   RO         1516    i.Record_SetInBufRecord  record.o
+    0x00006d0a   0x00006d0a   0x00000002   PAD
+    0x00006d0c   0x00006d0c   0x00000048   Code   RO         1517    i.Record_StartRec   record.o
+    0x00006d54   0x00006d54   0x0000001c   Code   RO         1518    i.Record_StopRec    record.o
+    0x00006d70   0x00006d70   0x00000030   Code   RO         1567    i.SPIFlash_3ByteAddr_Cmd  spiflash.o
+    0x00006da0   0x00006da0   0x0000002c   Code   RO         1575    i.SPIFlash_GetChipInfo  spiflash.o
+    0x00006dcc   0x00006dcc   0x0000007c   Code   RO            4    i.SPIFlash_Initiate  main.o
+    0x00006e48   0x00006e48   0x00000070   Code   RO         1578    i.SPIFlash_Open     spiflash.o
+    0x00006eb8   0x00006eb8   0x00000014   Code   RO         1579    i.SPIFlash_PowerDown  spiflash.o
+    0x00006ecc   0x00006ecc   0x0000001e   Code   RO         1580    i.SPIFlash_Read     spiflash.o
+    0x00006eea   0x00006eea   0x000000d4   Code   RO         1581    i.SPIFlash_ReadData  spiflash.o
+    0x00006fbe   0x00006fbe   0x00000002   PAD
+    0x00006fc0   0x00006fc0   0x00000018   Code   RO          387    i.SPIFlash_ReadDataCallback  appcallback.o
+    0x00006fd8   0x00006fd8   0x00000018   Code   RO         1583    i.SPIFlash_ReadEnd  spiflash.o
+    0x00006ff0   0x00006ff0   0x0000004e   Code   RO         1584    i.SPIFlash_ReadStart  spiflash.o
+    0x0000703e   0x0000703e   0x00000052   Code   RO         1586    i.SPIFlash_SendRecOneData  spiflash.o
+    0x00007090   0x00007090   0x00000016   Code   RO         2956    i.SPI_GetBusClock   spi.o
+    0x000070a6   0x000070a6   0x00000024   Code   RO         2958    i.SPI_Open          spi.o
+    0x000070ca   0x000070ca   0x00000002   PAD
+    0x000070cc   0x000070cc   0x00000050   Code   RO         2959    i.SPI_SetBusClock   spi.o
+    0x0000711c   0x0000711c   0x00000040   Code   RO         2960    i.SPI_SetVarClock   spi.o
+    0x0000715c   0x0000715c   0x00000038   Code   RO         1127    i.SPK_ChangeSR      micspk.o
+    0x00007194   0x00007194   0x00000048   Code   RO         1129    i.SPK_Open          micspk.o
+    0x000071dc   0x000071dc   0x00000020   Code   RO         1132    i.SPK_Start         micspk.o
+    0x000071fc   0x000071fc   0x00000010   Code   RO         1133    i.SPK_Stop          micspk.o
+    0x0000720c   0x0000720c   0x00000010   Code   RO         3008    i.SYS_Lock          sys.o
+    0x0000721c   0x0000721c   0x0000001a   Code   RO         3013    i.SYS_ResetModule   sys.o
+    0x00007236   0x00007236   0x00000002   PAD
+    0x00007238   0x00007238   0x0000002c   Code   RO         3014    i.SYS_Unlock        sys.o
+    0x00007264   0x00007264   0x0000001e   Code   RO          281    i.SendCMD           appfunctions.o
+    0x00007282   0x00007282   0x00000024   Code   RO          282    i.SendCMD1time      appfunctions.o
+    0x000072a6   0x000072a6   0x00000002   PAD
+    0x000072a8   0x000072a8   0x00000078   Code   RO          283    i.SendCMDByteTimer  appfunctions.o
+    0x00007320   0x00007320   0x00000020   Code   RO         3290    i.SendChar_ToUART   retarget.o
+    0x00007340   0x00007340   0x00000054   Code   RO          901    i.SysClk_InitiateRC  sysclk.o
+    0x00007394   0x00007394   0x00000050   Code   RO          862    i.SystemCoreClockUpdate  system_isd9100.o
+    0x000073e4   0x000073e4   0x00000058   Code   RO         3113    i.TIMER_GetModuleClock  timer.o
+    0x0000743c   0x0000743c   0x0000005e   Code   RO         3115    i.TIMER_Open        timer.o
+    0x0000749a   0x0000749a   0x00000002   PAD
+    0x0000749c   0x0000749c   0x000000a8   Code   RO            5    i.TMR0_IRQHandler   main.o
+    0x00007544   0x00007544   0x00000040   Code   RO            6    i.TMR1_IRQHandler   main.o
+    0x00007584   0x00007584   0x00000068   Code   RO            7    i.UART0_IRQHandler  main.o
+    0x000075ec   0x000075ec   0x00000038   Code   RO         3156    i.UART_ClearIntFlag  uart.o
+    0x00007624   0x00007624   0x00000078   Code   RO            8    i.UART_Init         main.o
+    0x0000769c   0x0000769c   0x0000005c   Code   RO         3160    i.UART_Open         uart.o
+    0x000076f8   0x000076f8   0x00000004   Code   RO          388    i.UserEvent_ProcessCallback  appcallback.o
+    0x000076fc   0x000076fc   0x0000002a   Code   RO          830    i.VROneCmdApp_GetCMDID  vronecmdapp.o
+    0x00007726   0x00007726   0x00000048   Code   RO          831    i.VROneCmdApp_Initiate  vronecmdapp.o
+    0x0000776e   0x0000776e   0x00000038   Code   RO          832    i.VROneCmdApp_UnpackBin  vronecmdapp.o
+    0x000077a6   0x000077a6   0x00000016   Code   RO         1436    i.VolumeCtrl_Reset  volumectrl.o
+    0x000077bc   0x000077bc   0x00000024   Code   RO         1438    i.VolumeCtrl_VolumeFade  volumectrl.o
+    0x000077e0   0x000077e0   0x00000002   Code   RO          501    i.WDT_IRQHandler    interrupthandler.o
+    0x000077e2   0x000077e2   0x0000001a   Code   RO          361    i.__ARM_common_switch8  appfunctions.o
+    0x000077fc   0x000077fc   0x0000000e   Code   RO         3936    i._is_digit         c_p.l(__printf_wp.o)
     0x0000780a   0x0000780a   0x00000002   PAD
-    0x0000780c   0x0000780c   0x0000007c   Code   RO            9    i.main              main.o
-    0x00007888   0x00007888   0x00000040   Code   RO           10    i.pwm_init          main.o
-    0x000078c8   0x000078c8   0x00000084   Code   RO           11    i.time_init         main.o
-    0x0000794c   0x0000794c   0x0000001c   Code   RO           12    i.uart_rev_task     main.o
-    0x00007968   0x00007968   0x00000010   Data   RO          387    .constdata          appcallback.o
-    0x00007978   0x00007978   0x00000044   Data   RO         1132    .constdata          micspk.o
-    0x000079bc   0x000079bc   0x0000001a   Data   RO         1437    .constdata          volumectrl.o
-    0x000079d6   0x000079d6   0x00000002   PAD
-    0x000079d8   0x000079d8   0x00000014   Data   RO         3116    .constdata          timer.o
-    0x000079ec   0x000079ec   0x00000030   Data   RO         3378    .constdata          MD4_Keil.lib(md4decode.o)
-    0x00007a1c   0x00007a1c   0x00000914   Data   RO         3547    .constdata          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
-    0x00008330   0x00008330   0x00000800   Data   RO         3616    .constdata          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrBen.o)
-    0x00008b30   0x00008b30   0x00000064   Data   RO         3798    .constdata          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEli.o)
-    0x00008b94   0x00008b94   0x00000009   Data   RO         3856    .constdata          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
-    0x00008b9d   0x00008b9d   0x00000001   PAD
-    0x00008b9e   0x00008b9e   0x00000284   Data   RO         3874    .constdata          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrAna.o)
-    0x00008e22   0x00008e22   0x00000404   Data   RO         3881    .constdata          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrAnn.o)
-    0x00009226   0x00009226   0x00000002   PAD
-    0x00009228   0x00009228   0x00000200   Data   RO         3890    .constdata          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGuy.o)
-    0x00009428   0x00009428   0x0000012c   Data   RO          287    .conststring        appfunctions.o
-    0x00009554   0x00009554   0x00000020   Data   RO         4144    Region$$Table       anon$$obj.o
+    0x0000780c   0x0000780c   0x00000024   Code   RO          285    i.delayms           appfunctions.o
+    0x00007830   0x00007830   0x00000006   Code   RO         3292    i.ferror            retarget.o
+    0x00007836   0x00007836   0x0000000c   Code   RO         3294    i.fputc             retarget.o
+    0x00007842   0x00007842   0x00000002   PAD
+    0x00007844   0x00007844   0x0000007c   Code   RO            9    i.main              main.o
+    0x000078c0   0x000078c0   0x00000040   Code   RO           10    i.pwm_init          main.o
+    0x00007900   0x00007900   0x00000084   Code   RO           11    i.time_init         main.o
+    0x00007984   0x00007984   0x0000001c   Code   RO           12    i.uart_rev_task     main.o
+    0x000079a0   0x000079a0   0x00000010   Data   RO          389    .constdata          appcallback.o
+    0x000079b0   0x000079b0   0x00000044   Data   RO         1134    .constdata          micspk.o
+    0x000079f4   0x000079f4   0x0000001a   Data   RO         1439    .constdata          volumectrl.o
+    0x00007a0e   0x00007a0e   0x00000002   PAD
+    0x00007a10   0x00007a10   0x00000014   Data   RO         3116    .constdata          timer.o
+    0x00007a24   0x00007a24   0x00000030   Data   RO         3378    .constdata          MD4_Keil.lib(md4decode.o)
+    0x00007a54   0x00007a54   0x00000914   Data   RO         3547    .constdata          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
+    0x00008368   0x00008368   0x00000800   Data   RO         3616    .constdata          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrBen.o)
+    0x00008b68   0x00008b68   0x00000064   Data   RO         3798    .constdata          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEli.o)
+    0x00008bcc   0x00008bcc   0x00000009   Data   RO         3856    .constdata          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
+    0x00008bd5   0x00008bd5   0x00000001   PAD
+    0x00008bd6   0x00008bd6   0x00000284   Data   RO         3874    .constdata          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrAna.o)
+    0x00008e5a   0x00008e5a   0x00000404   Data   RO         3881    .constdata          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrAnn.o)
+    0x0000925e   0x0000925e   0x00000002   PAD
+    0x00009260   0x00009260   0x00000200   Data   RO         3890    .constdata          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGuy.o)
+    0x00009460   0x00009460   0x0000012c   Data   RO          287    .conststring        appfunctions.o
+    0x0000958c   0x0000958c   0x00000020   Data   RO         4144    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x00009574, Size: 0x00002ec8, Max: 0x00003000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x000095ac, Size: 0x00002ec8, Max: 0x00003000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x00009574   0x00000010   Data   RW           17    .data               main.o
-    0x20000010   0x00009584   0x00000001   Data   RW           20    .data               main.o
-    0x20000011   0x00009585   0x00000001   Data   RW           21    .data               main.o
-    0x20000012   0x00009586   0x00000002   PAD
-    0x20000014   0x00009588   0x00000050   Data   RW          288    .data               appfunctions.o
-    0x20000064   0x000095d8   0x0000001c   Data   RW          862    .data               system_isd9100.o
-    0x20000080   0x000095f4   0x0000000c   Data   RW         1278    .data               playback.o
-    0x2000008c   0x00009600   0x00000008   Data   RW         1438    .data               volumectrl.o
-    0x20000094   0x00009608   0x00000008   Data   RW         1517    .data               record.o
-    0x2000009c   0x00009610   0x00000004   Data   RW         3297    .data               retarget.o
+    0x20000000   0x000095ac   0x00000010   Data   RW           17    .data               main.o
+    0x20000010   0x000095bc   0x00000001   Data   RW           20    .data               main.o
+    0x20000011   0x000095bd   0x00000001   Data   RW           21    .data               main.o
+    0x20000012   0x000095be   0x00000002   PAD
+    0x20000014   0x000095c0   0x00000050   Data   RW          288    .data               appfunctions.o
+    0x20000064   0x00009610   0x0000001c   Data   RW          864    .data               system_isd9100.o
+    0x20000080   0x0000962c   0x0000000c   Data   RW         1280    .data               playback.o
+    0x2000008c   0x00009638   0x00000008   Data   RW         1440    .data               volumectrl.o
+    0x20000094   0x00009640   0x00000008   Data   RW         1519    .data               record.o
+    0x2000009c   0x00009648   0x00000004   Data   RW         3297    .data               retarget.o
     0x200000a0        -       0x00000098   Zero   RW           14    .bss                main.o
     0x20000138        -       0x00002700   Zero   RW           15    .bss                main.o
     0x20002838        -       0x0000000c   Zero   RW           16    .bss                main.o
-    0x20002844        -       0x00000020   Zero   RW          500    .bss                interrupthandler.o
+    0x20002844        -       0x00000020   Zero   RW          502    .bss                interrupthandler.o
     0x20002864        -       0x00000060   Zero   RW         4019    .bss                c_p.l(libspace.o)
-    0x200028c4   0x00009614   0x00000004   PAD
-    0x200028c8        -       0x00000200   Zero   RW          891    HEAP                startup_isd9100.o
-    0x20002ac8        -       0x00000400   Zero   RW          890    STACK               startup_isd9100.o
+    0x200028c4   0x0000964c   0x00000004   PAD
+    0x200028c8        -       0x00000200   Zero   RW          893    HEAP                startup_isd9100.o
+    0x20002ac8        -       0x00000400   Zero   RW          892    STACK               startup_isd9100.o
 
 
 ==============================================================================
@@ -2984,7 +2985,7 @@ Image component sizes
 
        218         40          0          0          0       2852   adc.o
         28          6         16          0          0     109480   appcallback.o
-       770        140        300         80          0      10717   appfunctions.o
+       852        150        300         80          0      10701   appfunctions.o
         88          0          0          0          0       2648   audiorom.o
         96         12          0          0          0       1579   biq.o
         60          0          0          0          0       3853   bufctrl.o
@@ -2993,11 +2994,11 @@ Image component sizes
         62         10          0          0          0       1137   dpwm.o
         40          0          0          0          0       1039   gpio.o
        104         28          0          0         32     106129   interrupthandler.o
-       972        168          0         18      10148     126212   main.o
+       972        168          0         18      10148     126056   main.o
        356         14          0          0          0      12665   md4app.o
        118          0          0          0          0       6181   micgetapp.o
        636        118         68          0          0       5870   micspk.o
-       370         54          0          0          0       5550   pdma.o
+       344         54          0          0          0       5478   pdma.o
        260         24          0          0          0       2897   pdmactrl.o
        522         54          0         12          0       6494   playback.o
          0          0          0          0          0       5720   powerdown.o
@@ -3016,7 +3017,7 @@ Image component sizes
        170          0          0          0          0       2734   vronecmdapp.o
 
     ----------------------------------------------------------------------
-      7094        882        656        160      11716     453354   Object Totals
+      7150        892        656        160      11716     453110   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         28          0          2          2          0          0   (incl. Padding)
 
@@ -3095,15 +3096,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     30888       1240       7372        160      11816     452694   Grand Totals
-     30888       1240       7372        160      11816     452694   ELF Image Totals
-     30888       1240       7372        160          0          0   ROM Totals
+     30944       1250       7372        160      11816     452450   Grand Totals
+     30944       1250       7372        160      11816     452450   ELF Image Totals
+     30944       1250       7372        160          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                38260 (  37.36kB)
+    Total RO  Size (Code + RO Data)                38316 (  37.42kB)
     Total RW  Size (RW Data + ZI Data)             11976 (  11.70kB)
-    Total ROM Size (Code + RO Data + RW Data)      38420 (  37.52kB)
+    Total ROM Size (Code + RO Data + RW Data)      38476 (  37.57kB)
 
 ==============================================================================
 

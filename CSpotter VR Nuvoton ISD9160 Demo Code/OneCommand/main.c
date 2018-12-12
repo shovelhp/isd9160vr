@@ -258,7 +258,7 @@ void TMR0_IRQHandler(void)
 }
 
 void TMR1_IRQHandler(void)
-{
+{//timer1 irq, set 1.25ms flag, change signal line status
 	static uint8_t time_1p25ms = 0;
 	//uint32_t PAdata = 0;
 	if(time_1p25ms)	

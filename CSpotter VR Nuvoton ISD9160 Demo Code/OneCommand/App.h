@@ -115,6 +115,7 @@ typedef struct		//
 	uint8_t Breath_light; //ºôÎüµÆÊ¹ÄÜ
 }pwm_type;
 
+//PWM parameter define
 #define MUL 10
 #define PWM_INT 10*MUL
 #define PWM_STEP 30*MUL
@@ -125,31 +126,31 @@ typedef struct		//
 #define PWM_RATE 30000
 #define USE_PWM0 0
 #define USE_PWM1 0
-
+//LED function define
 #define FANON BIT14
 #define WAVEON BIT15
-#define WINDUP BIT7
-#define WINDDOWN BIT6
-#define TIMEADD BIT5
-#define TIMESUB BIT4
-#define HIGHSPEED BIT6
-#define MIDSPEED BIT5
-#define LOWSPEED BIT4
-#define ANIONON BIT7
+// #define WINDUP BIT7
+// #define WINDDOWN BIT6
+// #define TIMEADD BIT5
+// #define TIMESUB BIT4
+// #define HIGHSPEED BIT6
+// #define MIDSPEED BIT5
+// #define LOWSPEED BIT4
+// #define ANIONON BIT7
 #define COLORLIGHT BIT13
-#define SLEEPWIND BIT11
-#define NATURALWIND BIT10
+// #define SLEEPWIND BIT11
+// #define NATURALWIND BIT10
 #define TIMERON BIT12
 #define SCMDLINE BIT7
 #define SCMDLINE1 BIT11
-
+//VR active time
 #define VRTIME 10000
 #define VRTIMELED BIT10
 #define VRTIMEON 5000
 
 #define FAN_RUNING 1
 #define FAN_CLOSED 0
-
+//timer parameter
 #define MS1P25CNT 4000
 #define MSCNT 3000
 #define USCNT 3
@@ -161,10 +162,15 @@ typedef struct		//
 #define LOW4BIT 0x0F
 #define SENDTIMEOFFSET 4
 #define SENDCMDTIMES 3
+#define CMDGAPTIME 50
 
 #define USEFLASH 1
 #define USEWAKEUP 0
 #define ALLCMD 1
+
+// #define USEALLCMD
+// #ifndef USEALLCMD
+// #endif
 
 void delay1p25ms(void);
 void delayms(uint32_t ms);
