@@ -293,7 +293,8 @@ void App_Process(void)
 				{
 					if (i32ID == 1)
 					{
-						GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | FANON);
+						// GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | FANON);
+						GPIO_SET_BIT(PA, FANON);
 						//pwm1.Duty = PWM_DUTY_INIT;
 						//pwm0.Duty = PWM_DUTY_INIT;
 						//printf("Fan on!\n");
@@ -326,8 +327,10 @@ void App_Process(void)
 						break;*/
 						case 2:	//关风扇
 							printf("Command is : %s\n", AudioResStr[i32ID]);
-							GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~FANON));
-							GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~WAVEON));
+							// GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~FANON));
+							// GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~WAVEON));
+							GPIO_CLR_BIT(PA, FANON);
+							GPIO_CLR_BIT(PA, WAVEON);
 							//GPIO_SET_OUT_DATA(PA, 0);
 							pwm1.Duty = 0;
 							pwm0.Duty = 0;
@@ -340,7 +343,8 @@ void App_Process(void)
 						break;
 #ifdef USEALLCMD
 						case 3:	//请摇头
-							GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | WAVEON);
+							// GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | WAVEON);
+							GPIO_SET_BIT(PA, FANON);
 							// vr_time = 0;
 							u8CMDforMCU = i32ID;
 							SendCMD(u8CMDforMCU);
@@ -348,7 +352,8 @@ void App_Process(void)
 							printf("%s\n", AudioOptStr[i32ID]);
 						break;
 						case 4:	//关摇头
-							GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~WAVEON));
+							// GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~WAVEON));
+							GPIO_CLR_BIT(PA, WAVEON);
 							// vr_time = 0;
 							u8CMDforMCU = i32ID;
 							SendCMD(u8CMDforMCU);
