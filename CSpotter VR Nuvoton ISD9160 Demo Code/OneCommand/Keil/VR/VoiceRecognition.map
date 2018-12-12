@@ -117,8 +117,6 @@ Section Cross References
     appfunctions.o(i.SendCMD) refers to appfunctions.o(i.SendCMD1time) for SendCMD1time
     appfunctions.o(i.SendCMD) refers to appfunctions.o(i.delayms) for delayms
     appfunctions.o(i.SendCMD1time) refers to appfunctions.o(i.SendCMDByteTimer) for SendCMDByteTimer
-    appfunctions.o(i.SendCMDByte) refers to appfunctions.o(i.delay1p25ms) for delay1p25ms
-    appfunctions.o(i.SendCMDByte) refers to appfunctions.o(i.delayms) for delayms
     appfunctions.o(i.SendCMDByteTimer) refers to main.o(.data) for flag_1p25ms
     appfunctions.o(i.delay1p25ms) refers to main.o(.data) for flag_1p25ms
     appfunctions.o(i.delayms) refers to aeabi_sdivfast.o(.text) for __aeabi_uidivmod
@@ -1104,8 +1102,6 @@ Removing Unused input sections from the image.
     Removing appfunctions.o(.revsh_text), (4 bytes).
     Removing appfunctions.o(i.App_PowerDown), (44 bytes).
     Removing appfunctions.o(i.App_StopRecognize), (28 bytes).
-    Removing appfunctions.o(i.SendCMDByte), (88 bytes).
-    Removing appfunctions.o(i.SetSignalLine), (20 bytes).
     Removing appfunctions.o(i.delay1p25ms), (20 bytes).
     Removing appfunctions.o(i.vr_uart_send), (24 bytes).
     Removing appfunctions.o(.data), (1 bytes).
@@ -1599,7 +1595,7 @@ Removing Unused input sections from the image.
     Removing BsrAnn.o(i.BsrHans), (148 bytes).
     Removing BsrAnn.o(i.BsrHope), (148 bytes).
 
-505 unused section(s) (total 20605 bytes) removed from the image.
+503 unused section(s) (total 20497 bytes) removed from the image.
 
 ==============================================================================
 
@@ -2601,358 +2597,358 @@ Memory Map of the image
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x00000000   0x00000000   0x000000c0   Data   RO          903    RESET               startup_isd9100.o
-    0x000000c0   0x000000c0   0x00000008   Code   RO         3972  * !!!main             c_p.l(__main.o)
-    0x000000c8   0x000000c8   0x0000003c   Code   RO         4157    !!!scatter          c_p.l(__scatter.o)
-    0x00000104   0x00000104   0x0000001a   Code   RO         4159    !!handler_copy      c_p.l(__scatter_copy.o)
+    0x00000000   0x00000000   0x000000c0   Data   RO          892    RESET               startup_isd9100.o
+    0x000000c0   0x000000c0   0x00000008   Code   RO         3961  * !!!main             c_p.l(__main.o)
+    0x000000c8   0x000000c8   0x0000003c   Code   RO         4146    !!!scatter          c_p.l(__scatter.o)
+    0x00000104   0x00000104   0x0000001a   Code   RO         4148    !!handler_copy      c_p.l(__scatter_copy.o)
     0x0000011e   0x0000011e   0x00000002   PAD
-    0x00000120   0x00000120   0x0000001c   Code   RO         4161    !!handler_zi        c_p.l(__scatter_zi.o)
-    0x0000013c   0x0000013c   0x00000002   Code   RO         3959    .ARM.Collect$$_printf_percent$$00000000  c_p.l(_printf_percent.o)
-    0x0000013e   0x0000013e   0x0000000a   Code   RO         3957    .ARM.Collect$$_printf_percent$$00000014  c_p.l(_printf_s.o)
-    0x00000148   0x00000148   0x00000004   Code   RO         3991    .ARM.Collect$$_printf_percent$$00000017  c_p.l(_printf_percent_end.o)
-    0x0000014c   0x0000014c   0x00000002   Code   RO         4028    .ARM.Collect$$libinit$$00000000  c_p.l(libinit.o)
-    0x0000014e   0x0000014e   0x00000000   Code   RO         4042    .ARM.Collect$$libinit$$00000002  c_p.l(libinit2.o)
-    0x0000014e   0x0000014e   0x00000000   Code   RO         4044    .ARM.Collect$$libinit$$00000004  c_p.l(libinit2.o)
-    0x0000014e   0x0000014e   0x00000000   Code   RO         4047    .ARM.Collect$$libinit$$0000000A  c_p.l(libinit2.o)
-    0x0000014e   0x0000014e   0x00000000   Code   RO         4049    .ARM.Collect$$libinit$$0000000C  c_p.l(libinit2.o)
-    0x0000014e   0x0000014e   0x00000000   Code   RO         4051    .ARM.Collect$$libinit$$0000000E  c_p.l(libinit2.o)
-    0x0000014e   0x0000014e   0x00000000   Code   RO         4054    .ARM.Collect$$libinit$$00000011  c_p.l(libinit2.o)
-    0x0000014e   0x0000014e   0x00000000   Code   RO         4056    .ARM.Collect$$libinit$$00000013  c_p.l(libinit2.o)
-    0x0000014e   0x0000014e   0x00000000   Code   RO         4058    .ARM.Collect$$libinit$$00000015  c_p.l(libinit2.o)
-    0x0000014e   0x0000014e   0x00000000   Code   RO         4060    .ARM.Collect$$libinit$$00000017  c_p.l(libinit2.o)
-    0x0000014e   0x0000014e   0x00000000   Code   RO         4062    .ARM.Collect$$libinit$$00000019  c_p.l(libinit2.o)
-    0x0000014e   0x0000014e   0x00000000   Code   RO         4064    .ARM.Collect$$libinit$$0000001B  c_p.l(libinit2.o)
-    0x0000014e   0x0000014e   0x00000000   Code   RO         4066    .ARM.Collect$$libinit$$0000001D  c_p.l(libinit2.o)
-    0x0000014e   0x0000014e   0x00000000   Code   RO         4068    .ARM.Collect$$libinit$$0000001F  c_p.l(libinit2.o)
-    0x0000014e   0x0000014e   0x00000000   Code   RO         4070    .ARM.Collect$$libinit$$00000021  c_p.l(libinit2.o)
-    0x0000014e   0x0000014e   0x00000000   Code   RO         4072    .ARM.Collect$$libinit$$00000023  c_p.l(libinit2.o)
-    0x0000014e   0x0000014e   0x00000000   Code   RO         4074    .ARM.Collect$$libinit$$00000025  c_p.l(libinit2.o)
-    0x0000014e   0x0000014e   0x00000000   Code   RO         4078    .ARM.Collect$$libinit$$0000002C  c_p.l(libinit2.o)
-    0x0000014e   0x0000014e   0x00000000   Code   RO         4080    .ARM.Collect$$libinit$$0000002E  c_p.l(libinit2.o)
-    0x0000014e   0x0000014e   0x00000000   Code   RO         4082    .ARM.Collect$$libinit$$00000030  c_p.l(libinit2.o)
-    0x0000014e   0x0000014e   0x00000000   Code   RO         4084    .ARM.Collect$$libinit$$00000032  c_p.l(libinit2.o)
-    0x0000014e   0x0000014e   0x00000002   Code   RO         4085    .ARM.Collect$$libinit$$00000033  c_p.l(libinit2.o)
-    0x00000150   0x00000150   0x00000002   Code   RO         4114    .ARM.Collect$$libshutdown$$00000000  c_p.l(libshutdown.o)
-    0x00000152   0x00000152   0x00000000   Code   RO         4140    .ARM.Collect$$libshutdown$$00000002  c_p.l(libshutdown2.o)
-    0x00000152   0x00000152   0x00000000   Code   RO         4142    .ARM.Collect$$libshutdown$$00000004  c_p.l(libshutdown2.o)
-    0x00000152   0x00000152   0x00000000   Code   RO         4145    .ARM.Collect$$libshutdown$$00000007  c_p.l(libshutdown2.o)
-    0x00000152   0x00000152   0x00000000   Code   RO         4148    .ARM.Collect$$libshutdown$$0000000A  c_p.l(libshutdown2.o)
-    0x00000152   0x00000152   0x00000000   Code   RO         4150    .ARM.Collect$$libshutdown$$0000000C  c_p.l(libshutdown2.o)
-    0x00000152   0x00000152   0x00000000   Code   RO         4153    .ARM.Collect$$libshutdown$$0000000F  c_p.l(libshutdown2.o)
-    0x00000152   0x00000152   0x00000002   Code   RO         4154    .ARM.Collect$$libshutdown$$00000010  c_p.l(libshutdown2.o)
-    0x00000154   0x00000154   0x00000000   Code   RO         3980    .ARM.Collect$$rtentry$$00000000  c_p.l(__rtentry.o)
-    0x00000154   0x00000154   0x00000000   Code   RO         3994    .ARM.Collect$$rtentry$$00000002  c_p.l(__rtentry2.o)
-    0x00000154   0x00000154   0x00000006   Code   RO         4006    .ARM.Collect$$rtentry$$00000004  c_p.l(__rtentry4.o)
-    0x0000015a   0x0000015a   0x00000000   Code   RO         3996    .ARM.Collect$$rtentry$$00000009  c_p.l(__rtentry2.o)
-    0x0000015a   0x0000015a   0x00000004   Code   RO         3997    .ARM.Collect$$rtentry$$0000000A  c_p.l(__rtentry2.o)
-    0x0000015e   0x0000015e   0x00000000   Code   RO         3999    .ARM.Collect$$rtentry$$0000000C  c_p.l(__rtentry2.o)
-    0x0000015e   0x0000015e   0x00000008   Code   RO         4000    .ARM.Collect$$rtentry$$0000000D  c_p.l(__rtentry2.o)
-    0x00000166   0x00000166   0x00000002   Code   RO         4033    .ARM.Collect$$rtexit$$00000000  c_p.l(rtexit.o)
-    0x00000168   0x00000168   0x00000000   Code   RO         4089    .ARM.Collect$$rtexit$$00000002  c_p.l(rtexit2.o)
-    0x00000168   0x00000168   0x00000004   Code   RO         4090    .ARM.Collect$$rtexit$$00000003  c_p.l(rtexit2.o)
-    0x0000016c   0x0000016c   0x00000006   Code   RO         4091    .ARM.Collect$$rtexit$$00000004  c_p.l(rtexit2.o)
+    0x00000120   0x00000120   0x0000001c   Code   RO         4150    !!handler_zi        c_p.l(__scatter_zi.o)
+    0x0000013c   0x0000013c   0x00000002   Code   RO         3948    .ARM.Collect$$_printf_percent$$00000000  c_p.l(_printf_percent.o)
+    0x0000013e   0x0000013e   0x0000000a   Code   RO         3946    .ARM.Collect$$_printf_percent$$00000014  c_p.l(_printf_s.o)
+    0x00000148   0x00000148   0x00000004   Code   RO         3980    .ARM.Collect$$_printf_percent$$00000017  c_p.l(_printf_percent_end.o)
+    0x0000014c   0x0000014c   0x00000002   Code   RO         4017    .ARM.Collect$$libinit$$00000000  c_p.l(libinit.o)
+    0x0000014e   0x0000014e   0x00000000   Code   RO         4031    .ARM.Collect$$libinit$$00000002  c_p.l(libinit2.o)
+    0x0000014e   0x0000014e   0x00000000   Code   RO         4033    .ARM.Collect$$libinit$$00000004  c_p.l(libinit2.o)
+    0x0000014e   0x0000014e   0x00000000   Code   RO         4036    .ARM.Collect$$libinit$$0000000A  c_p.l(libinit2.o)
+    0x0000014e   0x0000014e   0x00000000   Code   RO         4038    .ARM.Collect$$libinit$$0000000C  c_p.l(libinit2.o)
+    0x0000014e   0x0000014e   0x00000000   Code   RO         4040    .ARM.Collect$$libinit$$0000000E  c_p.l(libinit2.o)
+    0x0000014e   0x0000014e   0x00000000   Code   RO         4043    .ARM.Collect$$libinit$$00000011  c_p.l(libinit2.o)
+    0x0000014e   0x0000014e   0x00000000   Code   RO         4045    .ARM.Collect$$libinit$$00000013  c_p.l(libinit2.o)
+    0x0000014e   0x0000014e   0x00000000   Code   RO         4047    .ARM.Collect$$libinit$$00000015  c_p.l(libinit2.o)
+    0x0000014e   0x0000014e   0x00000000   Code   RO         4049    .ARM.Collect$$libinit$$00000017  c_p.l(libinit2.o)
+    0x0000014e   0x0000014e   0x00000000   Code   RO         4051    .ARM.Collect$$libinit$$00000019  c_p.l(libinit2.o)
+    0x0000014e   0x0000014e   0x00000000   Code   RO         4053    .ARM.Collect$$libinit$$0000001B  c_p.l(libinit2.o)
+    0x0000014e   0x0000014e   0x00000000   Code   RO         4055    .ARM.Collect$$libinit$$0000001D  c_p.l(libinit2.o)
+    0x0000014e   0x0000014e   0x00000000   Code   RO         4057    .ARM.Collect$$libinit$$0000001F  c_p.l(libinit2.o)
+    0x0000014e   0x0000014e   0x00000000   Code   RO         4059    .ARM.Collect$$libinit$$00000021  c_p.l(libinit2.o)
+    0x0000014e   0x0000014e   0x00000000   Code   RO         4061    .ARM.Collect$$libinit$$00000023  c_p.l(libinit2.o)
+    0x0000014e   0x0000014e   0x00000000   Code   RO         4063    .ARM.Collect$$libinit$$00000025  c_p.l(libinit2.o)
+    0x0000014e   0x0000014e   0x00000000   Code   RO         4067    .ARM.Collect$$libinit$$0000002C  c_p.l(libinit2.o)
+    0x0000014e   0x0000014e   0x00000000   Code   RO         4069    .ARM.Collect$$libinit$$0000002E  c_p.l(libinit2.o)
+    0x0000014e   0x0000014e   0x00000000   Code   RO         4071    .ARM.Collect$$libinit$$00000030  c_p.l(libinit2.o)
+    0x0000014e   0x0000014e   0x00000000   Code   RO         4073    .ARM.Collect$$libinit$$00000032  c_p.l(libinit2.o)
+    0x0000014e   0x0000014e   0x00000002   Code   RO         4074    .ARM.Collect$$libinit$$00000033  c_p.l(libinit2.o)
+    0x00000150   0x00000150   0x00000002   Code   RO         4103    .ARM.Collect$$libshutdown$$00000000  c_p.l(libshutdown.o)
+    0x00000152   0x00000152   0x00000000   Code   RO         4129    .ARM.Collect$$libshutdown$$00000002  c_p.l(libshutdown2.o)
+    0x00000152   0x00000152   0x00000000   Code   RO         4131    .ARM.Collect$$libshutdown$$00000004  c_p.l(libshutdown2.o)
+    0x00000152   0x00000152   0x00000000   Code   RO         4134    .ARM.Collect$$libshutdown$$00000007  c_p.l(libshutdown2.o)
+    0x00000152   0x00000152   0x00000000   Code   RO         4137    .ARM.Collect$$libshutdown$$0000000A  c_p.l(libshutdown2.o)
+    0x00000152   0x00000152   0x00000000   Code   RO         4139    .ARM.Collect$$libshutdown$$0000000C  c_p.l(libshutdown2.o)
+    0x00000152   0x00000152   0x00000000   Code   RO         4142    .ARM.Collect$$libshutdown$$0000000F  c_p.l(libshutdown2.o)
+    0x00000152   0x00000152   0x00000002   Code   RO         4143    .ARM.Collect$$libshutdown$$00000010  c_p.l(libshutdown2.o)
+    0x00000154   0x00000154   0x00000000   Code   RO         3969    .ARM.Collect$$rtentry$$00000000  c_p.l(__rtentry.o)
+    0x00000154   0x00000154   0x00000000   Code   RO         3983    .ARM.Collect$$rtentry$$00000002  c_p.l(__rtentry2.o)
+    0x00000154   0x00000154   0x00000006   Code   RO         3995    .ARM.Collect$$rtentry$$00000004  c_p.l(__rtentry4.o)
+    0x0000015a   0x0000015a   0x00000000   Code   RO         3985    .ARM.Collect$$rtentry$$00000009  c_p.l(__rtentry2.o)
+    0x0000015a   0x0000015a   0x00000004   Code   RO         3986    .ARM.Collect$$rtentry$$0000000A  c_p.l(__rtentry2.o)
+    0x0000015e   0x0000015e   0x00000000   Code   RO         3988    .ARM.Collect$$rtentry$$0000000C  c_p.l(__rtentry2.o)
+    0x0000015e   0x0000015e   0x00000008   Code   RO         3989    .ARM.Collect$$rtentry$$0000000D  c_p.l(__rtentry2.o)
+    0x00000166   0x00000166   0x00000002   Code   RO         4022    .ARM.Collect$$rtexit$$00000000  c_p.l(rtexit.o)
+    0x00000168   0x00000168   0x00000000   Code   RO         4078    .ARM.Collect$$rtexit$$00000002  c_p.l(rtexit2.o)
+    0x00000168   0x00000168   0x00000004   Code   RO         4079    .ARM.Collect$$rtexit$$00000003  c_p.l(rtexit2.o)
+    0x0000016c   0x0000016c   0x00000006   Code   RO         4080    .ARM.Collect$$rtexit$$00000004  c_p.l(rtexit2.o)
     0x00000172   0x00000172   0x00000002   PAD
-    0x00000174   0x00000174   0x00000038   Code   RO         3960    .emb_text           c_p.l(rt_memcpy.o)
-    0x000001ac   0x000001ac   0x00000060   Code   RO          904  * .text               startup_isd9100.o
-    0x0000020c   0x0000020c   0x0000001c   Code   RO         3910    .text               c_p.l(noretval__2printf.o)
-    0x00000228   0x00000228   0x00000052   Code   RO         3914    .text               c_p.l(_printf_str.o)
-    0x0000027a   0x0000027a   0x0000010e   Code   RO         3945    .text               c_p.l(__printf_wp.o)
-    0x00000388   0x00000388   0x00000040   Code   RO         3964    .text               c_p.l(rt_memclr.o)
-    0x000003c8   0x000003c8   0x000001e8   Code   RO         3966    .text               c_p.l(aeabi_sdivfast.o)
-    0x000005b0   0x000005b0   0x00000006   Code   RO         3970    .text               c_p.l(heapauxi.o)
-    0x000005b6   0x000005b6   0x0000002e   Code   RO         3987    .text               c_p.l(_printf_char.o)
-    0x000005e4   0x000005e4   0x00000028   Code   RO         3989    .text               c_p.l(_printf_char_file.o)
-    0x0000060c   0x0000060c   0x00000030   Code   RO         4010    .text               c_p.l(_printf_char_common.o)
-    0x0000063c   0x0000063c   0x0000003e   Code   RO         4012    .text               c_p.l(sys_stackheap_outer.o)
-    0x0000067a   0x0000067a   0x00000010   Code   RO         4017    .text               c_p.l(exit.o)
+    0x00000174   0x00000174   0x00000038   Code   RO         3949    .emb_text           c_p.l(rt_memcpy.o)
+    0x000001ac   0x000001ac   0x00000060   Code   RO          893  * .text               startup_isd9100.o
+    0x0000020c   0x0000020c   0x0000001c   Code   RO         3899    .text               c_p.l(noretval__2printf.o)
+    0x00000228   0x00000228   0x00000052   Code   RO         3903    .text               c_p.l(_printf_str.o)
+    0x0000027a   0x0000027a   0x0000010e   Code   RO         3934    .text               c_p.l(__printf_wp.o)
+    0x00000388   0x00000388   0x00000040   Code   RO         3953    .text               c_p.l(rt_memclr.o)
+    0x000003c8   0x000003c8   0x000001e8   Code   RO         3955    .text               c_p.l(aeabi_sdivfast.o)
+    0x000005b0   0x000005b0   0x00000006   Code   RO         3959    .text               c_p.l(heapauxi.o)
+    0x000005b6   0x000005b6   0x0000002e   Code   RO         3976    .text               c_p.l(_printf_char.o)
+    0x000005e4   0x000005e4   0x00000028   Code   RO         3978    .text               c_p.l(_printf_char_file.o)
+    0x0000060c   0x0000060c   0x00000030   Code   RO         3999    .text               c_p.l(_printf_char_common.o)
+    0x0000063c   0x0000063c   0x0000003e   Code   RO         4001    .text               c_p.l(sys_stackheap_outer.o)
+    0x0000067a   0x0000067a   0x00000010   Code   RO         4006    .text               c_p.l(exit.o)
     0x0000068a   0x0000068a   0x00000002   PAD
-    0x0000068c   0x0000068c   0x00000008   Code   RO         4029    .text               c_p.l(libspace.o)
-    0x00000694   0x00000694   0x0000000c   Code   RO         4086    .text               c_p.l(sys_exit.o)
-    0x000006a0   0x000006a0   0x00000002   Code   RO         4103    .text               c_p.l(use_no_semi.o)
-    0x000006a2   0x000006a2   0x00000000   Code   RO         4105    .text               c_p.l(indicate_semi.o)
+    0x0000068c   0x0000068c   0x00000008   Code   RO         4018    .text               c_p.l(libspace.o)
+    0x00000694   0x00000694   0x0000000c   Code   RO         4075    .text               c_p.l(sys_exit.o)
+    0x000006a0   0x000006a0   0x00000002   Code   RO         4092    .text               c_p.l(use_no_semi.o)
+    0x000006a2   0x000006a2   0x00000000   Code   RO         4094    .text               c_p.l(indicate_semi.o)
     0x000006a2   0x000006a2   0x00000002   PAD
-    0x000006a4   0x000006a4   0x00000010   Code   RO         1940    i.ADC_EnableMICBias  adc.o
-    0x000006b4   0x000006b4   0x00000002   Code   RO         1944    i.ADC_Open          adc.o
+    0x000006a4   0x000006a4   0x00000010   Code   RO         1929    i.ADC_EnableMICBias  adc.o
+    0x000006b4   0x000006b4   0x00000002   Code   RO         1933    i.ADC_Open          adc.o
     0x000006b6   0x000006b6   0x00000002   PAD
-    0x000006b8   0x000006b8   0x00000044   Code   RO         1947    i.ADC_SetALCTargetLevel  adc.o
-    0x000006fc   0x000006fc   0x0000004c   Code   RO         1948    i.ADC_SetAMUX       adc.o
-    0x00000748   0x00000748   0x00000038   Code   RO         1950    i.ADC_SetPGAGaindB  adc.o
+    0x000006b8   0x000006b8   0x00000044   Code   RO         1936    i.ADC_SetALCTargetLevel  adc.o
+    0x000006fc   0x000006fc   0x0000004c   Code   RO         1937    i.ADC_SetAMUX       adc.o
+    0x00000748   0x00000748   0x00000038   Code   RO         1939    i.ADC_SetPGAGaindB  adc.o
     0x00000780   0x00000780   0x00000058   Code   RO          274    i.App_Initiate      appfunctions.o
     0x000007d8   0x000007d8   0x0000015c   Code   RO          276    i.App_Process       appfunctions.o
     0x00000934   0x00000934   0x00000038   Code   RO          277    i.App_StartPlay     appfunctions.o
     0x0000096c   0x0000096c   0x00000024   Code   RO          278    i.App_StartRecognize  appfunctions.o
     0x00000990   0x00000990   0x00000014   Code   RO          279    i.App_StopPlay      appfunctions.o
-    0x000009a4   0x000009a4   0x0000002e   Code   RO          978    i.AudioRom_GetAudioChunkInfo  audiorom.o
-    0x000009d2   0x000009d2   0x0000000e   Code   RO          979    i.AudioRom_GetAudioNum  audiorom.o
-    0x000009e0   0x000009e0   0x0000001c   Code   RO          980    i.AudioRom_GetRomHeader  audiorom.o
-    0x000009fc   0x000009fc   0x00000030   Code   RO         1130    i.BIQFilter_Setting  micspk.o
-    0x00000a2c   0x00000a2c   0x0000001c   Code   RO         2045    i.BIQ_Reset         biq.o
-    0x00000a48   0x00000a48   0x00000044   Code   RO         2046    i.BIQ_SetCoeff      biq.o
-    0x00000a8c   0x00000a8c   0x0000002c   Code   RO         3755    i.BsrAbby           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoe.o)
-    0x00000ab8   0x00000ab8   0x0000007e   Code   RO         3756    i.BsrAbel           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoe.o)
-    0x00000b36   0x00000b36   0x000000c8   Code   RO         3757    i.BsrAdam           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoe.o)
-    0x00000bfe   0x00000bfe   0x000000d2   Code   RO         3629    i.BsrAlma           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrDon.o)
-    0x00000cd0   0x00000cd0   0x00000018   Code   RO         3630    i.BsrAmir           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrDon.o)
-    0x00000ce8   0x00000ce8   0x00000126   Code   RO         3631    i.BsrAmos           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrDon.o)
-    0x00000e0e   0x00000e0e   0x0000002a   Code   RO         3665    i.BsrAna            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
-    0x00000e38   0x00000e38   0x00000026   Code   RO         3633    i.BsrAnna           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrDon.o)
-    0x00000e5e   0x00000e5e   0x00000018   Code   RO         3634    i.BsrAnne           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrDon.o)
-    0x00000e76   0x00000e76   0x0000001c   Code   RO         3635    i.BsrAnnie          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrDon.o)
+    0x000009a4   0x000009a4   0x0000002e   Code   RO          967    i.AudioRom_GetAudioChunkInfo  audiorom.o
+    0x000009d2   0x000009d2   0x0000000e   Code   RO          968    i.AudioRom_GetAudioNum  audiorom.o
+    0x000009e0   0x000009e0   0x0000001c   Code   RO          969    i.AudioRom_GetRomHeader  audiorom.o
+    0x000009fc   0x000009fc   0x00000030   Code   RO         1119    i.BIQFilter_Setting  micspk.o
+    0x00000a2c   0x00000a2c   0x0000001c   Code   RO         2034    i.BIQ_Reset         biq.o
+    0x00000a48   0x00000a48   0x00000044   Code   RO         2035    i.BIQ_SetCoeff      biq.o
+    0x00000a8c   0x00000a8c   0x0000002c   Code   RO         3744    i.BsrAbby           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoe.o)
+    0x00000ab8   0x00000ab8   0x0000007e   Code   RO         3745    i.BsrAbel           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoe.o)
+    0x00000b36   0x00000b36   0x000000c8   Code   RO         3746    i.BsrAdam           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoe.o)
+    0x00000bfe   0x00000bfe   0x000000d2   Code   RO         3618    i.BsrAlma           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrDon.o)
+    0x00000cd0   0x00000cd0   0x00000018   Code   RO         3619    i.BsrAmir           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrDon.o)
+    0x00000ce8   0x00000ce8   0x00000126   Code   RO         3620    i.BsrAmos           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrDon.o)
+    0x00000e0e   0x00000e0e   0x0000002a   Code   RO         3654    i.BsrAna            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
+    0x00000e38   0x00000e38   0x00000026   Code   RO         3622    i.BsrAnna           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrDon.o)
+    0x00000e5e   0x00000e5e   0x00000018   Code   RO         3623    i.BsrAnne           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrDon.o)
+    0x00000e76   0x00000e76   0x0000001c   Code   RO         3624    i.BsrAnnie          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrDon.o)
     0x00000e92   0x00000e92   0x00000002   PAD
-    0x00000e94   0x00000e94   0x000000b0   Code   RO         3666    i.BsrAri            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
-    0x00000f44   0x00000f44   0x000000f4   Code   RO         3667    i.BsrAsa            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
-    0x00001038   0x00001038   0x000000aa   Code   RO         3669    i.BsrAvea           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
-    0x000010e2   0x000010e2   0x0000001a   Code   RO         3641    i.BsrAyla           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrDon.o)
-    0x000010fc   0x000010fc   0x0000000e   Code   RO         3642    i.BsrBaby           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrDon.o)
-    0x0000110a   0x0000110a   0x000000ac   Code   RO         3670    i.BsrBen            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
+    0x00000e94   0x00000e94   0x000000b0   Code   RO         3655    i.BsrAri            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
+    0x00000f44   0x00000f44   0x000000f4   Code   RO         3656    i.BsrAsa            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
+    0x00001038   0x00001038   0x000000aa   Code   RO         3658    i.BsrAvea           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
+    0x000010e2   0x000010e2   0x0000001a   Code   RO         3630    i.BsrAyla           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrDon.o)
+    0x000010fc   0x000010fc   0x0000000e   Code   RO         3631    i.BsrBaby           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrDon.o)
+    0x0000110a   0x0000110a   0x000000ac   Code   RO         3659    i.BsrBen            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
     0x000011b6   0x000011b6   0x00000002   PAD
-    0x000011b8   0x000011b8   0x0000003c   Code   RO         3626    i.BsrBrad           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrBen.o)
-    0x000011f4   0x000011f4   0x00000150   Code   RO         3824    i.BsrBret           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
-    0x00001344   0x00001344   0x0000018a   Code   RO         3825    i.BsrCade           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
+    0x000011b8   0x000011b8   0x0000003c   Code   RO         3615    i.BsrBrad           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrBen.o)
+    0x000011f4   0x000011f4   0x00000150   Code   RO         3813    i.BsrBret           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
+    0x00001344   0x00001344   0x0000018a   Code   RO         3814    i.BsrCade           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
     0x000014ce   0x000014ce   0x00000002   PAD
-    0x000014d0   0x000014d0   0x00000104   Code   RO         3826    i.BsrCadea          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
-    0x000015d4   0x000015d4   0x00000044   Code   RO         3827    i.BsrCale           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
-    0x00001618   0x00001618   0x000003e8   Code   RO         3828    i.BsrCara           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
-    0x00001a00   0x00001a00   0x000000cc   Code   RO         3829    i.BsrCarae          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
-    0x00001acc   0x00001acc   0x000000bc   Code   RO         3830    i.BsrChad           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
-    0x00001b88   0x00001b88   0x00000048   Code   RO         3831    i.BsrChada          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
-    0x00001bd0   0x00001bd0   0x000000e0   Code   RO         3832    i.BsrChaz           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
-    0x00001cb0   0x00001cb0   0x000000bc   Code   RO         3833    i.BsrChaza          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
-    0x00001d6c   0x00001d6c   0x000000d0   Code   RO         3834    i.BsrChaze          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
-    0x00001e3c   0x00001e3c   0x000000ce   Code   RO         3835    i.BsrChazi          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
+    0x000014d0   0x000014d0   0x00000104   Code   RO         3815    i.BsrCadea          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
+    0x000015d4   0x000015d4   0x00000044   Code   RO         3816    i.BsrCale           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
+    0x00001618   0x00001618   0x000003e8   Code   RO         3817    i.BsrCara           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
+    0x00001a00   0x00001a00   0x000000cc   Code   RO         3818    i.BsrCarae          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
+    0x00001acc   0x00001acc   0x000000bc   Code   RO         3819    i.BsrChad           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
+    0x00001b88   0x00001b88   0x00000048   Code   RO         3820    i.BsrChada          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
+    0x00001bd0   0x00001bd0   0x000000e0   Code   RO         3821    i.BsrChaz           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
+    0x00001cb0   0x00001cb0   0x000000bc   Code   RO         3822    i.BsrChaza          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
+    0x00001d6c   0x00001d6c   0x000000d0   Code   RO         3823    i.BsrChaze          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
+    0x00001e3c   0x00001e3c   0x000000ce   Code   RO         3824    i.BsrChazi          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
     0x00001f0a   0x00001f0a   0x00000002   PAD
-    0x00001f0c   0x00001f0c   0x00000568   Code   RO         3836    i.BsrClay           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
-    0x00002474   0x00002474   0x000001ec   Code   RO         3852    i.BsrCory           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
-    0x00002660   0x00002660   0x00000022   Code   RO         3853    i.BsrCoty           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
+    0x00001f0c   0x00001f0c   0x00000568   Code   RO         3825    i.BsrClay           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
+    0x00002474   0x00002474   0x000001ec   Code   RO         3841    i.BsrCory           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
+    0x00002660   0x00002660   0x00000022   Code   RO         3842    i.BsrCoty           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
     0x00002682   0x00002682   0x00000002   PAD
-    0x00002684   0x00002684   0x00000058   Code   RO         3672    i.BsrDan            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
-    0x000026dc   0x000026dc   0x00000008   Code   RO         3857    i.BsrDane           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
-    0x000026e4   0x000026e4   0x00000008   Code   RO         3859    i.BsrDawn           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
-    0x000026ec   0x000026ec   0x0000006c   Code   RO         3860    i.BsrDeja           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
-    0x00002758   0x00002758   0x00000180   Code   RO         3861    i.BsrDemi           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
-    0x000028d8   0x000028d8   0x00000176   Code   RO         3862    i.BsrDeon           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
-    0x00002a4e   0x00002a4e   0x0000024a   Code   RO         3863    i.BsrDina           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
-    0x00002c98   0x00002c98   0x000000dc   Code   RO         3864    i.BsrDion           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
-    0x00002d74   0x00002d74   0x00000164   Code   RO         3816    i.BsrEden           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEva.o)
-    0x00002ed8   0x00002ed8   0x00000058   Code   RO         3675    i.BsrEli            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
-    0x00002f30   0x00002f30   0x000001b0   Code   RO         3817    i.BsrElla           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEva.o)
-    0x000030e0   0x000030e0   0x00000178   Code   RO         3818    i.BsrElsa           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEva.o)
-    0x00003258   0x00003258   0x000000d8   Code   RO         3803    i.BsrEmma           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEli.o)
-    0x00003330   0x00003330   0x00000082   Code   RO         3804    i.BsrEric           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEli.o)
+    0x00002684   0x00002684   0x00000058   Code   RO         3661    i.BsrDan            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
+    0x000026dc   0x000026dc   0x00000008   Code   RO         3846    i.BsrDane           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
+    0x000026e4   0x000026e4   0x00000008   Code   RO         3848    i.BsrDawn           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
+    0x000026ec   0x000026ec   0x0000006c   Code   RO         3849    i.BsrDeja           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
+    0x00002758   0x00002758   0x00000180   Code   RO         3850    i.BsrDemi           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
+    0x000028d8   0x000028d8   0x00000176   Code   RO         3851    i.BsrDeon           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
+    0x00002a4e   0x00002a4e   0x0000024a   Code   RO         3852    i.BsrDina           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
+    0x00002c98   0x00002c98   0x000000dc   Code   RO         3853    i.BsrDion           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
+    0x00002d74   0x00002d74   0x00000164   Code   RO         3805    i.BsrEden           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEva.o)
+    0x00002ed8   0x00002ed8   0x00000058   Code   RO         3664    i.BsrEli            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
+    0x00002f30   0x00002f30   0x000001b0   Code   RO         3806    i.BsrElla           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEva.o)
+    0x000030e0   0x000030e0   0x00000178   Code   RO         3807    i.BsrElsa           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEva.o)
+    0x00003258   0x00003258   0x000000d8   Code   RO         3792    i.BsrEmma           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEli.o)
+    0x00003330   0x00003330   0x00000082   Code   RO         3793    i.BsrEric           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEli.o)
     0x000033b2   0x000033b2   0x00000002   PAD
-    0x000033b4   0x000033b4   0x0000013c   Code   RO         3805    i.BsrErica          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEli.o)
-    0x000034f0   0x000034f0   0x0000002e   Code   RO         3806    i.BsrErik           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEli.o)
-    0x0000351e   0x0000351e   0x000000e6   Code   RO         3807    i.BsrErin           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEli.o)
-    0x00003604   0x00003604   0x00000022   Code   RO         3676    i.BsrEva            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
-    0x00003626   0x00003626   0x0000003a   Code   RO         3808    i.BsrEvan           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEli.o)
-    0x00003660   0x00003660   0x000000c0   Code   RO         3883    i.BsrGary           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrAna.o)
-    0x00003720   0x00003720   0x000001cc   Code   RO         3888    i.BsrGreg           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrAnn.o)
-    0x000038ec   0x000038ec   0x00000036   Code   RO         3678    i.BsrGuy            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
+    0x000033b4   0x000033b4   0x0000013c   Code   RO         3794    i.BsrErica          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEli.o)
+    0x000034f0   0x000034f0   0x0000002e   Code   RO         3795    i.BsrErik           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEli.o)
+    0x0000351e   0x0000351e   0x000000e6   Code   RO         3796    i.BsrErin           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEli.o)
+    0x00003604   0x00003604   0x00000022   Code   RO         3665    i.BsrEva            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
+    0x00003626   0x00003626   0x0000003a   Code   RO         3797    i.BsrEvan           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEli.o)
+    0x00003660   0x00003660   0x000000c0   Code   RO         3872    i.BsrGary           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrAna.o)
+    0x00003720   0x00003720   0x000001cc   Code   RO         3877    i.BsrGreg           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrAnn.o)
+    0x000038ec   0x000038ec   0x00000036   Code   RO         3667    i.BsrGuy            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
     0x00003922   0x00003922   0x00000002   PAD
-    0x00003924   0x00003924   0x000000b0   Code   RO         3897    i.BsrHugo           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGuy.o)
-    0x000039d4   0x000039d4   0x00000036   Code   RO         3898    i.BsrIris           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGuy.o)
+    0x00003924   0x00003924   0x000000b0   Code   RO         3886    i.BsrHugo           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGuy.o)
+    0x000039d4   0x000039d4   0x00000036   Code   RO         3887    i.BsrIris           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGuy.o)
     0x00003a0a   0x00003a0a   0x00000002   PAD
-    0x00003a0c   0x00003a0c   0x00000054   Code   RO         3899    i.BsrIrma           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGuy.o)
-    0x00003a60   0x00003a60   0x0000002e   Code   RO         3900    i.BsrIsai           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGuy.o)
-    0x00003a8e   0x00003a8e   0x000000bc   Code   RO         3680    i.BsrIvy            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
-    0x00003b4a   0x00003b4a   0x000000e2   Code   RO         3866    i.BsrJamii          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
-    0x00003c2c   0x00003c2c   0x00000018   Code   RO         3681    i.BsrJan            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
-    0x00003c44   0x00003c44   0x0000018c   Code   RO         3837    i.BsrJeni           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
-    0x00003dd0   0x00003dd0   0x0000016e   Code   RO         3771    i.BsrJoan           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
-    0x00003f3e   0x00003f3e   0x0000002a   Code   RO         3485    i.BsrJohn           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrAli.o)
-    0x00003f68   0x00003f68   0x00000036   Code   RO         3486    i.BsrJose           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrAli.o)
-    0x00003f9e   0x00003f9e   0x000000a4   Code   RO         3487    i.BsrJosh           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrAli.o)
+    0x00003a0c   0x00003a0c   0x00000054   Code   RO         3888    i.BsrIrma           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGuy.o)
+    0x00003a60   0x00003a60   0x0000002e   Code   RO         3889    i.BsrIsai           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGuy.o)
+    0x00003a8e   0x00003a8e   0x000000bc   Code   RO         3669    i.BsrIvy            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
+    0x00003b4a   0x00003b4a   0x000000e2   Code   RO         3855    i.BsrJamii          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
+    0x00003c2c   0x00003c2c   0x00000018   Code   RO         3670    i.BsrJan            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
+    0x00003c44   0x00003c44   0x0000018c   Code   RO         3826    i.BsrJeni           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJay.o)
+    0x00003dd0   0x00003dd0   0x0000016e   Code   RO         3760    i.BsrJoan           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
+    0x00003f3e   0x00003f3e   0x0000002a   Code   RO         3474    i.BsrJohn           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrAli.o)
+    0x00003f68   0x00003f68   0x00000036   Code   RO         3475    i.BsrJose           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrAli.o)
+    0x00003f9e   0x00003f9e   0x000000a4   Code   RO         3476    i.BsrJosh           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrAli.o)
     0x00004042   0x00004042   0x00000002   PAD
-    0x00004044   0x00004044   0x000000e0   Code   RO         3692    i.BsrJoyci          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
-    0x00004124   0x00004124   0x00000034   Code   RO         3819    i.BsrJuanitez       libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEva.o)
-    0x00004158   0x00004158   0x00000018   Code   RO         3697    i.BsrLei            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
-    0x00004170   0x00004170   0x0000007a   Code   RO         3702    i.BsrMaxi           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
-    0x000041ea   0x000041ea   0x00000576   Code   RO         3703    i.BsrMichael        libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
-    0x00004760   0x00004760   0x00000008   Code   RO         3704    i.BsrMichelle       libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
-    0x00004768   0x00004768   0x000000ac   Code   RO         3706    i.BsrMike           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
-    0x00004814   0x00004814   0x00000088   Code   RO         3773    i.BsrMya            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
-    0x0000489c   0x0000489c   0x00000032   Code   RO         3774    i.BsrNia            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
-    0x000048ce   0x000048ce   0x00000136   Code   RO         3777    i.BsrRay            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
-    0x00004a04   0x00004a04   0x00000012   Code   RO         3778    i.BsrRex            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
-    0x00004a16   0x00004a16   0x00000010   Code   RO         3779    i.BsrRey            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
-    0x00004a26   0x00004a26   0x000004a2   Code   RO         3780    i.BsrRon            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
-    0x00004ec8   0x00004ec8   0x0000002c   Code   RO         3781    i.BsrRoy            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
-    0x00004ef4   0x00004ef4   0x00000010   Code   RO         3782    i.BsrTed            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
-    0x00004f04   0x00004f04   0x00000068   Code   RO         3783    i.BsrTia            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
-    0x00004f6c   0x00004f6c   0x00000092   Code   RO         3784    i.BsrTom            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
-    0x00004ffe   0x00004ffe   0x0000005e   Code   RO         3785    i.BsrTop            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
-    0x0000505c   0x0000505c   0x00000012   Code   RO         3786    i.BsrTre            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
-    0x0000506e   0x0000506e   0x00000004   Code   RO         3762    i.BsrZoe            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoe.o)
-    0x00005072   0x00005072   0x0000001e   Code   RO         1080    i.BufCtrl_UpdateReadWithCount  bufctrl.o
-    0x00005090   0x00005090   0x0000001e   Code   RO         1081    i.BufCtrl_UpdateWriteWithCount  bufctrl.o
+    0x00004044   0x00004044   0x000000e0   Code   RO         3681    i.BsrJoyci          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
+    0x00004124   0x00004124   0x00000034   Code   RO         3808    i.BsrJuanitez       libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEva.o)
+    0x00004158   0x00004158   0x00000018   Code   RO         3686    i.BsrLei            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
+    0x00004170   0x00004170   0x0000007a   Code   RO         3691    i.BsrMaxi           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
+    0x000041ea   0x000041ea   0x00000576   Code   RO         3692    i.BsrMichael        libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
+    0x00004760   0x00004760   0x00000008   Code   RO         3693    i.BsrMichelle       libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
+    0x00004768   0x00004768   0x000000ac   Code   RO         3695    i.BsrMike           libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJim.o)
+    0x00004814   0x00004814   0x00000088   Code   RO         3762    i.BsrMya            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
+    0x0000489c   0x0000489c   0x00000032   Code   RO         3763    i.BsrNia            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
+    0x000048ce   0x000048ce   0x00000136   Code   RO         3766    i.BsrRay            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
+    0x00004a04   0x00004a04   0x00000012   Code   RO         3767    i.BsrRex            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
+    0x00004a16   0x00004a16   0x00000010   Code   RO         3768    i.BsrRey            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
+    0x00004a26   0x00004a26   0x000004a2   Code   RO         3769    i.BsrRon            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
+    0x00004ec8   0x00004ec8   0x0000002c   Code   RO         3770    i.BsrRoy            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
+    0x00004ef4   0x00004ef4   0x00000010   Code   RO         3771    i.BsrTed            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
+    0x00004f04   0x00004f04   0x00000068   Code   RO         3772    i.BsrTia            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
+    0x00004f6c   0x00004f6c   0x00000092   Code   RO         3773    i.BsrTom            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
+    0x00004ffe   0x00004ffe   0x0000005e   Code   RO         3774    i.BsrTop            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
+    0x0000505c   0x0000505c   0x00000012   Code   RO         3775    i.BsrTre            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrKai.o)
+    0x0000506e   0x0000506e   0x00000004   Code   RO         3751    i.BsrZoe            libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoe.o)
+    0x00005072   0x00005072   0x0000001e   Code   RO         1069    i.BufCtrl_UpdateReadWithCount  bufctrl.o
+    0x00005090   0x00005090   0x0000001e   Code   RO         1070    i.BufCtrl_UpdateWriteWithCount  bufctrl.o
     0x000050ae   0x000050ae   0x00000002   PAD
-    0x000050b0   0x000050b0   0x00000010   Code   RO          506    i.CAPS_IRQHandler   interrupthandler.o
-    0x000050c0   0x000050c0   0x00000034   Code   RO         2146    i.CLK_EnableLDO     clk.o
-    0x000050f4   0x000050f4   0x0000001c   Code   RO         2147    i.CLK_EnableModuleClock  clk.o
-    0x00005110   0x00005110   0x0000001c   Code   RO         2148    i.CLK_EnableXtalRC  clk.o
-    0x0000512c   0x0000512c   0x00000010   Code   RO         2149    i.CLK_GetHCLKFreq   clk.o
-    0x0000513c   0x0000513c   0x0000003c   Code   RO         2152    i.CLK_SetHCLK       clk.o
-    0x00005178   0x00005178   0x00000050   Code   RO         2153    i.CLK_SetModuleClock  clk.o
-    0x000051c8   0x000051c8   0x00000064   Code   RO         3399    i.CSpotter_AddSample  libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(CSpotterSDKApi.o)
-    0x0000522c   0x0000522c   0x000000bc   Code   RO         3403    i.CSpotter_GetMemoryUsage_MultiWithSpeakerAndExtRejModel  libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(CSpotterSDKApi.o)
-    0x000052e8   0x000052e8   0x00000018   Code   RO         3404    i.CSpotter_GetMemoryUsage_Sep  libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(CSpotterSDKApi.o)
-    0x00005300   0x00005300   0x00000024   Code   RO         3410    i.CSpotter_GetResult  libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(CSpotterSDKApi.o)
-    0x00005324   0x00005324   0x00000204   Code   RO         3418    i.CSpotter_Init_MultiWithExtRejModel  libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(CSpotterSDKApi.o)
-    0x00005528   0x00005528   0x00000024   Code   RO         3419    i.CSpotter_Init_Sep  libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(CSpotterSDKApi.o)
-    0x0000554c   0x0000554c   0x00000034   Code   RO         3424    i.CSpotter_Reset    libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(CSpotterSDKApi.o)
-    0x00005580   0x00005580   0x00000002   Code   RO         2297    i.DPWM_Open         dpwm.o
+    0x000050b0   0x000050b0   0x00000010   Code   RO          495    i.CAPS_IRQHandler   interrupthandler.o
+    0x000050c0   0x000050c0   0x00000034   Code   RO         2135    i.CLK_EnableLDO     clk.o
+    0x000050f4   0x000050f4   0x0000001c   Code   RO         2136    i.CLK_EnableModuleClock  clk.o
+    0x00005110   0x00005110   0x0000001c   Code   RO         2137    i.CLK_EnableXtalRC  clk.o
+    0x0000512c   0x0000512c   0x00000010   Code   RO         2138    i.CLK_GetHCLKFreq   clk.o
+    0x0000513c   0x0000513c   0x0000003c   Code   RO         2141    i.CLK_SetHCLK       clk.o
+    0x00005178   0x00005178   0x00000050   Code   RO         2142    i.CLK_SetModuleClock  clk.o
+    0x000051c8   0x000051c8   0x00000064   Code   RO         3388    i.CSpotter_AddSample  libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(CSpotterSDKApi.o)
+    0x0000522c   0x0000522c   0x000000bc   Code   RO         3392    i.CSpotter_GetMemoryUsage_MultiWithSpeakerAndExtRejModel  libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(CSpotterSDKApi.o)
+    0x000052e8   0x000052e8   0x00000018   Code   RO         3393    i.CSpotter_GetMemoryUsage_Sep  libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(CSpotterSDKApi.o)
+    0x00005300   0x00005300   0x00000024   Code   RO         3399    i.CSpotter_GetResult  libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(CSpotterSDKApi.o)
+    0x00005324   0x00005324   0x00000204   Code   RO         3407    i.CSpotter_Init_MultiWithExtRejModel  libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(CSpotterSDKApi.o)
+    0x00005528   0x00005528   0x00000024   Code   RO         3408    i.CSpotter_Init_Sep  libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(CSpotterSDKApi.o)
+    0x0000554c   0x0000554c   0x00000034   Code   RO         3413    i.CSpotter_Reset    libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(CSpotterSDKApi.o)
+    0x00005580   0x00005580   0x00000002   Code   RO         2286    i.DPWM_Open         dpwm.o
     0x00005582   0x00005582   0x00000002   PAD
-    0x00005584   0x00005584   0x0000003c   Code   RO         2298    i.DPWM_SetSampleRate  dpwm.o
-    0x000055c0   0x000055c0   0x0000001c   Code   RO          507    i.GPAB_IRQHandler   interrupthandler.o
-    0x000055dc   0x000055dc   0x00000028   Code   RO         2451    i.GPIO_SetMode      gpio.o
-    0x00005604   0x00005604   0x00000022   Code   RO          767    i.MD4App_DecodeInitiate  md4app.o
+    0x00005584   0x00005584   0x0000003c   Code   RO         2287    i.DPWM_SetSampleRate  dpwm.o
+    0x000055c0   0x000055c0   0x0000001c   Code   RO          496    i.GPAB_IRQHandler   interrupthandler.o
+    0x000055dc   0x000055dc   0x00000028   Code   RO         2440    i.GPIO_SetMode      gpio.o
+    0x00005604   0x00005604   0x00000022   Code   RO          756    i.MD4App_DecodeInitiate  md4app.o
     0x00005626   0x00005626   0x00000002   PAD
-    0x00005628   0x00005628   0x00000088   Code   RO          768    i.MD4App_DecodeProcess  md4app.o
-    0x000056b0   0x000056b0   0x00000070   Code   RO          769    i.MD4App_DecodeStartPlayByAddr  md4app.o
-    0x00005720   0x00005720   0x00000030   Code   RO          770    i.MD4App_DecodeStartPlayByID  md4app.o
-    0x00005750   0x00005750   0x0000001a   Code   RO          771    i.MD4App_DecodeStopPlay  md4app.o
-    0x0000576a   0x0000576a   0x00000020   Code   RO         3382    i.MD4_CheckResLdr   MD4_Keil.lib(md4decode.o)
+    0x00005628   0x00005628   0x00000088   Code   RO          757    i.MD4App_DecodeProcess  md4app.o
+    0x000056b0   0x000056b0   0x00000070   Code   RO          758    i.MD4App_DecodeStartPlayByAddr  md4app.o
+    0x00005720   0x00005720   0x00000030   Code   RO          759    i.MD4App_DecodeStartPlayByID  md4app.o
+    0x00005750   0x00005750   0x0000001a   Code   RO          760    i.MD4App_DecodeStopPlay  md4app.o
+    0x0000576a   0x0000576a   0x00000020   Code   RO         3371    i.MD4_CheckResLdr   MD4_Keil.lib(md4decode.o)
     0x0000578a   0x0000578a   0x00000002   PAD
-    0x0000578c   0x0000578c   0x000000c8   Code   RO         3383    i.MD4_DecodeFrame   MD4_Keil.lib(md4decode.o)
-    0x00005854   0x00005854   0x000000a0   Code   RO         3384    i.MD4_DecodeInitiate  MD4_Keil.lib(md4decode.o)
-    0x000058f4   0x000058f4   0x00000016   Code   RO         3385    i.MD4_DecodeIsEnd   MD4_Keil.lib(md4decode.o)
-    0x0000590a   0x0000590a   0x00000100   Code   RO         3386    i.MD4_DecodeProcess  MD4_Keil.lib(md4decode.o)
+    0x0000578c   0x0000578c   0x000000c8   Code   RO         3372    i.MD4_DecodeFrame   MD4_Keil.lib(md4decode.o)
+    0x00005854   0x00005854   0x000000a0   Code   RO         3373    i.MD4_DecodeInitiate  MD4_Keil.lib(md4decode.o)
+    0x000058f4   0x000058f4   0x00000016   Code   RO         3374    i.MD4_DecodeIsEnd   MD4_Keil.lib(md4decode.o)
+    0x0000590a   0x0000590a   0x00000100   Code   RO         3375    i.MD4_DecodeProcess  MD4_Keil.lib(md4decode.o)
     0x00005a0a   0x00005a0a   0x00000002   PAD
-    0x00005a0c   0x00005a0c   0x00000080   Code   RO         1131    i.MIC_ChangeSR      micspk.o
-    0x00005a8c   0x00005a8c   0x00000100   Code   RO         1133    i.MIC_Open          micspk.o
-    0x00005b8c   0x00005b8c   0x0000000c   Code   RO         1134    i.MIC_Start         micspk.o
-    0x00005b98   0x00005b98   0x00000010   Code   RO         1135    i.MIC_Stop          micspk.o
-    0x00005ba8   0x00005ba8   0x00000016   Code   RO          711    i.MicGetApp_Initiate  micgetapp.o
-    0x00005bbe   0x00005bbe   0x00000028   Code   RO          712    i.MicGetApp_ProcessRec  micgetapp.o
-    0x00005be6   0x00005be6   0x00000028   Code   RO          713    i.MicGetApp_StartRec  micgetapp.o
-    0x00005c0e   0x00005c0e   0x00000010   Code   RO          714    i.MicGetApp_StopRec  micgetapp.o
-    0x00005c1e   0x00005c1e   0x00000066   Code   RO         3493    i.NINJA_API_1       libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
-    0x00005c84   0x00005c84   0x00000280   Code   RO         3495    i.NINJA_API_11      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
-    0x00005f04   0x00005f04   0x00000170   Code   RO         3497    i.NINJA_API_13      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
-    0x00006074   0x00006074   0x0000001e   Code   RO         3499    i.NINJA_API_15      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
-    0x00006092   0x00006092   0x0000001e   Code   RO         3503    i.NINJA_API_19      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
-    0x000060b0   0x000060b0   0x00000028   Code   RO         3504    i.NINJA_API_2       libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
-    0x000060d8   0x000060d8   0x00000026   Code   RO         3507    i.NINJA_API_23      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
-    0x000060fe   0x000060fe   0x00000030   Code   RO         3510    i.NINJA_API_26      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
-    0x0000612e   0x0000612e   0x00000024   Code   RO         3514    i.NINJA_API_3       libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
-    0x00006152   0x00006152   0x00000070   Code   RO         3531    i.NINJA_API_47      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
-    0x000061c2   0x000061c2   0x0000007e   Code   RO         3532    i.NINJA_API_48      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
-    0x00006240   0x00006240   0x0000003c   Code   RO         3537    i.NINJA_API_55      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
-    0x0000627c   0x0000627c   0x0000002a   Code   RO         3538    i.NINJA_API_56      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
+    0x00005a0c   0x00005a0c   0x00000080   Code   RO         1120    i.MIC_ChangeSR      micspk.o
+    0x00005a8c   0x00005a8c   0x00000100   Code   RO         1122    i.MIC_Open          micspk.o
+    0x00005b8c   0x00005b8c   0x0000000c   Code   RO         1123    i.MIC_Start         micspk.o
+    0x00005b98   0x00005b98   0x00000010   Code   RO         1124    i.MIC_Stop          micspk.o
+    0x00005ba8   0x00005ba8   0x00000016   Code   RO          700    i.MicGetApp_Initiate  micgetapp.o
+    0x00005bbe   0x00005bbe   0x00000028   Code   RO          701    i.MicGetApp_ProcessRec  micgetapp.o
+    0x00005be6   0x00005be6   0x00000028   Code   RO          702    i.MicGetApp_StartRec  micgetapp.o
+    0x00005c0e   0x00005c0e   0x00000010   Code   RO          703    i.MicGetApp_StopRec  micgetapp.o
+    0x00005c1e   0x00005c1e   0x00000066   Code   RO         3482    i.NINJA_API_1       libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
+    0x00005c84   0x00005c84   0x00000280   Code   RO         3484    i.NINJA_API_11      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
+    0x00005f04   0x00005f04   0x00000170   Code   RO         3486    i.NINJA_API_13      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
+    0x00006074   0x00006074   0x0000001e   Code   RO         3488    i.NINJA_API_15      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
+    0x00006092   0x00006092   0x0000001e   Code   RO         3492    i.NINJA_API_19      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
+    0x000060b0   0x000060b0   0x00000028   Code   RO         3493    i.NINJA_API_2       libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
+    0x000060d8   0x000060d8   0x00000026   Code   RO         3496    i.NINJA_API_23      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
+    0x000060fe   0x000060fe   0x00000030   Code   RO         3499    i.NINJA_API_26      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
+    0x0000612e   0x0000612e   0x00000024   Code   RO         3503    i.NINJA_API_3       libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
+    0x00006152   0x00006152   0x00000070   Code   RO         3520    i.NINJA_API_47      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
+    0x000061c2   0x000061c2   0x0000007e   Code   RO         3521    i.NINJA_API_48      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
+    0x00006240   0x00006240   0x0000003c   Code   RO         3526    i.NINJA_API_55      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
+    0x0000627c   0x0000627c   0x0000002a   Code   RO         3527    i.NINJA_API_56      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
     0x000062a6   0x000062a6   0x00000002   PAD
-    0x000062a8   0x000062a8   0x000003e0   Code   RO         3553    i.NINJA_API_73      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
-    0x00006688   0x00006688   0x000000b4   Code   RO         3555    i.NINJA_API_75      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
-    0x0000673c   0x0000673c   0x00000030   Code   RO         1015    i.OutputPin_Initiate  configio.o
-    0x0000676c   0x0000676c   0x00000014   Code   RO         2650    i.PDMA_DisableInt   pdma.o
-    0x00006780   0x00006780   0x00000014   Code   RO         2651    i.PDMA_EnableInt    pdma.o
-    0x00006794   0x00006794   0x00000038   Code   RO          508    i.PDMA_IRQHandler   interrupthandler.o
-    0x000067cc   0x000067cc   0x00000010   Code   RO         2652    i.PDMA_Open         pdma.o
-    0x000067dc   0x000067dc   0x00000020   Code   RO         2653    i.PDMA_SetTransferAddr  pdma.o
-    0x000067fc   0x000067fc   0x00000038   Code   RO         2654    i.PDMA_SetTransferCnt  pdma.o
-    0x00006834   0x00006834   0x00000018   Code   RO         2655    i.PDMA_SetTransferDirection  pdma.o
-    0x0000684c   0x0000684c   0x00000098   Code   RO         2656    i.PDMA_SetTransferMode  pdma.o
-    0x000068e4   0x000068e4   0x00000018   Code   RO         2657    i.PDMA_Trigger      pdma.o
+    0x000062a8   0x000062a8   0x000003e0   Code   RO         3542    i.NINJA_API_73      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
+    0x00006688   0x00006688   0x000000b4   Code   RO         3544    i.NINJA_API_75      libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
+    0x0000673c   0x0000673c   0x00000030   Code   RO         1004    i.OutputPin_Initiate  configio.o
+    0x0000676c   0x0000676c   0x00000014   Code   RO         2639    i.PDMA_DisableInt   pdma.o
+    0x00006780   0x00006780   0x00000014   Code   RO         2640    i.PDMA_EnableInt    pdma.o
+    0x00006794   0x00006794   0x00000038   Code   RO          497    i.PDMA_IRQHandler   interrupthandler.o
+    0x000067cc   0x000067cc   0x00000010   Code   RO         2641    i.PDMA_Open         pdma.o
+    0x000067dc   0x000067dc   0x00000020   Code   RO         2642    i.PDMA_SetTransferAddr  pdma.o
+    0x000067fc   0x000067fc   0x00000038   Code   RO         2643    i.PDMA_SetTransferCnt  pdma.o
+    0x00006834   0x00006834   0x00000018   Code   RO         2644    i.PDMA_SetTransferDirection  pdma.o
+    0x0000684c   0x0000684c   0x00000098   Code   RO         2645    i.PDMA_SetTransferMode  pdma.o
+    0x000068e4   0x000068e4   0x00000018   Code   RO         2646    i.PDMA_Trigger      pdma.o
     0x000068fc   0x000068fc   0x0000002c   Code   RO            3    i.PWM0_IRQHandler   main.o
-    0x00006928   0x00006928   0x00000008   Code   RO         2720    i.PWM_ClearIntFlag  pwm.o
-    0x00006930   0x00006930   0x0000000e   Code   RO         2735    i.PWM_GetIntFlag    pwm.o
+    0x00006928   0x00006928   0x00000008   Code   RO         2709    i.PWM_ClearIntFlag  pwm.o
+    0x00006930   0x00006930   0x0000000e   Code   RO         2724    i.PWM_GetIntFlag    pwm.o
     0x0000693e   0x0000693e   0x00000002   PAD
-    0x00006940   0x00006940   0x00000024   Code   RO         1225    i.PdmaCtrl_Init     pdmactrl.o
-    0x00006964   0x00006964   0x0000008c   Code   RO         1226    i.PdmaCtrl_Open     pdmactrl.o
-    0x000069f0   0x000069f0   0x00000040   Code   RO         1227    i.PdmaCtrl_Start    pdmactrl.o
-    0x00006a30   0x00006a30   0x00000014   Code   RO         1228    i.PdmaCtrl_Stop     pdmactrl.o
-    0x00006a44   0x00006a44   0x00000034   Code   RO         1274    i.Playback_Add      playback.o
-    0x00006a78   0x00006a78   0x0000000a   Code   RO         1276    i.Playback_Initiate  playback.o
+    0x00006940   0x00006940   0x00000024   Code   RO         1214    i.PdmaCtrl_Init     pdmactrl.o
+    0x00006964   0x00006964   0x0000008c   Code   RO         1215    i.PdmaCtrl_Open     pdmactrl.o
+    0x000069f0   0x000069f0   0x00000040   Code   RO         1216    i.PdmaCtrl_Start    pdmactrl.o
+    0x00006a30   0x00006a30   0x00000014   Code   RO         1217    i.PdmaCtrl_Stop     pdmactrl.o
+    0x00006a44   0x00006a44   0x00000034   Code   RO         1263    i.Playback_Add      playback.o
+    0x00006a78   0x00006a78   0x0000000a   Code   RO         1265    i.Playback_Initiate  playback.o
     0x00006a82   0x00006a82   0x00000002   PAD
-    0x00006a84   0x00006a84   0x000000cc   Code   RO         1280    i.Playback_Process  playback.o
-    0x00006b50   0x00006b50   0x00000020   Code   RO         1281    i.Playback_Remove   playback.o
-    0x00006b70   0x00006b70   0x00000014   Code   RO         1282    i.Playback_ResetChannelVolume  playback.o
-    0x00006b84   0x00006b84   0x00000028   Code   RO         1283    i.Playback_SetOutputBuf  playback.o
-    0x00006bac   0x00006bac   0x00000058   Code   RO         1286    i.Playback_StartPlay  playback.o
-    0x00006c04   0x00006c04   0x0000004c   Code   RO         1287    i.Playback_StopPlay  playback.o
-    0x00006c50   0x00006c50   0x00000002   Code   RO          509    i.RTC_IRQHandler    interrupthandler.o
+    0x00006a84   0x00006a84   0x000000cc   Code   RO         1269    i.Playback_Process  playback.o
+    0x00006b50   0x00006b50   0x00000020   Code   RO         1270    i.Playback_Remove   playback.o
+    0x00006b70   0x00006b70   0x00000014   Code   RO         1271    i.Playback_ResetChannelVolume  playback.o
+    0x00006b84   0x00006b84   0x00000028   Code   RO         1272    i.Playback_SetOutputBuf  playback.o
+    0x00006bac   0x00006bac   0x00000058   Code   RO         1275    i.Playback_StartPlay  playback.o
+    0x00006c04   0x00006c04   0x0000004c   Code   RO         1276    i.Playback_StopPlay  playback.o
+    0x00006c50   0x00006c50   0x00000002   Code   RO          498    i.RTC_IRQHandler    interrupthandler.o
     0x00006c52   0x00006c52   0x00000002   PAD
-    0x00006c54   0x00006c54   0x00000018   Code   RO         1522    i.Record_Add        record.o
-    0x00006c6c   0x00006c6c   0x00000044   Code   RO         1523    i.Record_Process    record.o
-    0x00006cb0   0x00006cb0   0x00000022   Code   RO         1525    i.Record_SetInBufRecord  record.o
+    0x00006c54   0x00006c54   0x00000018   Code   RO         1511    i.Record_Add        record.o
+    0x00006c6c   0x00006c6c   0x00000044   Code   RO         1512    i.Record_Process    record.o
+    0x00006cb0   0x00006cb0   0x00000022   Code   RO         1514    i.Record_SetInBufRecord  record.o
     0x00006cd2   0x00006cd2   0x00000002   PAD
-    0x00006cd4   0x00006cd4   0x00000048   Code   RO         1526    i.Record_StartRec   record.o
-    0x00006d1c   0x00006d1c   0x0000001c   Code   RO         1527    i.Record_StopRec    record.o
-    0x00006d38   0x00006d38   0x00000030   Code   RO         1576    i.SPIFlash_3ByteAddr_Cmd  spiflash.o
-    0x00006d68   0x00006d68   0x0000002c   Code   RO         1584    i.SPIFlash_GetChipInfo  spiflash.o
+    0x00006cd4   0x00006cd4   0x00000048   Code   RO         1515    i.Record_StartRec   record.o
+    0x00006d1c   0x00006d1c   0x0000001c   Code   RO         1516    i.Record_StopRec    record.o
+    0x00006d38   0x00006d38   0x00000030   Code   RO         1565    i.SPIFlash_3ByteAddr_Cmd  spiflash.o
+    0x00006d68   0x00006d68   0x0000002c   Code   RO         1573    i.SPIFlash_GetChipInfo  spiflash.o
     0x00006d94   0x00006d94   0x0000007c   Code   RO            4    i.SPIFlash_Initiate  main.o
-    0x00006e10   0x00006e10   0x00000070   Code   RO         1587    i.SPIFlash_Open     spiflash.o
-    0x00006e80   0x00006e80   0x00000014   Code   RO         1588    i.SPIFlash_PowerDown  spiflash.o
-    0x00006e94   0x00006e94   0x0000001e   Code   RO         1589    i.SPIFlash_Read     spiflash.o
-    0x00006eb2   0x00006eb2   0x000000d4   Code   RO         1590    i.SPIFlash_ReadData  spiflash.o
+    0x00006e10   0x00006e10   0x00000070   Code   RO         1576    i.SPIFlash_Open     spiflash.o
+    0x00006e80   0x00006e80   0x00000014   Code   RO         1577    i.SPIFlash_PowerDown  spiflash.o
+    0x00006e94   0x00006e94   0x0000001e   Code   RO         1578    i.SPIFlash_Read     spiflash.o
+    0x00006eb2   0x00006eb2   0x000000d4   Code   RO         1579    i.SPIFlash_ReadData  spiflash.o
     0x00006f86   0x00006f86   0x00000002   PAD
-    0x00006f88   0x00006f88   0x00000018   Code   RO          396    i.SPIFlash_ReadDataCallback  appcallback.o
-    0x00006fa0   0x00006fa0   0x00000018   Code   RO         1592    i.SPIFlash_ReadEnd  spiflash.o
-    0x00006fb8   0x00006fb8   0x0000004e   Code   RO         1593    i.SPIFlash_ReadStart  spiflash.o
-    0x00007006   0x00007006   0x00000052   Code   RO         1595    i.SPIFlash_SendRecOneData  spiflash.o
-    0x00007058   0x00007058   0x00000016   Code   RO         2967    i.SPI_GetBusClock   spi.o
-    0x0000706e   0x0000706e   0x00000024   Code   RO         2969    i.SPI_Open          spi.o
+    0x00006f88   0x00006f88   0x00000018   Code   RO          385    i.SPIFlash_ReadDataCallback  appcallback.o
+    0x00006fa0   0x00006fa0   0x00000018   Code   RO         1581    i.SPIFlash_ReadEnd  spiflash.o
+    0x00006fb8   0x00006fb8   0x0000004e   Code   RO         1582    i.SPIFlash_ReadStart  spiflash.o
+    0x00007006   0x00007006   0x00000052   Code   RO         1584    i.SPIFlash_SendRecOneData  spiflash.o
+    0x00007058   0x00007058   0x00000016   Code   RO         2956    i.SPI_GetBusClock   spi.o
+    0x0000706e   0x0000706e   0x00000024   Code   RO         2958    i.SPI_Open          spi.o
     0x00007092   0x00007092   0x00000002   PAD
-    0x00007094   0x00007094   0x00000050   Code   RO         2970    i.SPI_SetBusClock   spi.o
-    0x000070e4   0x000070e4   0x00000040   Code   RO         2971    i.SPI_SetVarClock   spi.o
-    0x00007124   0x00007124   0x00000038   Code   RO         1136    i.SPK_ChangeSR      micspk.o
-    0x0000715c   0x0000715c   0x00000048   Code   RO         1138    i.SPK_Open          micspk.o
-    0x000071a4   0x000071a4   0x00000020   Code   RO         1141    i.SPK_Start         micspk.o
-    0x000071c4   0x000071c4   0x00000010   Code   RO         1142    i.SPK_Stop          micspk.o
-    0x000071d4   0x000071d4   0x00000010   Code   RO         3019    i.SYS_Lock          sys.o
-    0x000071e4   0x000071e4   0x0000001a   Code   RO         3024    i.SYS_ResetModule   sys.o
+    0x00007094   0x00007094   0x00000050   Code   RO         2959    i.SPI_SetBusClock   spi.o
+    0x000070e4   0x000070e4   0x00000040   Code   RO         2960    i.SPI_SetVarClock   spi.o
+    0x00007124   0x00007124   0x00000038   Code   RO         1125    i.SPK_ChangeSR      micspk.o
+    0x0000715c   0x0000715c   0x00000048   Code   RO         1127    i.SPK_Open          micspk.o
+    0x000071a4   0x000071a4   0x00000020   Code   RO         1130    i.SPK_Start         micspk.o
+    0x000071c4   0x000071c4   0x00000010   Code   RO         1131    i.SPK_Stop          micspk.o
+    0x000071d4   0x000071d4   0x00000010   Code   RO         3008    i.SYS_Lock          sys.o
+    0x000071e4   0x000071e4   0x0000001a   Code   RO         3013    i.SYS_ResetModule   sys.o
     0x000071fe   0x000071fe   0x00000002   PAD
-    0x00007200   0x00007200   0x0000002c   Code   RO         3025    i.SYS_Unlock        sys.o
+    0x00007200   0x00007200   0x0000002c   Code   RO         3014    i.SYS_Unlock        sys.o
     0x0000722c   0x0000722c   0x0000001e   Code   RO          281    i.SendCMD           appfunctions.o
     0x0000724a   0x0000724a   0x00000024   Code   RO          282    i.SendCMD1time      appfunctions.o
     0x0000726e   0x0000726e   0x00000002   PAD
-    0x00007270   0x00007270   0x00000078   Code   RO          284    i.SendCMDByteTimer  appfunctions.o
-    0x000072e8   0x000072e8   0x00000020   Code   RO         3301    i.SendChar_ToUART   retarget.o
-    0x00007308   0x00007308   0x00000054   Code   RO          910    i.SysClk_InitiateRC  sysclk.o
-    0x0000735c   0x0000735c   0x00000050   Code   RO          871    i.SystemCoreClockUpdate  system_isd9100.o
-    0x000073ac   0x000073ac   0x00000058   Code   RO         3124    i.TIMER_GetModuleClock  timer.o
-    0x00007404   0x00007404   0x0000005e   Code   RO         3126    i.TIMER_Open        timer.o
+    0x00007270   0x00007270   0x00000078   Code   RO          283    i.SendCMDByteTimer  appfunctions.o
+    0x000072e8   0x000072e8   0x00000020   Code   RO         3290    i.SendChar_ToUART   retarget.o
+    0x00007308   0x00007308   0x00000054   Code   RO          899    i.SysClk_InitiateRC  sysclk.o
+    0x0000735c   0x0000735c   0x00000050   Code   RO          860    i.SystemCoreClockUpdate  system_isd9100.o
+    0x000073ac   0x000073ac   0x00000058   Code   RO         3113    i.TIMER_GetModuleClock  timer.o
+    0x00007404   0x00007404   0x0000005e   Code   RO         3115    i.TIMER_Open        timer.o
     0x00007462   0x00007462   0x00000002   PAD
     0x00007464   0x00007464   0x000000a8   Code   RO            5    i.TMR0_IRQHandler   main.o
     0x0000750c   0x0000750c   0x00000040   Code   RO            6    i.TMR1_IRQHandler   main.o
     0x0000754c   0x0000754c   0x00000068   Code   RO            7    i.UART0_IRQHandler  main.o
-    0x000075b4   0x000075b4   0x00000038   Code   RO         3167    i.UART_ClearIntFlag  uart.o
+    0x000075b4   0x000075b4   0x00000038   Code   RO         3156    i.UART_ClearIntFlag  uart.o
     0x000075ec   0x000075ec   0x00000078   Code   RO            8    i.UART_Init         main.o
-    0x00007664   0x00007664   0x0000005c   Code   RO         3171    i.UART_Open         uart.o
-    0x000076c0   0x000076c0   0x00000004   Code   RO          397    i.UserEvent_ProcessCallback  appcallback.o
-    0x000076c4   0x000076c4   0x0000002a   Code   RO          839    i.VROneCmdApp_GetCMDID  vronecmdapp.o
-    0x000076ee   0x000076ee   0x00000048   Code   RO          840    i.VROneCmdApp_Initiate  vronecmdapp.o
-    0x00007736   0x00007736   0x00000038   Code   RO          841    i.VROneCmdApp_UnpackBin  vronecmdapp.o
-    0x0000776e   0x0000776e   0x00000016   Code   RO         1445    i.VolumeCtrl_Reset  volumectrl.o
-    0x00007784   0x00007784   0x00000024   Code   RO         1447    i.VolumeCtrl_VolumeFade  volumectrl.o
-    0x000077a8   0x000077a8   0x00000002   Code   RO          510    i.WDT_IRQHandler    interrupthandler.o
-    0x000077aa   0x000077aa   0x0000001a   Code   RO         2712    i.__ARM_common_switch8  pdma.o
-    0x000077c4   0x000077c4   0x0000000e   Code   RO         3947    i._is_digit         c_p.l(__printf_wp.o)
+    0x00007664   0x00007664   0x0000005c   Code   RO         3160    i.UART_Open         uart.o
+    0x000076c0   0x000076c0   0x00000004   Code   RO          386    i.UserEvent_ProcessCallback  appcallback.o
+    0x000076c4   0x000076c4   0x0000002a   Code   RO          828    i.VROneCmdApp_GetCMDID  vronecmdapp.o
+    0x000076ee   0x000076ee   0x00000048   Code   RO          829    i.VROneCmdApp_Initiate  vronecmdapp.o
+    0x00007736   0x00007736   0x00000038   Code   RO          830    i.VROneCmdApp_UnpackBin  vronecmdapp.o
+    0x0000776e   0x0000776e   0x00000016   Code   RO         1434    i.VolumeCtrl_Reset  volumectrl.o
+    0x00007784   0x00007784   0x00000024   Code   RO         1436    i.VolumeCtrl_VolumeFade  volumectrl.o
+    0x000077a8   0x000077a8   0x00000002   Code   RO          499    i.WDT_IRQHandler    interrupthandler.o
+    0x000077aa   0x000077aa   0x0000001a   Code   RO         2701    i.__ARM_common_switch8  pdma.o
+    0x000077c4   0x000077c4   0x0000000e   Code   RO         3936    i._is_digit         c_p.l(__printf_wp.o)
     0x000077d2   0x000077d2   0x00000002   PAD
-    0x000077d4   0x000077d4   0x00000024   Code   RO          287    i.delayms           appfunctions.o
-    0x000077f8   0x000077f8   0x00000006   Code   RO         3303    i.ferror            retarget.o
-    0x000077fe   0x000077fe   0x0000000c   Code   RO         3305    i.fputc             retarget.o
+    0x000077d4   0x000077d4   0x00000024   Code   RO          285    i.delayms           appfunctions.o
+    0x000077f8   0x000077f8   0x00000006   Code   RO         3292    i.ferror            retarget.o
+    0x000077fe   0x000077fe   0x0000000c   Code   RO         3294    i.fputc             retarget.o
     0x0000780a   0x0000780a   0x00000002   PAD
     0x0000780c   0x0000780c   0x0000007c   Code   RO            9    i.main              main.o
     0x00007888   0x00007888   0x00000040   Code   RO           10    i.pwm_init          main.o
     0x000078c8   0x000078c8   0x00000084   Code   RO           11    i.time_init         main.o
     0x0000794c   0x0000794c   0x0000001c   Code   RO           12    i.uart_rev_task     main.o
-    0x00007968   0x00007968   0x00000010   Data   RO          398    .constdata          appcallback.o
-    0x00007978   0x00007978   0x00000044   Data   RO         1143    .constdata          micspk.o
-    0x000079bc   0x000079bc   0x0000001a   Data   RO         1448    .constdata          volumectrl.o
+    0x00007968   0x00007968   0x00000010   Data   RO          387    .constdata          appcallback.o
+    0x00007978   0x00007978   0x00000044   Data   RO         1132    .constdata          micspk.o
+    0x000079bc   0x000079bc   0x0000001a   Data   RO         1437    .constdata          volumectrl.o
     0x000079d6   0x000079d6   0x00000002   PAD
-    0x000079d8   0x000079d8   0x00000014   Data   RO         3127    .constdata          timer.o
-    0x000079ec   0x000079ec   0x00000030   Data   RO         3389    .constdata          MD4_Keil.lib(md4decode.o)
-    0x00007a1c   0x00007a1c   0x00000914   Data   RO         3558    .constdata          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
-    0x00008330   0x00008330   0x00000800   Data   RO         3627    .constdata          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrBen.o)
-    0x00008b30   0x00008b30   0x00000064   Data   RO         3809    .constdata          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEli.o)
-    0x00008b94   0x00008b94   0x00000009   Data   RO         3867    .constdata          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
+    0x000079d8   0x000079d8   0x00000014   Data   RO         3116    .constdata          timer.o
+    0x000079ec   0x000079ec   0x00000030   Data   RO         3378    .constdata          MD4_Keil.lib(md4decode.o)
+    0x00007a1c   0x00007a1c   0x00000914   Data   RO         3547    .constdata          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGo.o)
+    0x00008330   0x00008330   0x00000800   Data   RO         3616    .constdata          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrBen.o)
+    0x00008b30   0x00008b30   0x00000064   Data   RO         3798    .constdata          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrEli.o)
+    0x00008b94   0x00008b94   0x00000009   Data   RO         3856    .constdata          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrJoy.o)
     0x00008b9d   0x00008b9d   0x00000001   PAD
-    0x00008b9e   0x00008b9e   0x00000284   Data   RO         3885    .constdata          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrAna.o)
-    0x00008e22   0x00008e22   0x00000404   Data   RO         3892    .constdata          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrAnn.o)
+    0x00008b9e   0x00008b9e   0x00000284   Data   RO         3874    .constdata          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrAna.o)
+    0x00008e22   0x00008e22   0x00000404   Data   RO         3881    .constdata          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrAnn.o)
     0x00009226   0x00009226   0x00000002   PAD
-    0x00009228   0x00009228   0x00000200   Data   RO         3901    .constdata          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGuy.o)
-    0x00009428   0x00009428   0x0000012c   Data   RO          289    .conststring        appfunctions.o
-    0x00009554   0x00009554   0x00000020   Data   RO         4155    Region$$Table       anon$$obj.o
+    0x00009228   0x00009228   0x00000200   Data   RO         3890    .constdata          libCSpotterSDK_16k_24d_ISD9xxC_arm-cm0_V6.4.4_b20180328.lib(BsrGuy.o)
+    0x00009428   0x00009428   0x0000012c   Data   RO          287    .conststring        appfunctions.o
+    0x00009554   0x00009554   0x00000020   Data   RO         4144    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x00009574, Size: 0x00002ec8, Max: 0x00003000, ABSOLUTE)
@@ -2963,20 +2959,20 @@ Memory Map of the image
     0x20000010   0x00009584   0x00000001   Data   RW           20    .data               main.o
     0x20000011   0x00009585   0x00000001   Data   RW           21    .data               main.o
     0x20000012   0x00009586   0x00000002   PAD
-    0x20000014   0x00009588   0x00000050   Data   RW          290    .data               appfunctions.o
-    0x20000064   0x000095d8   0x0000001c   Data   RW          873    .data               system_isd9100.o
-    0x20000080   0x000095f4   0x0000000c   Data   RW         1289    .data               playback.o
-    0x2000008c   0x00009600   0x00000008   Data   RW         1449    .data               volumectrl.o
-    0x20000094   0x00009608   0x00000008   Data   RW         1528    .data               record.o
-    0x2000009c   0x00009610   0x00000004   Data   RW         3308    .data               retarget.o
+    0x20000014   0x00009588   0x00000050   Data   RW          288    .data               appfunctions.o
+    0x20000064   0x000095d8   0x0000001c   Data   RW          862    .data               system_isd9100.o
+    0x20000080   0x000095f4   0x0000000c   Data   RW         1278    .data               playback.o
+    0x2000008c   0x00009600   0x00000008   Data   RW         1438    .data               volumectrl.o
+    0x20000094   0x00009608   0x00000008   Data   RW         1517    .data               record.o
+    0x2000009c   0x00009610   0x00000004   Data   RW         3297    .data               retarget.o
     0x200000a0        -       0x00000098   Zero   RW           14    .bss                main.o
     0x20000138        -       0x00002700   Zero   RW           15    .bss                main.o
     0x20002838        -       0x0000000c   Zero   RW           16    .bss                main.o
-    0x20002844        -       0x00000020   Zero   RW          511    .bss                interrupthandler.o
-    0x20002864        -       0x00000060   Zero   RW         4030    .bss                c_p.l(libspace.o)
+    0x20002844        -       0x00000020   Zero   RW          500    .bss                interrupthandler.o
+    0x20002864        -       0x00000060   Zero   RW         4019    .bss                c_p.l(libspace.o)
     0x200028c4   0x00009614   0x00000004   PAD
-    0x200028c8        -       0x00000200   Zero   RW          902    HEAP                startup_isd9100.o
-    0x20002ac8        -       0x00000400   Zero   RW          901    STACK               startup_isd9100.o
+    0x200028c8        -       0x00000200   Zero   RW          891    HEAP                startup_isd9100.o
+    0x20002ac8        -       0x00000400   Zero   RW          890    STACK               startup_isd9100.o
 
 
 ==============================================================================
@@ -2988,7 +2984,7 @@ Image component sizes
 
        218         40          0          0          0       2852   adc.o
         28          6         16          0          0     109480   appcallback.o
-       770        140        300         80          0      10553   appfunctions.o
+       770        140        300         80          0      10717   appfunctions.o
         88          0          0          0          0       2648   audiorom.o
         96         12          0          0          0       1579   biq.o
         60          0          0          0          0       3853   bufctrl.o
@@ -2997,7 +2993,7 @@ Image component sizes
         62         10          0          0          0       1137   dpwm.o
         40          0          0          0          0       1039   gpio.o
        104         28          0          0         32     106129   interrupthandler.o
-       972        168          0         18      10148     126012   main.o
+       972        168          0         18      10148     126212   main.o
        356         14          0          0          0      12665   md4app.o
        118          0          0          0          0       6181   micgetapp.o
        636        118         68          0          0       5870   micspk.o
@@ -3020,7 +3016,7 @@ Image component sizes
        170          0          0          0          0       2734   vronecmdapp.o
 
     ----------------------------------------------------------------------
-      7094        882        656        160      11716     452990   Object Totals
+      7094        882        656        160      11716     453354   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         28          0          2          2          0          0   (incl. Padding)
 
@@ -3099,8 +3095,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     30888       1240       7372        160      11816     452330   Grand Totals
-     30888       1240       7372        160      11816     452330   ELF Image Totals
+     30888       1240       7372        160      11816     452694   Grand Totals
+     30888       1240       7372        160      11816     452694   ELF Image Totals
      30888       1240       7372        160          0          0   ROM Totals
 
 ==============================================================================

@@ -271,7 +271,7 @@ void App_Process(void)
 
 			if(i32ID==0)	//唤醒词：智能电扇
 			{
-				if(Fan_Stauts == FAN_RUNING)
+				if((Fan_Stauts == FAN_RUNING)| USEWAKEUP )
 				{
 					vr_time=VRTIME;
 					App_StartPlay(0);	//播放回答声音
@@ -640,7 +640,7 @@ void delay50us(void)
 }
 */
 
-
+/*
 void SendCMDByte(uint8_t u8CMDByte)
 {
 	uint32_t loopi = 0;
@@ -665,14 +665,15 @@ void SendCMDByte(uint8_t u8CMDByte)
 		delay1p25ms();
 	return;
 }
-
+*/
+/*
 void SetSignalLine(uint32_t SignalLine, uint8_t Val)
 {
 	uint32_t PAdata = GPIO_GET_OUT_DATA(PA) & (~SignalLine);
 	GPIO_SET_OUT_DATA(PA, PAdata | (Val << SignalLine));
 	return;
 }
-
+*/
 void SendCMDByteTimer(uint8_t u8CMDByte)
 {
 	uint8_t time20ms = 16;

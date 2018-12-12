@@ -163,12 +163,14 @@ typedef struct		//
 #define SENDCMDTIMES 3
 
 #define USEFLASH 1
+#define USEWAKEUP 0
+#define ALLCMD 1
 
 void delay1p25ms(void);
 void delayms(uint32_t ms);
 //void delayus(uint32_t us);
 //void delay50us(void);
-void SendCMDByte(uint8_t u8CMDByte);
+//void SendCMDByte(uint8_t u8CMDByte);
 void SendCMD(uint8_t u8CMDforMCU);
 void SendCMDByteTimer(uint8_t u8CMDByte);
 void SendCMD1time(uint8_t u8CMDforMCU, uint8_t u8SendTimes);
@@ -176,6 +178,19 @@ void SendCMD1time(uint8_t u8CMDforMCU, uint8_t u8SendTimes);
 #define SET_GPIO_PA_BIT_HIGH(sbit)	GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | sbit);
 #define SET_GPIO_PA_BIT_LOW(sbit)	GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~sbit));
 
+/**
+ * @brief       Set GPIO Port OUT Data
+ *
+ * @param[in]   gpio        GPIO port. It could be PA, PB.
+ * @param[in]   u32Bit    	GPIO Bit to set/clear/toggle.
+ *
+ * @retval      None
+ *
+ * @details     Set the Data into specified GPIO port.
+ */
+#define GPIO_SET_BIT(gpio, u32Bit)   ((gpio)->DOUT |= (u32Bit))
+#define GPIO_CLR_BIT(gpio, u32Bit)   ((gpio)->DOUT &= (~u32Bit))
+#define GPIO_TOGGLE_BIT(gpio, u32Bit)    ((gpio)->DOUT ^= (u32Bit))
 
 #endif //#ifndef _APP_H_
 
