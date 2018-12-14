@@ -31,6 +31,7 @@
 #include "BufCtrl.h"
 #include "ConfigIO.h"
 #include "Preload.h"
+#include "adc.h"
 
 // -------------------------------------------------------------------------------------------------------------------------------
 // VR Commands Model Maximum Size For Load To Data Flash
@@ -172,6 +173,11 @@ typedef struct		//
 // #ifdef USEALLCMD
 // #endif
 
+#define ADC_PGA_GAIN_USE 800  //800,2600
+#define ADC_ALC_TARLEV_USE -750  //-750,-600
+#define ADC_ALCCTL_NGTH_USE ADC_ALCCTL_NGTH7  //7,4
+#define ADC_MICBSEL_USE ADC_MICBSEL_17V //ADC_MICBSEL_90_VCCA
+
 void delay1p25ms(void);
 void delayms(uint32_t ms);
 //void delayus(uint32_t us);
@@ -181,8 +187,8 @@ void SendCMD(uint8_t u8CMDforMCU);
 void SendCMDByteTimer(uint8_t u8CMDByte);
 void SendCMD1time(uint8_t u8CMDforMCU, uint8_t u8SendTimes);
 
-#define SET_GPIO_PA_BIT_HIGH(sbit)	GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | sbit);
-#define SET_GPIO_PA_BIT_LOW(sbit)	GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~sbit));
+//#define SET_GPIO_PA_BIT_HIGH(sbit)	GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | sbit);
+//#define SET_GPIO_PA_BIT_LOW(sbit)	GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~sbit));
 
 /**
  * @brief       Set GPIO Port OUT Data

@@ -523,16 +523,8 @@
 			"file": "main.c",
 			"settings":
 			{
-				"buffer_size": 12933,
+				"buffer_size": 13059,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/src/ConfigIO.c",
-			"settings":
-			{
-				"buffer_size": 3512,
 				"line_ending": "Windows"
 			}
 		},
@@ -540,7 +532,16 @@
 			"file": "AppFunctions.c",
 			"settings":
 			{
-				"buffer_size": 18951,
+				"buffer_size": 17573,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "App.h.dump",
+			"settings":
+			{
+				"buffer_size": 6445,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -609,32 +610,43 @@
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Device/Nuvoton",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Device/Nuvoton/ISD9100",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Device/Nuvoton/ISD9100/Include",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Driver",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Driver/inc",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand"
 	],
 	"file_history":
 	[
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/src/ConfigIO.c",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/inc/UltraIO.h",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/inc/Framework.h",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/ConfigApp.h",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/src/UltraIO.c",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/ConfigUltraIO.h",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/Powerdown.c",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Device/Nuvoton/ISD9100/Include/ISD9100.h",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/ConfigIO.h",
+		"/Z/ghp/temp/icp/copyfile_wakeup8cmd.bat",
+		"/Z/ghp/temp/icp/copyfile_wang8cmd.bat",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/App.h",
+		"/Z/ghp/temp/icp/copyfile_wang2cmd.bat",
+		"/Z/ghp/temp/icp/copyfile.bat",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/App.h.dump",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/copyfile.bat",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/AudioRes/Output/AudioResText.h",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/inc/gpio.h",
 		"/C/Windows/System32/drivers/etc/ipv6_google_hosts.zc",
 		"/C/Windows/System32/drivers/etc/hosts.dump",
 		"/C/Windows/System32/drivers/etc/hosts",
-		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/App.h.dump",
-		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/App.h",
-		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/inc/Framework.h",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/copyfile.bat.dump",
-		"/F/shovelhp/Documents/GitHub/isd9160vr/copyfile.bat",
 		"/Z/ghp/temp/山丘语音/code2.c",
 		"/Z/ghp/temp/山丘语音/code1.c",
 		"/C/Nuvoton/ISD91XX_SDK/NuvotonPlatform_Keil/Sample/TestOK/LDROM_ISP/main.c",
 		"/C/Nuvoton/ISD91XX_SDK/NuvotonPlatform_Keil/Sample/TestOK/LDROM_ISP/FMC.c",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/AppFunctions.c",
-		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/inc/gpio.h",
-		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Device/Nuvoton/ISD9100/Include/ISD9100.h",
-		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/Powerdown.c",
-		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/src/UltraIO.c",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/src/gpio.c",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/src/adc.c",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/src/clk.c",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/inc/clk.h",
-		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/src/ConfigIO.c",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/ConfigSysClk.h",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/inc/SysClk.h",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/src/SysClk.c",
@@ -654,10 +666,8 @@
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/src/pwm.c",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/inc/pwm.h",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/main.c",
-		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/AudioRes/Output/AudioResText.h",
 		"/C/Nuvoton/ISD91XX_SDK/NuvotonPlatform_Keil/Sample/Driver/Smpl_DrvPWM/Smpl_DrvPWM.c",
 		"/C/Nuvoton ISD9100 SDS/V5.02.001/SampleCode/StdDriver/PWM/KEIL/startup_ISD9100.s",
-		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/ConfigUltraIO.h",
 		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/AppFunctions.c",
 		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/gpio_spi.c",
 		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/AudioRes/Output/AudioResText.h",
@@ -733,14 +743,7 @@
 		"/E/shovelhpwork/hinoc/s5gxboard/DNS5GX_F2/FPGA_Reference_Designs/boards/dn0237_dns5gx_f2/MainRef/PROJECTS/fpga_a.qsf",
 		"/E/shovelhpwork/hinoc/s5gxboard/DNS5GX_F2/FPGA_Reference_Designs/boards/dn0237_dns5gx_f2/MainRef/PROJECTS/fpga_b.qsf",
 		"/Z/ywy/Mifi.mif",
-		"/E/shovelhpwork/Dr/科学研究方法与实践/latex作业/中文论文.tex",
-		"/I/COM6_2_15_10_13_2 (2).txt",
-		"/Z/ghp/Dr/amcc/log20170207/20170204pon_ratio20to0_rate100to500_cl0to35_len16x_nofec.log",
-		"/Z/ghp/Dr/amcc/logAMCC/amcc_16x_ratio_speed_cl0to35_nofec_rcos.log",
-		"/Z/#挂网数据/channel data/telnetlog/telnet",
-		"/Z/#挂网数据/channel data/telnet",
-		"/Z/ghp/Dr/amcc/logAMCC/sweep_amcc_fec_rcos_speed2.log",
-		"/E/shovelhpwork/matlab/amcc/PON/SCFDE/Tx_SCFDE/Tx_SCFDE.m"
+		"/E/shovelhpwork/Dr/科学研究方法与实践/latex作业/中文论文.tex"
 	],
 	"find":
 	{
@@ -790,15 +793,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 12933,
+						"buffer_size": 13059,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								8587,
-								8587
+								10827,
+								10827
 							]
 						],
 						"settings":
@@ -809,7 +812,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 4923.0,
+						"translation.y": 5895.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -817,50 +820,19 @@
 				},
 				{
 					"buffer": 1,
-					"file": "/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/src/ConfigIO.c",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3512,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3220,
-								3220
-							]
-						],
-						"settings":
-						{
-							"is_init_dirty_state": false,
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/C++/C.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 920.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "AppFunctions.c",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 18951,
+						"buffer_size": 17573,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								8280,
-								8285
+								15556,
+								15556
 							]
 						],
 						"settings":
@@ -871,7 +843,36 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 4891.0,
+						"translation.y": 10403.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "App.h.dump",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6445,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5330,
+								5330
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1566.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
