@@ -75,8 +75,10 @@ void App_Initiate(void)
 
 	g_u8AppCtrl = APPCTRL_NO_ACTION;
 
+// #ifndef NOFLASH
 	// Initiate the audio playback.
 	Playback_Initiate();
+// #endif
 
 	// Initiate the buffer control from MIC.
 	MicGetApp_Initiate(&g_sApp.Mic_MD4.sMicGetApp);
@@ -85,7 +87,9 @@ void App_Initiate(void)
 	NVIC_SetPriority(ULTRAIO_TMR_IRQ, 0);
 	#endif
 
+#ifndef NOFLASH
 	u8TotalAudioNum= AudioRom_GetAudioNum( SPIFlash_ReadDataCallback, 0 );
+#endif
 
 	g_sApp.u32AudioStartAddr=0;
 
@@ -167,6 +171,7 @@ BOOL App_StartPlay(UINT32 u32PlayID)
 	// The ROM file is placed on SPI Flash address "g_sApp.u32AudioStartAddr".
 	// And decode the first frame of PCMs.
 
+#ifndef NOFLASH
 	MicGetApp_StopRec(&g_sApp.Mic_MD4.sMicGetApp);	//2017-9-5 hwh  stop mic
 
 	MD4App_DecodeInitiate(&g_sApp.Mic_MD4.asMD4App, NULL, 0);
@@ -179,7 +184,7 @@ BOOL App_StartPlay(UINT32 u32PlayID)
 
 	// Start to playback audio.
 	Playback_StartPlay();
-
+#endif
 	return TRUE;
 }
 
@@ -193,6 +198,7 @@ BOOL App_StartPlay(UINT32 u32PlayID)
 //---------------------------------------------------------------------------------------------------------
 BOOL App_StopPlay(void)
 {
+#ifndef NOFLASH
 	// Stop speaker.
 	Playback_StopPlay();
 
@@ -200,6 +206,7 @@ BOOL App_StopPlay(void)
 
 	// Stop Ultraio Timer & HW pwm.
 	ULTRAIO_STOP();
+#endif
 
 	return TRUE;
 }
@@ -344,7 +351,7 @@ void App_Process(void)
 #ifdef USEALLCMD
 						case 3:	//请摇头
 							// GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | WAVEON);
-							GPIO_SET_BIT(PA, FANON);
+							GPIO_SET_BIT(PA, WAVEON);
 							// vr_time = 0;
 							u8CMDforMCU = i32ID;
 							SendCMD(u8CMDforMCU);

@@ -169,7 +169,8 @@ typedef struct		//
 #define USEWAKEUP 0
 #define ALLCMD 1
 
-// #define USEALLCMD
+#define NOFLASH
+#define USEALLCMD
 // #ifdef USEALLCMD
 // #endif
 

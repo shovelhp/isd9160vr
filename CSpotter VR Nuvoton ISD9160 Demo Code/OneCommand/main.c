@@ -383,8 +383,10 @@ INT32 main()
 
 	CLK_EnableLDO(CLK_LDOSEL_3_3V);		// Enable interl 3.3 LDO.
 
+#ifndef NOFLASH
 	if (! SPIFlash_Initiate())				// Initiate SPI interface and checking flows for accessing SPI flash.
 	while(USEFLASH); 												// loop here for easy debug
+#endif
 	
 
 	OUTPUTPIN_INITIATE();							// Initiate output pin configuration.
