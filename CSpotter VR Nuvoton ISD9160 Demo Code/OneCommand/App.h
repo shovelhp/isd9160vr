@@ -170,7 +170,7 @@ typedef struct		//
 #define ALLCMD 1
 
 #define NOFLASH
-#define USEALLCMD
+// #define USEALLCMD
 // #ifdef USEALLCMD
 // #endif
 
