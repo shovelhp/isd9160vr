@@ -58,6 +58,8 @@ extern pwm_type pwm1;
 extern uint8_t Fan_Stauts;
 extern volatile uint8_t flag_1p25ms;
 extern volatile uint8_t sendbline;
+extern volatile uint8_t flag_150ms;
+extern volatile uint8_t flag_0p5ms;
 
 //---------------------------------------------------------------------------------------------------------
 // Function: App_Initiate
@@ -87,7 +89,8 @@ void App_Initiate(void)
 	NVIC_SetPriority(ULTRAIO_TMR_IRQ, 0);
 	#endif
 
-#ifndef NOFLASH
+//#ifndef NOFLASH
+#if USEFLASH
 	u8TotalAudioNum= AudioRom_GetAudioNum( SPIFlash_ReadDataCallback, 0 );
 #endif
 
@@ -171,7 +174,8 @@ BOOL App_StartPlay(UINT32 u32PlayID)
 	// The ROM file is placed on SPI Flash address "g_sApp.u32AudioStartAddr".
 	// And decode the first frame of PCMs.
 
-#ifndef NOFLASH
+//#ifndef NOFLASH
+#if USEFLASH
 	MicGetApp_StopRec(&g_sApp.Mic_MD4.sMicGetApp);	//2017-9-5 hwh  stop mic
 
 	MD4App_DecodeInitiate(&g_sApp.Mic_MD4.asMD4App, NULL, 0);
@@ -198,7 +202,8 @@ BOOL App_StartPlay(UINT32 u32PlayID)
 //---------------------------------------------------------------------------------------------------------
 BOOL App_StopPlay(void)
 {
-#ifndef NOFLASH
+//#ifndef NOFLASH
+#if USEFLASH
 	// Stop speaker.
 	Playback_StopPlay();
 
@@ -247,8 +252,21 @@ void App_Process(void)
 	UINT16 u16GetSamples = 0;
 	//uint16_t u16CMDforMCU = 0;
 	uint8_t u8CMDforMCU = 0;
+	uint8_t flag_CMD = 0;
 //	static BOOL VR_flag = FALSE;
-
+#if DEBUGTIMER
+	// GPIO_TOGGLE_BIT(PA, FANON);
+	if(flag_150ms)
+	{
+		GPIO_TOGGLE_BIT(PA, WAVEON);
+		flag_150ms =  0;
+	}
+	if(flag_0p5ms)
+	{
+		GPIO_TOGGLE_BIT(PA, FANON);
+		flag_0p5ms =  0;
+	}
+#endif
 	// Play response
 	if (vr_time<=0)
 	{
@@ -290,9 +308,11 @@ void App_Process(void)
 				}
 				// GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | VRTIMELED);
 				GPIO_SET_BIT(PA, VRTIMELED);
+#if USEUART
 				printf("\n");
 				printf("Command is : %s\n", AudioResStr[i32ID]);
 				printf("%s\n", AudioOptStr[i32ID]);
+#endif				
 			}
 			else if(vr_time)	//在唤醒计时内
 			{
@@ -306,14 +326,15 @@ void App_Process(void)
 						//pwm0.Duty = PWM_DUTY_INIT;
 						//printf("Fan on!\n");
 						//App_StartPlay(1);
-						printf("Command is : %s\n", AudioResStr[i32ID]);
+						// printf("Command is : %s\n", AudioResStr[i32ID]);
 						//u16CMDforMCU = i32ID;
 						u8CMDforMCU = i32ID;
-						SendCMD(u8CMDforMCU);
+						flag_CMD = 1;
+						//SendCMD(u8CMDforMCU);
 						Fan_Stauts = FAN_RUNING;
 						vr_time = 0;
-						App_StartPlay(i32ID);
-						printf("%s\n", AudioOptStr[i32ID]);
+						//App_StartPlay(i32ID);
+						//printf("%s\n", AudioOptStr[i32ID]);
 					}
 				}
 				else
@@ -333,7 +354,7 @@ void App_Process(void)
 							printf("%s\n", AudioOptStr[i32ID]);
 						break;*/
 						case 2:	//关风扇
-							printf("Command is : %s\n", AudioResStr[i32ID]);
+							// printf("Command is : %s\n", AudioResStr[i32ID]);
 							// GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~FANON));
 							// GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~WAVEON));
 							GPIO_CLR_BIT(PA, FANON);
@@ -343,29 +364,32 @@ void App_Process(void)
 							pwm0.Duty = 0;
 							vr_time = 0;
 							u8CMDforMCU = i32ID;
-							SendCMD(u8CMDforMCU);
+							flag_CMD = 1;
+							// SendCMD(u8CMDforMCU);
 							Fan_Stauts = FAN_CLOSED;
-							App_StartPlay(i32ID);
-							printf("%s\n", AudioOptStr[i32ID]);
+							// App_StartPlay(i32ID);
+							// printf("%s\n", AudioOptStr[i32ID]);
 						break;
-#ifdef USEALLCMD
+#if USEALLCMD
 						case 3:	//请摇头
 							// GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | WAVEON);
 							GPIO_SET_BIT(PA, WAVEON);
 							// vr_time = 0;
 							u8CMDforMCU = i32ID;
-							SendCMD(u8CMDforMCU);
-							App_StartPlay(i32ID);
-							printf("%s\n", AudioOptStr[i32ID]);
+							flag_CMD = 1;
+							// SendCMD(u8CMDforMCU);
+							// App_StartPlay(i32ID);
+							// printf("%s\n", AudioOptStr[i32ID]);
 						break;
 						case 4:	//关摇头
 							// GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~WAVEON));
 							GPIO_CLR_BIT(PA, WAVEON);
 							// vr_time = 0;
 							u8CMDforMCU = i32ID;
-							SendCMD(u8CMDforMCU);
-							App_StartPlay(i32ID);
-							printf("%s\n", AudioOptStr[i32ID]);
+							flag_CMD = 1;
+							// SendCMD(u8CMDforMCU);
+							// App_StartPlay(i32ID);
+							// printf("%s\n", AudioOptStr[i32ID]);
 						break;
 						case 5://增加风量
 							// GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | WINDUP);
@@ -385,9 +409,10 @@ void App_Process(void)
 						  	}
 							// vr_time = 0;
 							u8CMDforMCU = i32ID;
-							SendCMD(u8CMDforMCU);
-							App_StartPlay(i32ID);
-							printf("%s\n", AudioOptStr[i32ID]);
+							flag_CMD = 1;
+							// SendCMD(u8CMDforMCU);
+							// App_StartPlay(i32ID);
+							// printf("%s\n", AudioOptStr[i32ID]);
 						break;
 						case 6://减少风量
 							// GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | WINDDOWN);
@@ -408,9 +433,10 @@ void App_Process(void)
 							}
 							// vr_time = 0;
 							u8CMDforMCU = i32ID;
-							SendCMD(u8CMDforMCU);
-							App_StartPlay(i32ID);
-							printf("%s\n", AudioOptStr[i32ID]);
+							flag_CMD = 1;
+							// SendCMD(u8CMDforMCU);
+							// App_StartPlay(i32ID);
+							// printf("%s\n", AudioOptStr[i32ID]);
 						break;
 						case 7://增加定时
 							// GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | TIMEADD);
@@ -430,9 +456,10 @@ void App_Process(void)
 							}
 							// vr_time = 0;
 							u8CMDforMCU = i32ID;
-							SendCMD(u8CMDforMCU);
-							App_StartPlay(i32ID);
-							printf("%s\n", AudioOptStr[i32ID]);
+							flag_CMD = 1;
+							// SendCMD(u8CMDforMCU);
+							// App_StartPlay(i32ID);
+							// printf("%s\n", AudioOptStr[i32ID]);
 						break;
 						case 8://减少定时
 							// GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | TIMESUB);
@@ -453,14 +480,17 @@ void App_Process(void)
 							}
 							// vr_time = 0;
 							u8CMDforMCU = i32ID;
-							SendCMD(u8CMDforMCU);
-							App_StartPlay(i32ID);
-							printf("%s\n", AudioOptStr[i32ID]);
+							flag_CMD = 1;
+							// SendCMD(u8CMDforMCU);
+							// App_StartPlay(i32ID);
+							// printf("%s\n", AudioOptStr[i32ID]);
 						break;
 #endif
 						default:
 							//App_StartPlay(i32ID);//播放对应回应声音
-							printf("%s\n", AudioResStr[i32ID]);//串口打印命令内容
+							// printf("%s\n", AudioResStr[i32ID]);//串口打印命令内容
+							u8CMDforMCU = i32ID;
+							flag_CMD = 0;
 						break;
 					}
 				}
@@ -472,9 +502,20 @@ void App_Process(void)
 				//if(i32ID < 11)	 App_StartPlay(i32ID+1);	//播放
 				//uart_send(vr_uart_send(i32ID+32), 4);
 			}
-			else return;
+		// else return;
 
 		}
+	}
+	if(flag_CMD)
+	{
+		while(!flag_150ms);
+	}
+	if(flag_150ms)
+	{
+		SendCMD(u8CMDforMCU, flag_CMD);
+		// App_StartPlay(i32ID);
+		// printf("%s\n", AudioOptStr[i32ID]);
+		flag_150ms = 0;
 	}
 }
 
@@ -686,7 +727,7 @@ void SendCMD1time(uint8_t u8CMDforMCU, uint8_t u8SendTimes)
 	SendCMDByteTimer(u8CRC);
 	return;
 }
-
+/*
 void SendCMD(uint8_t u8CMDforMCU)
 {//send command 3 times
 	uint8_t u8SendTimes = 1;
@@ -697,3 +738,62 @@ void SendCMD(uint8_t u8CMDforMCU)
 	}
 	return;
 }
+*/
+void SendCMDNULL(void)
+{
+	uint8_t time2ms = TIME2MSINIT;
+	// flag_0p5ms = 0;
+	sendbline = 1;
+	// TIMER_Start(TIMER1);
+	while(!flag_0p5ms);
+	while(time2ms--)
+	{
+		sendbline = 0;
+		flag_0p5ms = 0;
+		while(!flag_0p5ms);
+		//time20ms--;
+	}
+	sendbline = 1;
+	flag_0p5ms = 0;
+	while(!flag_0p5ms);
+	sendbline = 0;
+	flag_0p5ms = 0;
+	while(!flag_0p5ms);
+	sendbline = 1;
+	flag_0p5ms = 0;
+	while(!flag_0p5ms);
+	sendbline = 0;
+	flag_0p5ms = 0;
+	while(!flag_0p5ms);
+	sendbline = 0;
+	flag_0p5ms = 0;
+	while(!flag_0p5ms);
+	sendbline = 1;
+	flag_0p5ms = 0;
+	//TIMER_Stop(TIMER1);
+	return;
+}
+
+void SendCMD(uint8_t u8CMDforMCU, uint8_t flag_CMD)
+{//send command 3 times
+	uint8_t u8SendTimes = 1;
+	if (flag_CMD)
+	{
+		for (u8SendTimes = 1; u8SendTimes <= SENDCMDTIMES ; u8SendTimes++)
+		{
+			SendCMD1time(u8CMDforMCU, u8SendTimes);
+			delayms(CMDGAPTIME);
+		}
+		App_StartPlay(i32ID);
+#if USEUART
+		printf("Command is : %s\n", AudioResStr[i32ID]);
+		printf("%s\n", AudioOptStr[i32ID]);
+#endif		
+	}
+	else
+	{
+		SendCMDNULL();
+	}
+	return;
+}
+

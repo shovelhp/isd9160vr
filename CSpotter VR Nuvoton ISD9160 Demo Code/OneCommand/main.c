@@ -56,6 +56,8 @@ pwm_type pwm0;
 pwm_type pwm1;
 volatile uint8_t flag_1p25ms = 0;
 volatile uint8_t sendbline = 1;
+volatile uint8_t flag_150ms = 0;
+volatile uint8_t flag_0p5ms = 0;
 
 UINT8 SPIFlash_Initiate(void)
 { 
@@ -244,11 +246,10 @@ void TMR0_IRQHandler(void)
 	else
 	{
 		time_10ms=10;
-		
-		PB_PIN_STA <<=1;
+/*		PB_PIN_STA <<=1;
 		if(((PB->PIN)&(1<<6))==0)	PB_PIN_STA+=1;
 		
-		if (PB_PIN_STA==0xfF00)	spk_sta++;
+		if (PB_PIN_STA==0xfF00)	spk_sta++;*/
 	}
 	
 	if(ap_uart0.uart_rx_time)	ap_uart0.uart_rx_time --;
@@ -260,24 +261,38 @@ void TMR0_IRQHandler(void)
 void TMR1_IRQHandler(void)
 {//timer1 irq, set 1.25ms flag, change signal line status
 	static uint8_t time_1p25ms = 0;
+	static uint8_t time_0p5ms = 0;
+	static uint8_t time_150ms=0;
 	//uint32_t PAdata = 0;
 	if(time_1p25ms)	
 		time_1p25ms--;
 	else
 	{
-		time_1p25ms = 10;
+		time_1p25ms = TIME1P25MSINIT;
 		flag_1p25ms = 1;
-		/*PAdata = GPIO_GET_OUT_DATA(PA) & (~BIT4);
-		PAdata |= (~GPIO_GET_OUT_DATA(PA) & BIT4);
-		GPIO_SET_OUT_DATA(PA, PAdata);*/
-		if(sendbline)
-			// GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | SCMDLINE1);
-			GPIO_SET_BIT(PA, SCMDLINE1);
+		if(time_150ms)
+			time_150ms--;
 		else
-			// GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~SCMDLINE1));
-			GPIO_CLR_BIT(PA, SCMDLINE1);
+		{
+			time_150ms = TIME150MSINIT;
+			flag_150ms = 1;
+		}
 	}
-    TIMER_ClearIntFlag(TIMER1);	
+	if(time_0p5ms)	
+		time_0p5ms--;
+	else
+	{
+		time_0p5ms = TIME0P5MSINIT;
+		flag_0p5ms = 1;
+	}
+	if(sendbline)
+	// GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | SCMDLINE1);
+		GPIO_SET_BIT(PA, SCMDLINE1);
+	else
+	// GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~SCMDLINE1));
+		GPIO_CLR_BIT(PA, SCMDLINE1);
+
+	TIMER_ClearIntFlag(TIMER1);	
 }
 
 void UART0_IRQHandler(void)   ////modify 20170804
@@ -383,7 +398,8 @@ INT32 main()
 
 	CLK_EnableLDO(CLK_LDOSEL_3_3V);		// Enable interl 3.3 LDO.
 
-#ifndef NOFLASH
+//#ifndef NOFLASH
+#if USEFLASH
 	if (! SPIFlash_Initiate())				// Initiate SPI interface and checking flows for accessing SPI flash.
 	while(USEFLASH); 												// loop here for easy debug
 #endif
@@ -425,9 +441,11 @@ INT32 main()
 //	GPIO_SetMode(PA, 12, GPIO_MODE_OUTPUT);
 	
 	//App_StartPlay(0);
+#if USEUART
 	printf("\n\n");
 	printf("INIT Finished!\n");
 	printf("Starting VR...\n");
+#endif
 	while (1)
 	{
 		

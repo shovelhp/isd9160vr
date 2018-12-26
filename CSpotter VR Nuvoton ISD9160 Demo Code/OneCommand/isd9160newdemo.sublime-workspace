@@ -536,15 +536,6 @@
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
-		},
-		{
-			"file": "App.h.dump",
-			"settings":
-			{
-				"buffer_size": 6682,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
 		}
 	],
 	"build_system": "",
@@ -609,11 +600,13 @@
 	],
 	"file_history":
 	[
+		"/Z/ghp/temp/ina220/ina220arduino/ina220.h",
+		"/Z/ghp/temp/ina220/ina220arduino/ina220.cpp",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/App.h.dump",
 		"/Z/ghp/temp/sdramerr.txt",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/App.h",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/inc/Framework.h",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/src/MicSpk.c",
-		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/App.h.dump",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/src/Playback.c",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/AppFunctions.c",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/MD4App/MD4App.c",
@@ -734,9 +727,7 @@
 		"/E/shovelhpwork/hinoc/cpu/Hi401_ctrl/spi.txt",
 		"/E/shovelhpwork/hinoc/cpu/pllswitch/sw_pll/boot_spi.c",
 		"/Z/#Test/201711江苏信道测试/数据/分支分配器/201711JSYX/NJ-JKXC-S11.set",
-		"/Z/IC_design_group/DINI/DNIOB_SFP/DNIOB_SFP/5SGXEAB_N2_C3/fpga_a.rbf",
-		"/E/shovelhpwork/quartus/Dini_En1460_pku_daclkout/Dini_En1460_pku.qsf",
-		"/E/shovelhpwork/quartus/EP4CE30F23C6_en1460_rc1_0820_ChangeFreq_FilterAdj_IQCorrect/RFXIAO_TEST.qsf"
+		"/Z/IC_design_group/DINI/DNIOB_SFP/DNIOB_SFP/5SGXEAB_N2_C3/fpga_a.rbf"
 	],
 	"find":
 	{
@@ -834,40 +825,13 @@
 						],
 						"settings":
 						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
 							"syntax": "Packages/C++/C.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 5918.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "App.h.dump",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6682,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5584,
-								5584
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2227.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -915,7 +879,7 @@
 	"project": "isd9160newdemo.sublime-project",
 	"replace":
 	{
-		"height": 67.0
+		"height": 50.0
 	},
 	"save_all_on_build": true,
 	"select_file":
