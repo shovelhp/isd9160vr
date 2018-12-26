@@ -177,10 +177,11 @@ typedef struct		//
 
 //#define NOFLASH
 
-#define ADC_PGA_GAIN_USE 800  //800,2600
-#define ADC_ALC_TARLEV_USE -750  //-750,-600
-#define ADC_ALCCTL_NGTH_USE ADC_ALCCTL_NGTH7  //7,4
-#define ADC_MICBSEL_USE ADC_MICBSEL_17V //ADC_MICBSEL_90_VCCA
+#define ADC_PGA_GAIN_USE 3525  //800,2600, -1200~3525, step75
+#define ADC_ALC_TARLEV_USE -750  //-750,-600, -600~-2850, step150
+#define ADC_ALCCTL_NGTH_USE ADC_ALCCTL_NGTH7  //7,4, 0~7
+#define ADC_MICBSEL_USE ADC_MICBSEL_17V //ADC_MICBSEL_90_VCCA, acd.h
+#define USEADCALC 0
 
 void delay1p25ms(void);
 void delayms(uint32_t ms);
