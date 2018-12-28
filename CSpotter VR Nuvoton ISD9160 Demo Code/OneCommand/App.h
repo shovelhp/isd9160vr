@@ -168,18 +168,19 @@ typedef struct		//
 #define SENDTIMEOFFSET 4
 #define SENDCMDTIMES 3
 #define CMDGAPTIME 50
-
-#define USEFLASH 1
-#define USEWAKEUP 0
-#define USEALLCMD 0
 #define DEBUGTIMER 0
-#define USEUART 0
-#define USEEX32K 0
-#define USEDUMYCMD 0
+
+//Compile Parameter
+#define USEFLASH 0 		//if use external flash and voice response
+#define USEWAKEUP 0		//if use wakeup voice to turn on the fan
+#define USEALLCMD 0		//if use all commands on list
+#define USEUART 0		//if use uart to see VR result
+#define USEEX32K 0		//if use external 32.768k xtal
+#define USEDUMYCMD 0	//if send dumy command in 150ms
 
 //#define NOFLASH
 
-#define ADC_PGA_GAIN_USE 3300  //800,2600, -1200~3525, step75
+#define ADC_PGA_GAIN_USE 3525  //800,2600, -1200~3525, step75
 #define ADC_PGACTL_BOSST_GAIN_USE ADC_PGACTL_BOSST_GAIN_26DB //ADC_PGACTL_BOSST_GAIN_26DB£¬ADC_PGACTL_BOSST_GAIN_0DB
 #define ADC_ALC_TARLEV_USE -750  //-750,-600, -600~-2850, step150
 #define ADC_ALCCTL_NGTH_USE ADC_ALCCTL_NGTH7  //7,4, 0~7

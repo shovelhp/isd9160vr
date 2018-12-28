@@ -3618,9 +3618,9 @@
       </Doc>
       <Doc>
         <Name>..\AppFunctions.c</Name>
-        <ColumnNumber>5</ColumnNumber>
+        <ColumnNumber>43</ColumnNumber>
         <TopLine>269</TopLine>
-        <CurrentLine>272</CurrentLine>
+        <CurrentLine>275</CurrentLine>
         <Folding>1</Folding>
         <ContractedFolders></ContractedFolders>
         <PaneID>0</PaneID>
@@ -3628,7 +3628,7 @@
       <Doc>
         <Name>..\App.h</Name>
         <ColumnNumber>24</ColumnNumber>
-        <TopLine>159</TopLine>
+        <TopLine>161</TopLine>
         <CurrentLine>168</CurrentLine>
         <Folding>1</Folding>
         <ContractedFolders></ContractedFolders>
