@@ -58,8 +58,10 @@ extern pwm_type pwm1;
 extern uint8_t Fan_Stauts;
 extern volatile uint8_t flag_1p25ms;
 extern volatile uint8_t sendbline;
+#if USEDUMYCMD
 extern volatile uint8_t flag_150ms;
 extern volatile uint8_t flag_0p5ms;
+#endif
 
 //---------------------------------------------------------------------------------------------------------
 // Function: App_Initiate
@@ -506,6 +508,7 @@ void App_Process(void)
 
 		}
 	}
+#if USEDUMYCMD	
 	if(flag_CMD)
 	{
 		while(!flag_150ms);
@@ -517,6 +520,10 @@ void App_Process(void)
 		// printf("%s\n", AudioOptStr[i32ID]);
 		flag_150ms = 0;
 	}
+#else
+		SendCMD(u8CMDforMCU, flag_CMD);
+#endif
+		return;
 }
 
 
@@ -739,6 +746,7 @@ void SendCMD(uint8_t u8CMDforMCU)
 	return;
 }
 */
+#if USEDUMYCMD
 void SendCMDNULL(void)
 {
 	uint8_t time2ms = TIME2MSINIT;
@@ -773,6 +781,7 @@ void SendCMDNULL(void)
 	//TIMER_Stop(TIMER1);
 	return;
 }
+#endif
 
 void SendCMD(uint8_t u8CMDforMCU, uint8_t flag_CMD)
 {//send command 3 times
@@ -790,10 +799,12 @@ void SendCMD(uint8_t u8CMDforMCU, uint8_t flag_CMD)
 		printf("%s\n", AudioOptStr[i32ID]);
 #endif		
 	}
+#if USEDUMYCMD
 	else
 	{
 		SendCMDNULL();
 	}
+#endif	
 	return;
 }
 

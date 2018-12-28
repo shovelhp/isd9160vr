@@ -23,7 +23,11 @@ UINT32 SysClk_InitiateRC(UINT32 u32SystemClk)
 	UINT32 u32SysClkDiv;
 	
 	/* Enable External XTL32K, OSC49M, OSC10K */
+#if USEEX32K
 	CLK_EnableXtalRC(CLK_PWRCTL_LXTEN_Msk|CLK_PWRCTL_HIRCEN_Msk|CLK_PWRCTL_LIRCEN_Msk);
+#else
+	CLK_EnableXtalRC(CLK_PWRCTL_HIRCEN_Msk|CLK_PWRCTL_LIRCEN_Msk);
+#endif
 
 	/* Switch HCLK clock source to HXT */
 	if( u32SystemClk == (32*1000000UL) )

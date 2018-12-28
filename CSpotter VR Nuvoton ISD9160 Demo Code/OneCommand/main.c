@@ -56,8 +56,10 @@ pwm_type pwm0;
 pwm_type pwm1;
 volatile uint8_t flag_1p25ms = 0;
 volatile uint8_t sendbline = 1;
+#if USEDUMYCMD
 volatile uint8_t flag_150ms = 0;
 volatile uint8_t flag_0p5ms = 0;
+#endif
 
 UINT8 SPIFlash_Initiate(void)
 { 
@@ -261,8 +263,10 @@ void TMR0_IRQHandler(void)
 void TMR1_IRQHandler(void)
 {//timer1 irq, set 1.25ms flag, change signal line status
 	static uint8_t time_1p25ms = 0;
+#if USEDUMYCMD
 	static uint8_t time_0p5ms = 0;
 	static uint8_t time_150ms=0;
+#endif		
 	//uint32_t PAdata = 0;
 	if(time_1p25ms)	
 		time_1p25ms--;
@@ -270,6 +274,7 @@ void TMR1_IRQHandler(void)
 	{
 		time_1p25ms = TIME1P25MSINIT;
 		flag_1p25ms = 1;
+#if USEDUMYCMD
 		if(time_150ms)
 			time_150ms--;
 		else
@@ -277,7 +282,9 @@ void TMR1_IRQHandler(void)
 			time_150ms = TIME150MSINIT;
 			flag_150ms = 1;
 		}
+#endif		
 	}
+#if USEDUMYCMD
 	if(time_0p5ms)	
 		time_0p5ms--;
 	else
@@ -285,6 +292,7 @@ void TMR1_IRQHandler(void)
 		time_0p5ms = TIME0P5MSINIT;
 		flag_0p5ms = 1;
 	}
+#endif		
 	if(sendbline)
 	// GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) | SCMDLINE1);
 		GPIO_SET_BIT(PA, SCMDLINE1);
