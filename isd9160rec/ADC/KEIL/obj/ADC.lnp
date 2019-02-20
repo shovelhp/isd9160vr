@@ -1,0 +1,16 @@
+--cpu Cortex-M0
+".\obj\startup_isd9100.o"
+".\obj\system_isd9100.o"
+".\obj\main.o"
+".\obj\retarget.o"
+".\obj\sys.o"
+".\obj\clk.o"
+".\obj\adc.o"
+".\obj\dpwm.o"
+".\obj\biq.o"
+".\obj\gpio.o"
+".\obj\uart.o"
+--ro-base 0x00000000 --entry 0x00000000 --rw-base 0x20000000 --entry Reset_Handler --first __Vectors --strict
+--map --first='startup_ISD9100.o(RESET)' --datacompressor=off --info=inline --entry Reset_Handler --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\lst\ADC.map" -o .\obj\ADC.axf

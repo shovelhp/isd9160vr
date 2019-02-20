@@ -176,7 +176,7 @@ typedef struct		//
 #define USEALLCMD 0		//if use all commands on list
 #define USEUART 0		//if use uart to see VR result
 #define USEEX32K 0		//if use external 32.768k xtal
-#define USEDUMYCMD 0	//if send dumy command in 150ms
+#define USEDUMYCMD 1	//if send dumy command in 150ms
 
 //#define NOFLASH
 

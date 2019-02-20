@@ -1,0 +1,52 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.25.3.0
+Copyright (C) 2018 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Haipeng Guo, PKU, LIC=9WSNN-YS047-PCEJ8-3AS66-0VQYN-ZC1AL
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.26.2.0
+Toolchain Path:  d:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.26.2.0
+Dialog DLL:      DARMCM1.DLL V1.19.1.0
+Target DLL:      Nu_Link.dll V2.04
+Dialog DLL:      TARMCM1.DLL V1.14.0.0
+ 
+<h2>Project:</h2>
+F:\shovelhp\Documents\GitHub\ISD9100BSP_CMSIS_V3.01.001\SampleCode\StdDriver\ADC\KEIL\ADC.uvproj
+Project File Date:  02/01/2019
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'd:\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'ADC'
+assembling startup_ISD9100.s...
+compiling system_ISD9100.c...
+compiling retarget.c...
+compiling main.c...
+..\main.c(263): warning:  #177-D: variable "u8Option"  was declared but never referenced
+  	uint8_t u8Option;
+..\main.c: 1 warning, 0 errors
+compiling SYS.c...
+compiling CLK.c...
+compiling ADC.c...
+compiling DPWM.c...
+compiling BIQ.c...
+compiling UART.c...
+compiling GPIO.c...
+linking...
+Program Size: Code=3888 RO-data=224 RW-data=80 ZI-data=1648  
+After Build - User command #1: fromelf --bin ".\obj\ADC.axf" --output ".\obj\ADC.bin"
+After Build - User command #2: fromelf --text -c ".\obj\ADC.axf" --output ".\obj\ADC.txt"
+".\obj\ADC.axf" - 0 Error(s), 1 Warning(s).
+Build Time Elapsed:  00:00:04
+</pre>
+</body>
+</html>

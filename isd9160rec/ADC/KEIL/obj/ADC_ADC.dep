@@ -1,0 +1,296 @@
+Dependencies for Project 'ADC', Target 'ADC': (DO NOT MODIFY !)
+F (startup_ISD9100.s)(0x55879F52)(--cpu Cortex-M0 -g --16 --apcs=interwork -Id:\Keil_v5\ARM\RV31\INC-Id:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 525"--list .\lst\startup_isd9100.lst --xref -o .\obj\startup_isd9100.o --depend .\obj\startup_isd9100.d)
+F (..\..\..\..\Library\Device\Nuvoton\ISD9100\Source\system_ISD9100.c)(0x55879F45)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I ..\..\..\..\Library\CMSIS\Include -I ..\..\..\..\Library\Device\Nuvoton\ISD9100\Include -I ..\..\..\..\Library\StdDriver\inc-Id:\Keil_v5\ARM\RV31\INC-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\obj\system_isd9100.o --omf_browse .\obj\system_isd9100.crf --depend .\obj\system_isd9100.d)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\..\..\..\Library\Device\Nuvoton\ISD9100\Include\ISD9100.h)(0x55879F43)
+I (..\..\..\..\Library\CMSIS\Include\core_cm0.h)(0x55879F3F)
+I (..\..\..\..\Library\CMSIS\Include\core_cmInstr.h)(0x55879F3F)
+I (..\..\..\..\Library\CMSIS\Include\core_cmFunc.h)(0x55879F3F)
+I (..\..\..\..\Library\Device\Nuvoton\ISD9100\Include\system_ISD9100.h)(0x55879F44)
+I (..\..\..\..\Library\StdDriver\inc\acmp.h)(0x55879F47)
+I (..\..\..\..\Library\StdDriver\inc\adc.h)(0x55879F48)
+I (..\..\..\..\Library\StdDriver\inc\biq.h)(0x55879F49)
+I (..\..\..\..\Library\StdDriver\inc\bod.h)(0x55879F4A)
+I (..\..\..\..\Library\StdDriver\inc\capsense.h)(0x55879F4B)
+I (..\..\..\..\Library\StdDriver\inc\clk.h)(0x55879F4B)
+I (..\..\..\..\Library\StdDriver\inc\crc.h)(0x55879F4B)
+I (..\..\..\..\Library\StdDriver\inc\dpwm.h)(0x55879F4B)
+I (..\..\..\..\Library\StdDriver\inc\fmc.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\gpio.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\i2c.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\i2s.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\osc.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\pdma.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\pwm.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\rtc.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\spi.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\sys.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\talarm.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\timer.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\uart.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\wdt.h)(0x55879F4D)
+F (..\main.c)(0x5C6A0DAB)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I ..\..\..\..\Library\CMSIS\Include -I ..\..\..\..\Library\Device\Nuvoton\ISD9100\Include -I ..\..\..\..\Library\StdDriver\inc-Id:\Keil_v5\ARM\RV31\INC-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\obj\main.o --omf_browse .\obj\main.crf --depend .\obj\main.d)
+I (d:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
+I (d:\Keil_v5\ARM\ARMCC\include\string.h)(0x599EDB3C)
+I (..\..\..\..\Library\Device\Nuvoton\ISD9100\Include\ISD9100.h)(0x55879F43)
+I (..\..\..\..\Library\CMSIS\Include\core_cm0.h)(0x55879F3F)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\..\..\..\Library\CMSIS\Include\core_cmInstr.h)(0x55879F3F)
+I (..\..\..\..\Library\CMSIS\Include\core_cmFunc.h)(0x55879F3F)
+I (..\..\..\..\Library\Device\Nuvoton\ISD9100\Include\system_ISD9100.h)(0x55879F44)
+I (..\..\..\..\Library\StdDriver\inc\acmp.h)(0x55879F47)
+I (..\..\..\..\Library\StdDriver\inc\adc.h)(0x55879F48)
+I (..\..\..\..\Library\StdDriver\inc\biq.h)(0x55879F49)
+I (..\..\..\..\Library\StdDriver\inc\bod.h)(0x55879F4A)
+I (..\..\..\..\Library\StdDriver\inc\capsense.h)(0x55879F4B)
+I (..\..\..\..\Library\StdDriver\inc\clk.h)(0x55879F4B)
+I (..\..\..\..\Library\StdDriver\inc\crc.h)(0x55879F4B)
+I (..\..\..\..\Library\StdDriver\inc\dpwm.h)(0x55879F4B)
+I (..\..\..\..\Library\StdDriver\inc\fmc.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\gpio.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\i2c.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\i2s.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\osc.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\pdma.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\pwm.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\rtc.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\spi.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\sys.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\talarm.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\timer.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\uart.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\wdt.h)(0x55879F4D)
+F (..\..\..\..\Library\StdDriver\src\retarget.c)(0x55879F4F)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I ..\..\..\..\Library\CMSIS\Include -I ..\..\..\..\Library\Device\Nuvoton\ISD9100\Include -I ..\..\..\..\Library\StdDriver\inc-Id:\Keil_v5\ARM\RV31\INC-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\obj\retarget.o --omf_browse .\obj\retarget.crf --depend .\obj\retarget.d)
+I (d:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
+I (..\..\..\..\Library\Device\Nuvoton\ISD9100\Include\ISD9100.h)(0x55879F43)
+I (..\..\..\..\Library\CMSIS\Include\core_cm0.h)(0x55879F3F)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\..\..\..\Library\CMSIS\Include\core_cmInstr.h)(0x55879F3F)
+I (..\..\..\..\Library\CMSIS\Include\core_cmFunc.h)(0x55879F3F)
+I (..\..\..\..\Library\Device\Nuvoton\ISD9100\Include\system_ISD9100.h)(0x55879F44)
+I (..\..\..\..\Library\StdDriver\inc\acmp.h)(0x55879F47)
+I (..\..\..\..\Library\StdDriver\inc\adc.h)(0x55879F48)
+I (..\..\..\..\Library\StdDriver\inc\biq.h)(0x55879F49)
+I (..\..\..\..\Library\StdDriver\inc\bod.h)(0x55879F4A)
+I (..\..\..\..\Library\StdDriver\inc\capsense.h)(0x55879F4B)
+I (..\..\..\..\Library\StdDriver\inc\clk.h)(0x55879F4B)
+I (..\..\..\..\Library\StdDriver\inc\crc.h)(0x55879F4B)
+I (..\..\..\..\Library\StdDriver\inc\dpwm.h)(0x55879F4B)
+I (..\..\..\..\Library\StdDriver\inc\fmc.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\gpio.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\i2c.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\i2s.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\osc.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\pdma.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\pwm.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\rtc.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\spi.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\sys.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\talarm.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\timer.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\uart.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\wdt.h)(0x55879F4D)
+F (..\..\..\..\Library\StdDriver\src\SYS.c)(0x55879F50)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I ..\..\..\..\Library\CMSIS\Include -I ..\..\..\..\Library\Device\Nuvoton\ISD9100\Include -I ..\..\..\..\Library\StdDriver\inc-Id:\Keil_v5\ARM\RV31\INC-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\obj\sys.o --omf_browse .\obj\sys.crf --depend .\obj\sys.d)
+I (..\..\..\..\Library\Device\Nuvoton\ISD9100\Include\ISD9100.h)(0x55879F43)
+I (..\..\..\..\Library\CMSIS\Include\core_cm0.h)(0x55879F3F)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\..\..\..\Library\CMSIS\Include\core_cmInstr.h)(0x55879F3F)
+I (..\..\..\..\Library\CMSIS\Include\core_cmFunc.h)(0x55879F3F)
+I (..\..\..\..\Library\Device\Nuvoton\ISD9100\Include\system_ISD9100.h)(0x55879F44)
+I (..\..\..\..\Library\StdDriver\inc\acmp.h)(0x55879F47)
+I (..\..\..\..\Library\StdDriver\inc\adc.h)(0x55879F48)
+I (..\..\..\..\Library\StdDriver\inc\biq.h)(0x55879F49)
+I (..\..\..\..\Library\StdDriver\inc\bod.h)(0x55879F4A)
+I (..\..\..\..\Library\StdDriver\inc\capsense.h)(0x55879F4B)
+I (..\..\..\..\Library\StdDriver\inc\clk.h)(0x55879F4B)
+I (..\..\..\..\Library\StdDriver\inc\crc.h)(0x55879F4B)
+I (..\..\..\..\Library\StdDriver\inc\dpwm.h)(0x55879F4B)
+I (..\..\..\..\Library\StdDriver\inc\fmc.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\gpio.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\i2c.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\i2s.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\osc.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\pdma.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\pwm.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\rtc.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\spi.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\sys.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\talarm.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\timer.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\uart.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\wdt.h)(0x55879F4D)
+F (..\..\..\..\Library\StdDriver\src\CLK.c)(0x55879F4E)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I ..\..\..\..\Library\CMSIS\Include -I ..\..\..\..\Library\Device\Nuvoton\ISD9100\Include -I ..\..\..\..\Library\StdDriver\inc-Id:\Keil_v5\ARM\RV31\INC-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\obj\clk.o --omf_browse .\obj\clk.crf --depend .\obj\clk.d)
+I (..\..\..\..\Library\Device\Nuvoton\ISD9100\Include\ISD9100.h)(0x55879F43)
+I (..\..\..\..\Library\CMSIS\Include\core_cm0.h)(0x55879F3F)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\..\..\..\Library\CMSIS\Include\core_cmInstr.h)(0x55879F3F)
+I (..\..\..\..\Library\CMSIS\Include\core_cmFunc.h)(0x55879F3F)
+I (..\..\..\..\Library\Device\Nuvoton\ISD9100\Include\system_ISD9100.h)(0x55879F44)
+I (..\..\..\..\Library\StdDriver\inc\acmp.h)(0x55879F47)
+I (..\..\..\..\Library\StdDriver\inc\adc.h)(0x55879F48)
+I (..\..\..\..\Library\StdDriver\inc\biq.h)(0x55879F49)
+I (..\..\..\..\Library\StdDriver\inc\bod.h)(0x55879F4A)
+I (..\..\..\..\Library\StdDriver\inc\capsense.h)(0x55879F4B)
+I (..\..\..\..\Library\StdDriver\inc\clk.h)(0x55879F4B)
+I (..\..\..\..\Library\StdDriver\inc\crc.h)(0x55879F4B)
+I (..\..\..\..\Library\StdDriver\inc\dpwm.h)(0x55879F4B)
+I (..\..\..\..\Library\StdDriver\inc\fmc.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\gpio.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\i2c.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\i2s.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\osc.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\pdma.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\pwm.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\rtc.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\spi.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\sys.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\talarm.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\timer.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\uart.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\wdt.h)(0x55879F4D)
+F (..\..\..\..\Library\StdDriver\src\ADC.c)(0x55879F4E)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I ..\..\..\..\Library\CMSIS\Include -I ..\..\..\..\Library\Device\Nuvoton\ISD9100\Include -I ..\..\..\..\Library\StdDriver\inc-Id:\Keil_v5\ARM\RV31\INC-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\obj\adc.o --omf_browse .\obj\adc.crf --depend .\obj\adc.d)
+I (..\..\..\..\Library\Device\Nuvoton\ISD9100\Include\ISD9100.h)(0x55879F43)
+I (..\..\..\..\Library\CMSIS\Include\core_cm0.h)(0x55879F3F)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\..\..\..\Library\CMSIS\Include\core_cmInstr.h)(0x55879F3F)
+I (..\..\..\..\Library\CMSIS\Include\core_cmFunc.h)(0x55879F3F)
+I (..\..\..\..\Library\Device\Nuvoton\ISD9100\Include\system_ISD9100.h)(0x55879F44)
+I (..\..\..\..\Library\StdDriver\inc\acmp.h)(0x55879F47)
+I (..\..\..\..\Library\StdDriver\inc\adc.h)(0x55879F48)
+I (..\..\..\..\Library\StdDriver\inc\biq.h)(0x55879F49)
+I (..\..\..\..\Library\StdDriver\inc\bod.h)(0x55879F4A)
+I (..\..\..\..\Library\StdDriver\inc\capsense.h)(0x55879F4B)
+I (..\..\..\..\Library\StdDriver\inc\clk.h)(0x55879F4B)
+I (..\..\..\..\Library\StdDriver\inc\crc.h)(0x55879F4B)
+I (..\..\..\..\Library\StdDriver\inc\dpwm.h)(0x55879F4B)
+I (..\..\..\..\Library\StdDriver\inc\fmc.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\gpio.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\i2c.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\i2s.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\osc.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\pdma.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\pwm.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\rtc.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\spi.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\sys.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\talarm.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\timer.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\uart.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\wdt.h)(0x55879F4D)
+F (..\..\..\..\Library\StdDriver\src\DPWM.c)(0x55879F4E)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I ..\..\..\..\Library\CMSIS\Include -I ..\..\..\..\Library\Device\Nuvoton\ISD9100\Include -I ..\..\..\..\Library\StdDriver\inc-Id:\Keil_v5\ARM\RV31\INC-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\obj\dpwm.o --omf_browse .\obj\dpwm.crf --depend .\obj\dpwm.d)
+I (..\..\..\..\Library\Device\Nuvoton\ISD9100\Include\ISD9100.h)(0x55879F43)
+I (..\..\..\..\Library\CMSIS\Include\core_cm0.h)(0x55879F3F)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\..\..\..\Library\CMSIS\Include\core_cmInstr.h)(0x55879F3F)
+I (..\..\..\..\Library\CMSIS\Include\core_cmFunc.h)(0x55879F3F)
+I (..\..\..\..\Library\Device\Nuvoton\ISD9100\Include\system_ISD9100.h)(0x55879F44)
+I (..\..\..\..\Library\StdDriver\inc\acmp.h)(0x55879F47)
+I (..\..\..\..\Library\StdDriver\inc\adc.h)(0x55879F48)
+I (..\..\..\..\Library\StdDriver\inc\biq.h)(0x55879F49)
+I (..\..\..\..\Library\StdDriver\inc\bod.h)(0x55879F4A)
+I (..\..\..\..\Library\StdDriver\inc\capsense.h)(0x55879F4B)
+I (..\..\..\..\Library\StdDriver\inc\clk.h)(0x55879F4B)
+I (..\..\..\..\Library\StdDriver\inc\crc.h)(0x55879F4B)
+I (..\..\..\..\Library\StdDriver\inc\dpwm.h)(0x55879F4B)
+I (..\..\..\..\Library\StdDriver\inc\fmc.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\gpio.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\i2c.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\i2s.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\osc.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\pdma.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\pwm.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\rtc.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\spi.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\sys.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\talarm.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\timer.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\uart.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\wdt.h)(0x55879F4D)
+F (..\..\..\..\Library\StdDriver\src\BIQ.c)(0x55879F4E)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I ..\..\..\..\Library\CMSIS\Include -I ..\..\..\..\Library\Device\Nuvoton\ISD9100\Include -I ..\..\..\..\Library\StdDriver\inc-Id:\Keil_v5\ARM\RV31\INC-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\obj\biq.o --omf_browse .\obj\biq.crf --depend .\obj\biq.d)
+I (..\..\..\..\Library\Device\Nuvoton\ISD9100\Include\ISD9100.h)(0x55879F43)
+I (..\..\..\..\Library\CMSIS\Include\core_cm0.h)(0x55879F3F)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\..\..\..\Library\CMSIS\Include\core_cmInstr.h)(0x55879F3F)
+I (..\..\..\..\Library\CMSIS\Include\core_cmFunc.h)(0x55879F3F)
+I (..\..\..\..\Library\Device\Nuvoton\ISD9100\Include\system_ISD9100.h)(0x55879F44)
+I (..\..\..\..\Library\StdDriver\inc\acmp.h)(0x55879F47)
+I (..\..\..\..\Library\StdDriver\inc\adc.h)(0x55879F48)
+I (..\..\..\..\Library\StdDriver\inc\biq.h)(0x55879F49)
+I (..\..\..\..\Library\StdDriver\inc\bod.h)(0x55879F4A)
+I (..\..\..\..\Library\StdDriver\inc\capsense.h)(0x55879F4B)
+I (..\..\..\..\Library\StdDriver\inc\clk.h)(0x55879F4B)
+I (..\..\..\..\Library\StdDriver\inc\crc.h)(0x55879F4B)
+I (..\..\..\..\Library\StdDriver\inc\dpwm.h)(0x55879F4B)
+I (..\..\..\..\Library\StdDriver\inc\fmc.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\gpio.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\i2c.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\i2s.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\osc.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\pdma.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\pwm.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\rtc.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\spi.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\sys.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\talarm.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\timer.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\uart.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\wdt.h)(0x55879F4D)
+F (..\..\..\..\Library\StdDriver\src\GPIO.c)(0x55879F4F)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I ..\..\..\..\Library\CMSIS\Include -I ..\..\..\..\Library\Device\Nuvoton\ISD9100\Include -I ..\..\..\..\Library\StdDriver\inc-Id:\Keil_v5\ARM\RV31\INC-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\obj\gpio.o --omf_browse .\obj\gpio.crf --depend .\obj\gpio.d)
+I (..\..\..\..\Library\Device\Nuvoton\ISD9100\Include\ISD9100.h)(0x55879F43)
+I (..\..\..\..\Library\CMSIS\Include\core_cm0.h)(0x55879F3F)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\..\..\..\Library\CMSIS\Include\core_cmInstr.h)(0x55879F3F)
+I (..\..\..\..\Library\CMSIS\Include\core_cmFunc.h)(0x55879F3F)
+I (..\..\..\..\Library\Device\Nuvoton\ISD9100\Include\system_ISD9100.h)(0x55879F44)
+I (..\..\..\..\Library\StdDriver\inc\acmp.h)(0x55879F47)
+I (..\..\..\..\Library\StdDriver\inc\adc.h)(0x55879F48)
+I (..\..\..\..\Library\StdDriver\inc\biq.h)(0x55879F49)
+I (..\..\..\..\Library\StdDriver\inc\bod.h)(0x55879F4A)
+I (..\..\..\..\Library\StdDriver\inc\capsense.h)(0x55879F4B)
+I (..\..\..\..\Library\StdDriver\inc\clk.h)(0x55879F4B)
+I (..\..\..\..\Library\StdDriver\inc\crc.h)(0x55879F4B)
+I (..\..\..\..\Library\StdDriver\inc\dpwm.h)(0x55879F4B)
+I (..\..\..\..\Library\StdDriver\inc\fmc.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\gpio.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\i2c.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\i2s.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\osc.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\pdma.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\pwm.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\rtc.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\spi.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\sys.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\talarm.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\timer.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\uart.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\wdt.h)(0x55879F4D)
+F (..\..\..\..\Library\StdDriver\src\UART.c)(0x55879F50)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I ..\..\..\..\Library\CMSIS\Include -I ..\..\..\..\Library\Device\Nuvoton\ISD9100\Include -I ..\..\..\..\Library\StdDriver\inc-Id:\Keil_v5\ARM\RV31\INC-Id:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="525"-o .\obj\uart.o --omf_browse .\obj\uart.crf --depend .\obj\uart.d)
+I (d:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
+I (..\..\..\..\Library\Device\Nuvoton\ISD9100\Include\ISD9100.h)(0x55879F43)
+I (..\..\..\..\Library\CMSIS\Include\core_cm0.h)(0x55879F3F)
+I (d:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
+I (..\..\..\..\Library\CMSIS\Include\core_cmInstr.h)(0x55879F3F)
+I (..\..\..\..\Library\CMSIS\Include\core_cmFunc.h)(0x55879F3F)
+I (..\..\..\..\Library\Device\Nuvoton\ISD9100\Include\system_ISD9100.h)(0x55879F44)
+I (..\..\..\..\Library\StdDriver\inc\acmp.h)(0x55879F47)
+I (..\..\..\..\Library\StdDriver\inc\adc.h)(0x55879F48)
+I (..\..\..\..\Library\StdDriver\inc\biq.h)(0x55879F49)
+I (..\..\..\..\Library\StdDriver\inc\bod.h)(0x55879F4A)
+I (..\..\..\..\Library\StdDriver\inc\capsense.h)(0x55879F4B)
+I (..\..\..\..\Library\StdDriver\inc\clk.h)(0x55879F4B)
+I (..\..\..\..\Library\StdDriver\inc\crc.h)(0x55879F4B)
+I (..\..\..\..\Library\StdDriver\inc\dpwm.h)(0x55879F4B)
+I (..\..\..\..\Library\StdDriver\inc\fmc.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\gpio.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\i2c.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\i2s.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\osc.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\pdma.h)(0x55879F4C)
+I (..\..\..\..\Library\StdDriver\inc\pwm.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\rtc.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\spi.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\sys.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\talarm.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\timer.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\uart.h)(0x55879F4D)
+I (..\..\..\..\Library\StdDriver\inc\wdt.h)(0x55879F4D)
