@@ -52,6 +52,12 @@ uint8_t FrameGap[] = {0x55,0xaa,0xaa,0x55,0x55,0xaa,0xaa,0x55};
 	
 #define MENU 0
 
+#define GPIO_SET_BIT(gpio, u32Bit)   ((gpio)->DOUT |= (u32Bit))
+#define GPIO_CLR_BIT(gpio, u32Bit)   ((gpio)->DOUT &= (~u32Bit))
+#define GPIO_TOGGLE_BIT(gpio, u32Bit)    ((gpio)->DOUT ^= (u32Bit))
+#define RECLED0 BIT12
+#define RECLED1 BIT13
+
 /*
 volatile char cmd[32] = {0};  //command length < 32 chars
 volatile char cmdc = 0;
@@ -260,8 +266,10 @@ void PDMA_Init(void)
 /*---------------------------------------------------------------------------------------------------------*/
 int main(void)
 {
+#if MENU
 	uint8_t u8Option;
-		
+#endif
+	
 	/* Lock protected registers */
     if(SYS->REGLCTL == 1) // In end of main function, program issued CPU reset and write-protection will be disabled.
         SYS_LockReg();
@@ -320,6 +328,11 @@ void ADC_MICTest(void)
 	u32FrameTime = FRAMETIME;
 	u32Cnt = TRANSTIME * BLOCK_SIZE;
 	u32BlockCnt = FRAMETIME * BLOCK_SIZE;
+
+	GPIO_SetMode(PA, RECLED0, GPIO_MODE_OUTPUT);
+	GPIO_SET_BIT(PA, RECLED0);
+	GPIO_SetMode(PA, RECLED1, GPIO_MODE_OUTPUT);
+	GPIO_CLR_BIT(PA, RECLED1);
 	/* Init ADC */
 	// i32PGAGain = PGA_GAIN;
 	ADC_Init();
@@ -378,6 +391,8 @@ void ADC_MICTest(void)
 			NVIC_DisableIRQ(PDMA_IRQn);
 	    printf("%s%d", FrameGap,0);
 			u32BlockCnt = u32FrameTime * BLOCK_SIZE;
+			GPIO_TOGGLE_BIT(PA, RECLED0);
+			GPIO_TOGGLE_BIT(PA, RECLED1);
 			NVIC_ClearPendingIRQ(PDMA_IRQn);
 			NVIC_EnableIRQ(PDMA_IRQn);
 			ADC_START_CONV(ADC);

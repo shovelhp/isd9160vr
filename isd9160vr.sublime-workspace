@@ -14,17 +14,20 @@
 				"buffer_size": 3868,
 				"line_ending": "Unix"
 			}
+		},
+		{
+			"file": "CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/AppFunctions.c",
+			"settings":
+			{
+				"buffer_size": 19668,
+				"line_ending": "Windows"
+			}
 		}
 	],
 	"build_system": "",
-	"build_system_choices":
-	[
-	],
-	"build_varint": "",
 	"command_palette":
 	{
 		"height": 0.0,
-		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -94,12 +97,9 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/D/shovelhp/Documents/GitHub/isd9160vr"
-	],
 	"file_history":
 	[
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/App.h",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/Keil/VR/VoiceRecognition.bin",
 		"/C/Nuvoton ISD9100 SDS/V5.02.001/SampleCode/StdDriver/PWM/main.c",
 		"/D/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/main.c",
@@ -196,7 +196,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -219,15 +219,40 @@
 						"settings":
 						{
 							"encoding_helper_encoding": "cp936",
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/C++/C++.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1080.0,
+						"translation.y": 1044.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/AppFunctions.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 19668,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9942,
+								9942
+							]
+						],
+						"settings":
+						{
+							"encoding_helper_encoding": "UTF-8",
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 108.0,
+						"zoom_level": 1.0
+					},
 					"type": "text"
 				}
 			]
@@ -268,7 +293,6 @@
 	{
 		"height": 0.0
 	},
-	"pinned_build_system": "",
 	"project": "isd9160vr.sublime-project",
 	"replace":
 	{
@@ -278,7 +302,6 @@
 	"select_file":
 	{
 		"height": 0.0,
-		"last_filter": "",
 		"selected_items":
 		[
 		],
@@ -287,7 +310,6 @@
 	"select_project":
 	{
 		"height": 0.0,
-		"last_filter": "",
 		"selected_items":
 		[
 		],
@@ -296,13 +318,11 @@
 	"select_symbol":
 	{
 		"height": 0.0,
-		"last_filter": "",
 		"selected_items":
 		[
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
 	"settings":
 	{
 	},

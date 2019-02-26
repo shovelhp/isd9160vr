@@ -51,6 +51,7 @@ Section Cross References
     main.o(i.ADC_MICTest) refers to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     main.o(i.ADC_MICTest) refers to _printf_dec.o(.text) for _printf_int_dec
     main.o(i.ADC_MICTest) refers to _printf_str.o(.text) for _printf_str
+    main.o(i.ADC_MICTest) refers to gpio.o(i.GPIO_SetMode) for GPIO_SetMode
     main.o(i.ADC_MICTest) refers to main.o(i.ADC_Init) for ADC_Init
     main.o(i.ADC_MICTest) refers to noretval__2printf.o(.text) for __2printf
     main.o(i.ADC_MICTest) refers to main.o(i.PDMA_Init) for PDMA_Init
@@ -358,7 +359,6 @@ Removing Unused input sections from the image.
     Removing gpio.o(.revsh_text), (4 bytes).
     Removing gpio.o(i.GPIO_DisableInt), (28 bytes).
     Removing gpio.o(i.GPIO_EnableInt), (26 bytes).
-    Removing gpio.o(i.GPIO_SetMode), (46 bytes).
     Removing uart.o(.rev16_text), (4 bytes).
     Removing uart.o(.revsh_text), (4 bytes).
     Removing uart.o(i.UART_ClearIntFlag), (80 bytes).
@@ -370,7 +370,7 @@ Removing Unused input sections from the image.
     Removing uart.o(i.UART_SetLine_Config), (120 bytes).
     Removing uart.o(i.UART_SetTimeoutCnt), (22 bytes).
 
-74 unused section(s) (total 2594 bytes) removed from the image.
+73 unused section(s) (total 2548 bytes) removed from the image.
 
 ==============================================================================
 
@@ -382,87 +382,87 @@ Image Symbol Table
 
     RESET                                    0x00000000   Section      192  startup_isd9100.o(RESET)
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit1.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit3.o ABSOLUTE
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit2.o ABSOLUTE
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardshut.o ABSOLUTE
-    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit3.o ABSOLUTE
-    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_zi.o ABSOLUTE
     ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_copy.o ABSOLUTE
+    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_zi.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry2.o ABSOLUTE
-    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry4.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit2.o ABSOLUTE
-    ../clib/angel/rt.s                       0x00000000   Number         0  rt_div0.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry4.o ABSOLUTE
     ../clib/angel/rt.s                       0x00000000   Number         0  aeabi_idiv0_sigfpe.o ABSOLUTE
-    ../clib/angel/rt.s                       0x00000000   Number         0  aeabi_idiv0.o ABSOLUTE
     ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  aeabi_idiv0.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_div0.o ABSOLUTE
     ../clib/angel/scatterp.s                 0x00000000   Number         0  __scatter.o ABSOLUTE
     ../clib/angel/startup.s                  0x00000000   Number         0  __main.o ABSOLUTE
     ../clib/angel/sys.s                      0x00000000   Number         0  tempstk.o ABSOLUTE
-    ../clib/angel/sys.s                      0x00000000   Number         0  sys_stackheap_outer.o ABSOLUTE
     ../clib/angel/sys.s                      0x00000000   Number         0  libspace.o ABSOLUTE
-    ../clib/angel/sys.s                      0x00000000   Number         0  indicate_semi.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  sys_stackheap_outer.o ABSOLUTE
     ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  indicate_semi.o ABSOLUTE
     ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_exit.o ABSOLUTE
     ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  _get_argv_nomalloc.o ABSOLUTE
     ../clib/armsys.c                         0x00000000   Number         0  no_argv.o ABSOLUTE
     ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
-    ../clib/armsys.c                         0x00000000   Number         0  _get_argv_nomalloc.o ABSOLUTE
     ../clib/division.c                       0x00000000   Number         0  rtudiv10.o ABSOLUTE
     ../clib/division.s                       0x00000000   Number         0  aeabi_sdiv.o ABSOLUTE
     ../clib/division.s                       0x00000000   Number         0  aeabi_sdiv_div0.o ABSOLUTE
     ../clib/heapalloc.c                      0x00000000   Number         0  hrguard.o ABSOLUTE
     ../clib/heapaux.c                        0x00000000   Number         0  heapauxi.o ABSOLUTE
-    ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
-    ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
-    ../clib/libinit.s                        0x00000000   Number         0  libinit.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit.o ABSOLUTE
     ../clib/misc.s                           0x00000000   Number         0  printf_stubs.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_intcommon.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf_wp.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf_flags_ss.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_int.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_ll.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf_ss.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_int_ll.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_dec.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_char_common.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_ptr.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  _printf_str.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf_nopercent.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __2printf.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  noretval__2printf.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  _printf_hex_int_ptr.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf_flags.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_ll_ptr.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  __printf_flags_wp.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  noretval__2printf.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  _printf_hex_int_ll_ptr.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_flags.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_ss.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __2printf.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_nopercent.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_flags_ss.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_wp.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  __printf_flags_wp.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  __printf_ss_wp.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  __printf_flags_ss_wp.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_ll_ptr.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_ll.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  _printf_char_file.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_dec.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  _printf_char.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_ptr.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_int.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_hex_int_ll.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_intcommon.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_char_common.o ABSOLUTE
+    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_d.o ABSOLUTE
+    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_percent_end.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_percent.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_s.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_x.o ABSOLUTE
-    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_percent_end.o ABSOLUTE
-    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_d.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_cppl_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_formal.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_outer.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_general.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_formal.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_cppl_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
     ../clib/signal.s                         0x00000000   Number         0  defsig.o ABSOLUTE
     ../clib/stdlib.c                         0x00000000   Number         0  exit.o ABSOLUTE
     ../fplib/cfplib/fpinit.c                 0x00000000   Number         0  fpinit.o ABSOLUTE
@@ -562,39 +562,40 @@ Image Symbol Table
     i.ADC_IRQHandler                         0x0000078c   Section        0  main.o(i.ADC_IRQHandler)
     i.ADC_Init                               0x000007d0   Section        0  main.o(i.ADC_Init)
     i.ADC_MICTest                            0x000008b4   Section        0  main.o(i.ADC_MICTest)
-    i.ADC_Open                               0x000009e8   Section        0  adc.o(i.ADC_Open)
-    i.ADC_SetAMUX                            0x000009ec   Section        0  adc.o(i.ADC_SetAMUX)
-    i.ADC_SetPGAGaindB                       0x00000a4c   Section        0  adc.o(i.ADC_SetPGAGaindB)
-    i.CLK_EnableModuleClock                  0x00000a8c   Section        0  clk.o(i.CLK_EnableModuleClock)
-    i.CLK_EnableXtalRC                       0x00000ab0   Section        0  clk.o(i.CLK_EnableXtalRC)
-    i.CLK_GetHCLKFreq                        0x00000ad0   Section        0  clk.o(i.CLK_GetHCLKFreq)
-    i.CLK_GetHIRCFreq                        0x00000ae0   Section        0  clk.o(i.CLK_GetHIRCFreq)
-    i.CLK_SetHCLK                            0x00000afc   Section        0  clk.o(i.CLK_SetHCLK)
-    i.CLK_SetModuleClock                     0x00000b44   Section        0  clk.o(i.CLK_SetModuleClock)
-    i.NVIC_ClearPendingIRQ                   0x00000ba8   Section        0  main.o(i.NVIC_ClearPendingIRQ)
-    NVIC_ClearPendingIRQ                     0x00000ba9   Thumb Code    14  main.o(i.NVIC_ClearPendingIRQ)
-    i.NVIC_DisableIRQ                        0x00000bbc   Section        0  main.o(i.NVIC_DisableIRQ)
-    NVIC_DisableIRQ                          0x00000bbd   Thumb Code    14  main.o(i.NVIC_DisableIRQ)
-    i.NVIC_EnableIRQ                         0x00000bd0   Section        0  main.o(i.NVIC_EnableIRQ)
-    NVIC_EnableIRQ                           0x00000bd1   Thumb Code    14  main.o(i.NVIC_EnableIRQ)
-    i.PDMA_IRQHandler                        0x00000be4   Section        0  main.o(i.PDMA_IRQHandler)
-    i.PDMA_Init                              0x00000c6c   Section        0  main.o(i.PDMA_Init)
-    i.SYS_Init                               0x00000d54   Section        0  main.o(i.SYS_Init)
-    i.SYS_Lock                               0x00000db0   Section        0  sys.o(i.SYS_Lock)
-    i.SYS_LockReg                            0x00000dc0   Section        0  sys.o(i.SYS_LockReg)
-    i.SYS_ResetModule                        0x00000dcc   Section        0  sys.o(i.SYS_ResetModule)
-    i.SYS_Unlock                             0x00000dfc   Section        0  sys.o(i.SYS_Unlock)
-    i.SYS_UnlockReg                          0x00000e2c   Section        0  sys.o(i.SYS_UnlockReg)
-    i.SendChar                               0x00000e4c   Section        0  retarget.o(i.SendChar)
-    i.SendChar_ToUART                        0x00000e58   Section        0  retarget.o(i.SendChar_ToUART)
-    i.SystemCoreClockUpdate                  0x00000e8c   Section        0  system_isd9100.o(i.SystemCoreClockUpdate)
-    i.UART_Init                              0x00000ef4   Section        0  main.o(i.UART_Init)
-    i.UART_Open                              0x00000f1c   Section        0  uart.o(i.UART_Open)
-    i.UART_Write                             0x00000f84   Section        0  uart.o(i.UART_Write)
-    i._is_digit                              0x00000fa8   Section        0  __printf_wp.o(i._is_digit)
-    i.ferror                                 0x00000fb6   Section        0  retarget.o(i.ferror)
-    i.fputc                                  0x00000fbe   Section        0  retarget.o(i.fputc)
-    i.main                                   0x00000fd0   Section        0  main.o(i.main)
+    i.ADC_Open                               0x00000a38   Section        0  adc.o(i.ADC_Open)
+    i.ADC_SetAMUX                            0x00000a3c   Section        0  adc.o(i.ADC_SetAMUX)
+    i.ADC_SetPGAGaindB                       0x00000a9c   Section        0  adc.o(i.ADC_SetPGAGaindB)
+    i.CLK_EnableModuleClock                  0x00000adc   Section        0  clk.o(i.CLK_EnableModuleClock)
+    i.CLK_EnableXtalRC                       0x00000b00   Section        0  clk.o(i.CLK_EnableXtalRC)
+    i.CLK_GetHCLKFreq                        0x00000b20   Section        0  clk.o(i.CLK_GetHCLKFreq)
+    i.CLK_GetHIRCFreq                        0x00000b30   Section        0  clk.o(i.CLK_GetHIRCFreq)
+    i.CLK_SetHCLK                            0x00000b4c   Section        0  clk.o(i.CLK_SetHCLK)
+    i.CLK_SetModuleClock                     0x00000b94   Section        0  clk.o(i.CLK_SetModuleClock)
+    i.GPIO_SetMode                           0x00000bf8   Section        0  gpio.o(i.GPIO_SetMode)
+    i.NVIC_ClearPendingIRQ                   0x00000c28   Section        0  main.o(i.NVIC_ClearPendingIRQ)
+    NVIC_ClearPendingIRQ                     0x00000c29   Thumb Code    14  main.o(i.NVIC_ClearPendingIRQ)
+    i.NVIC_DisableIRQ                        0x00000c3c   Section        0  main.o(i.NVIC_DisableIRQ)
+    NVIC_DisableIRQ                          0x00000c3d   Thumb Code    14  main.o(i.NVIC_DisableIRQ)
+    i.NVIC_EnableIRQ                         0x00000c50   Section        0  main.o(i.NVIC_EnableIRQ)
+    NVIC_EnableIRQ                           0x00000c51   Thumb Code    14  main.o(i.NVIC_EnableIRQ)
+    i.PDMA_IRQHandler                        0x00000c64   Section        0  main.o(i.PDMA_IRQHandler)
+    i.PDMA_Init                              0x00000cec   Section        0  main.o(i.PDMA_Init)
+    i.SYS_Init                               0x00000dd4   Section        0  main.o(i.SYS_Init)
+    i.SYS_Lock                               0x00000e30   Section        0  sys.o(i.SYS_Lock)
+    i.SYS_LockReg                            0x00000e40   Section        0  sys.o(i.SYS_LockReg)
+    i.SYS_ResetModule                        0x00000e4c   Section        0  sys.o(i.SYS_ResetModule)
+    i.SYS_Unlock                             0x00000e7c   Section        0  sys.o(i.SYS_Unlock)
+    i.SYS_UnlockReg                          0x00000eac   Section        0  sys.o(i.SYS_UnlockReg)
+    i.SendChar                               0x00000ecc   Section        0  retarget.o(i.SendChar)
+    i.SendChar_ToUART                        0x00000ed8   Section        0  retarget.o(i.SendChar_ToUART)
+    i.SystemCoreClockUpdate                  0x00000f0c   Section        0  system_isd9100.o(i.SystemCoreClockUpdate)
+    i.UART_Init                              0x00000f74   Section        0  main.o(i.UART_Init)
+    i.UART_Open                              0x00000f9c   Section        0  uart.o(i.UART_Open)
+    i.UART_Write                             0x00001004   Section        0  uart.o(i.UART_Write)
+    i._is_digit                              0x00001028   Section        0  __printf_wp.o(i._is_digit)
+    i.ferror                                 0x00001036   Section        0  retarget.o(i.ferror)
+    i.fputc                                  0x0000103e   Section        0  retarget.o(i.fputc)
+    i.main                                   0x00001050   Section        0  main.o(i.main)
     .data                                    0x20000000   Section       28  system_isd9100.o(.data)
     .data                                    0x2000001c   Section       44  main.o(.data)
     .data                                    0x20000048   Section        8  retarget.o(.data)
@@ -758,36 +759,37 @@ Image Symbol Table
     ADC_GetIntFlag                           0x00000749   Thumb Code    60  adc.o(i.ADC_GetIntFlag)
     ADC_IRQHandler                           0x0000078d   Thumb Code    62  main.o(i.ADC_IRQHandler)
     ADC_Init                                 0x000007d1   Thumb Code   200  main.o(i.ADC_Init)
-    ADC_MICTest                              0x000008b5   Thumb Code   224  main.o(i.ADC_MICTest)
-    ADC_Open                                 0x000009e9   Thumb Code     2  adc.o(i.ADC_Open)
-    ADC_SetAMUX                              0x000009ed   Thumb Code    86  adc.o(i.ADC_SetAMUX)
-    ADC_SetPGAGaindB                         0x00000a4d   Thumb Code    52  adc.o(i.ADC_SetPGAGaindB)
-    CLK_EnableModuleClock                    0x00000a8d   Thumb Code    32  clk.o(i.CLK_EnableModuleClock)
-    CLK_EnableXtalRC                         0x00000ab1   Thumb Code    28  clk.o(i.CLK_EnableXtalRC)
-    CLK_GetHCLKFreq                          0x00000ad1   Thumb Code    12  clk.o(i.CLK_GetHCLKFreq)
-    CLK_GetHIRCFreq                          0x00000ae1   Thumb Code    18  clk.o(i.CLK_GetHIRCFreq)
-    CLK_SetHCLK                              0x00000afd   Thumb Code    66  clk.o(i.CLK_SetHCLK)
-    CLK_SetModuleClock                       0x00000b45   Thumb Code    94  clk.o(i.CLK_SetModuleClock)
-    PDMA_IRQHandler                          0x00000be5   Thumb Code   104  main.o(i.PDMA_IRQHandler)
-    PDMA_Init                                0x00000c6d   Thumb Code   216  main.o(i.PDMA_Init)
-    SYS_Init                                 0x00000d55   Thumb Code    88  main.o(i.SYS_Init)
-    SYS_Lock                                 0x00000db1   Thumb Code    12  sys.o(i.SYS_Lock)
-    SYS_LockReg                              0x00000dc1   Thumb Code     8  sys.o(i.SYS_LockReg)
-    SYS_ResetModule                          0x00000dcd   Thumb Code    48  sys.o(i.SYS_ResetModule)
-    SYS_Unlock                               0x00000dfd   Thumb Code    44  sys.o(i.SYS_Unlock)
-    SYS_UnlockReg                            0x00000e2d   Thumb Code    26  sys.o(i.SYS_UnlockReg)
-    SendChar                                 0x00000e4d   Thumb Code    12  retarget.o(i.SendChar)
-    SendChar_ToUART                          0x00000e59   Thumb Code    48  retarget.o(i.SendChar_ToUART)
-    SystemCoreClockUpdate                    0x00000e8d   Thumb Code    74  system_isd9100.o(i.SystemCoreClockUpdate)
-    UART_Init                                0x00000ef5   Thumb Code    26  main.o(i.UART_Init)
-    UART_Open                                0x00000f1d   Thumb Code    96  uart.o(i.UART_Open)
-    UART_Write                               0x00000f85   Thumb Code    36  uart.o(i.UART_Write)
-    _is_digit                                0x00000fa9   Thumb Code    14  __printf_wp.o(i._is_digit)
-    ferror                                   0x00000fb7   Thumb Code     8  retarget.o(i.ferror)
-    fputc                                    0x00000fbf   Thumb Code    16  retarget.o(i.fputc)
-    main                                     0x00000fd1   Thumb Code    28  main.o(i.main)
-    Region$$Table$$Base                      0x00000ff0   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x00001010   Number         0  anon$$obj.o(Region$$Table)
+    ADC_MICTest                              0x000008b5   Thumb Code   300  main.o(i.ADC_MICTest)
+    ADC_Open                                 0x00000a39   Thumb Code     2  adc.o(i.ADC_Open)
+    ADC_SetAMUX                              0x00000a3d   Thumb Code    86  adc.o(i.ADC_SetAMUX)
+    ADC_SetPGAGaindB                         0x00000a9d   Thumb Code    52  adc.o(i.ADC_SetPGAGaindB)
+    CLK_EnableModuleClock                    0x00000add   Thumb Code    32  clk.o(i.CLK_EnableModuleClock)
+    CLK_EnableXtalRC                         0x00000b01   Thumb Code    28  clk.o(i.CLK_EnableXtalRC)
+    CLK_GetHCLKFreq                          0x00000b21   Thumb Code    12  clk.o(i.CLK_GetHCLKFreq)
+    CLK_GetHIRCFreq                          0x00000b31   Thumb Code    18  clk.o(i.CLK_GetHIRCFreq)
+    CLK_SetHCLK                              0x00000b4d   Thumb Code    66  clk.o(i.CLK_SetHCLK)
+    CLK_SetModuleClock                       0x00000b95   Thumb Code    94  clk.o(i.CLK_SetModuleClock)
+    GPIO_SetMode                             0x00000bf9   Thumb Code    46  gpio.o(i.GPIO_SetMode)
+    PDMA_IRQHandler                          0x00000c65   Thumb Code   104  main.o(i.PDMA_IRQHandler)
+    PDMA_Init                                0x00000ced   Thumb Code   216  main.o(i.PDMA_Init)
+    SYS_Init                                 0x00000dd5   Thumb Code    88  main.o(i.SYS_Init)
+    SYS_Lock                                 0x00000e31   Thumb Code    12  sys.o(i.SYS_Lock)
+    SYS_LockReg                              0x00000e41   Thumb Code     8  sys.o(i.SYS_LockReg)
+    SYS_ResetModule                          0x00000e4d   Thumb Code    48  sys.o(i.SYS_ResetModule)
+    SYS_Unlock                               0x00000e7d   Thumb Code    44  sys.o(i.SYS_Unlock)
+    SYS_UnlockReg                            0x00000ead   Thumb Code    26  sys.o(i.SYS_UnlockReg)
+    SendChar                                 0x00000ecd   Thumb Code    12  retarget.o(i.SendChar)
+    SendChar_ToUART                          0x00000ed9   Thumb Code    48  retarget.o(i.SendChar_ToUART)
+    SystemCoreClockUpdate                    0x00000f0d   Thumb Code    74  system_isd9100.o(i.SystemCoreClockUpdate)
+    UART_Init                                0x00000f75   Thumb Code    26  main.o(i.UART_Init)
+    UART_Open                                0x00000f9d   Thumb Code    96  uart.o(i.UART_Open)
+    UART_Write                               0x00001005   Thumb Code    36  uart.o(i.UART_Write)
+    _is_digit                                0x00001029   Thumb Code    14  __printf_wp.o(i._is_digit)
+    ferror                                   0x00001037   Thumb Code     8  retarget.o(i.ferror)
+    fputc                                    0x0000103f   Thumb Code    16  retarget.o(i.fputc)
+    main                                     0x00001051   Thumb Code    28  main.o(i.main)
+    Region$$Table$$Base                      0x00001070   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00001090   Number         0  anon$$obj.o(Region$$Table)
     SystemCoreClock                          0x20000000   Data           4  system_isd9100.o(.data)
     CyclesPerUs                              0x20000004   Data           4  system_isd9100.o(.data)
     gau32ClkSrcTbl                           0x20000008   Data          12  system_isd9100.o(.data)
@@ -813,9 +815,9 @@ Memory Map of the image
 
   Image Entry point : 0x0000017d
 
-  Load Region LR_1 (Base: 0x00000000, Size: 0x00001060, Max: 0xffffffff, ABSOLUTE)
+  Load Region LR_1 (Base: 0x00000000, Size: 0x000010e0, Max: 0xffffffff, ABSOLUTE)
 
-    Execution Region ER_RO (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00001010, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RO (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00001090, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -896,52 +898,54 @@ Memory Map of the image
     0x00000748   0x00000748   0x00000044   Code   RO          536    i.ADC_GetIntFlag    adc.o
     0x0000078c   0x0000078c   0x00000044   Code   RO          126    i.ADC_IRQHandler    main.o
     0x000007d0   0x000007d0   0x000000e4   Code   RO          127    i.ADC_Init          main.o
-    0x000008b4   0x000008b4   0x00000134   Code   RO          128    i.ADC_MICTest       main.o
-    0x000009e8   0x000009e8   0x00000002   Code   RO          539    i.ADC_Open          adc.o
-    0x000009ea   0x000009ea   0x00000002   PAD
-    0x000009ec   0x000009ec   0x00000060   Code   RO          543    i.ADC_SetAMUX       adc.o
-    0x00000a4c   0x00000a4c   0x00000040   Code   RO          545    i.ADC_SetPGAGaindB  adc.o
-    0x00000a8c   0x00000a8c   0x00000024   Code   RO          420    i.CLK_EnableModuleClock  clk.o
-    0x00000ab0   0x00000ab0   0x00000020   Code   RO          421    i.CLK_EnableXtalRC  clk.o
-    0x00000ad0   0x00000ad0   0x00000010   Code   RO          422    i.CLK_GetHCLKFreq   clk.o
-    0x00000ae0   0x00000ae0   0x0000001c   Code   RO          423    i.CLK_GetHIRCFreq   clk.o
-    0x00000afc   0x00000afc   0x00000048   Code   RO          425    i.CLK_SetHCLK       clk.o
-    0x00000b44   0x00000b44   0x00000064   Code   RO          426    i.CLK_SetModuleClock  clk.o
-    0x00000ba8   0x00000ba8   0x00000014   Code   RO          130    i.NVIC_ClearPendingIRQ  main.o
-    0x00000bbc   0x00000bbc   0x00000014   Code   RO          131    i.NVIC_DisableIRQ   main.o
-    0x00000bd0   0x00000bd0   0x00000014   Code   RO          132    i.NVIC_EnableIRQ    main.o
-    0x00000be4   0x00000be4   0x00000088   Code   RO          133    i.PDMA_IRQHandler   main.o
-    0x00000c6c   0x00000c6c   0x000000e8   Code   RO          134    i.PDMA_Init         main.o
-    0x00000d54   0x00000d54   0x0000005c   Code   RO          135    i.SYS_Init          main.o
-    0x00000db0   0x00000db0   0x00000010   Code   RO          337    i.SYS_Lock          sys.o
-    0x00000dc0   0x00000dc0   0x0000000c   Code   RO          338    i.SYS_LockReg       sys.o
-    0x00000dcc   0x00000dcc   0x00000030   Code   RO          342    i.SYS_ResetModule   sys.o
-    0x00000dfc   0x00000dfc   0x00000030   Code   RO          343    i.SYS_Unlock        sys.o
-    0x00000e2c   0x00000e2c   0x00000020   Code   RO          344    i.SYS_UnlockReg     sys.o
-    0x00000e4c   0x00000e4c   0x0000000c   Code   RO          248    i.SendChar          retarget.o
-    0x00000e58   0x00000e58   0x00000034   Code   RO          249    i.SendChar_ToUART   retarget.o
-    0x00000e8c   0x00000e8c   0x00000068   Code   RO           12    i.SystemCoreClockUpdate  system_isd9100.o
-    0x00000ef4   0x00000ef4   0x00000028   Code   RO          136    i.UART_Init         main.o
-    0x00000f1c   0x00000f1c   0x00000068   Code   RO          746    i.UART_Open         uart.o
-    0x00000f84   0x00000f84   0x00000024   Code   RO          751    i.UART_Write        uart.o
-    0x00000fa8   0x00000fa8   0x0000000e   Code   RO          855    i._is_digit         c_p.l(__printf_wp.o)
-    0x00000fb6   0x00000fb6   0x00000008   Code   RO          251    i.ferror            retarget.o
-    0x00000fbe   0x00000fbe   0x00000010   Code   RO          253    i.fputc             retarget.o
-    0x00000fce   0x00000fce   0x00000002   PAD
-    0x00000fd0   0x00000fd0   0x00000020   Code   RO          137    i.main              main.o
-    0x00000ff0   0x00000ff0   0x00000020   Data   RO         1053    Region$$Table       anon$$obj.o
+    0x000008b4   0x000008b4   0x00000184   Code   RO          128    i.ADC_MICTest       main.o
+    0x00000a38   0x00000a38   0x00000002   Code   RO          539    i.ADC_Open          adc.o
+    0x00000a3a   0x00000a3a   0x00000002   PAD
+    0x00000a3c   0x00000a3c   0x00000060   Code   RO          543    i.ADC_SetAMUX       adc.o
+    0x00000a9c   0x00000a9c   0x00000040   Code   RO          545    i.ADC_SetPGAGaindB  adc.o
+    0x00000adc   0x00000adc   0x00000024   Code   RO          420    i.CLK_EnableModuleClock  clk.o
+    0x00000b00   0x00000b00   0x00000020   Code   RO          421    i.CLK_EnableXtalRC  clk.o
+    0x00000b20   0x00000b20   0x00000010   Code   RO          422    i.CLK_GetHCLKFreq   clk.o
+    0x00000b30   0x00000b30   0x0000001c   Code   RO          423    i.CLK_GetHIRCFreq   clk.o
+    0x00000b4c   0x00000b4c   0x00000048   Code   RO          425    i.CLK_SetHCLK       clk.o
+    0x00000b94   0x00000b94   0x00000064   Code   RO          426    i.CLK_SetModuleClock  clk.o
+    0x00000bf8   0x00000bf8   0x0000002e   Code   RO          712    i.GPIO_SetMode      gpio.o
+    0x00000c26   0x00000c26   0x00000002   PAD
+    0x00000c28   0x00000c28   0x00000014   Code   RO          130    i.NVIC_ClearPendingIRQ  main.o
+    0x00000c3c   0x00000c3c   0x00000014   Code   RO          131    i.NVIC_DisableIRQ   main.o
+    0x00000c50   0x00000c50   0x00000014   Code   RO          132    i.NVIC_EnableIRQ    main.o
+    0x00000c64   0x00000c64   0x00000088   Code   RO          133    i.PDMA_IRQHandler   main.o
+    0x00000cec   0x00000cec   0x000000e8   Code   RO          134    i.PDMA_Init         main.o
+    0x00000dd4   0x00000dd4   0x0000005c   Code   RO          135    i.SYS_Init          main.o
+    0x00000e30   0x00000e30   0x00000010   Code   RO          337    i.SYS_Lock          sys.o
+    0x00000e40   0x00000e40   0x0000000c   Code   RO          338    i.SYS_LockReg       sys.o
+    0x00000e4c   0x00000e4c   0x00000030   Code   RO          342    i.SYS_ResetModule   sys.o
+    0x00000e7c   0x00000e7c   0x00000030   Code   RO          343    i.SYS_Unlock        sys.o
+    0x00000eac   0x00000eac   0x00000020   Code   RO          344    i.SYS_UnlockReg     sys.o
+    0x00000ecc   0x00000ecc   0x0000000c   Code   RO          248    i.SendChar          retarget.o
+    0x00000ed8   0x00000ed8   0x00000034   Code   RO          249    i.SendChar_ToUART   retarget.o
+    0x00000f0c   0x00000f0c   0x00000068   Code   RO           12    i.SystemCoreClockUpdate  system_isd9100.o
+    0x00000f74   0x00000f74   0x00000028   Code   RO          136    i.UART_Init         main.o
+    0x00000f9c   0x00000f9c   0x00000068   Code   RO          746    i.UART_Open         uart.o
+    0x00001004   0x00001004   0x00000024   Code   RO          751    i.UART_Write        uart.o
+    0x00001028   0x00001028   0x0000000e   Code   RO          855    i._is_digit         c_p.l(__printf_wp.o)
+    0x00001036   0x00001036   0x00000008   Code   RO          251    i.ferror            retarget.o
+    0x0000103e   0x0000103e   0x00000010   Code   RO          253    i.fputc             retarget.o
+    0x0000104e   0x0000104e   0x00000002   PAD
+    0x00001050   0x00001050   0x00000020   Code   RO          137    i.main              main.o
+    0x00001070   0x00001070   0x00000020   Data   RO         1053    Region$$Table       anon$$obj.o
 
 
-    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x00001010, Size: 0x00000050, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x00001090, Size: 0x00000050, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x00001010   0x0000001c   Data   RW           14    .data               system_isd9100.o
-    0x2000001c   0x0000102c   0x0000002c   Data   RW          139    .data               main.o
-    0x20000048   0x00001058   0x00000008   Data   RW          256    .data               retarget.o
+    0x20000000   0x00001090   0x0000001c   Data   RW           14    .data               system_isd9100.o
+    0x2000001c   0x000010ac   0x0000002c   Data   RW          139    .data               main.o
+    0x20000048   0x000010d8   0x00000008   Data   RW          256    .data               retarget.o
 
 
-    Execution Region ER_ZI (Exec base: 0x20000050, Load base: 0x00001060, Size: 0x00000670, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_ZI (Exec base: 0x20000050, Load base: 0x000010e0, Size: 0x00000670, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -960,17 +964,18 @@ Image component sizes
 
        322         46          0          0          0       3424   adc.o
        284         34          0          0          0       3658   clk.o
-      1196        206          0         44         16     107144   main.o
+        46          0          0          0          0       1043   gpio.o
+      1276        210          0         44         16     107356   main.o
         88          4          0          8          0       4316   retarget.o
         96         46        192          0       1536        664   startup_isd9100.o
        156         18          0          0          0       2556   sys.o
-       104         30          0         28          0       6093   system_isd9100.o
+       104         30          0         28          0     100941   system_isd9100.o
        140          8          0          0          0       1901   uart.o
 
     ----------------------------------------------------------------------
-      2390        392        224         80       1552     129756   Object Totals
+      2518        396        224         80       1552     225859   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-         4          0          0          0          0          0   (incl. Padding)
+         6          0          0          0          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -1031,15 +1036,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      3888        444        224         80       1648     129176   Grand Totals
-      3888        444        224         80       1648     129176   ELF Image Totals
-      3888        444        224         80          0          0   ROM Totals
+      4016        448        224         80       1648     225235   Grand Totals
+      4016        448        224         80       1648     225235   ELF Image Totals
+      4016        448        224         80          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 4112 (   4.02kB)
+    Total RO  Size (Code + RO Data)                 4240 (   4.14kB)
     Total RW  Size (RW Data + ZI Data)              1728 (   1.69kB)
-    Total ROM Size (Code + RO Data + RW Data)       4192 (   4.09kB)
+    Total ROM Size (Code + RO Data + RW Data)       4320 (   4.22kB)
 
 ==============================================================================
 
