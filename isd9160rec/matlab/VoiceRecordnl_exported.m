@@ -36,6 +36,7 @@ classdef VoiceRecordnl_exported < matlab.apps.AppBase
     properties (Access = private)
         RecRuning = 0;% Description
         RecIndex = 1;
+        DataDirName = 'data' % Description
     end
     
     methods (Access = private)
@@ -56,9 +57,15 @@ classdef VoiceRecordnl_exported < matlab.apps.AppBase
             app.RecordSW.Text = '停止采集';
             pause(0.1);
             filetimestr = datestr(now,'yyyymmddHHMM');
+            filedirstatus = mkdir(app.DataDirName);
+            if(~filedirstatus)
+                app.RecIndex = 1;
+                app.RecRuning = -1;
+                return
+            end
             for index = 1:RecTimes
                 app.RecIndex = index;
-                recfilename = [RecFilenamePre num2str(index) '_' filetimestr '.bin' ];
+                recfilename = ['.\' app.DataDirName '\' RecFilenamePre num2str(index) '_' filetimestr '.bin' ];
                 recfilehn = fopen(recfilename,'w');
                 tic;
                 runningtime = toc;
@@ -162,7 +169,7 @@ classdef VoiceRecordnl_exported < matlab.apps.AppBase
 
         % Button pushed function: DispSW
         function DispSWButtonPushed(app, event)
-            filename = app.DispFilename.Value;
+            filename = ['.\' app.DataDirName '\' app.DispFilename.Value];
             Dispfile = fopen(filename, 'r');
             if(Dispfile <= 0)
                 app.DispStatus.Color = 'y';
@@ -279,6 +286,7 @@ classdef VoiceRecordnl_exported < matlab.apps.AppBase
             % Create EditField_3Label
             app.EditField_3Label = uilabel(app.VoiceRecordPanel);
             app.EditField_3Label.HorizontalAlignment = 'right';
+            app.EditField_3Label.Visible = 'off';
             app.EditField_3Label.Position = [319 286 53 22];
             app.EditField_3Label.Text = '分片长度';
 
@@ -286,6 +294,7 @@ classdef VoiceRecordnl_exported < matlab.apps.AppBase
             app.FrameSize = uieditfield(app.VoiceRecordPanel, 'numeric');
             app.FrameSize.ValueDisplayFormat = '%.0f';
             app.FrameSize.HorizontalAlignment = 'center';
+            app.FrameSize.Visible = 'off';
             app.FrameSize.Position = [387 286 100 22];
             app.FrameSize.Value = 1;
 
