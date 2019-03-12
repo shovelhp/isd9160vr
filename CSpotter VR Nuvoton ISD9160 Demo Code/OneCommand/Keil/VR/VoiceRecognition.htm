@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\VR\VoiceRecognition.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\VR\VoiceRecognition.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Thu Jan 03 11:06:15 2019
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Mon Mar 11 16:16:26 2019
 <BR><P>
 <H3>Maximum Stack Usage =        680 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -49,6 +49,7 @@ Function Pointers
  <LI><a href="#[22]">Reset_Handler</a> from startup_isd9100.o(.text) referenced from startup_isd9100.o(RESET)
  <LI><a href="#[16]">SPI0_IRQHandler</a> from startup_isd9100.o(.text) referenced from startup_isd9100.o(RESET)
  <LI><a href="#[20]">SPIFlash_ReadDataCallback</a> from appcallback.o(i.SPIFlash_ReadDataCallback) referenced from appcallback.o(.constdata)
+ <LI><a href="#[20]">SPIFlash_ReadDataCallback</a> from appcallback.o(i.SPIFlash_ReadDataCallback) referenced from appfunctions.o(i.App_Initiate)
  <LI><a href="#[8]">SVC_Handler</a> from startup_isd9100.o(.text) referenced from startup_isd9100.o(RESET)
  <LI><a href="#[a]">SysTick_Handler</a> from startup_isd9100.o(.text) referenced from startup_isd9100.o(RESET)
  <LI><a href="#[18]">TALARM_IRQHandler</a> from startup_isd9100.o(.text) referenced from startup_isd9100.o(RESET)
@@ -76,9 +77,9 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry
 </UL>
 
-<P><STRONG><a name="[106]"></a>__scatterload_rt2_thumb_only</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
+<P><STRONG><a name="[122]"></a>__scatterload_rt2_thumb_only</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
 
-<P><STRONG><a name="[107]"></a>__scatterload_null</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
+<P><STRONG><a name="[123]"></a>__scatterload_null</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __scatter.o(!!!scatter), UNUSED)
 
 <P><STRONG><a name="[28]"></a>__scatterload_copy</STRONG> (Thumb, 26 bytes, Stack size unknown bytes, __scatter_copy.o(!!handler_copy), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_copy
@@ -86,78 +87,78 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_copy
 </UL>
 
-<P><STRONG><a name="[108]"></a>__scatterload_zeroinit</STRONG> (Thumb, 28 bytes, Stack size unknown bytes, __scatter_zi.o(!!handler_zi), UNUSED)
+<P><STRONG><a name="[124]"></a>__scatterload_zeroinit</STRONG> (Thumb, 28 bytes, Stack size unknown bytes, __scatter_zi.o(!!handler_zi), UNUSED)
 
 <P><STRONG><a name="[2c]"></a>__rt_lib_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit.o(.ARM.Collect$$libinit$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[2b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_li
 </UL>
 
-<P><STRONG><a name="[109]"></a>__rt_lib_init_alloca_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002E))
+<P><STRONG><a name="[125]"></a>__rt_lib_init_alloca_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002E))
 
-<P><STRONG><a name="[10a]"></a>__rt_lib_init_argv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002C))
+<P><STRONG><a name="[126]"></a>__rt_lib_init_argv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000002C))
 
-<P><STRONG><a name="[10b]"></a>__rt_lib_init_atexit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001B))
+<P><STRONG><a name="[127]"></a>__rt_lib_init_atexit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001B))
 
-<P><STRONG><a name="[10c]"></a>__rt_lib_init_clock_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000021))
+<P><STRONG><a name="[128]"></a>__rt_lib_init_clock_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000021))
 
-<P><STRONG><a name="[10d]"></a>__rt_lib_init_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000032))
+<P><STRONG><a name="[129]"></a>__rt_lib_init_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000032))
 
-<P><STRONG><a name="[10e]"></a>__rt_lib_init_exceptions_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000030))
+<P><STRONG><a name="[12a]"></a>__rt_lib_init_exceptions_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000030))
 
-<P><STRONG><a name="[10f]"></a>__rt_lib_init_fp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000002))
+<P><STRONG><a name="[12b]"></a>__rt_lib_init_fp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000002))
 
-<P><STRONG><a name="[110]"></a>__rt_lib_init_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001F))
+<P><STRONG><a name="[12c]"></a>__rt_lib_init_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001F))
 
-<P><STRONG><a name="[111]"></a>__rt_lib_init_getenv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000023))
+<P><STRONG><a name="[12d]"></a>__rt_lib_init_getenv_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000023))
 
-<P><STRONG><a name="[112]"></a>__rt_lib_init_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000A))
+<P><STRONG><a name="[12e]"></a>__rt_lib_init_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000A))
 
-<P><STRONG><a name="[113]"></a>__rt_lib_init_lc_collate_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000011))
+<P><STRONG><a name="[12f]"></a>__rt_lib_init_lc_collate_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000011))
 
-<P><STRONG><a name="[114]"></a>__rt_lib_init_lc_ctype_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000013))
+<P><STRONG><a name="[130]"></a>__rt_lib_init_lc_ctype_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000013))
 
-<P><STRONG><a name="[115]"></a>__rt_lib_init_lc_monetary_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000015))
+<P><STRONG><a name="[131]"></a>__rt_lib_init_lc_monetary_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000015))
 
-<P><STRONG><a name="[116]"></a>__rt_lib_init_lc_numeric_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000017))
+<P><STRONG><a name="[132]"></a>__rt_lib_init_lc_numeric_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000017))
 
-<P><STRONG><a name="[117]"></a>__rt_lib_init_lc_time_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000019))
+<P><STRONG><a name="[133]"></a>__rt_lib_init_lc_time_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000019))
 
-<P><STRONG><a name="[118]"></a>__rt_lib_init_preinit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000004))
+<P><STRONG><a name="[134]"></a>__rt_lib_init_preinit_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000004))
 
-<P><STRONG><a name="[119]"></a>__rt_lib_init_rand_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000E))
+<P><STRONG><a name="[135]"></a>__rt_lib_init_rand_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000E))
 
-<P><STRONG><a name="[11a]"></a>__rt_lib_init_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000033))
+<P><STRONG><a name="[136]"></a>__rt_lib_init_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000033))
 
-<P><STRONG><a name="[11b]"></a>__rt_lib_init_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001D))
+<P><STRONG><a name="[137]"></a>__rt_lib_init_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000001D))
 
-<P><STRONG><a name="[11c]"></a>__rt_lib_init_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000025))
+<P><STRONG><a name="[138]"></a>__rt_lib_init_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$00000025))
 
-<P><STRONG><a name="[11d]"></a>__rt_lib_init_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000C))
+<P><STRONG><a name="[139]"></a>__rt_lib_init_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libinit2.o(.ARM.Collect$$libinit$$0000000C))
 
 <P><STRONG><a name="[31]"></a>__rt_lib_shutdown</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown.o(.ARM.Collect$$libshutdown$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit_ls
 </UL>
 
-<P><STRONG><a name="[11e]"></a>__rt_lib_shutdown_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000002))
+<P><STRONG><a name="[13a]"></a>__rt_lib_shutdown_cpp_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000002))
 
-<P><STRONG><a name="[11f]"></a>__rt_lib_shutdown_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000007))
+<P><STRONG><a name="[13b]"></a>__rt_lib_shutdown_fp_trap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000007))
 
-<P><STRONG><a name="[120]"></a>__rt_lib_shutdown_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F))
+<P><STRONG><a name="[13c]"></a>__rt_lib_shutdown_heap_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F))
 
-<P><STRONG><a name="[121]"></a>__rt_lib_shutdown_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000010))
+<P><STRONG><a name="[13d]"></a>__rt_lib_shutdown_return</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000010))
 
-<P><STRONG><a name="[122]"></a>__rt_lib_shutdown_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A))
+<P><STRONG><a name="[13e]"></a>__rt_lib_shutdown_signal_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A))
 
-<P><STRONG><a name="[123]"></a>__rt_lib_shutdown_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000004))
+<P><STRONG><a name="[13f]"></a>__rt_lib_shutdown_stdio_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$00000004))
 
-<P><STRONG><a name="[124]"></a>__rt_lib_shutdown_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C))
+<P><STRONG><a name="[140]"></a>__rt_lib_shutdown_user_alloc_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C))
 
 <P><STRONG><a name="[26]"></a>__rt_entry</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry.o(.ARM.Collect$$rtentry$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload_rt2
 <LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
 </UL>
 
-<P><STRONG><a name="[125]"></a>__rt_entry_presh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000002))
+<P><STRONG><a name="[141]"></a>__rt_entry_presh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000002))
 
 <P><STRONG><a name="[29]"></a>__rt_entry_sh</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry4.o(.ARM.Collect$$rtentry$$00000004))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
@@ -170,7 +171,7 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init
 </UL>
 
-<P><STRONG><a name="[126]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000009))
+<P><STRONG><a name="[142]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000009))
 
 <P><STRONG><a name="[2d]"></a>__rt_entry_main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000D))
 <BR><BR>[Stack]<UL><LI>Max Depth = 680 + Unknown Stack Size
@@ -180,7 +181,7 @@ Global Symbols
 <LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
 </UL>
 
-<P><STRONG><a name="[127]"></a>__rt_entry_postli_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000C))
+<P><STRONG><a name="[143]"></a>__rt_entry_postli_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000C))
 
 <P><STRONG><a name="[3a]"></a>__rt_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit.o(.ARM.Collect$$rtexit$$00000000))
 <BR><BR>[Called By]<UL><LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;exit
@@ -190,18 +191,18 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_shutdown
 </UL>
 
-<P><STRONG><a name="[128]"></a>__rt_exit_prels_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000002))
+<P><STRONG><a name="[144]"></a>__rt_exit_prels_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000002))
 
 <P><STRONG><a name="[32]"></a>__rt_exit_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rtexit2.o(.ARM.Collect$$rtexit$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_exit
 </UL>
 
-<P><STRONG><a name="[dc]"></a>__aeabi_memcpy4</STRONG> (Thumb, 56 bytes, Stack size 0 bytes, rt_memcpy.o(.emb_text))
-<BR><BR>[Called By]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM_ConfigOutputChannel
-<LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER_GetModuleClock
+<P><STRONG><a name="[ee]"></a>__aeabi_memcpy4</STRONG> (Thumb, 56 bytes, Stack size 0 bytes, rt_memcpy.o(.emb_text))
+<BR><BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM_ConfigOutputChannel
+<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER_GetModuleClock
 </UL>
 
-<P><STRONG><a name="[129]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, rt_memcpy.o(.emb_text), UNUSED)
+<P><STRONG><a name="[145]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, rt_memcpy.o(.emb_text), UNUSED)
 
 <P><STRONG><a name="[22]"></a>Reset_Handler</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, startup_isd9100.o(.text))
 
@@ -288,64 +289,73 @@ Global Symbols
 <P><STRONG><a name="[36]"></a>__aeabi_memclr</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, rt_memclr.o(.text))
 <BR><BR>[Calls]<UL><LI><a href="#[34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_memset
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;VolumeCtrl_Reset
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4_DecodeProcess
-<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Record_SetInBufRecord
+<BR>[Called By]<UL><LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;VolumeCtrl_Reset
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_SetOutputBuf
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4_DecodeProcess
+<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Record_SetInBufRecord
 </UL>
 
-<P><STRONG><a name="[12a]"></a>__rt_memclr</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, rt_memclr.o(.text), UNUSED)
+<P><STRONG><a name="[146]"></a>__rt_memclr</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, rt_memclr.o(.text), UNUSED)
 
 <P><STRONG><a name="[c0]"></a>__aeabi_memclr4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, rt_memclr.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MicGetApp_Initiate
+<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4App_DecodeInitiate
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4_DecodeInitiate
 </UL>
 
-<P><STRONG><a name="[12b]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, rt_memclr.o(.text), UNUSED)
+<P><STRONG><a name="[147]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, rt_memclr.o(.text), UNUSED)
 
 <P><STRONG><a name="[37]"></a>__rt_memclr_w</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, rt_memclr.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_memset_w
 </UL>
 
-<P><STRONG><a name="[12c]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, aeabi_sdivfast.o(.text), UNUSED)
+<P><STRONG><a name="[148]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, aeabi_sdivfast.o(.text), UNUSED)
 
-<P><STRONG><a name="[76]"></a>__aeabi_uidivmod</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, aeabi_sdivfast.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delayms
-<LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Open
-<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER_Open
-<LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysClk_InitiateRC
-<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM_ConfigOutputChannel
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MIC_ChangeSR
-<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemCoreClockUpdate
-<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrDina
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_13
-<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJamii
+<P><STRONG><a name="[4a]"></a>__aeabi_uidivmod</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, aeabi_sdivfast.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delayms
+<LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Open
+<LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER_Open
+<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysClk_InitiateRC
+<LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM_ConfigOutputChannel
+<LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_Process
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DPWM_SetSampleRate
+<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPK_ChangeSR
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MIC_ChangeSR
+<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemCoreClockUpdate
+<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_SetVarClock
+<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_SetBusClock
+<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_GetBusClock
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrDina
+<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_13
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJamii
 </UL>
 
-<P><STRONG><a name="[12d]"></a>__aeabi_idiv</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, aeabi_sdivfast.o(.text), UNUSED)
+<P><STRONG><a name="[149]"></a>__aeabi_idiv</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, aeabi_sdivfast.o(.text), UNUSED)
 
 <P><STRONG><a name="[3c]"></a>__aeabi_idivmod</STRONG> (Thumb, 460 bytes, Stack size 8 bytes, aeabi_sdivfast.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_idivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_SetPGAGaindB
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrGreg
-<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrErin
-<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrEmma
-<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJoan
-<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrClay
-<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrChaza
-<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrErica
-<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrElsa
-<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrElla
-<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRon
-<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_11
-<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_55
-<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJeni
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrGreg
+<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrErin
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrEmma
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJoan
+<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrClay
+<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrChaza
+<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrErica
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrElsa
+<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrElla
+<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRon
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_11
+<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_55
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJeni
 </UL>
 
-<P><STRONG><a name="[12e]"></a>__use_two_region_memory</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
+<P><STRONG><a name="[14a]"></a>__use_two_region_memory</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
-<P><STRONG><a name="[12f]"></a>__rt_heap_escrow$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
+<P><STRONG><a name="[14b]"></a>__rt_heap_escrow$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
-<P><STRONG><a name="[130]"></a>__rt_heap_expand$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
+<P><STRONG><a name="[14c]"></a>__rt_heap_expand$2region</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
 <P><STRONG><a name="[2a]"></a>__user_setup_stackheap</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, sys_stackheap_outer.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
@@ -367,36 +377,36 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
-<P><STRONG><a name="[131]"></a>__user_libspace</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
+<P><STRONG><a name="[14d]"></a>__user_libspace</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
 
 <P><STRONG><a name="[38]"></a>__user_perproc_libspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, libspace.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[2a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_setup_stackheap
 </UL>
 
-<P><STRONG><a name="[132]"></a>__user_perthread_libspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
+<P><STRONG><a name="[14e]"></a>__user_perthread_libspace</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
 
 <P><STRONG><a name="[33]"></a>_sys_exit</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, sys_exit.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[32]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit_exit
 </UL>
 
-<P><STRONG><a name="[133]"></a>__I$use$semihosting</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
+<P><STRONG><a name="[14f]"></a>__I$use$semihosting</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[134]"></a>__use_no_semihosting_swi</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
+<P><STRONG><a name="[150]"></a>__use_no_semihosting_swi</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[135]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, indicate_semi.o(.text), UNUSED)
+<P><STRONG><a name="[151]"></a>__semihosting_library_function</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, indicate_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[bc]"></a>ADC_EnableMICBias</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, adc.o(i.ADC_EnableMICBias))
-<BR><BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MIC_Open
+<P><STRONG><a name="[ce]"></a>ADC_EnableMICBias</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, adc.o(i.ADC_EnableMICBias))
+<BR><BR>[Called By]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MIC_Open
 </UL>
 
-<P><STRONG><a name="[be]"></a>ADC_Open</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, adc.o(i.ADC_Open))
-<BR><BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MIC_Open
+<P><STRONG><a name="[d0]"></a>ADC_Open</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, adc.o(i.ADC_Open))
+<BR><BR>[Called By]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MIC_Open
 </UL>
 
-<P><STRONG><a name="[bd]"></a>ADC_SetAMUX</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, adc.o(i.ADC_SetAMUX))
+<P><STRONG><a name="[cf]"></a>ADC_SetAMUX</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, adc.o(i.ADC_SetAMUX))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = ADC_SetAMUX
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MIC_Open
+<BR>[Called By]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MIC_Open
 </UL>
 
 <P><STRONG><a name="[3b]"></a>ADC_SetPGAGaindB</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, adc.o(i.ADC_SetPGAGaindB))
@@ -404,899 +414,1006 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MIC_Open
+<BR>[Called By]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MIC_Open
 </UL>
 
-<P><STRONG><a name="[3d]"></a>App_Initiate</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, appfunctions.o(i.App_Initiate))
+<P><STRONG><a name="[3d]"></a>App_Initiate</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, appfunctions.o(i.App_Initiate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 680<LI>Call Chain = App_Initiate &rArr; App_StartRecognize &rArr; VROneCmdApp_Initiate &rArr; CSpotter_Init_Sep &rArr; CSpotter_Init_MultiWithExtRejModel &rArr; NINJA_API_73 &rArr; BsrRay &rArr; BsrDina
 </UL>
-<BR>[Calls]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;VROneCmdApp_UnpackBin
+<BR>[Calls]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;VROneCmdApp_UnpackBin
 <LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_Initiate
 <LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MicGetApp_Initiate
-<LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_StartRecognize
+<LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AudioRom_GetAudioNum
+<LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_StartRecognize
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[42]"></a>App_Process</STRONG> (Thumb, 232 bytes, Stack size 24 bytes, appfunctions.o(i.App_Process))
+<P><STRONG><a name="[43]"></a>App_Process</STRONG> (Thumb, 476 bytes, Stack size 24 bytes, appfunctions.o(i.App_Process))
 <BR><BR>[Stack]<UL><LI>Max Depth = 608<LI>Call Chain = App_Process &rArr; VROneCmdApp_GetCMDID &rArr; CSpotter_AddSample &rArr; NINJA_API_13 &rArr; NINJA_API_11 &rArr; BsrAsa &rArr; BsrCara &rArr; BsrBret
 </UL>
-<BR>[Calls]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;VROneCmdApp_GetCMDID
-<LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MicGetApp_StartRec
-<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MicGetApp_ProcessRec
-<LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4App_DecodeProcess
-<LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendCMD
+<BR>[Calls]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;VROneCmdApp_GetCMDID
+<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MicGetApp_StartRec
+<LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MicGetApp_ProcessRec
+<LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4App_DecodeProcess
+<LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
+<LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendCMD
+<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_StopPlay
+<LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM_Start
+<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[41]"></a>App_StartRecognize</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, appfunctions.o(i.App_StartRecognize))
+<P><STRONG><a name="[4d]"></a>App_StartPlay</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, appfunctions.o(i.App_StartPlay))
+<BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = App_StartPlay &rArr; MD4App_DecodeStartPlayByID &rArr; MD4App_DecodeStartPlayByAddr &rArr; MD4App_DecodeProcess &rArr; MD4_DecodeProcess &rArr; MD4_DecodeFrame &rArr; MD4_CheckResLdr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_StartPlay
+<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MicGetApp_StopRec
+<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4App_DecodeStartPlayByID
+<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4App_DecodeInitiate
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendCMD
+</UL>
+
+<P><STRONG><a name="[42]"></a>App_StartRecognize</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, appfunctions.o(i.App_StartRecognize))
 <BR><BR>[Stack]<UL><LI>Max Depth = 672<LI>Call Chain = App_StartRecognize &rArr; VROneCmdApp_Initiate &rArr; CSpotter_Init_Sep &rArr; CSpotter_Init_MultiWithExtRejModel &rArr; NINJA_API_73 &rArr; BsrRay &rArr; BsrDina
 </UL>
-<BR>[Calls]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;VROneCmdApp_Initiate
-<LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MicGetApp_StartRec
+<BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;VROneCmdApp_Initiate
+<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MicGetApp_StartRec
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_Initiate
 </UL>
 
-<P><STRONG><a name="[4b]"></a>BIQ_Reset</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, biq.o(i.BIQ_Reset))
-<BR><BR>[Called By]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BIQFilter_Setting
+<P><STRONG><a name="[45]"></a>App_StopPlay</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, appfunctions.o(i.App_StopPlay))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = App_StopPlay &rArr; MD4App_DecodeStopPlay &rArr; Playback_Remove &rArr; Playback_StopPlay
+</UL>
+<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_StopPlay
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4App_DecodeStopPlay
+</UL>
+<BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_Process
 </UL>
 
-<P><STRONG><a name="[4c]"></a>BIQ_SetCoeff</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, biq.o(i.BIQ_SetCoeff))
+<P><STRONG><a name="[55]"></a>AudioRom_GetAudioChunkInfo</STRONG> (Thumb, 46 bytes, Stack size 40 bytes, audiorom.o(i.AudioRom_GetAudioChunkInfo))
+<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = AudioRom_GetAudioChunkInfo &rArr; AudioRom_GetRomHeader
+</UL>
+<BR>[Calls]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AudioRom_GetRomHeader
+</UL>
+<BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4App_DecodeStartPlayByID
+</UL>
+
+<P><STRONG><a name="[40]"></a>AudioRom_GetAudioNum</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, audiorom.o(i.AudioRom_GetAudioNum))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = AudioRom_GetAudioNum
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_Initiate
+</UL>
+
+<P><STRONG><a name="[56]"></a>AudioRom_GetRomHeader</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, audiorom.o(i.AudioRom_GetRomHeader))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = AudioRom_GetRomHeader
+</UL>
+<BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AudioRom_GetAudioChunkInfo
+</UL>
+
+<P><STRONG><a name="[59]"></a>BIQ_Reset</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, biq.o(i.BIQ_Reset))
+<BR><BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BIQFilter_Setting
+</UL>
+
+<P><STRONG><a name="[5a]"></a>BIQ_SetCoeff</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, biq.o(i.BIQ_SetCoeff))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = BIQ_SetCoeff
 </UL>
-<BR>[Called By]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BIQFilter_Setting
+<BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BIQFilter_Setting
 </UL>
 
-<P><STRONG><a name="[d0]"></a>BsrAbby</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, BsrJoe.o(i.BsrAbby))
-<BR><BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
+<P><STRONG><a name="[e2]"></a>BsrAbby</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, BsrJoe.o(i.BsrAbby))
+<BR><BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
 </UL>
 
-<P><STRONG><a name="[4e]"></a>BsrAbel</STRONG> (Thumb, 126 bytes, Stack size 12 bytes, BsrJoe.o(i.BsrAbel))
+<P><STRONG><a name="[5c]"></a>BsrAbel</STRONG> (Thumb, 126 bytes, Stack size 12 bytes, BsrJoe.o(i.BsrAbel))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = BsrAbel
 </UL>
-<BR>[Called By]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrCory
-<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrChaze
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrChaz
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrCara
-<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRon
-<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrMya
-<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrMichael
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJoyci
-<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAmos
-<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAlma
+<BR>[Called By]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrCory
+<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrChaze
+<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrChaz
+<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrCara
+<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRon
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrMya
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrMichael
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJoyci
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAmos
+<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAlma
 </UL>
 
-<P><STRONG><a name="[53]"></a>BsrAdam</STRONG> (Thumb, 200 bytes, Stack size 8 bytes, BsrJoe.o(i.BsrAdam))
+<P><STRONG><a name="[61]"></a>BsrAdam</STRONG> (Thumb, 200 bytes, Stack size 8 bytes, BsrJoe.o(i.BsrAdam))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = BsrAdam
 </UL>
-<BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrCoty
-<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrCory
-<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrChaze
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrChaz
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrCara
-<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRon
-<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrNia
-<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrMya
-<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrMichael
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJoyci
-<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAna
-<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAmos
-<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAmir
+<BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrCoty
+<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrCory
+<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrChaze
+<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrChaz
+<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrCara
+<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRon
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrNia
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrMya
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrMichael
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJoyci
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAna
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAmos
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAmir
 </UL>
 
-<P><STRONG><a name="[4d]"></a>BsrAlma</STRONG> (Thumb, 210 bytes, Stack size 40 bytes, BsrDon.o(i.BsrAlma))
+<P><STRONG><a name="[5b]"></a>BsrAlma</STRONG> (Thumb, 210 bytes, Stack size 40 bytes, BsrDon.o(i.BsrAlma))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = BsrAlma &rArr; BsrErica &rArr; __aeabi_idivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrZoe
-<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrErica
-<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAbel
-<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJohn
+<BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrZoe
+<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrErica
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAbel
+<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJohn
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
+<BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
 </UL>
 
-<P><STRONG><a name="[52]"></a>BsrAmir</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, BsrDon.o(i.BsrAmir))
+<P><STRONG><a name="[60]"></a>BsrAmir</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, BsrDon.o(i.BsrAmir))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = BsrAmir &rArr; BsrAdam
 </UL>
-<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAdam
+<BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAdam
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
-<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_2
+<BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_2
 </UL>
 
-<P><STRONG><a name="[54]"></a>BsrAmos</STRONG> (Thumb, 294 bytes, Stack size 48 bytes, BsrDon.o(i.BsrAmos))
+<P><STRONG><a name="[62]"></a>BsrAmos</STRONG> (Thumb, 294 bytes, Stack size 48 bytes, BsrDon.o(i.BsrAmos))
 <BR><BR>[Stack]<UL><LI>Max Depth = 216<LI>Call Chain = BsrAmos &rArr; BsrEden &rArr; BsrGreg &rArr; __aeabi_idivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrElsa
-<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrElla
-<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrEden
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAdam
-<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAbel
-<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJose
+<BR>[Calls]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrElsa
+<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrElla
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrEden
+<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAdam
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAbel
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJose
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_13
+<BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_13
 </UL>
 
-<P><STRONG><a name="[59]"></a>BsrAna</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, BsrJim.o(i.BsrAna))
+<P><STRONG><a name="[67]"></a>BsrAna</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, BsrJim.o(i.BsrAna))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = BsrAna &rArr; BsrAdam
 </UL>
-<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAdam
+<BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAdam
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
-<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_2
+<BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_2
 </UL>
 
-<P><STRONG><a name="[5a]"></a>BsrAnna</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, BsrDon.o(i.BsrAnna))
+<P><STRONG><a name="[68]"></a>BsrAnna</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, BsrDon.o(i.BsrAnna))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = BsrAnna &rArr; BsrErica &rArr; __aeabi_idivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrErica
+<BR>[Calls]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrErica
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
+<BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
 </UL>
 
-<P><STRONG><a name="[5b]"></a>BsrAnne</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, BsrDon.o(i.BsrAnne))
+<P><STRONG><a name="[69]"></a>BsrAnne</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, BsrDon.o(i.BsrAnne))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = BsrAnne
 </UL>
-<BR>[Calls]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrZoe
+<BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrZoe
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_75
+<BR>[Called By]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_75
 </UL>
 
-<P><STRONG><a name="[5c]"></a>BsrAnnie</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, BsrDon.o(i.BsrAnnie))
+<P><STRONG><a name="[6a]"></a>BsrAnnie</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, BsrDon.o(i.BsrAnnie))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = BsrAnnie
 </UL>
-<BR>[Calls]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrZoe
+<BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrZoe
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_75
+<BR>[Called By]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_75
 </UL>
 
-<P><STRONG><a name="[69]"></a>BsrAri</STRONG> (Thumb, 172 bytes, Stack size 12 bytes, BsrJim.o(i.BsrAri))
+<P><STRONG><a name="[77]"></a>BsrAri</STRONG> (Thumb, 172 bytes, Stack size 12 bytes, BsrJim.o(i.BsrAri))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = BsrAri
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAsa
-<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_11
-<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
-<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_3
+<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAsa
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_11
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_3
 </UL>
 
-<P><STRONG><a name="[5d]"></a>BsrAsa</STRONG> (Thumb, 238 bytes, Stack size 16 bytes, BsrJim.o(i.BsrAsa))
+<P><STRONG><a name="[6b]"></a>BsrAsa</STRONG> (Thumb, 238 bytes, Stack size 16 bytes, BsrJim.o(i.BsrAsa))
 <BR><BR>[Stack]<UL><LI>Max Depth = 256<LI>Call Chain = BsrAsa &rArr; BsrCara &rArr; BsrBret
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrClay
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrChazi
-<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrChaze
-<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrChaza
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrChaz
-<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrChada
-<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrChad
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrCarae
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrCara
-<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrCale
-<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrCadea
-<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrCade
-<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAri
+<BR>[Calls]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrClay
+<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrChazi
+<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrChaze
+<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrChaza
+<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrChaz
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrChada
+<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrChad
+<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrCarae
+<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrCara
+<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrCale
+<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrCadea
+<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrCade
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAri
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_11
+<BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_11
 </UL>
 
-<P><STRONG><a name="[6b]"></a>BsrAvea</STRONG> (Thumb, 170 bytes, Stack size 40 bytes, BsrJim.o(i.BsrAvea))
+<P><STRONG><a name="[79]"></a>BsrAvea</STRONG> (Thumb, 170 bytes, Stack size 40 bytes, BsrJim.o(i.BsrAvea))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = BsrAvea &rArr; BsrBen &rArr; BsrMaxi
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrBen
-<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrZoe
+<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrBen
+<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrZoe
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_75
-</UL>
-
-<P><STRONG><a name="[cc]"></a>BsrAyla</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, BsrDon.o(i.BsrAyla))
-<BR><BR>[Called By]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_26
+<BR>[Called By]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_75
 </UL>
 
-<P><STRONG><a name="[cd]"></a>BsrBaby</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, BsrDon.o(i.BsrBaby))
-<BR><BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
-<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_48
-<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_47
+<P><STRONG><a name="[de]"></a>BsrAyla</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, BsrDon.o(i.BsrAyla))
+<BR><BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_26
 </UL>
 
-<P><STRONG><a name="[84]"></a>BsrBrad</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, BsrBen.o(i.BsrBrad))
-<BR><BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrErik
-<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_11
+<P><STRONG><a name="[df]"></a>BsrBaby</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, BsrDon.o(i.BsrBaby))
+<BR><BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_48
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_47
 </UL>
 
-<P><STRONG><a name="[5f]"></a>BsrCade</STRONG> (Thumb, 394 bytes, Stack size 40 bytes, BsrJay.o(i.BsrCade))
+<P><STRONG><a name="[91]"></a>BsrBrad</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, BsrBen.o(i.BsrBrad))
+<BR><BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrErik
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_11
+</UL>
+
+<P><STRONG><a name="[6d]"></a>BsrCade</STRONG> (Thumb, 394 bytes, Stack size 40 bytes, BsrJay.o(i.BsrCade))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = BsrCade
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAsa
+<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAsa
 </UL>
 
-<P><STRONG><a name="[5e]"></a>BsrCadea</STRONG> (Thumb, 254 bytes, Stack size 28 bytes, BsrJay.o(i.BsrCadea))
+<P><STRONG><a name="[6c]"></a>BsrCadea</STRONG> (Thumb, 254 bytes, Stack size 28 bytes, BsrJay.o(i.BsrCadea))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = BsrCadea
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAsa
+<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAsa
 </UL>
 
-<P><STRONG><a name="[60]"></a>BsrCale</STRONG> (Thumb, 68 bytes, Stack size 4 bytes, BsrJay.o(i.BsrCale))
+<P><STRONG><a name="[6e]"></a>BsrCale</STRONG> (Thumb, 68 bytes, Stack size 4 bytes, BsrJay.o(i.BsrCale))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = BsrCale
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAsa
+<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAsa
 </UL>
 
-<P><STRONG><a name="[61]"></a>BsrCara</STRONG> (Thumb, 1000 bytes, Stack size 136 bytes, BsrJay.o(i.BsrCara))
+<P><STRONG><a name="[6f]"></a>BsrCara</STRONG> (Thumb, 1000 bytes, Stack size 136 bytes, BsrJay.o(i.BsrCara))
 <BR><BR>[Stack]<UL><LI>Max Depth = 240<LI>Call Chain = BsrCara &rArr; BsrBret
 </UL>
-<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAdam
-<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAbel
-<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJohn
-<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrBret
+<BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAdam
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAbel
+<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJohn
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrBret
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAsa
+<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAsa
 </UL>
 
-<P><STRONG><a name="[62]"></a>BsrCarae</STRONG> (Thumb, 198 bytes, Stack size 88 bytes, BsrJay.o(i.BsrCarae))
+<P><STRONG><a name="[70]"></a>BsrCarae</STRONG> (Thumb, 198 bytes, Stack size 88 bytes, BsrJay.o(i.BsrCarae))
 <BR><BR>[Stack]<UL><LI>Max Depth = 192<LI>Call Chain = BsrCarae &rArr; BsrBret
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrBret
+<BR>[Calls]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrBret
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAsa
+<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAsa
 </UL>
 
-<P><STRONG><a name="[65]"></a>BsrChad</STRONG> (Thumb, 182 bytes, Stack size 20 bytes, BsrJay.o(i.BsrChad))
+<P><STRONG><a name="[73]"></a>BsrChad</STRONG> (Thumb, 182 bytes, Stack size 20 bytes, BsrJay.o(i.BsrChad))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = BsrChad
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAsa
+<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAsa
 </UL>
 
-<P><STRONG><a name="[63]"></a>BsrChada</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, BsrJay.o(i.BsrChada))
+<P><STRONG><a name="[71]"></a>BsrChada</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, BsrJay.o(i.BsrChada))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = BsrChada
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAsa
+<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAsa
 </UL>
 
-<P><STRONG><a name="[66]"></a>BsrChaz</STRONG> (Thumb, 218 bytes, Stack size 32 bytes, BsrJay.o(i.BsrChaz))
+<P><STRONG><a name="[74]"></a>BsrChaz</STRONG> (Thumb, 218 bytes, Stack size 32 bytes, BsrJay.o(i.BsrChaz))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = BsrChaz &rArr; BsrAbel
 </UL>
-<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAdam
-<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAbel
+<BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAdam
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAbel
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAsa
+<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAsa
 </UL>
 
-<P><STRONG><a name="[67]"></a>BsrChaza</STRONG> (Thumb, 182 bytes, Stack size 48 bytes, BsrJay.o(i.BsrChaza))
+<P><STRONG><a name="[75]"></a>BsrChaza</STRONG> (Thumb, 182 bytes, Stack size 48 bytes, BsrJay.o(i.BsrChaza))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = BsrChaza &rArr; __aeabi_idivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAsa
+<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAsa
 </UL>
 
-<P><STRONG><a name="[64]"></a>BsrChaze</STRONG> (Thumb, 204 bytes, Stack size 32 bytes, BsrJay.o(i.BsrChaze))
+<P><STRONG><a name="[72]"></a>BsrChaze</STRONG> (Thumb, 204 bytes, Stack size 32 bytes, BsrJay.o(i.BsrChaze))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = BsrChaze &rArr; BsrAbel
 </UL>
-<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAdam
-<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAbel
+<BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAdam
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAbel
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAsa
+<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAsa
 </UL>
 
-<P><STRONG><a name="[68]"></a>BsrChazi</STRONG> (Thumb, 206 bytes, Stack size 40 bytes, BsrJay.o(i.BsrChazi))
+<P><STRONG><a name="[76]"></a>BsrChazi</STRONG> (Thumb, 206 bytes, Stack size 40 bytes, BsrJay.o(i.BsrChazi))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = BsrChazi
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAsa
+<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAsa
 </UL>
 
-<P><STRONG><a name="[6a]"></a>BsrClay</STRONG> (Thumb, 1378 bytes, Stack size 104 bytes, BsrJay.o(i.BsrClay))
+<P><STRONG><a name="[78]"></a>BsrClay</STRONG> (Thumb, 1378 bytes, Stack size 104 bytes, BsrJay.o(i.BsrClay))
 <BR><BR>[Stack]<UL><LI>Max Depth = 216<LI>Call Chain = BsrClay &rArr; BsrJeni &rArr; __aeabi_idivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
-<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJeni
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJeni
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAsa
+<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAsa
 </UL>
 
-<P><STRONG><a name="[70]"></a>BsrCory</STRONG> (Thumb, 488 bytes, Stack size 24 bytes, BsrJoy.o(i.BsrCory))
+<P><STRONG><a name="[7e]"></a>BsrCory</STRONG> (Thumb, 488 bytes, Stack size 24 bytes, BsrJoy.o(i.BsrCory))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = BsrCory &rArr; BsrJosh
 </UL>
-<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAdam
-<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAbel
-<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJosh
-<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJohn
+<BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAdam
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAbel
+<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJosh
+<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJohn
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRay
+<BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRay
 </UL>
 
-<P><STRONG><a name="[72]"></a>BsrCoty</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, BsrJoy.o(i.BsrCoty))
+<P><STRONG><a name="[80]"></a>BsrCoty</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, BsrJoy.o(i.BsrCoty))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = BsrCoty &rArr; BsrAdam
 </UL>
-<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAdam
+<BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAdam
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRay
-<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrNia
-<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrMya
+<BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRay
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrNia
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrMya
 </UL>
 
-<P><STRONG><a name="[ca]"></a>BsrDan</STRONG> (Thumb, 82 bytes, Stack size 4 bytes, BsrJim.o(i.BsrDan))
+<P><STRONG><a name="[dc]"></a>BsrDan</STRONG> (Thumb, 82 bytes, Stack size 4 bytes, BsrJim.o(i.BsrDan))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = BsrDan
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
-<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_15
+<BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
+<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_15
 </UL>
 
-<P><STRONG><a name="[8e]"></a>BsrDane</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, BsrJoy.o(i.BsrDane))
-<BR><BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRay
+<P><STRONG><a name="[9b]"></a>BsrDane</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, BsrJoy.o(i.BsrDane))
+<BR><BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRay
 </UL>
 
-<P><STRONG><a name="[8f]"></a>BsrDawn</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, BsrJoy.o(i.BsrDawn))
-<BR><BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRay
+<P><STRONG><a name="[9c]"></a>BsrDawn</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, BsrJoy.o(i.BsrDawn))
+<BR><BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRay
 </UL>
 
-<P><STRONG><a name="[92]"></a>BsrDeja</STRONG> (Thumb, 108 bytes, Stack size 16 bytes, BsrJoy.o(i.BsrDeja))
+<P><STRONG><a name="[9f]"></a>BsrDeja</STRONG> (Thumb, 108 bytes, Stack size 16 bytes, BsrJoy.o(i.BsrDeja))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = BsrDeja
 </UL>
-<BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRon
+<BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRon
 </UL>
 
-<P><STRONG><a name="[93]"></a>BsrDemi</STRONG> (Thumb, 374 bytes, Stack size 140 bytes, BsrJoy.o(i.BsrDemi))
+<P><STRONG><a name="[a0]"></a>BsrDemi</STRONG> (Thumb, 374 bytes, Stack size 140 bytes, BsrJoy.o(i.BsrDemi))
 <BR><BR>[Stack]<UL><LI>Max Depth = 140<LI>Call Chain = BsrDemi
 </UL>
-<BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRon
+<BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRon
 </UL>
 
-<P><STRONG><a name="[73]"></a>BsrDeon</STRONG> (Thumb, 374 bytes, Stack size 112 bytes, BsrJoy.o(i.BsrDeon))
+<P><STRONG><a name="[81]"></a>BsrDeon</STRONG> (Thumb, 374 bytes, Stack size 112 bytes, BsrJoy.o(i.BsrDeon))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = BsrDeon &rArr; BsrJamii
 </UL>
-<BR>[Calls]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJamii
+<BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJamii
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRay
+<BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRay
 </UL>
 
-<P><STRONG><a name="[75]"></a>BsrDina</STRONG> (Thumb, 586 bytes, Stack size 152 bytes, BsrJoy.o(i.BsrDina))
+<P><STRONG><a name="[83]"></a>BsrDina</STRONG> (Thumb, 586 bytes, Stack size 152 bytes, BsrJoy.o(i.BsrDina))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = BsrDina
 </UL>
-<BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<BR>[Calls]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRay
+<BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRay
 </UL>
 
-<P><STRONG><a name="[77]"></a>BsrDion</STRONG> (Thumb, 214 bytes, Stack size 88 bytes, BsrJoy.o(i.BsrDion))
+<P><STRONG><a name="[84]"></a>BsrDion</STRONG> (Thumb, 214 bytes, Stack size 88 bytes, BsrJoy.o(i.BsrDion))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = BsrDion &rArr; BsrJosh
 </UL>
-<BR>[Calls]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrZoe
-<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJosh
+<BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrZoe
+<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJosh
 </UL>
-<BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRoy
+<BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRoy
 </UL>
 
-<P><STRONG><a name="[55]"></a>BsrEden</STRONG> (Thumb, 350 bytes, Stack size 48 bytes, BsrEva.o(i.BsrEden))
+<P><STRONG><a name="[63]"></a>BsrEden</STRONG> (Thumb, 350 bytes, Stack size 48 bytes, BsrEva.o(i.BsrEden))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = BsrEden &rArr; BsrGreg &rArr; __aeabi_idivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrIsai
-<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrIrma
-<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrIris
-<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrHugo
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrGreg
-<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrGary
-<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrEvan
-<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrErin
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrErik
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrEric
-<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrEmma
-<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJohn
+<BR>[Calls]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrIsai
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrIrma
+<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrIris
+<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrHugo
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrGreg
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrGary
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrEvan
+<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrErin
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrErik
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrEric
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrEmma
+<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJohn
 </UL>
-<BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAmos
+<BR>[Called By]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAmos
 </UL>
 
-<P><STRONG><a name="[c7]"></a>BsrEli</STRONG> (Thumb, 88 bytes, Stack size 8 bytes, BsrJim.o(i.BsrEli))
+<P><STRONG><a name="[d9]"></a>BsrEli</STRONG> (Thumb, 88 bytes, Stack size 8 bytes, BsrJim.o(i.BsrEli))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = BsrEli
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_11
-<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_23
+<BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_11
+<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_23
 </UL>
 
-<P><STRONG><a name="[56]"></a>BsrElla</STRONG> (Thumb, 426 bytes, Stack size 40 bytes, BsrEva.o(i.BsrElla))
+<P><STRONG><a name="[64]"></a>BsrElla</STRONG> (Thumb, 426 bytes, Stack size 40 bytes, BsrEva.o(i.BsrElla))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = BsrElla &rArr; __aeabi_idivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJuanitez
+<BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJuanitez
 <LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAmos
+<BR>[Called By]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAmos
 </UL>
 
-<P><STRONG><a name="[57]"></a>BsrElsa</STRONG> (Thumb, 370 bytes, Stack size 56 bytes, BsrEva.o(i.BsrElsa))
+<P><STRONG><a name="[65]"></a>BsrElsa</STRONG> (Thumb, 370 bytes, Stack size 56 bytes, BsrEva.o(i.BsrElsa))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = BsrElsa &rArr; __aeabi_idivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJuanitez
+<BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJuanitez
 <LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAmos
+<BR>[Called By]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAmos
 </UL>
 
-<P><STRONG><a name="[80]"></a>BsrEmma</STRONG> (Thumb, 212 bytes, Stack size 48 bytes, BsrEli.o(i.BsrEmma))
+<P><STRONG><a name="[8d]"></a>BsrEmma</STRONG> (Thumb, 212 bytes, Stack size 48 bytes, BsrEli.o(i.BsrEmma))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = BsrEmma &rArr; __aeabi_idivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrEden
+<BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrEden
 </UL>
 
-<P><STRONG><a name="[7d]"></a>BsrEric</STRONG> (Thumb, 130 bytes, Stack size 12 bytes, BsrEli.o(i.BsrEric))
+<P><STRONG><a name="[8a]"></a>BsrEric</STRONG> (Thumb, 130 bytes, Stack size 12 bytes, BsrEli.o(i.BsrEric))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = BsrEric
 </UL>
-<BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrEden
+<BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrEden
 </UL>
 
-<P><STRONG><a name="[51]"></a>BsrErica</STRONG> (Thumb, 306 bytes, Stack size 40 bytes, BsrEli.o(i.BsrErica))
+<P><STRONG><a name="[5f]"></a>BsrErica</STRONG> (Thumb, 306 bytes, Stack size 40 bytes, BsrEli.o(i.BsrErica))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = BsrErica &rArr; __aeabi_idivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAnna
-<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAlma
+<BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAnna
+<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAlma
 </UL>
 
-<P><STRONG><a name="[81]"></a>BsrErik</STRONG> (Thumb, 46 bytes, Stack size 32 bytes, BsrEli.o(i.BsrErik))
+<P><STRONG><a name="[8e]"></a>BsrErik</STRONG> (Thumb, 46 bytes, Stack size 32 bytes, BsrEli.o(i.BsrErik))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = BsrErik
 </UL>
-<BR>[Calls]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrBrad
+<BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrBrad
 </UL>
-<BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrEden
+<BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrEden
 </UL>
 
-<P><STRONG><a name="[7e]"></a>BsrErin</STRONG> (Thumb, 230 bytes, Stack size 24 bytes, BsrEli.o(i.BsrErin))
+<P><STRONG><a name="[8b]"></a>BsrErin</STRONG> (Thumb, 230 bytes, Stack size 24 bytes, BsrEli.o(i.BsrErin))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = BsrErin &rArr; __aeabi_idivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrEden
+<BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrEden
 </UL>
 
-<P><STRONG><a name="[c6]"></a>BsrEva</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, BsrJim.o(i.BsrEva))
-<BR><BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_11
+<P><STRONG><a name="[d8]"></a>BsrEva</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, BsrJim.o(i.BsrEva))
+<BR><BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_11
 </UL>
 
-<P><STRONG><a name="[7f]"></a>BsrEvan</STRONG> (Thumb, 58 bytes, Stack size 4 bytes, BsrEli.o(i.BsrEvan))
+<P><STRONG><a name="[8c]"></a>BsrEvan</STRONG> (Thumb, 58 bytes, Stack size 4 bytes, BsrEli.o(i.BsrEvan))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = BsrEvan
 </UL>
-<BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrEden
+<BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrEden
 </UL>
 
-<P><STRONG><a name="[82]"></a>BsrGary</STRONG> (Thumb, 188 bytes, Stack size 44 bytes, BsrAna.o(i.BsrGary))
+<P><STRONG><a name="[8f]"></a>BsrGary</STRONG> (Thumb, 188 bytes, Stack size 44 bytes, BsrAna.o(i.BsrGary))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = BsrGary
 </UL>
-<BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrEden
+<BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrEden
 </UL>
 
-<P><STRONG><a name="[7c]"></a>BsrGreg</STRONG> (Thumb, 448 bytes, Stack size 112 bytes, BsrAnn.o(i.BsrGreg))
+<P><STRONG><a name="[89]"></a>BsrGreg</STRONG> (Thumb, 448 bytes, Stack size 112 bytes, BsrAnn.o(i.BsrGreg))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = BsrGreg &rArr; __aeabi_idivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrEden
+<BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrEden
 </UL>
 
-<P><STRONG><a name="[d2]"></a>BsrGuy</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, BsrJim.o(i.BsrGuy))
-<BR><BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
+<P><STRONG><a name="[e4]"></a>BsrGuy</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, BsrJim.o(i.BsrGuy))
+<BR><BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
 </UL>
 
-<P><STRONG><a name="[7a]"></a>BsrHugo</STRONG> (Thumb, 170 bytes, Stack size 16 bytes, BsrGuy.o(i.BsrHugo))
+<P><STRONG><a name="[87]"></a>BsrHugo</STRONG> (Thumb, 170 bytes, Stack size 16 bytes, BsrGuy.o(i.BsrHugo))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = BsrHugo
 </UL>
-<BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrEden
+<BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrEden
 </UL>
 
-<P><STRONG><a name="[79]"></a>BsrIris</STRONG> (Thumb, 54 bytes, Stack size 12 bytes, BsrGuy.o(i.BsrIris))
+<P><STRONG><a name="[86]"></a>BsrIris</STRONG> (Thumb, 54 bytes, Stack size 12 bytes, BsrGuy.o(i.BsrIris))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = BsrIris
 </UL>
-<BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrEden
+<BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrEden
 </UL>
 
-<P><STRONG><a name="[78]"></a>BsrIrma</STRONG> (Thumb, 80 bytes, Stack size 16 bytes, BsrGuy.o(i.BsrIrma))
+<P><STRONG><a name="[85]"></a>BsrIrma</STRONG> (Thumb, 80 bytes, Stack size 16 bytes, BsrGuy.o(i.BsrIrma))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = BsrIrma
 </UL>
-<BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrEden
+<BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrEden
 </UL>
 
-<P><STRONG><a name="[7b]"></a>BsrIsai</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, BsrGuy.o(i.BsrIsai))
-<BR><BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrEden
+<P><STRONG><a name="[88]"></a>BsrIsai</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, BsrGuy.o(i.BsrIsai))
+<BR><BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrEden
 </UL>
 
-<P><STRONG><a name="[85]"></a>BsrIvy</STRONG> (Thumb, 188 bytes, Stack size 32 bytes, BsrJim.o(i.BsrIvy))
+<P><STRONG><a name="[92]"></a>BsrIvy</STRONG> (Thumb, 188 bytes, Stack size 32 bytes, BsrJim.o(i.BsrIvy))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = BsrIvy &rArr; BsrMike
 </UL>
-<BR>[Calls]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrMike
+<BR>[Calls]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrMike
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
-</UL>
-
-<P><STRONG><a name="[cb]"></a>BsrJan</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, BsrJim.o(i.BsrJan))
-<BR><BR>[Called By]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_19
+<BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
 </UL>
 
-<P><STRONG><a name="[4f]"></a>BsrJohn</STRONG> (Thumb, 42 bytes, Stack size 4 bytes, BsrAli.o(i.BsrJohn))
+<P><STRONG><a name="[dd]"></a>BsrJan</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, BsrJim.o(i.BsrJan))
+<BR><BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_19
+</UL>
+
+<P><STRONG><a name="[5d]"></a>BsrJohn</STRONG> (Thumb, 42 bytes, Stack size 4 bytes, BsrAli.o(i.BsrJohn))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = BsrJohn
 </UL>
-<BR>[Called By]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrCory
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrCara
-<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrEden
-<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrMya
-<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrMichael
-<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAlma
-<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
-<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_Init_MultiWithExtRejModel
+<BR>[Called By]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrCory
+<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrCara
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrEden
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrMya
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrMichael
+<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAlma
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_Init_MultiWithExtRejModel
 </UL>
 
-<P><STRONG><a name="[58]"></a>BsrJose</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, BsrAli.o(i.BsrJose))
-<BR><BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRon
-<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAmos
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_13
+<P><STRONG><a name="[66]"></a>BsrJose</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, BsrAli.o(i.BsrJose))
+<BR><BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRon
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAmos
+<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_13
 </UL>
 
-<P><STRONG><a name="[71]"></a>BsrJosh</STRONG> (Thumb, 164 bytes, Stack size 16 bytes, BsrAli.o(i.BsrJosh))
+<P><STRONG><a name="[7f]"></a>BsrJosh</STRONG> (Thumb, 164 bytes, Stack size 16 bytes, BsrAli.o(i.BsrJosh))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = BsrJosh
 </UL>
-<BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrDion
-<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrCory
+<BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrDion
+<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrCory
 </UL>
 
-<P><STRONG><a name="[88]"></a>BsrJoyci</STRONG> (Thumb, 218 bytes, Stack size 24 bytes, BsrJim.o(i.BsrJoyci))
+<P><STRONG><a name="[95]"></a>BsrJoyci</STRONG> (Thumb, 218 bytes, Stack size 24 bytes, BsrJim.o(i.BsrJoyci))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = BsrJoyci &rArr; BsrAbel
 </UL>
-<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAdam
-<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAbel
+<BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAdam
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAbel
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
-</UL>
-
-<P><STRONG><a name="[89]"></a>BsrLei</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, BsrJim.o(i.BsrLei))
-<BR><BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrMaxi
-<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrMike
+<BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
 </UL>
 
-<P><STRONG><a name="[6d]"></a>BsrMaxi</STRONG> (Thumb, 122 bytes, Stack size 12 bytes, BsrJim.o(i.BsrMaxi))
+<P><STRONG><a name="[96]"></a>BsrLei</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, BsrJim.o(i.BsrLei))
+<BR><BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrMaxi
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrMike
+</UL>
+
+<P><STRONG><a name="[7b]"></a>BsrMaxi</STRONG> (Thumb, 122 bytes, Stack size 12 bytes, BsrJim.o(i.BsrMaxi))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = BsrMaxi
 </UL>
-<BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrLei
+<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrLei
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrBen
+<BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrBen
 </UL>
 
-<P><STRONG><a name="[8a]"></a>BsrMichael</STRONG> (Thumb, 1398 bytes, Stack size 120 bytes, BsrJim.o(i.BsrMichael))
+<P><STRONG><a name="[97]"></a>BsrMichael</STRONG> (Thumb, 1398 bytes, Stack size 120 bytes, BsrJim.o(i.BsrMichael))
 <BR><BR>[Stack]<UL><LI>Max Depth = 148<LI>Call Chain = BsrMichael &rArr; BsrBen &rArr; BsrMaxi
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrBen
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAdam
-<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAbel
-<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJohn
+<BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrBen
+<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAdam
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAbel
+<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJohn
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
-</UL>
-
-<P><STRONG><a name="[d3]"></a>BsrMichelle</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, BsrJim.o(i.BsrMichelle))
-<BR><BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
+<BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
 </UL>
 
-<P><STRONG><a name="[86]"></a>BsrMike</STRONG> (Thumb, 172 bytes, Stack size 8 bytes, BsrJim.o(i.BsrMike))
+<P><STRONG><a name="[e5]"></a>BsrMichelle</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, BsrJim.o(i.BsrMichelle))
+<BR><BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
+</UL>
+
+<P><STRONG><a name="[93]"></a>BsrMike</STRONG> (Thumb, 172 bytes, Stack size 8 bytes, BsrJim.o(i.BsrMike))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = BsrMike
 </UL>
-<BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrLei
+<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrLei
 </UL>
-<BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrIvy
+<BR>[Called By]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrIvy
 </UL>
 
-<P><STRONG><a name="[8b]"></a>BsrMya</STRONG> (Thumb, 136 bytes, Stack size 40 bytes, BsrKai.o(i.BsrMya))
+<P><STRONG><a name="[98]"></a>BsrMya</STRONG> (Thumb, 136 bytes, Stack size 40 bytes, BsrKai.o(i.BsrMya))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = BsrMya &rArr; BsrCoty &rArr; BsrAdam
 </UL>
-<BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrCoty
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAdam
-<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAbel
-<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJohn
+<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrCoty
+<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAdam
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAbel
+<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJohn
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
+<BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
 </UL>
 
-<P><STRONG><a name="[8c]"></a>BsrNia</STRONG> (Thumb, 50 bytes, Stack size 16 bytes, BsrKai.o(i.BsrNia))
+<P><STRONG><a name="[99]"></a>BsrNia</STRONG> (Thumb, 50 bytes, Stack size 16 bytes, BsrKai.o(i.BsrNia))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = BsrNia &rArr; BsrCoty &rArr; BsrAdam
 </UL>
-<BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrCoty
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAdam
+<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrCoty
+<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAdam
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
-<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_2
+<BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_2
 </UL>
 
-<P><STRONG><a name="[8d]"></a>BsrRay</STRONG> (Thumb, 310 bytes, Stack size 200 bytes, BsrKai.o(i.BsrRay))
+<P><STRONG><a name="[9a]"></a>BsrRay</STRONG> (Thumb, 310 bytes, Stack size 200 bytes, BsrKai.o(i.BsrRay))
 <BR><BR>[Stack]<UL><LI>Max Depth = 352<LI>Call Chain = BsrRay &rArr; BsrDina
 </UL>
-<BR>[Calls]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrDina
-<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrDeon
-<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrDawn
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrDane
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrCoty
-<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrCory
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrTom
+<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrDina
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrDeon
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrDawn
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrDane
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrCoty
+<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrCory
+<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrTom
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
-</UL>
-
-<P><STRONG><a name="[d1]"></a>BsrRex</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, BsrKai.o(i.BsrRex))
-<BR><BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
+<BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
 </UL>
 
-<P><STRONG><a name="[c8]"></a>BsrRey</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, BsrKai.o(i.BsrRey))
-<BR><BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_13
+<P><STRONG><a name="[e3]"></a>BsrRex</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, BsrKai.o(i.BsrRex))
+<BR><BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
 </UL>
 
-<P><STRONG><a name="[91]"></a>BsrRon</STRONG> (Thumb, 1186 bytes, Stack size 104 bytes, BsrKai.o(i.BsrRon))
+<P><STRONG><a name="[da]"></a>BsrRey</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, BsrKai.o(i.BsrRey))
+<BR><BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_13
+</UL>
+
+<P><STRONG><a name="[9e]"></a>BsrRon</STRONG> (Thumb, 1186 bytes, Stack size 104 bytes, BsrKai.o(i.BsrRon))
 <BR><BR>[Stack]<UL><LI>Max Depth = 244<LI>Call Chain = BsrRon &rArr; BsrDemi
 </UL>
-<BR>[Calls]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrDemi
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrDeja
-<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJoan
-<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAdam
-<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAbel
-<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJose
+<BR>[Calls]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrDemi
+<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrDeja
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJoan
+<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAdam
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAbel
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJose
 <LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_13
+<BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_13
 </UL>
 
-<P><STRONG><a name="[94]"></a>BsrRoy</STRONG> (Thumb, 44 bytes, Stack size 16 bytes, BsrKai.o(i.BsrRoy))
+<P><STRONG><a name="[a1]"></a>BsrRoy</STRONG> (Thumb, 44 bytes, Stack size 16 bytes, BsrKai.o(i.BsrRoy))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = BsrRoy &rArr; BsrDion &rArr; BsrJosh
 </UL>
-<BR>[Calls]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrDion
-<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrZoe
+<BR>[Calls]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrDion
+<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrZoe
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_75
-</UL>
-
-<P><STRONG><a name="[ce]"></a>BsrTed</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, BsrKai.o(i.BsrTed))
-<BR><BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
-<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_48
-<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_47
+<BR>[Called By]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_75
 </UL>
 
-<P><STRONG><a name="[cf]"></a>BsrTia</STRONG> (Thumb, 104 bytes, Stack size 8 bytes, BsrKai.o(i.BsrTia))
+<P><STRONG><a name="[e0]"></a>BsrTed</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, BsrKai.o(i.BsrTed))
+<BR><BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_48
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_47
+</UL>
+
+<P><STRONG><a name="[e1]"></a>BsrTia</STRONG> (Thumb, 104 bytes, Stack size 8 bytes, BsrKai.o(i.BsrTia))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = BsrTia
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_47
+<BR>[Called By]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_47
 </UL>
 
-<P><STRONG><a name="[90]"></a>BsrTom</STRONG> (Thumb, 146 bytes, Stack size 16 bytes, BsrKai.o(i.BsrTom))
+<P><STRONG><a name="[9d]"></a>BsrTom</STRONG> (Thumb, 146 bytes, Stack size 16 bytes, BsrKai.o(i.BsrTom))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = BsrTom
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRay
-<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
-<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_48
+<BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRay
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_48
 </UL>
 
-<P><STRONG><a name="[c9]"></a>BsrTop</STRONG> (Thumb, 94 bytes, Stack size 16 bytes, BsrKai.o(i.BsrTop))
+<P><STRONG><a name="[db]"></a>BsrTop</STRONG> (Thumb, 94 bytes, Stack size 16 bytes, BsrKai.o(i.BsrTop))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = BsrTop
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_13
+<BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_13
 </UL>
 
-<P><STRONG><a name="[95]"></a>BsrTre</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, BsrKai.o(i.BsrTre))
+<P><STRONG><a name="[a2]"></a>BsrTre</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, BsrKai.o(i.BsrTre))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = BsrTre &rArr; BsrJoan &rArr; __aeabi_idivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJoan
+<BR>[Calls]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJoan
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_47
-</UL>
-
-<P><STRONG><a name="[50]"></a>BsrZoe</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, BsrJoe.o(i.BsrZoe))
-<BR><BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrDion
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRoy
-<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAvea
-<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAnnie
-<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAnne
-<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAlma
+<BR>[Called By]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_47
 </UL>
 
-<P><STRONG><a name="[c1]"></a>BufCtrl_UpdateReadWithCount</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, bufctrl.o(i.BufCtrl_UpdateReadWithCount))
-<BR><BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_Process
-<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MicGetApp_ProcessRec
+<P><STRONG><a name="[5e]"></a>BsrZoe</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, BsrJoe.o(i.BsrZoe))
+<BR><BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrDion
+<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRoy
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAvea
+<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAnnie
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAnne
+<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAlma
 </UL>
 
-<P><STRONG><a name="[b5]"></a>BufCtrl_UpdateWriteWithCount</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, bufctrl.o(i.BufCtrl_UpdateWriteWithCount))
-<BR><BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Record_Process
-<LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4App_DecodeProcess
+<P><STRONG><a name="[d2]"></a>BufCtrl_UpdateReadWithCount</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, bufctrl.o(i.BufCtrl_UpdateReadWithCount))
+<BR><BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_Process
+<LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MicGetApp_ProcessRec
+</UL>
+
+<P><STRONG><a name="[c4]"></a>BufCtrl_UpdateWriteWithCount</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, bufctrl.o(i.BufCtrl_UpdateWriteWithCount))
+<BR><BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Record_Process
+<LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4App_DecodeProcess
 </UL>
 
 <P><STRONG><a name="[1c]"></a>CAPS_IRQHandler</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, interrupthandler.o(i.CAPS_IRQHandler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_isd9100.o(RESET)
 </UL>
-<P><STRONG><a name="[96]"></a>CLK_EnableLDO</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, clk.o(i.CLK_EnableLDO))
+<P><STRONG><a name="[a3]"></a>CLK_EnableLDO</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, clk.o(i.CLK_EnableLDO))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = CLK_EnableLDO &rArr; SYS_Unlock
 </UL>
-<BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYS_Unlock
-<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYS_Lock
+<BR>[Calls]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYS_Unlock
+<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYS_Lock
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[4a]"></a>CLK_EnableModuleClock</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, clk.o(i.CLK_EnableModuleClock))
-<BR><BR>[Called By]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPK_Open
-<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PdmaCtrl_Init
-<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MIC_Open
-<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time_init
-<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwm_init
-<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Init
-<LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BIQFilter_Setting
+<P><STRONG><a name="[58]"></a>CLK_EnableModuleClock</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, clk.o(i.CLK_EnableModuleClock))
+<BR><BR>[Called By]<UL><LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPK_Open
+<LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PdmaCtrl_Init
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MIC_Open
+<LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time_init
+<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwm_init
+<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Init
+<LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIFlash_Initiate
+<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BIQFilter_Setting
 </UL>
 
-<P><STRONG><a name="[99]"></a>CLK_EnableXtalRC</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, clk.o(i.CLK_EnableXtalRC))
+<P><STRONG><a name="[a6]"></a>CLK_EnableXtalRC</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, clk.o(i.CLK_EnableXtalRC))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = CLK_EnableXtalRC &rArr; SYS_Unlock
 </UL>
-<BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYS_Unlock
-<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYS_Lock
+<BR>[Calls]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYS_Unlock
+<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYS_Lock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysClk_InitiateRC
+<BR>[Called By]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysClk_InitiateRC
 </UL>
 
-<P><STRONG><a name="[9a]"></a>CLK_GetHCLKFreq</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, clk.o(i.CLK_GetHCLKFreq))
+<P><STRONG><a name="[a7]"></a>CLK_GetHCLKFreq</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, clk.o(i.CLK_GetHCLKFreq))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = CLK_GetHCLKFreq &rArr; SystemCoreClockUpdate
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemCoreClockUpdate
+<BR>[Calls]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemCoreClockUpdate
 </UL>
-<BR>[Called By]<UL><LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Open
-<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM_ConfigOutputChannel
-</UL>
-
-<P><STRONG><a name="[9c]"></a>CLK_SetHCLK</STRONG> (Thumb, 56 bytes, Stack size 16 bytes, clk.o(i.CLK_SetHCLK))
-<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = CLK_SetHCLK &rArr; SYS_Unlock
-</UL>
-<BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYS_Unlock
-<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYS_Lock
-<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemCoreClockUpdate
-</UL>
-<BR>[Called By]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysClk_InitiateRC
+<BR>[Called By]<UL><LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Open
+<LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM_ConfigOutputChannel
+<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_SetVarClock
+<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_SetBusClock
+<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_GetBusClock
 </UL>
 
-<P><STRONG><a name="[f3]"></a>CLK_SetModuleClock</STRONG> (Thumb, 74 bytes, Stack size 16 bytes, clk.o(i.CLK_SetModuleClock))
+<P><STRONG><a name="[a9]"></a>CLK_SetHCLK</STRONG> (Thumb, 56 bytes, Stack size 16 bytes, clk.o(i.CLK_SetHCLK))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = CLK_SetHCLK &rArr; SystemCoreClockUpdate
+</UL>
+<BR>[Calls]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemCoreClockUpdate
+<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYS_Unlock
+<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYS_Lock
+</UL>
+<BR>[Called By]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysClk_InitiateRC
+</UL>
+
+<P><STRONG><a name="[110]"></a>CLK_SetModuleClock</STRONG> (Thumb, 74 bytes, Stack size 16 bytes, clk.o(i.CLK_SetModuleClock))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = CLK_SetModuleClock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPK_Open
-<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time_init
-<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwm_init
+<BR>[Called By]<UL><LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPK_Open
+<LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time_init
+<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwm_init
 </UL>
 
-<P><STRONG><a name="[9d]"></a>CSpotter_AddSample</STRONG> (Thumb, 82 bytes, Stack size 8 bytes, CSpotterSDKApi.o(i.CSpotter_AddSample))
+<P><STRONG><a name="[aa]"></a>CSpotter_AddSample</STRONG> (Thumb, 82 bytes, Stack size 8 bytes, CSpotterSDKApi.o(i.CSpotter_AddSample))
 <BR><BR>[Stack]<UL><LI>Max Depth = 568<LI>Call Chain = CSpotter_AddSample &rArr; NINJA_API_13 &rArr; NINJA_API_11 &rArr; BsrAsa &rArr; BsrCara &rArr; BsrBret
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_23
-<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_15
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_13
+<BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_23
+<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_15
+<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_13
 </UL>
-<BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;VROneCmdApp_GetCMDID
+<BR>[Called By]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;VROneCmdApp_GetCMDID
 </UL>
 
-<P><STRONG><a name="[a1]"></a>CSpotter_GetMemoryUsage_MultiWithSpeakerAndExtRejModel</STRONG> (Thumb, 178 bytes, Stack size 96 bytes, CSpotterSDKApi.o(i.CSpotter_GetMemoryUsage_MultiWithSpeakerAndExtRejModel))
+<P><STRONG><a name="[ae]"></a>CSpotter_GetMemoryUsage_MultiWithSpeakerAndExtRejModel</STRONG> (Thumb, 178 bytes, Stack size 96 bytes, CSpotterSDKApi.o(i.CSpotter_GetMemoryUsage_MultiWithSpeakerAndExtRejModel))
 <BR><BR>[Stack]<UL><LI>Max Depth = 256<LI>Call Chain = CSpotter_GetMemoryUsage_MultiWithSpeakerAndExtRejModel &rArr; NINJA_API_75 &rArr; BsrRoy &rArr; BsrDion &rArr; BsrJosh
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_75
-<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_1
+<BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_75
+<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_1
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_GetMemoryUsage_Sep
-<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_Init_MultiWithExtRejModel
+<BR>[Called By]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_GetMemoryUsage_Sep
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_Init_MultiWithExtRejModel
 </UL>
 
-<P><STRONG><a name="[a4]"></a>CSpotter_GetMemoryUsage_Sep</STRONG> (Thumb, 24 bytes, Stack size 24 bytes, CSpotterSDKApi.o(i.CSpotter_GetMemoryUsage_Sep))
+<P><STRONG><a name="[b1]"></a>CSpotter_GetMemoryUsage_Sep</STRONG> (Thumb, 24 bytes, Stack size 24 bytes, CSpotterSDKApi.o(i.CSpotter_GetMemoryUsage_Sep))
 <BR><BR>[Stack]<UL><LI>Max Depth = 280<LI>Call Chain = CSpotter_GetMemoryUsage_Sep &rArr; CSpotter_GetMemoryUsage_MultiWithSpeakerAndExtRejModel &rArr; NINJA_API_75 &rArr; BsrRoy &rArr; BsrDion &rArr; BsrJosh
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_GetMemoryUsage_MultiWithSpeakerAndExtRejModel
+<BR>[Calls]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_GetMemoryUsage_MultiWithSpeakerAndExtRejModel
 </UL>
-<BR>[Called By]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;VROneCmdApp_Initiate
+<BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;VROneCmdApp_Initiate
 </UL>
 
-<P><STRONG><a name="[a5]"></a>CSpotter_GetResult</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, CSpotterSDKApi.o(i.CSpotter_GetResult))
+<P><STRONG><a name="[b2]"></a>CSpotter_GetResult</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, CSpotterSDKApi.o(i.CSpotter_GetResult))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = CSpotter_GetResult &rArr; NINJA_API_47 &rArr; BsrTre &rArr; BsrJoan &rArr; __aeabi_idivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_55
-<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_47
+<BR>[Calls]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_55
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_47
 </UL>
-<BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;VROneCmdApp_GetCMDID
+<BR>[Called By]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;VROneCmdApp_GetCMDID
 </UL>
 
-<P><STRONG><a name="[a8]"></a>CSpotter_Init_MultiWithExtRejModel</STRONG> (Thumb, 488 bytes, Stack size 104 bytes, CSpotterSDKApi.o(i.CSpotter_Init_MultiWithExtRejModel))
+<P><STRONG><a name="[b5]"></a>CSpotter_Init_MultiWithExtRejModel</STRONG> (Thumb, 488 bytes, Stack size 104 bytes, CSpotterSDKApi.o(i.CSpotter_Init_MultiWithExtRejModel))
 <BR><BR>[Stack]<UL><LI>Max Depth = 568<LI>Call Chain = CSpotter_Init_MultiWithExtRejModel &rArr; NINJA_API_73 &rArr; BsrRay &rArr; BsrDina
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
-<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_56
-<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_55
-<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_48
-<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_47
-<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_26
-<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_2
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_19
-<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_15
-<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_1
-<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJohn
-<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_GetMemoryUsage_MultiWithSpeakerAndExtRejModel
+<BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_56
+<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_55
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_48
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_47
+<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_26
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_2
+<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_19
+<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_15
+<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_1
+<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJohn
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_GetMemoryUsage_MultiWithSpeakerAndExtRejModel
 </UL>
-<BR>[Called By]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_Init_Sep
+<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_Init_Sep
 </UL>
 
-<P><STRONG><a name="[af]"></a>CSpotter_Init_Sep</STRONG> (Thumb, 36 bytes, Stack size 56 bytes, CSpotterSDKApi.o(i.CSpotter_Init_Sep))
+<P><STRONG><a name="[bc]"></a>CSpotter_Init_Sep</STRONG> (Thumb, 36 bytes, Stack size 56 bytes, CSpotterSDKApi.o(i.CSpotter_Init_Sep))
 <BR><BR>[Stack]<UL><LI>Max Depth = 624<LI>Call Chain = CSpotter_Init_Sep &rArr; CSpotter_Init_MultiWithExtRejModel &rArr; NINJA_API_73 &rArr; BsrRay &rArr; BsrDina
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_Init_MultiWithExtRejModel
+<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_Init_MultiWithExtRejModel
 </UL>
-<BR>[Called By]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;VROneCmdApp_Initiate
+<BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;VROneCmdApp_Initiate
 </UL>
 
-<P><STRONG><a name="[b0]"></a>CSpotter_Reset</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, CSpotterSDKApi.o(i.CSpotter_Reset))
+<P><STRONG><a name="[bd]"></a>CSpotter_Reset</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, CSpotterSDKApi.o(i.CSpotter_Reset))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = CSpotter_Reset &rArr; NINJA_API_3 &rArr; BsrAri
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_3
+<BR>[Calls]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_3
 </UL>
-<BR>[Called By]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;VROneCmdApp_Initiate
+<BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;VROneCmdApp_Initiate
 </UL>
 
-<P><STRONG><a name="[f4]"></a>DPWM_Open</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, dpwm.o(i.DPWM_Open))
-<BR><BR>[Called By]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPK_Open
+<P><STRONG><a name="[111]"></a>DPWM_Open</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, dpwm.o(i.DPWM_Open))
+<BR><BR>[Called By]<UL><LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPK_Open
+</UL>
+
+<P><STRONG><a name="[bf]"></a>DPWM_SetSampleRate</STRONG> (Thumb, 50 bytes, Stack size 16 bytes, dpwm.o(i.DPWM_SetSampleRate))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = DPWM_SetSampleRate &rArr; SystemCoreClockUpdate
+</UL>
+<BR>[Calls]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemCoreClockUpdate
+<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+</UL>
+<BR>[Called By]<UL><LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPK_ChangeSR
 </UL>
 
 <P><STRONG><a name="[f]"></a>GPAB_IRQHandler</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, interrupthandler.o(i.GPAB_IRQHandler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_isd9100.o(RESET)
 </UL>
-<P><STRONG><a name="[d5]"></a>GPIO_SetMode</STRONG> (Thumb, 40 bytes, Stack size 20 bytes, gpio.o(i.GPIO_SetMode))
+<P><STRONG><a name="[e7]"></a>GPIO_SetMode</STRONG> (Thumb, 40 bytes, Stack size 20 bytes, gpio.o(i.GPIO_SetMode))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = GPIO_SetMode
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OutputPin_Initiate
+<BR>[Called By]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OutputPin_Initiate
 </UL>
 
-<P><STRONG><a name="[43]"></a>MD4App_DecodeProcess</STRONG> (Thumb, 132 bytes, Stack size 32 bytes, md4app.o(i.MD4App_DecodeProcess))
+<P><STRONG><a name="[4f]"></a>MD4App_DecodeInitiate</STRONG> (Thumb, 34 bytes, Stack size 16 bytes, md4app.o(i.MD4App_DecodeInitiate))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = MD4App_DecodeInitiate
+</UL>
+<BR>[Calls]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_StartPlay
+</UL>
+
+<P><STRONG><a name="[44]"></a>MD4App_DecodeProcess</STRONG> (Thumb, 132 bytes, Stack size 32 bytes, md4app.o(i.MD4App_DecodeProcess))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = MD4App_DecodeProcess &rArr; MD4_DecodeProcess &rArr; MD4_DecodeFrame &rArr; MD4_CheckResLdr
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_Remove
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4_DecodeProcess
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4_DecodeIsEnd
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BufCtrl_UpdateWriteWithCount
+<BR>[Calls]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_Remove
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4_DecodeProcess
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4_DecodeIsEnd
+<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BufCtrl_UpdateWriteWithCount
 </UL>
-<BR>[Called By]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_Process
-</UL>
-
-<P><STRONG><a name="[b2]"></a>MD4_DecodeIsEnd</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, md4decode.o(i.MD4_DecodeIsEnd))
-<BR><BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4App_DecodeProcess
+<BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_Process
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4App_DecodeStartPlayByAddr
 </UL>
 
-<P><STRONG><a name="[b4]"></a>MD4_DecodeProcess</STRONG> (Thumb, 256 bytes, Stack size 40 bytes, md4decode.o(i.MD4_DecodeProcess))
+<P><STRONG><a name="[c5]"></a>MD4App_DecodeStartPlayByAddr</STRONG> (Thumb, 108 bytes, Stack size 40 bytes, md4app.o(i.MD4App_DecodeStartPlayByAddr))
+<BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = MD4App_DecodeStartPlayByAddr &rArr; MD4App_DecodeProcess &rArr; MD4_DecodeProcess &rArr; MD4_DecodeFrame &rArr; MD4_CheckResLdr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4App_DecodeProcess
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_SetOutputBuf
+<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_Add
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4_DecodeInitiate
+</UL>
+<BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4App_DecodeStartPlayByID
+</UL>
+
+<P><STRONG><a name="[50]"></a>MD4App_DecodeStartPlayByID</STRONG> (Thumb, 42 bytes, Stack size 24 bytes, md4app.o(i.MD4App_DecodeStartPlayByID))
+<BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = MD4App_DecodeStartPlayByID &rArr; MD4App_DecodeStartPlayByAddr &rArr; MD4App_DecodeProcess &rArr; MD4_DecodeProcess &rArr; MD4_DecodeFrame &rArr; MD4_CheckResLdr
+</UL>
+<BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AudioRom_GetAudioChunkInfo
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4App_DecodeStartPlayByAddr
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_StartPlay
+</UL>
+
+<P><STRONG><a name="[54]"></a>MD4App_DecodeStopPlay</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, md4app.o(i.MD4App_DecodeStopPlay))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = MD4App_DecodeStopPlay &rArr; Playback_Remove &rArr; Playback_StopPlay
+</UL>
+<BR>[Calls]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_Remove
+</UL>
+<BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_StopPlay
+</UL>
+
+<P><STRONG><a name="[c6]"></a>MD4_DecodeInitiate</STRONG> (Thumb, 154 bytes, Stack size 24 bytes, md4decode.o(i.MD4_DecodeInitiate))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = MD4_DecodeInitiate
+</UL>
+<BR>[Calls]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
+</UL>
+<BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4App_DecodeStartPlayByAddr
+</UL>
+
+<P><STRONG><a name="[c1]"></a>MD4_DecodeIsEnd</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, md4decode.o(i.MD4_DecodeIsEnd))
+<BR><BR>[Called By]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4App_DecodeProcess
+</UL>
+
+<P><STRONG><a name="[c3]"></a>MD4_DecodeProcess</STRONG> (Thumb, 256 bytes, Stack size 40 bytes, md4decode.o(i.MD4_DecodeProcess))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = MD4_DecodeProcess &rArr; MD4_DecodeFrame &rArr; MD4_CheckResLdr
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
-<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4_DecodeFrame
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4_CheckResLdr
+<BR>[Calls]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4_DecodeFrame
+<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4_CheckResLdr
 <LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4App_DecodeProcess
+<BR>[Called By]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4App_DecodeProcess
 </UL>
 
-<P><STRONG><a name="[b9]"></a>MIC_ChangeSR</STRONG> (Thumb, 108 bytes, Stack size 40 bytes, micspk.o(i.MIC_ChangeSR))
+<P><STRONG><a name="[cb]"></a>MIC_ChangeSR</STRONG> (Thumb, 108 bytes, Stack size 40 bytes, micspk.o(i.MIC_ChangeSR))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = MIC_ChangeSR
 </UL>
-<BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<BR>[Calls]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Record_Add
+<BR>[Called By]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Record_Add
 </UL>
 
-<P><STRONG><a name="[ba]"></a>MIC_Open</STRONG> (Thumb, 152 bytes, Stack size 16 bytes, micspk.o(i.MIC_Open))
+<P><STRONG><a name="[cc]"></a>MIC_Open</STRONG> (Thumb, 152 bytes, Stack size 16 bytes, micspk.o(i.MIC_Open))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = MIC_Open &rArr; PdmaCtrl_Open &rArr; PDMA_SetTransferMode &rArr; __ARM_common_switch8
 </UL>
-<BR>[Calls]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYS_ResetModule
-<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_EnableModuleClock
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PdmaCtrl_Open
+<BR>[Calls]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYS_ResetModule
+<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_EnableModuleClock
+<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PdmaCtrl_Open
 <LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_SetPGAGaindB
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_SetAMUX
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Open
-<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_EnableMICBias
-<LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BIQFilter_Setting
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_SetAMUX
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_Open
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_EnableMICBias
+<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BIQFilter_Setting
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[ec]"></a>MIC_Start</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, micspk.o(i.MIC_Start))
-<BR><BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Record_StartRec
+<P><STRONG><a name="[ff]"></a>MIC_Start</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, micspk.o(i.MIC_Start))
+<BR><BR>[Called By]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Record_StartRec
+</UL>
+
+<P><STRONG><a name="[100]"></a>MIC_Stop</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, micspk.o(i.MIC_Stop))
+<BR><BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Record_StopRec
 </UL>
 
 <P><STRONG><a name="[3f]"></a>MicGetApp_Initiate</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, micgetapp.o(i.MicGetApp_Initiate))
@@ -1307,548 +1424,700 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_Initiate
 </UL>
 
-<P><STRONG><a name="[45]"></a>MicGetApp_ProcessRec</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, micgetapp.o(i.MicGetApp_ProcessRec))
+<P><STRONG><a name="[47]"></a>MicGetApp_ProcessRec</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, micgetapp.o(i.MicGetApp_ProcessRec))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = MicGetApp_ProcessRec
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BufCtrl_UpdateReadWithCount
+<BR>[Calls]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BufCtrl_UpdateReadWithCount
 </UL>
-<BR>[Called By]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_Process
+<BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_Process
 </UL>
 
-<P><STRONG><a name="[44]"></a>MicGetApp_StartRec</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, micgetapp.o(i.MicGetApp_StartRec))
+<P><STRONG><a name="[46]"></a>MicGetApp_StartRec</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, micgetapp.o(i.MicGetApp_StartRec))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = MicGetApp_StartRec &rArr; Record_Add &rArr; MIC_ChangeSR
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Record_StartRec
-<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Record_SetInBufRecord
-<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Record_Add
+<BR>[Calls]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Record_StartRec
+<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Record_SetInBufRecord
+<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Record_Add
 </UL>
-<BR>[Called By]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_StartRecognize
-<LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_Process
+<BR>[Called By]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_StartRecognize
+<LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_Process
 </UL>
 
-<P><STRONG><a name="[a2]"></a>NINJA_API_1</STRONG> (Thumb, 102 bytes, Stack size 20 bytes, BsrGo.o(i.NINJA_API_1))
+<P><STRONG><a name="[4e]"></a>MicGetApp_StopRec</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, micgetapp.o(i.MicGetApp_StopRec))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = MicGetApp_StopRec &rArr; Record_StopRec
+</UL>
+<BR>[Calls]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Record_StopRec
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_StartPlay
+</UL>
+
+<P><STRONG><a name="[af]"></a>NINJA_API_1</STRONG> (Thumb, 102 bytes, Stack size 20 bytes, BsrGo.o(i.NINJA_API_1))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = NINJA_API_1
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_Init_MultiWithExtRejModel
-<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_GetMemoryUsage_MultiWithSpeakerAndExtRejModel
+<BR>[Called By]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_Init_MultiWithExtRejModel
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_GetMemoryUsage_MultiWithSpeakerAndExtRejModel
 </UL>
 
-<P><STRONG><a name="[c5]"></a>NINJA_API_11</STRONG> (Thumb, 634 bytes, Stack size 104 bytes, BsrGo.o(i.NINJA_API_11))
+<P><STRONG><a name="[d7]"></a>NINJA_API_11</STRONG> (Thumb, 634 bytes, Stack size 104 bytes, BsrGo.o(i.NINJA_API_11))
 <BR><BR>[Stack]<UL><LI>Max Depth = 360<LI>Call Chain = NINJA_API_11 &rArr; BsrAsa &rArr; BsrCara &rArr; BsrBret
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrEva
-<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrEli
-<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrBrad
-<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAsa
-<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAri
+<BR>[Calls]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrEva
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrEli
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrBrad
+<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAsa
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAri
 <LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_13
+<BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_13
 </UL>
 
-<P><STRONG><a name="[9e]"></a>NINJA_API_13</STRONG> (Thumb, 358 bytes, Stack size 200 bytes, BsrGo.o(i.NINJA_API_13))
+<P><STRONG><a name="[ab]"></a>NINJA_API_13</STRONG> (Thumb, 358 bytes, Stack size 200 bytes, BsrGo.o(i.NINJA_API_13))
 <BR><BR>[Stack]<UL><LI>Max Depth = 560<LI>Call Chain = NINJA_API_13 &rArr; NINJA_API_11 &rArr; BsrAsa &rArr; BsrCara &rArr; BsrBret
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrTop
-<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRon
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRey
-<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAmos
-<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_11
-<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJose
-<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<BR>[Calls]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrTop
+<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRon
+<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRey
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAmos
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_11
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJose
+<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_AddSample
+<BR>[Called By]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_AddSample
 </UL>
 
-<P><STRONG><a name="[9f]"></a>NINJA_API_15</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, BsrGo.o(i.NINJA_API_15))
+<P><STRONG><a name="[ac]"></a>NINJA_API_15</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, BsrGo.o(i.NINJA_API_15))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = NINJA_API_15 &rArr; BsrDan
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrDan
+<BR>[Calls]<UL><LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrDan
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_AddSample
-<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_Init_MultiWithExtRejModel
+<BR>[Called By]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_AddSample
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_Init_MultiWithExtRejModel
 </UL>
 
-<P><STRONG><a name="[ac]"></a>NINJA_API_19</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, BsrGo.o(i.NINJA_API_19))
+<P><STRONG><a name="[b9]"></a>NINJA_API_19</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, BsrGo.o(i.NINJA_API_19))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = NINJA_API_19
 </UL>
-<BR>[Calls]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJan
+<BR>[Calls]<UL><LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJan
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_Init_MultiWithExtRejModel
+<BR>[Called By]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_Init_MultiWithExtRejModel
 </UL>
 
-<P><STRONG><a name="[ae]"></a>NINJA_API_2</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, BsrGo.o(i.NINJA_API_2))
+<P><STRONG><a name="[bb]"></a>NINJA_API_2</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, BsrGo.o(i.NINJA_API_2))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = NINJA_API_2 &rArr; BsrNia &rArr; BsrCoty &rArr; BsrAdam
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrNia
-<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAna
-<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAmir
+<BR>[Calls]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrNia
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAna
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAmir
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_Init_MultiWithExtRejModel
+<BR>[Called By]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_Init_MultiWithExtRejModel
 </UL>
 
-<P><STRONG><a name="[a0]"></a>NINJA_API_23</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, BsrGo.o(i.NINJA_API_23))
+<P><STRONG><a name="[ad]"></a>NINJA_API_23</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, BsrGo.o(i.NINJA_API_23))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = NINJA_API_23 &rArr; BsrEli
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrEli
+<BR>[Calls]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrEli
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_AddSample
+<BR>[Called By]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_AddSample
 </UL>
 
-<P><STRONG><a name="[ad]"></a>NINJA_API_26</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, BsrGo.o(i.NINJA_API_26))
+<P><STRONG><a name="[ba]"></a>NINJA_API_26</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, BsrGo.o(i.NINJA_API_26))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = NINJA_API_26
 </UL>
-<BR>[Calls]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAyla
+<BR>[Calls]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAyla
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_Init_MultiWithExtRejModel
+<BR>[Called By]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_Init_MultiWithExtRejModel
 </UL>
 
-<P><STRONG><a name="[b1]"></a>NINJA_API_3</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, BsrGo.o(i.NINJA_API_3))
+<P><STRONG><a name="[be]"></a>NINJA_API_3</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, BsrGo.o(i.NINJA_API_3))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = NINJA_API_3 &rArr; BsrAri
 </UL>
-<BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAri
+<BR>[Calls]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAri
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_Reset
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_Reset
 </UL>
 
-<P><STRONG><a name="[a6]"></a>NINJA_API_47</STRONG> (Thumb, 112 bytes, Stack size 40 bytes, BsrGo.o(i.NINJA_API_47))
+<P><STRONG><a name="[b3]"></a>NINJA_API_47</STRONG> (Thumb, 112 bytes, Stack size 40 bytes, BsrGo.o(i.NINJA_API_47))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = NINJA_API_47 &rArr; BsrTre &rArr; BsrJoan &rArr; __aeabi_idivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrTre
-<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrTia
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrTed
-<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrBaby
+<BR>[Calls]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrTre
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrTia
+<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrTed
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrBaby
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_GetResult
-<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_Init_MultiWithExtRejModel
+<BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_GetResult
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_Init_MultiWithExtRejModel
 </UL>
 
-<P><STRONG><a name="[aa]"></a>NINJA_API_48</STRONG> (Thumb, 126 bytes, Stack size 40 bytes, BsrGo.o(i.NINJA_API_48))
+<P><STRONG><a name="[b7]"></a>NINJA_API_48</STRONG> (Thumb, 126 bytes, Stack size 40 bytes, BsrGo.o(i.NINJA_API_48))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = NINJA_API_48 &rArr; BsrTom
 </UL>
-<BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrTom
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrTed
-<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrBaby
+<BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrTom
+<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrTed
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrBaby
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_Init_MultiWithExtRejModel
+<BR>[Called By]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_Init_MultiWithExtRejModel
 </UL>
 
-<P><STRONG><a name="[a7]"></a>NINJA_API_55</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, BsrGo.o(i.NINJA_API_55))
+<P><STRONG><a name="[b4]"></a>NINJA_API_55</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, BsrGo.o(i.NINJA_API_55))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = NINJA_API_55 &rArr; __aeabi_idivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_GetResult
-<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_Init_MultiWithExtRejModel
+<BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_GetResult
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_Init_MultiWithExtRejModel
 </UL>
 
-<P><STRONG><a name="[ab]"></a>NINJA_API_56</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, BsrGo.o(i.NINJA_API_56))
-<BR><BR>[Called By]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_Init_MultiWithExtRejModel
+<P><STRONG><a name="[b8]"></a>NINJA_API_56</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, BsrGo.o(i.NINJA_API_56))
+<BR><BR>[Called By]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_Init_MultiWithExtRejModel
 </UL>
 
-<P><STRONG><a name="[a9]"></a>NINJA_API_73</STRONG> (Thumb, 978 bytes, Stack size 112 bytes, BsrGo.o(i.NINJA_API_73))
+<P><STRONG><a name="[b6]"></a>NINJA_API_73</STRONG> (Thumb, 978 bytes, Stack size 112 bytes, BsrGo.o(i.NINJA_API_73))
 <BR><BR>[Stack]<UL><LI>Max Depth = 464<LI>Call Chain = NINJA_API_73 &rArr; BsrRay &rArr; BsrDina
 </UL>
-<BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrTom
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrTed
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRex
-<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRay
-<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrNia
-<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrMya
-<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrMichelle
-<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrMichael
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJoyci
-<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrIvy
-<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrGuy
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrDan
-<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrBaby
-<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAri
-<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAnna
-<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAna
-<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAmir
-<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAlma
-<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAbby
-<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_75
-<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJohn
+<BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrTom
+<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrTed
+<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRex
+<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRay
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrNia
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrMya
+<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrMichelle
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrMichael
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJoyci
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrIvy
+<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrGuy
+<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrDan
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrBaby
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAri
+<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAnna
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAna
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAmir
+<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAlma
+<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAbby
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_75
+<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrJohn
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_Init_MultiWithExtRejModel
+<BR>[Called By]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_Init_MultiWithExtRejModel
 </UL>
 
-<P><STRONG><a name="[a3]"></a>NINJA_API_75</STRONG> (Thumb, 174 bytes, Stack size 40 bytes, BsrGo.o(i.NINJA_API_75))
+<P><STRONG><a name="[b0]"></a>NINJA_API_75</STRONG> (Thumb, 174 bytes, Stack size 40 bytes, BsrGo.o(i.NINJA_API_75))
 <BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = NINJA_API_75 &rArr; BsrRoy &rArr; BsrDion &rArr; BsrJosh
 </UL>
-<BR>[Calls]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRoy
-<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAvea
-<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAnnie
-<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAnne
+<BR>[Calls]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRoy
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAvea
+<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAnnie
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAnne
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
-<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_GetMemoryUsage_MultiWithSpeakerAndExtRejModel
+<BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NINJA_API_73
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_GetMemoryUsage_MultiWithSpeakerAndExtRejModel
 </UL>
 
-<P><STRONG><a name="[d4]"></a>OutputPin_Initiate</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, configio.o(i.OutputPin_Initiate))
+<P><STRONG><a name="[e6]"></a>OutputPin_Initiate</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, configio.o(i.OutputPin_Initiate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = OutputPin_Initiate &rArr; GPIO_SetMode
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetMode
+<BR>[Calls]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetMode
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[e8]"></a>PDMA_DisableInt</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, pdma.o(i.PDMA_DisableInt))
-<BR><BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_StopPlay
-<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_Remove
+<P><STRONG><a name="[f7]"></a>PDMA_DisableInt</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, pdma.o(i.PDMA_DisableInt))
+<BR><BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_StopPlay
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_Remove
+<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_Add
 </UL>
 
-<P><STRONG><a name="[e2]"></a>PDMA_EnableInt</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, pdma.o(i.PDMA_EnableInt))
-<BR><BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_StopPlay
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PdmaCtrl_Open
+<P><STRONG><a name="[f4]"></a>PDMA_EnableInt</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, pdma.o(i.PDMA_EnableInt))
+<BR><BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_StopPlay
+<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PdmaCtrl_Open
+<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_Add
 </UL>
 
 <P><STRONG><a name="[1a]"></a>PDMA_IRQHandler</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, interrupthandler.o(i.PDMA_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = PDMA_IRQHandler &rArr; Playback_Process &rArr; PdmaCtrl_Start
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Record_Process
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_Process
+<BR>[Calls]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Record_Process
+<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_Process
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_isd9100.o(RESET)
 </UL>
-<P><STRONG><a name="[de]"></a>PDMA_Open</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, pdma.o(i.PDMA_Open))
-<BR><BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PdmaCtrl_Open
+<P><STRONG><a name="[f0]"></a>PDMA_Open</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, pdma.o(i.PDMA_Open))
+<BR><BR>[Called By]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PdmaCtrl_Open
 </UL>
 
-<P><STRONG><a name="[df]"></a>PDMA_SetTransferAddr</STRONG> (Thumb, 28 bytes, Stack size 12 bytes, pdma.o(i.PDMA_SetTransferAddr))
+<P><STRONG><a name="[f1]"></a>PDMA_SetTransferAddr</STRONG> (Thumb, 28 bytes, Stack size 12 bytes, pdma.o(i.PDMA_SetTransferAddr))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = PDMA_SetTransferAddr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PdmaCtrl_Open
+<BR>[Called By]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PdmaCtrl_Open
 </UL>
 
-<P><STRONG><a name="[e0]"></a>PDMA_SetTransferCnt</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, pdma.o(i.PDMA_SetTransferCnt))
+<P><STRONG><a name="[f2]"></a>PDMA_SetTransferCnt</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, pdma.o(i.PDMA_SetTransferCnt))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = PDMA_SetTransferCnt
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PdmaCtrl_Open
+<BR>[Called By]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PdmaCtrl_Open
 </UL>
 
-<P><STRONG><a name="[e1]"></a>PDMA_SetTransferDirection</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, pdma.o(i.PDMA_SetTransferDirection))
-<BR><BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PdmaCtrl_Open
+<P><STRONG><a name="[f3]"></a>PDMA_SetTransferDirection</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, pdma.o(i.PDMA_SetTransferDirection))
+<BR><BR>[Called By]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PdmaCtrl_Open
 </UL>
 
-<P><STRONG><a name="[d8]"></a>PDMA_SetTransferMode</STRONG> (Thumb, 148 bytes, Stack size 20 bytes, pdma.o(i.PDMA_SetTransferMode))
+<P><STRONG><a name="[ea]"></a>PDMA_SetTransferMode</STRONG> (Thumb, 148 bytes, Stack size 20 bytes, pdma.o(i.PDMA_SetTransferMode))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = PDMA_SetTransferMode &rArr; __ARM_common_switch8
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
+<BR>[Calls]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PdmaCtrl_Open
+<BR>[Called By]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PdmaCtrl_Open
 </UL>
 
-<P><STRONG><a name="[e4]"></a>PDMA_Trigger</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, pdma.o(i.PDMA_Trigger))
-<BR><BR>[Called By]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PdmaCtrl_Start
+<P><STRONG><a name="[f6]"></a>PDMA_Trigger</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, pdma.o(i.PDMA_Trigger))
+<BR><BR>[Called By]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PdmaCtrl_Start
 </UL>
 
 <P><STRONG><a name="[11]"></a>PWM0_IRQHandler</STRONG> (Thumb, 68 bytes, Stack size 8 bytes, main.o(i.PWM0_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = PWM0_IRQHandler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM_GetIntFlag
-<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM_ClearIntFlag
+<BR>[Calls]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM_GetIntFlag
+<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM_ClearIntFlag
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_isd9100.o(RESET)
 </UL>
-<P><STRONG><a name="[da]"></a>PWM_ClearIntFlag</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, pwm.o(i.PWM_ClearIntFlag))
+<P><STRONG><a name="[ec]"></a>PWM_ClearIntFlag</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, pwm.o(i.PWM_ClearIntFlag))
 <BR><BR>[Called By]<UL><LI><a href="#[11]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM0_IRQHandler
 </UL>
 
-<P><STRONG><a name="[db]"></a>PWM_ConfigOutputChannel</STRONG> (Thumb, 280 bytes, Stack size 136 bytes, pwm.o(i.PWM_ConfigOutputChannel))
+<P><STRONG><a name="[ed]"></a>PWM_ConfigOutputChannel</STRONG> (Thumb, 280 bytes, Stack size 136 bytes, pwm.o(i.PWM_ConfigOutputChannel))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = PWM_ConfigOutputChannel &rArr; CLK_GetHCLKFreq &rArr; SystemCoreClockUpdate
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemCoreClockUpdate
-<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_GetHCLKFreq
-<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
-<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
+<BR>[Calls]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemCoreClockUpdate
+<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_GetHCLKFreq
+<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
-<BR>[Called By]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwm_init
-</UL>
-
-<P><STRONG><a name="[105]"></a>PWM_DisableDeadZone</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, pwm.o(i.PWM_DisableDeadZone))
-<BR><BR>[Called By]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwm_init
+<BR>[Called By]<UL><LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwm_init
 </UL>
 
-<P><STRONG><a name="[103]"></a>PWM_EnableOutput</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, pwm.o(i.PWM_EnableOutput))
-<BR><BR>[Called By]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwm_init
+<P><STRONG><a name="[121]"></a>PWM_DisableDeadZone</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, pwm.o(i.PWM_DisableDeadZone))
+<BR><BR>[Called By]<UL><LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwm_init
 </UL>
 
-<P><STRONG><a name="[d9]"></a>PWM_GetIntFlag</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, pwm.o(i.PWM_GetIntFlag))
+<P><STRONG><a name="[120]"></a>PWM_EnableOutput</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, pwm.o(i.PWM_EnableOutput))
+<BR><BR>[Called By]<UL><LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwm_init
+</UL>
+
+<P><STRONG><a name="[eb]"></a>PWM_GetIntFlag</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, pwm.o(i.PWM_GetIntFlag))
 <BR><BR>[Called By]<UL><LI><a href="#[11]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM0_IRQHandler
 </UL>
 
-<P><STRONG><a name="[104]"></a>PWM_Start</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, pwm.o(i.PWM_Start))
+<P><STRONG><a name="[4b]"></a>PWM_Start</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, pwm.o(i.PWM_Start))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = PWM_Start
 </UL>
-<BR>[Called By]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwm_init
+<BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_Process
+<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwm_init
 </UL>
 
-<P><STRONG><a name="[dd]"></a>PdmaCtrl_Init</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, pdmactrl.o(i.PdmaCtrl_Init))
+<P><STRONG><a name="[ef]"></a>PdmaCtrl_Init</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, pdmactrl.o(i.PdmaCtrl_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = PdmaCtrl_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYS_ResetModule
-<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_EnableModuleClock
+<BR>[Calls]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYS_ResetModule
+<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_EnableModuleClock
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[bf]"></a>PdmaCtrl_Open</STRONG> (Thumb, 132 bytes, Stack size 24 bytes, pdmactrl.o(i.PdmaCtrl_Open))
+<P><STRONG><a name="[d1]"></a>PdmaCtrl_Open</STRONG> (Thumb, 132 bytes, Stack size 24 bytes, pdmactrl.o(i.PdmaCtrl_Open))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = PdmaCtrl_Open &rArr; PDMA_SetTransferMode &rArr; __ARM_common_switch8
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PDMA_SetTransferMode
-<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PDMA_SetTransferDirection
-<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PDMA_SetTransferCnt
-<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PDMA_SetTransferAddr
-<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PDMA_Open
-<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PDMA_EnableInt
+<BR>[Calls]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PDMA_SetTransferMode
+<LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PDMA_SetTransferDirection
+<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PDMA_SetTransferCnt
+<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PDMA_SetTransferAddr
+<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PDMA_Open
+<LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PDMA_EnableInt
 </UL>
-<BR>[Called By]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPK_Open
-<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MIC_Open
+<BR>[Called By]<UL><LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPK_Open
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MIC_Open
 </UL>
 
-<P><STRONG><a name="[e3]"></a>PdmaCtrl_Start</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, pdmactrl.o(i.PdmaCtrl_Start))
+<P><STRONG><a name="[f5]"></a>PdmaCtrl_Start</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, pdmactrl.o(i.PdmaCtrl_Start))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = PdmaCtrl_Start
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PDMA_Trigger
+<BR>[Calls]<UL><LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PDMA_Trigger
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Record_Process
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_Process
-<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Record_StartRec
+<BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Record_Process
+<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_Process
+<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_StartPlay
+<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Record_StartRec
 </UL>
 
-<P><STRONG><a name="[e7]"></a>PdmaCtrl_Stop</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, pdmactrl.o(i.PdmaCtrl_Stop))
-<BR><BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_Process
+<P><STRONG><a name="[fb]"></a>PdmaCtrl_Stop</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, pdmactrl.o(i.PdmaCtrl_Stop))
+<BR><BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_Process
+<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Record_StopRec
+</UL>
+
+<P><STRONG><a name="[c8]"></a>Playback_Add</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, playback.o(i.Playback_Add))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = Playback_Add &rArr; SPK_ChangeSR &rArr; DPWM_SetSampleRate &rArr; SystemCoreClockUpdate
+</UL>
+<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_StopPlay
+<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PDMA_DisableInt
+<LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PDMA_EnableInt
+<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPK_ChangeSR
+</UL>
+<BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4App_DecodeStartPlayByAddr
 </UL>
 
 <P><STRONG><a name="[3e]"></a>Playback_Initiate</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, playback.o(i.Playback_Initiate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = Playback_Initiate &rArr; Playback_ResetChannelVolume &rArr; VolumeCtrl_Reset
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_ResetChannelVolume
+<BR>[Calls]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_ResetChannelVolume
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_Initiate
 </UL>
 
-<P><STRONG><a name="[d6]"></a>Playback_Process</STRONG> (Thumb, 190 bytes, Stack size 24 bytes, playback.o(i.Playback_Process))
+<P><STRONG><a name="[e8]"></a>Playback_Process</STRONG> (Thumb, 190 bytes, Stack size 24 bytes, playback.o(i.Playback_Process))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = Playback_Process &rArr; PdmaCtrl_Start
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PdmaCtrl_Start
-<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PdmaCtrl_Stop
-<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;VolumeCtrl_VolumeFade
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BufCtrl_UpdateReadWithCount
+<BR>[Calls]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PdmaCtrl_Start
+<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PdmaCtrl_Stop
+<LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;VolumeCtrl_VolumeFade
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BufCtrl_UpdateReadWithCount
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PDMA_IRQHandler
 </UL>
 
-<P><STRONG><a name="[b3]"></a>Playback_Remove</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, playback.o(i.Playback_Remove))
+<P><STRONG><a name="[c2]"></a>Playback_Remove</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, playback.o(i.Playback_Remove))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = Playback_Remove &rArr; Playback_StopPlay
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PDMA_DisableInt
-<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_StopPlay
+<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_StopPlay
+<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PDMA_DisableInt
 </UL>
-<BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4App_DecodeProcess
+<BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4App_DecodeStopPlay
+<LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4App_DecodeProcess
 </UL>
 
-<P><STRONG><a name="[e5]"></a>Playback_ResetChannelVolume</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, playback.o(i.Playback_ResetChannelVolume))
+<P><STRONG><a name="[f9]"></a>Playback_ResetChannelVolume</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, playback.o(i.Playback_ResetChannelVolume))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = Playback_ResetChannelVolume &rArr; VolumeCtrl_Reset
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;VolumeCtrl_Reset
+<BR>[Calls]<UL><LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;VolumeCtrl_Reset
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_Initiate
 </UL>
 
-<P><STRONG><a name="[e9]"></a>Playback_StopPlay</STRONG> (Thumb, 68 bytes, Stack size 8 bytes, playback.o(i.Playback_StopPlay))
+<P><STRONG><a name="[c7]"></a>Playback_SetOutputBuf</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, playback.o(i.Playback_SetOutputBuf))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Playback_SetOutputBuf
+</UL>
+<BR>[Calls]<UL><LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
+</UL>
+<BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4App_DecodeStartPlayByAddr
+</UL>
+
+<P><STRONG><a name="[51]"></a>Playback_StartPlay</STRONG> (Thumb, 72 bytes, Stack size 16 bytes, playback.o(i.Playback_StartPlay))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = Playback_StartPlay &rArr; PdmaCtrl_Start
+</UL>
+<BR>[Calls]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PdmaCtrl_Start
+<LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPK_Start
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_StartPlay
+</UL>
+
+<P><STRONG><a name="[53]"></a>Playback_StopPlay</STRONG> (Thumb, 68 bytes, Stack size 8 bytes, playback.o(i.Playback_StopPlay))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Playback_StopPlay
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PDMA_DisableInt
-<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PDMA_EnableInt
-<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPK_Stop
+<BR>[Calls]<UL><LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PDMA_DisableInt
+<LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PDMA_EnableInt
+<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPK_Stop
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_Remove
+<BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_StopPlay
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_Remove
+<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_Add
 </UL>
 
 <P><STRONG><a name="[1e]"></a>RTC_IRQHandler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, interrupthandler.o(i.RTC_IRQHandler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_isd9100.o(RESET)
 </UL>
-<P><STRONG><a name="[c3]"></a>Record_Add</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, record.o(i.Record_Add))
+<P><STRONG><a name="[d4]"></a>Record_Add</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, record.o(i.Record_Add))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = Record_Add &rArr; MIC_ChangeSR
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MIC_ChangeSR
+<BR>[Calls]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MIC_ChangeSR
 </UL>
-<BR>[Called By]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MicGetApp_StartRec
+<BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MicGetApp_StartRec
 </UL>
 
-<P><STRONG><a name="[d7]"></a>Record_Process</STRONG> (Thumb, 58 bytes, Stack size 16 bytes, record.o(i.Record_Process))
+<P><STRONG><a name="[e9]"></a>Record_Process</STRONG> (Thumb, 58 bytes, Stack size 16 bytes, record.o(i.Record_Process))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = Record_Process &rArr; PdmaCtrl_Start
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PdmaCtrl_Start
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BufCtrl_UpdateWriteWithCount
+<BR>[Calls]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PdmaCtrl_Start
+<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BufCtrl_UpdateWriteWithCount
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PDMA_IRQHandler
 </UL>
 
-<P><STRONG><a name="[c2]"></a>Record_SetInBufRecord</STRONG> (Thumb, 34 bytes, Stack size 16 bytes, record.o(i.Record_SetInBufRecord))
+<P><STRONG><a name="[d3]"></a>Record_SetInBufRecord</STRONG> (Thumb, 34 bytes, Stack size 16 bytes, record.o(i.Record_SetInBufRecord))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = Record_SetInBufRecord
 </UL>
 <BR>[Calls]<UL><LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MicGetApp_StartRec
+<BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MicGetApp_StartRec
 </UL>
 
-<P><STRONG><a name="[c4]"></a>Record_StartRec</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, record.o(i.Record_StartRec))
+<P><STRONG><a name="[d5]"></a>Record_StartRec</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, record.o(i.Record_StartRec))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = Record_StartRec &rArr; PdmaCtrl_Start
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PdmaCtrl_Start
-<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MIC_Start
+<BR>[Calls]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PdmaCtrl_Start
+<LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MIC_Start
 </UL>
-<BR>[Called By]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MicGetApp_StartRec
+<BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MicGetApp_StartRec
 </UL>
 
-<P><STRONG><a name="[f1]"></a>SPIFlash_3ByteAddr_Cmd</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, spiflash.o(i.SPIFlash_3ByteAddr_Cmd))
+<P><STRONG><a name="[d6]"></a>Record_StopRec</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, record.o(i.Record_StopRec))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Record_StopRec
+</UL>
+<BR>[Calls]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PdmaCtrl_Stop
+<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MIC_Stop
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MicGetApp_StopRec
+</UL>
+
+<P><STRONG><a name="[10b]"></a>SPIFlash_3ByteAddr_Cmd</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, spiflash.o(i.SPIFlash_3ByteAddr_Cmd))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SPIFlash_3ByteAddr_Cmd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIFlash_ReadStart
+<BR>[Called By]<UL><LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIFlash_ReadStart
 </UL>
 
-<P><STRONG><a name="[ed]"></a>SPIFlash_Read</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, spiflash.o(i.SPIFlash_Read))
+<P><STRONG><a name="[101]"></a>SPIFlash_GetChipInfo</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, spiflash.o(i.SPIFlash_GetChipInfo))
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = SPIFlash_GetChipInfo &rArr; SPIFlash_SendRecOneData
+</UL>
+<BR>[Calls]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIFlash_SendRecOneData
+</UL>
+<BR>[Called By]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIFlash_Initiate
+</UL>
+
+<P><STRONG><a name="[103]"></a>SPIFlash_Initiate</STRONG> (Thumb, 102 bytes, Stack size 24 bytes, main.o(i.SPIFlash_Initiate))
+<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = SPIFlash_Initiate &rArr; SPIFlash_Open &rArr; SPI_Open &rArr; SPI_SetBusClock &rArr; CLK_GetHCLKFreq &rArr; SystemCoreClockUpdate
+</UL>
+<BR>[Calls]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYS_ResetModule
+<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIFlash_Read
+<LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIFlash_PowerDown
+<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIFlash_Open
+<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIFlash_GetChipInfo
+<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_EnableModuleClock
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[104]"></a>SPIFlash_Open</STRONG> (Thumb, 112 bytes, Stack size 16 bytes, spiflash.o(i.SPIFlash_Open))
+<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = SPIFlash_Open &rArr; SPI_Open &rArr; SPI_SetBusClock &rArr; CLK_GetHCLKFreq &rArr; SystemCoreClockUpdate
+</UL>
+<BR>[Calls]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_Open
+</UL>
+<BR>[Called By]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIFlash_Initiate
+</UL>
+
+<P><STRONG><a name="[105]"></a>SPIFlash_PowerDown</STRONG> (Thumb, 20 bytes, Stack size 4 bytes, spiflash.o(i.SPIFlash_PowerDown))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = SPIFlash_PowerDown &rArr; SPIFlash_SendRecOneData
+</UL>
+<BR>[Calls]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIFlash_SendRecOneData
+</UL>
+<BR>[Called By]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIFlash_Initiate
+</UL>
+
+<P><STRONG><a name="[106]"></a>SPIFlash_Read</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, spiflash.o(i.SPIFlash_Read))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = SPIFlash_Read &rArr; SPIFlash_ReadData
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIFlash_ReadStart
-<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIFlash_ReadEnd
-<LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIFlash_ReadData
+<BR>[Calls]<UL><LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIFlash_ReadStart
+<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIFlash_ReadEnd
+<LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIFlash_ReadData
 </UL>
 <BR>[Called By]<UL><LI><a href="#[20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIFlash_ReadDataCallback
+<LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIFlash_Initiate
 </UL>
 
-<P><STRONG><a name="[ef]"></a>SPIFlash_ReadData</STRONG> (Thumb, 212 bytes, Stack size 20 bytes, spiflash.o(i.SPIFlash_ReadData))
+<P><STRONG><a name="[109]"></a>SPIFlash_ReadData</STRONG> (Thumb, 212 bytes, Stack size 20 bytes, spiflash.o(i.SPIFlash_ReadData))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = SPIFlash_ReadData
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIFlash_Read
+<BR>[Called By]<UL><LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIFlash_Read
 </UL>
 
 <P><STRONG><a name="[20]"></a>SPIFlash_ReadDataCallback</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, appcallback.o(i.SPIFlash_ReadDataCallback))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = SPIFlash_ReadDataCallback &rArr; SPIFlash_Read &rArr; SPIFlash_ReadData
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIFlash_Read
+<BR>[Calls]<UL><LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIFlash_Read
 </UL>
-<BR>[Address Reference Count : 1]<UL><LI> appcallback.o(.constdata)
+<BR>[Address Reference Count : 2]<UL><LI> appcallback.o(.constdata)
+<LI> appfunctions.o(i.App_Initiate)
 </UL>
-<P><STRONG><a name="[f0]"></a>SPIFlash_ReadEnd</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, spiflash.o(i.SPIFlash_ReadEnd))
-<BR><BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIFlash_Read
+<P><STRONG><a name="[10a]"></a>SPIFlash_ReadEnd</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, spiflash.o(i.SPIFlash_ReadEnd))
+<BR><BR>[Called By]<UL><LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIFlash_Read
 </UL>
 
-<P><STRONG><a name="[ee]"></a>SPIFlash_ReadStart</STRONG> (Thumb, 78 bytes, Stack size 8 bytes, spiflash.o(i.SPIFlash_ReadStart))
+<P><STRONG><a name="[108]"></a>SPIFlash_ReadStart</STRONG> (Thumb, 78 bytes, Stack size 8 bytes, spiflash.o(i.SPIFlash_ReadStart))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = SPIFlash_ReadStart &rArr; SPIFlash_3ByteAddr_Cmd
 </UL>
-<BR>[Calls]<UL><LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIFlash_3ByteAddr_Cmd
+<BR>[Calls]<UL><LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIFlash_3ByteAddr_Cmd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIFlash_Read
+<BR>[Called By]<UL><LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIFlash_Read
 </UL>
 
-<P><STRONG><a name="[f2]"></a>SPK_Open</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, micspk.o(i.SPK_Open))
+<P><STRONG><a name="[102]"></a>SPIFlash_SendRecOneData</STRONG> (Thumb, 82 bytes, Stack size 12 bytes, spiflash.o(i.SPIFlash_SendRecOneData))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = SPIFlash_SendRecOneData
+</UL>
+<BR>[Called By]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIFlash_PowerDown
+<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIFlash_GetChipInfo
+</UL>
+
+<P><STRONG><a name="[10c]"></a>SPI_GetBusClock</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, spi.o(i.SPI_GetBusClock))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = SPI_GetBusClock &rArr; CLK_GetHCLKFreq &rArr; SystemCoreClockUpdate
+</UL>
+<BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_GetHCLKFreq
+<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+</UL>
+<BR>[Called By]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_Open
+</UL>
+
+<P><STRONG><a name="[107]"></a>SPI_Open</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, spi.o(i.SPI_Open))
+<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = SPI_Open &rArr; SPI_SetBusClock &rArr; CLK_GetHCLKFreq &rArr; SystemCoreClockUpdate
+</UL>
+<BR>[Calls]<UL><LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_SetVarClock
+<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_SetBusClock
+<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_GetBusClock
+</UL>
+<BR>[Called By]<UL><LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIFlash_Open
+</UL>
+
+<P><STRONG><a name="[10e]"></a>SPI_SetBusClock</STRONG> (Thumb, 74 bytes, Stack size 24 bytes, spi.o(i.SPI_SetBusClock))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = SPI_SetBusClock &rArr; CLK_GetHCLKFreq &rArr; SystemCoreClockUpdate
+</UL>
+<BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_GetHCLKFreq
+<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+</UL>
+<BR>[Called By]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_Open
+</UL>
+
+<P><STRONG><a name="[10d]"></a>SPI_SetVarClock</STRONG> (Thumb, 58 bytes, Stack size 16 bytes, spi.o(i.SPI_SetVarClock))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = SPI_SetVarClock &rArr; CLK_GetHCLKFreq &rArr; SystemCoreClockUpdate
+</UL>
+<BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_GetHCLKFreq
+<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+</UL>
+<BR>[Called By]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_Open
+</UL>
+
+<P><STRONG><a name="[f8]"></a>SPK_ChangeSR</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, micspk.o(i.SPK_ChangeSR))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = SPK_ChangeSR &rArr; DPWM_SetSampleRate &rArr; SystemCoreClockUpdate
+</UL>
+<BR>[Calls]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DPWM_SetSampleRate
+<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+</UL>
+<BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_Add
+</UL>
+
+<P><STRONG><a name="[10f]"></a>SPK_Open</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, micspk.o(i.SPK_Open))
 <BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = SPK_Open &rArr; PdmaCtrl_Open &rArr; PDMA_SetTransferMode &rArr; __ARM_common_switch8
 </UL>
-<BR>[Calls]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYS_ResetModule
-<LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_SetModuleClock
-<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_EnableModuleClock
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PdmaCtrl_Open
-<LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DPWM_Open
-<LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BIQFilter_Setting
+<BR>[Calls]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYS_ResetModule
+<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_SetModuleClock
+<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_EnableModuleClock
+<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PdmaCtrl_Open
+<LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DPWM_Open
+<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BIQFilter_Setting
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[eb]"></a>SPK_Stop</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, micspk.o(i.SPK_Stop))
-<BR><BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_StopPlay
+<P><STRONG><a name="[fd]"></a>SPK_Start</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, micspk.o(i.SPK_Start))
+<BR><BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_StartPlay
 </UL>
 
-<P><STRONG><a name="[98]"></a>SYS_Lock</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, sys.o(i.SYS_Lock))
-<BR><BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_EnableLDO
-<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_SetHCLK
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_EnableXtalRC
+<P><STRONG><a name="[fe]"></a>SPK_Stop</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, micspk.o(i.SPK_Stop))
+<BR><BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_StopPlay
 </UL>
 
-<P><STRONG><a name="[bb]"></a>SYS_ResetModule</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, sys.o(i.SYS_ResetModule))
-<BR><BR>[Called By]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPK_Open
-<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PdmaCtrl_Init
-<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MIC_Open
-<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwm_init
+<P><STRONG><a name="[a5]"></a>SYS_Lock</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, sys.o(i.SYS_Lock))
+<BR><BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_EnableLDO
+<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_SetHCLK
+<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_EnableXtalRC
 </UL>
 
-<P><STRONG><a name="[97]"></a>SYS_Unlock</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, sys.o(i.SYS_Unlock))
+<P><STRONG><a name="[cd]"></a>SYS_ResetModule</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, sys.o(i.SYS_ResetModule))
+<BR><BR>[Called By]<UL><LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPK_Open
+<LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PdmaCtrl_Init
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MIC_Open
+<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwm_init
+<LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIFlash_Initiate
+</UL>
+
+<P><STRONG><a name="[a4]"></a>SYS_Unlock</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, sys.o(i.SYS_Unlock))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SYS_Unlock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_EnableLDO
-<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_SetHCLK
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_EnableXtalRC
+<BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_EnableLDO
+<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_SetHCLK
+<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_EnableXtalRC
 </UL>
 
-<P><STRONG><a name="[47]"></a>SendCMD</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, appfunctions.o(i.SendCMD))
-<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = SendCMD &rArr; SendCMD1time &rArr; SendCMDByteTimer
+<P><STRONG><a name="[4c]"></a>SendCMD</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, appfunctions.o(i.SendCMD))
+<BR><BR>[Stack]<UL><LI>Max Depth = 200<LI>Call Chain = SendCMD &rArr; App_StartPlay &rArr; MD4App_DecodeStartPlayByID &rArr; MD4App_DecodeStartPlayByAddr &rArr; MD4App_DecodeProcess &rArr; MD4_DecodeProcess &rArr; MD4_DecodeFrame &rArr; MD4_CheckResLdr
 </UL>
-<BR>[Calls]<UL><LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delayms
-<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendCMDNULL
-<LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendCMD1time
+<BR>[Calls]<UL><LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delayms
+<LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendCMDNULL
+<LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendCMD1time
+<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_StartPlay
 </UL>
-<BR>[Called By]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_Process
+<BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_Process
 </UL>
 
-<P><STRONG><a name="[f5]"></a>SendCMD1time</STRONG> (Thumb, 36 bytes, Stack size 12 bytes, appfunctions.o(i.SendCMD1time))
+<P><STRONG><a name="[112]"></a>SendCMD1time</STRONG> (Thumb, 36 bytes, Stack size 12 bytes, appfunctions.o(i.SendCMD1time))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = SendCMD1time &rArr; SendCMDByteTimer
 </UL>
-<BR>[Calls]<UL><LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendCMDByteTimer
+<BR>[Calls]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendCMDByteTimer
 </UL>
-<BR>[Called By]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendCMD
+<BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendCMD
 </UL>
 
-<P><STRONG><a name="[f8]"></a>SendCMDByteTimer</STRONG> (Thumb, 112 bytes, Stack size 20 bytes, appfunctions.o(i.SendCMDByteTimer))
+<P><STRONG><a name="[115]"></a>SendCMDByteTimer</STRONG> (Thumb, 112 bytes, Stack size 20 bytes, appfunctions.o(i.SendCMDByteTimer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = SendCMDByteTimer
 </UL>
-<BR>[Called By]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendCMD1time
+<BR>[Called By]<UL><LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendCMD1time
 </UL>
 
-<P><STRONG><a name="[f7]"></a>SendCMDNULL</STRONG> (Thumb, 98 bytes, Stack size 12 bytes, appfunctions.o(i.SendCMDNULL))
+<P><STRONG><a name="[114]"></a>SendCMDNULL</STRONG> (Thumb, 98 bytes, Stack size 12 bytes, appfunctions.o(i.SendCMDNULL))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = SendCMDNULL
 </UL>
-<BR>[Called By]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendCMD
+<BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendCMD
 </UL>
 
-<P><STRONG><a name="[f9]"></a>SysClk_InitiateRC</STRONG> (Thumb, 76 bytes, Stack size 16 bytes, sysclk.o(i.SysClk_InitiateRC))
-<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = SysClk_InitiateRC &rArr; CLK_SetHCLK &rArr; SYS_Unlock
+<P><STRONG><a name="[116]"></a>SysClk_InitiateRC</STRONG> (Thumb, 76 bytes, Stack size 16 bytes, sysclk.o(i.SysClk_InitiateRC))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = SysClk_InitiateRC &rArr; CLK_SetHCLK &rArr; SystemCoreClockUpdate
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_SetHCLK
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_EnableXtalRC
-<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<BR>[Calls]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_SetHCLK
+<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_EnableXtalRC
+<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[9b]"></a>SystemCoreClockUpdate</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, system_isd9100.o(i.SystemCoreClockUpdate))
+<P><STRONG><a name="[a8]"></a>SystemCoreClockUpdate</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, system_isd9100.o(i.SystemCoreClockUpdate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SystemCoreClockUpdate
 </UL>
-<BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<BR>[Calls]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM_ConfigOutputChannel
-<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_SetHCLK
-<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_GetHCLKFreq
+<BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM_ConfigOutputChannel
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DPWM_SetSampleRate
+<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_SetHCLK
+<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_GetHCLKFreq
 </UL>
 
-<P><STRONG><a name="[fa]"></a>TIMER_GetModuleClock</STRONG> (Thumb, 70 bytes, Stack size 32 bytes, timer.o(i.TIMER_GetModuleClock))
+<P><STRONG><a name="[117]"></a>TIMER_GetModuleClock</STRONG> (Thumb, 70 bytes, Stack size 32 bytes, timer.o(i.TIMER_GetModuleClock))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = TIMER_GetModuleClock
 </UL>
-<BR>[Calls]<UL><LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
+<BR>[Calls]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
-<BR>[Called By]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER_Open
+<BR>[Called By]<UL><LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER_Open
 </UL>
 
-<P><STRONG><a name="[fb]"></a>TIMER_Open</STRONG> (Thumb, 94 bytes, Stack size 32 bytes, timer.o(i.TIMER_Open))
+<P><STRONG><a name="[118]"></a>TIMER_Open</STRONG> (Thumb, 94 bytes, Stack size 32 bytes, timer.o(i.TIMER_Open))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = TIMER_Open &rArr; TIMER_GetModuleClock
 </UL>
-<BR>[Calls]<UL><LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER_GetModuleClock
-<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<BR>[Calls]<UL><LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER_GetModuleClock
+<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time_init
+<BR>[Called By]<UL><LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time_init
 </UL>
 
 <P><STRONG><a name="[13]"></a>TMR0_IRQHandler</STRONG> (Thumb, 112 bytes, Stack size 12 bytes, main.o(i.TMR0_IRQHandler))
@@ -1864,144 +2133,146 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_isd9100.o(RESET)
 </UL>
-<P><STRONG><a name="[fe]"></a>UART_ClearIntFlag</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, uart.o(i.UART_ClearIntFlag))
-<BR><BR>[Called By]<UL><LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Init
+<P><STRONG><a name="[11b]"></a>UART_ClearIntFlag</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, uart.o(i.UART_ClearIntFlag))
+<BR><BR>[Called By]<UL><LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Init
 </UL>
 
-<P><STRONG><a name="[fc]"></a>UART_Init</STRONG> (Thumb, 108 bytes, Stack size 8 bytes, main.o(i.UART_Init))
+<P><STRONG><a name="[119]"></a>UART_Init</STRONG> (Thumb, 108 bytes, Stack size 8 bytes, main.o(i.UART_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = UART_Init &rArr; UART_Open &rArr; CLK_GetHCLKFreq &rArr; SystemCoreClockUpdate
 </UL>
-<BR>[Calls]<UL><LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Open
-<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_ClearIntFlag
-<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_EnableModuleClock
-<LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_EnableIRQ
+<BR>[Calls]<UL><LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Open
+<LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_ClearIntFlag
+<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_EnableModuleClock
+<LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_EnableIRQ
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[fd]"></a>UART_Open</STRONG> (Thumb, 84 bytes, Stack size 16 bytes, uart.o(i.UART_Open))
+<P><STRONG><a name="[11a]"></a>UART_Open</STRONG> (Thumb, 84 bytes, Stack size 16 bytes, uart.o(i.UART_Open))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = UART_Open &rArr; CLK_GetHCLKFreq &rArr; SystemCoreClockUpdate
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_GetHCLKFreq
-<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_GetHCLKFreq
+<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Init
+<BR>[Called By]<UL><LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Init
 </UL>
 
 <P><STRONG><a name="[21]"></a>UserEvent_ProcessCallback</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, appcallback.o(i.UserEvent_ProcessCallback))
 <BR>[Address Reference Count : 1]<UL><LI> appcallback.o(.constdata)
 </UL>
-<P><STRONG><a name="[46]"></a>VROneCmdApp_GetCMDID</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, vronecmdapp.o(i.VROneCmdApp_GetCMDID))
+<P><STRONG><a name="[48]"></a>VROneCmdApp_GetCMDID</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, vronecmdapp.o(i.VROneCmdApp_GetCMDID))
 <BR><BR>[Stack]<UL><LI>Max Depth = 584<LI>Call Chain = VROneCmdApp_GetCMDID &rArr; CSpotter_AddSample &rArr; NINJA_API_13 &rArr; NINJA_API_11 &rArr; BsrAsa &rArr; BsrCara &rArr; BsrBret
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_GetResult
-<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_AddSample
+<BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_GetResult
+<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_AddSample
 </UL>
-<BR>[Called By]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_Process
+<BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_Process
 </UL>
 
-<P><STRONG><a name="[48]"></a>VROneCmdApp_Initiate</STRONG> (Thumb, 72 bytes, Stack size 40 bytes, vronecmdapp.o(i.VROneCmdApp_Initiate))
+<P><STRONG><a name="[52]"></a>VROneCmdApp_Initiate</STRONG> (Thumb, 72 bytes, Stack size 40 bytes, vronecmdapp.o(i.VROneCmdApp_Initiate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 664<LI>Call Chain = VROneCmdApp_Initiate &rArr; CSpotter_Init_Sep &rArr; CSpotter_Init_MultiWithExtRejModel &rArr; NINJA_API_73 &rArr; BsrRay &rArr; BsrDina
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_Reset
-<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_Init_Sep
-<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_GetMemoryUsage_Sep
+<BR>[Calls]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_Reset
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_Init_Sep
+<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CSpotter_GetMemoryUsage_Sep
 </UL>
-<BR>[Called By]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_StartRecognize
+<BR>[Called By]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_StartRecognize
 </UL>
 
-<P><STRONG><a name="[40]"></a>VROneCmdApp_UnpackBin</STRONG> (Thumb, 56 bytes, Stack size 20 bytes, vronecmdapp.o(i.VROneCmdApp_UnpackBin))
+<P><STRONG><a name="[41]"></a>VROneCmdApp_UnpackBin</STRONG> (Thumb, 56 bytes, Stack size 20 bytes, vronecmdapp.o(i.VROneCmdApp_UnpackBin))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = VROneCmdApp_UnpackBin
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_Initiate
 </UL>
 
-<P><STRONG><a name="[ea]"></a>VolumeCtrl_Reset</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, volumectrl.o(i.VolumeCtrl_Reset))
+<P><STRONG><a name="[fc]"></a>VolumeCtrl_Reset</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, volumectrl.o(i.VolumeCtrl_Reset))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = VolumeCtrl_Reset
 </UL>
 <BR>[Calls]<UL><LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_ResetChannelVolume
+<BR>[Called By]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_ResetChannelVolume
 </UL>
 
-<P><STRONG><a name="[e6]"></a>VolumeCtrl_VolumeFade</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, volumectrl.o(i.VolumeCtrl_VolumeFade))
-<BR><BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_Process
+<P><STRONG><a name="[fa]"></a>VolumeCtrl_VolumeFade</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, volumectrl.o(i.VolumeCtrl_VolumeFade))
+<BR><BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Playback_Process
 </UL>
 
 <P><STRONG><a name="[c]"></a>WDT_IRQHandler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, interrupthandler.o(i.WDT_IRQHandler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_isd9100.o(RESET)
 </UL>
-<P><STRONG><a name="[b8]"></a>__ARM_common_switch8</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, pdma.o(i.__ARM_common_switch8))
+<P><STRONG><a name="[49]"></a>__ARM_common_switch8</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, appfunctions.o(i.__ARM_common_switch8))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __ARM_common_switch8
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PDMA_SetTransferMode
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4_DecodeProcess
+<BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_Process
+<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PDMA_SetTransferMode
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4_DecodeProcess
 </UL>
 
-<P><STRONG><a name="[f6]"></a>delayms</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, appfunctions.o(i.delayms))
+<P><STRONG><a name="[113]"></a>delayms</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, appfunctions.o(i.delayms))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = delayms
 </UL>
-<BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<BR>[Calls]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendCMD
+<BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendCMD
 </UL>
 
-<P><STRONG><a name="[2e]"></a>main</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, main.o(i.main))
+<P><STRONG><a name="[2e]"></a>main</STRONG> (Thumb, 64 bytes, Stack size 0 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 680<LI>Call Chain = main &rArr; App_Initiate &rArr; App_StartRecognize &rArr; VROneCmdApp_Initiate &rArr; CSpotter_Init_Sep &rArr; CSpotter_Init_MultiWithExtRejModel &rArr; NINJA_API_73 &rArr; BsrRay &rArr; BsrDina
 </UL>
-<BR>[Calls]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysClk_InitiateRC
-<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPK_Open
-<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PdmaCtrl_Init
-<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OutputPin_Initiate
-<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MIC_Open
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_EnableLDO
-<LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_Process
+<BR>[Calls]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysClk_InitiateRC
+<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPK_Open
+<LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PdmaCtrl_Init
+<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OutputPin_Initiate
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MIC_Open
+<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_EnableLDO
+<LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_Process
 <LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_Initiate
-<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_rev_task
-<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time_init
-<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwm_init
-<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Init
+<LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_rev_task
+<LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time_init
+<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwm_init
+<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Init
+<LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPIFlash_Initiate
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
-<P><STRONG><a name="[101]"></a>pwm_init</STRONG> (Thumb, 180 bytes, Stack size 24 bytes, main.o(i.pwm_init))
+<P><STRONG><a name="[11e]"></a>pwm_init</STRONG> (Thumb, 180 bytes, Stack size 24 bytes, main.o(i.pwm_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = pwm_init &rArr; PWM_ConfigOutputChannel &rArr; CLK_GetHCLKFreq &rArr; SystemCoreClockUpdate
 </UL>
-<BR>[Calls]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYS_ResetModule
-<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM_Start
-<LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM_EnableOutput
-<LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM_DisableDeadZone
-<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM_ConfigOutputChannel
-<LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_SetModuleClock
-<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_EnableModuleClock
-<LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_EnableIRQ
+<BR>[Calls]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SYS_ResetModule
+<LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM_Start
+<LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM_EnableOutput
+<LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM_DisableDeadZone
+<LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWM_ConfigOutputChannel
+<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_SetModuleClock
+<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_EnableModuleClock
+<LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_EnableIRQ
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[100]"></a>time_init</STRONG> (Thumb, 114 bytes, Stack size 24 bytes, main.o(i.time_init))
+<P><STRONG><a name="[11d]"></a>time_init</STRONG> (Thumb, 114 bytes, Stack size 24 bytes, main.o(i.time_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = time_init &rArr; TIMER_Open &rArr; TIMER_GetModuleClock
 </UL>
-<BR>[Calls]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER_Open
-<LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_SetModuleClock
-<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_EnableModuleClock
-<LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_EnableIRQ
+<BR>[Calls]<UL><LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIMER_Open
+<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_SetModuleClock
+<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_EnableModuleClock
+<LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_EnableIRQ
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[102]"></a>uart_rev_task</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, main.o(i.uart_rev_task))
+<P><STRONG><a name="[11f]"></a>uart_rev_task</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, main.o(i.uart_rev_task))
 <BR><BR>[Called By]<UL><LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 <P>
 <H3>
 Local Symbols
 </H3>
-<P><STRONG><a name="[ff]"></a>NVIC_EnableIRQ</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, main.o(i.NVIC_EnableIRQ))
-<BR><BR>[Called By]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time_init
-<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwm_init
-<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Init
+<P><STRONG><a name="[11c]"></a>NVIC_EnableIRQ</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, main.o(i.NVIC_EnableIRQ))
+<BR><BR>[Called By]<UL><LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;time_init
+<LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pwm_init
+<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_Init
 </UL>
 
 <P><STRONG><a name="[12]"></a>Default_Handler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, startup_isd9100.o(.text))
@@ -2011,78 +2282,78 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_isd9100.o(RESET)
 </UL>
-<P><STRONG><a name="[49]"></a>BIQFilter_Setting</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, micspk.o(i.BIQFilter_Setting))
+<P><STRONG><a name="[57]"></a>BIQFilter_Setting</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, micspk.o(i.BIQFilter_Setting))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = BIQFilter_Setting &rArr; BIQ_SetCoeff
 </UL>
-<BR>[Calls]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_EnableModuleClock
-<LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BIQ_SetCoeff
-<LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BIQ_Reset
+<BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_EnableModuleClock
+<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BIQ_SetCoeff
+<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BIQ_Reset
 </UL>
-<BR>[Called By]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPK_Open
-<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MIC_Open
+<BR>[Called By]<UL><LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPK_Open
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MIC_Open
 </UL>
 
-<P><STRONG><a name="[b7]"></a>MD4_CheckResLdr</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, md4decode.o(i.MD4_CheckResLdr))
+<P><STRONG><a name="[ca]"></a>MD4_CheckResLdr</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, md4decode.o(i.MD4_CheckResLdr))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = MD4_CheckResLdr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4_DecodeProcess
-<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4_DecodeFrame
+<BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4_DecodeProcess
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4_DecodeFrame
 </UL>
 
-<P><STRONG><a name="[b6]"></a>MD4_DecodeFrame</STRONG> (Thumb, 190 bytes, Stack size 32 bytes, md4decode.o(i.MD4_DecodeFrame))
+<P><STRONG><a name="[c9]"></a>MD4_DecodeFrame</STRONG> (Thumb, 190 bytes, Stack size 32 bytes, md4decode.o(i.MD4_DecodeFrame))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = MD4_DecodeFrame &rArr; MD4_CheckResLdr
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4_CheckResLdr
+<BR>[Calls]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4_CheckResLdr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4_DecodeProcess
+<BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MD4_DecodeProcess
 </UL>
 
-<P><STRONG><a name="[6c]"></a>BsrBen</STRONG> (Thumb, 172 bytes, Stack size 16 bytes, BsrJim.o(i.BsrBen))
+<P><STRONG><a name="[7a]"></a>BsrBen</STRONG> (Thumb, 172 bytes, Stack size 16 bytes, BsrJim.o(i.BsrBen))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = BsrBen &rArr; BsrMaxi
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrMaxi
+<BR>[Calls]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrMaxi
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrMichael
-<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAvea
+<BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrMichael
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrAvea
 </UL>
 
-<P><STRONG><a name="[87]"></a>BsrJoan</STRONG> (Thumb, 366 bytes, Stack size 40 bytes, BsrKai.o(i.BsrJoan))
+<P><STRONG><a name="[94]"></a>BsrJoan</STRONG> (Thumb, 366 bytes, Stack size 40 bytes, BsrKai.o(i.BsrJoan))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = BsrJoan &rArr; __aeabi_idivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrTre
-<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRon
+<BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrTre
+<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrRon
 </UL>
 
-<P><STRONG><a name="[83]"></a>BsrJuanitez</STRONG> (Thumb, 52 bytes, Stack size 4 bytes, BsrEva.o(i.BsrJuanitez))
+<P><STRONG><a name="[90]"></a>BsrJuanitez</STRONG> (Thumb, 52 bytes, Stack size 4 bytes, BsrEva.o(i.BsrJuanitez))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = BsrJuanitez
 </UL>
-<BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrElsa
-<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrElla
+<BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrElsa
+<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrElla
 </UL>
 
-<P><STRONG><a name="[6e]"></a>BsrBret</STRONG> (Thumb, 324 bytes, Stack size 104 bytes, BsrJay.o(i.BsrBret))
+<P><STRONG><a name="[7c]"></a>BsrBret</STRONG> (Thumb, 324 bytes, Stack size 104 bytes, BsrJay.o(i.BsrBret))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = BsrBret
 </UL>
-<BR>[Called By]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrCarae
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrCara
+<BR>[Called By]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrCarae
+<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrCara
 </UL>
 
-<P><STRONG><a name="[6f]"></a>BsrJeni</STRONG> (Thumb, 390 bytes, Stack size 104 bytes, BsrJay.o(i.BsrJeni))
+<P><STRONG><a name="[7d]"></a>BsrJeni</STRONG> (Thumb, 390 bytes, Stack size 104 bytes, BsrJay.o(i.BsrJeni))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = BsrJeni &rArr; __aeabi_idivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrClay
+<BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrClay
 </UL>
 
-<P><STRONG><a name="[74]"></a>BsrJamii</STRONG> (Thumb, 226 bytes, Stack size 40 bytes, BsrJoy.o(i.BsrJamii))
+<P><STRONG><a name="[82]"></a>BsrJamii</STRONG> (Thumb, 226 bytes, Stack size 40 bytes, BsrJoy.o(i.BsrJamii))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = BsrJamii
 </UL>
-<BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<BR>[Calls]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrDeon
+<BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BsrDeon
 </UL>
 <P>
 <H3>

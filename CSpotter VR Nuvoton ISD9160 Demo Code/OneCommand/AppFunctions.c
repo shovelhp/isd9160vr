@@ -302,7 +302,9 @@ void App_Process(void)
 				if((Fan_Stauts == FAN_RUNING)| USEWAKEUP )
 				{
 					vr_time=VRTIME;
+#if USEWAKEUPRES
 					App_StartPlay(0);	//播放回答声音
+#endif					
 				}
 				else
 				{
