@@ -1,0 +1,923 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"flag",
+				"flag_150ms"
+			],
+			[
+				"flag_1",
+				"flag_150ms"
+			],
+			[
+				"time",
+				"time_150ms"
+			],
+			[
+				"uin",
+				"uint8_t"
+			],
+			[
+				"uint",
+				"uint8_t"
+			],
+			[
+				"cmd",
+				"CMDid"
+			],
+			[
+				"Fan",
+				"Fan_Stauts"
+			],
+			[
+				"u8",
+				"UINT8"
+			],
+			[
+				"uint8",
+				"UINT8"
+			],
+			[
+				"vrti",
+				"vr_time"
+			],
+			[
+				"pw",
+				"POWER"
+			],
+			[
+				"cu",
+				"CURRENT"
+			],
+			[
+				"CALC",
+				"CALC_DATA"
+			],
+			[
+				"VBUS_c",
+				"VBUS_CNVR"
+			],
+			[
+				"ov",
+				"VBUS_OVF"
+			],
+			[
+				"vubs",
+				"VBUS"
+			],
+			[
+				"con",
+				"CONF_DATA"
+			],
+			[
+				"i2c",
+				"i2c_read"
+			],
+			[
+				"sla",
+				"Slave_Address"
+			],
+			[
+				"pri",
+				"printf_P"
+			],
+			[
+				"INIT",
+				"INITSEG1"
+			],
+			[
+				"chip",
+				"chip_init_all"
+			],
+			[
+				"def",
+				"define"
+			],
+			[
+				"clk",
+				"CLK_chip_init2"
+			],
+			[
+				"drive_clk",
+				"drive_CLK_CFG_low"
+			],
+			[
+				"ui",
+				"uint8_t"
+			],
+			[
+				"org",
+				"org_addr"
+			],
+			[
+				"data",
+				"data_addr"
+			],
+			[
+				"DATA",
+				"data_addr"
+			],
+			[
+				"de",
+				"default"
+			],
+			[
+				"cha",
+				"changetype"
+			],
+			[
+				"un",
+				"uint16_t"
+			],
+			[
+				"dri",
+				"drive_ADC_CFG_low"
+			],
+			[
+				"SP",
+				"SPI_DEV"
+			],
+			[
+				"CLK",
+				"CLK_chip_reset"
+			],
+			[
+				"S",
+				"SPICMD_WRITE"
+			],
+			[
+				"spi",
+				"spi_cmd_match"
+			],
+			[
+				"he",
+				"helppage"
+			],
+			[
+				"prin",
+				"printchar"
+			],
+			[
+				"p",
+				"printchar"
+			],
+			[
+				"add",
+				"address"
+			],
+			[
+				"re",
+				"register"
+			],
+			[
+				"ini",
+				"initial"
+			],
+			[
+				"SPI",
+				"SPI_DEV"
+			],
+			[
+				"ADC",
+				"ADC1_init"
+			],
+			[
+				"T",
+				"Tx_SCFDE"
+			],
+			[
+				"cnt",
+				"cnt_data"
+			],
+			[
+				"frq",
+				"Freq_en"
+			],
+			[
+				"rf",
+				"rfic_initclk"
+			],
+			[
+				"rfic_cfgen_f",
+				"rfic_cfgen_ff1"
+			],
+			[
+				"rfic",
+				"rfic_cfgen"
+			],
+			[
+				"rf_cfg",
+				"rfic_cfgen_ff0"
+			],
+			[
+				"rfi",
+				"rfic_cfgen"
+			],
+			[
+				"Fr",
+				"Fre_en"
+			],
+			[
+				"wire",
+				"wire"
+			],
+			[
+				"spen",
+				"sp_en"
+			],
+			[
+				"da",
+				"dataout_rfic"
+			],
+			[
+				"riiclkff",
+				"rfic_initclk_out_ff"
+			],
+			[
+				"a",
+				"always\talways"
+			],
+			[
+				"addr",
+				"ADDR"
+			],
+			[
+				"TX",
+				"TX_GAIN_INIT"
+			],
+			[
+				"F",
+				"Freq_en"
+			],
+			[
+				"lmsoutte",
+				"lms_coeff_out0_temp"
+			],
+			[
+				"lmsadd",
+				"LMS_COEFF_0_2_ADDR"
+			],
+			[
+				"lmscoad",
+				"LMS_COEFF_0_2_ADDR"
+			],
+			[
+				"lmswi",
+				"LMS_COEFF_PHY_WIDTH"
+			],
+			[
+				"pown",
+				"pow_null_out_temp"
+			],
+			[
+				"pow",
+				"pow_null_out_temp"
+			],
+			[
+				"POW",
+				"POW_NULL_INIT"
+			],
+			[
+				"LMSST",
+				"LMS_STEP_WIDTH"
+			],
+			[
+				"LMS",
+				"LMS_COEFF_0_2_ADDR"
+			],
+			[
+				"dout_da",
+				"dout_i_da"
+			],
+			[
+				"b",
+				"b0"
+			],
+			[
+				"h1",
+				"h1"
+			],
+			[
+				"opre1out",
+				"optional_reg1_out"
+			],
+			[
+				"opretemp",
+				"optional_reg1_out_temp"
+			],
+			[
+				"puintff",
+				"PU_INT_STATUS_IN_FF"
+			],
+			[
+				"PU_INT_ST",
+				"PU_INT_STATUS_INIT"
+			],
+			[
+				"pustau",
+				"PU_INT_STATUS_WIDTH"
+			],
+			[
+				"mapuptcnt",
+				"MAP_UPDATE_CNT_ADDR"
+			],
+			[
+				"fecff",
+				"FEC_TOTAL_ID_CNT_DATA_IN_FF"
+			],
+			[
+				"pdlostint",
+				"PD_LOST_INT_CNT_ADDR"
+			],
+			[
+				"ofdmbitwith",
+				"OFDM_BIT_T_PHY_ADDR_WIDTH-1"
+			],
+			[
+				"ddlsphdatawi",
+				"DD_LS_SUMX2_PHY_DATA_WIDTH-1"
+			],
+			[
+				"ddlssumxdatawi",
+				"DD_LS_SUMX_PHY_DATA_WIDTH-1"
+			],
+			[
+				"ddlsdatawi",
+				"DD_LS_IND_PHY_DATA_WIDTH"
+			],
+			[
+				"ofdmbittdatawi",
+				"OFDM_BIT_T_PHY_DATA_WIDTH-1"
+			],
+			[
+				"pilotse",
+				"PILOT_C_PHASE_selected"
+			],
+			[
+				"hip",
+				"hiphy_time"
+			],
+			[
+				"stp",
+				"stp_on"
+			],
+			[
+				"stpwi",
+				"STP_EN_WIDTH"
+			],
+			[
+				"staddr",
+				"STP_REG_ADDR"
+			],
+			[
+				"stsrc",
+				"stp_src_sel_out_temp"
+			],
+			[
+				"stp_sr",
+				"stp_src_sel_out_temp"
+			],
+			[
+				"stpbit",
+				"STP_END_BIT"
+			],
+			[
+				"st",
+				"stp_end_in"
+			],
+			[
+				"STPEND",
+				"STP_END_IN_FF"
+			],
+			[
+				"ampmovedon",
+				"amp_ram_move_done_in"
+			],
+			[
+				"phasenouttem",
+				"phase_ram_move_en_out_temp"
+			],
+			[
+				"amprammovoutt",
+				"amp_ram_move_id_out_temp"
+			],
+			[
+				"ampen",
+				"AMP_RAM_MOVE_EN_INIT"
+			],
+			[
+				"ampidout",
+				"amp_ram_move_id_out_temp"
+			],
+			[
+				"amp",
+				"amp_parameter_out_temp"
+			],
+			[
+				"ampmovdon",
+				"AMP_RAM_MOVE_DONE_BIT"
+			],
+			[
+				"AMPmove_d",
+				"AMP_RAM_MOVE_DONE_IN_FF"
+			],
+			[
+				"moveid",
+				"MOVE_ID_ADDR"
+			],
+			[
+				"phasemovedon",
+				"PHASE_RAM_move_DONE"
+			],
+			[
+				"AMP_RAM_move",
+				"AMP_RAM_move_EN"
+			],
+			[
+				"amp_",
+				"amp_ram_move_done_in"
+			],
+			[
+				"AMPmov",
+				"AMP_RAM_move_EN"
+			],
+			[
+				"phasewi",
+				"PHASE_RAM_MOVE_ID_WIDTH"
+			],
+			[
+				"ampwi",
+				"AMP_RAM_MOVE_ID_WIDTH"
+			],
+			[
+				"d",
+				"d10000"
+			],
+			[
+				"move",
+				"AMP_move_flag_ff"
+			],
+			[
+				"hiphy",
+				"hiphy_time"
+			],
+			[
+				"amp_moveaddr",
+				"AMP_RAM_move_Base_addr"
+			],
+			[
+				"AM",
+				"AMP_addr_cnt"
+			],
+			[
+				"Amp",
+				"AMP_addr_cnt"
+			],
+			[
+				"cpurdata",
+				"cpu_rdata_AMP_RAM"
+			],
+			[
+				"cpur",
+				"cpu_rdata_AMP_RAM"
+			],
+			[
+				"clk_hiphy_",
+				"clk_hiphy_ff"
+			],
+			[
+				"hiph",
+				"hiphy_adc_i"
+			],
+			[
+				"H",
+				"HIPHY_ADC_DATA_WIDTH"
+			],
+			[
+				"s",
+				"stp_on"
+			],
+			[
+				"clk_hi",
+				"clk_hiphy"
+			],
+			[
+				"r_fre_corr_out_",
+				"r_fre_corr_out_temp"
+			],
+			[
+				"t_fre_out_",
+				"t_fre_out_temp"
+			],
+			[
+				"esti_in_use_",
+				"esti_in_use_out_temp"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "main.c",
+			"settings":
+			{
+				"buffer_size": 13407,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "AppFunctions.c",
+			"settings":
+			{
+				"buffer_size": 19733,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 35.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: de",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"Package Control: up",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: isn",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 504.0
+	},
+	"console":
+	{
+		"height": 146.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/F/shovelhp/Documents/GitHub/isd9160vr/ISD9160 Air Con",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/ISD9160 Air Con/OneCommand"
+	],
+	"file_history":
+	[
+		"/F/shovelhp/Documents/GitHub/isd9160vr/ISD9160 Air Con/OneCommand/App.h.dump",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/ISD9160 Air Con/OneCommand/App.h",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/main.c",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/inc/Framework.h",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/src/MicSpk.c",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/AppFunctions.c",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/AudioRes/Output/AudioRes_AudioInfo.h",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/AudioRes/Output/AudioResText.h",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/App.h.dump",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/App.h",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Device/Nuvoton/ISD9100/Include/ISD9100.h",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/inc/adc.h",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/inc/MicSpk.h",
+		"/F/shovelhp/Documents/GitHub/ISD9100BSP_CMSIS_V3.01.001/SampleCode/StdDriver/ADC/main.c",
+		"/C/Nuvoton/BSP Library/ISD9100BSP_CMSIS_V3.01.001/SampleCode/StdDriver/ADC/main.c",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/inc/uart.h",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/src/uart.c",
+		"/E/shovelhpwork/hinoc/MCU/ADCCTRL/ADCCTRL/ADCCTRL/cmdres.c",
+		"/F/shovelhp/Documents/GitHub/Open4337-C-Demo/Drivers/include/spifi_rom_api.h",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/copyfile.bat",
+		"/F/softwares/专业软件/NXP/lpclibspifi/test/test_suite.c",
+		"/F/softwares/专业软件/NXP/lpclibspifi/src/spifilib_fam_standard_cmd.c",
+		"/F/softwares/专业软件/NXP/lpclibspifi/src/spifilib_dev_common.c",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/ConfigSysClk.h",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/src/SysClk.c",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/src/clk.c",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/src/sys.c",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/inc/clk.h",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/Powerdown.c",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/InputKeyActions.c",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/src/Playback.c",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/inc/dpwm.h",
+		"/Z/ghp/temp/ina220/ina220arduino/ina220.h",
+		"/Z/ghp/temp/ina220/ina220arduino/ina220.cpp",
+		"/Z/ghp/temp/sdramerr.txt",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/MD4App/MD4App.c",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/AppCallback.c",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/inc/AudioMixer.h",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/src/UltraIO.c",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/src/AudioRom.c",
+		"/G/game/CaoCao/Sv00s.e5s",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/src/adc.c",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/ConfigIP.h",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/src/ConfigIO.c",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/inc/UltraIO.h",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/ConfigApp.h",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/ConfigUltraIO.h",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/ConfigIO.h",
+		"/Z/ghp/temp/icp/copyfile_wakeup8cmd.bat",
+		"/Z/ghp/temp/icp/copyfile_wang8cmd.bat",
+		"/Z/ghp/temp/icp/copyfile_wang2cmd.bat",
+		"/Z/ghp/temp/icp/copyfile.bat",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/inc/gpio.h",
+		"/C/Windows/System32/drivers/etc/ipv6_google_hosts.zc",
+		"/C/Windows/System32/drivers/etc/hosts.dump",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/copyfile.bat.dump",
+		"/Z/ghp/temp/山丘语音/code2.c",
+		"/Z/ghp/temp/山丘语音/code1.c",
+		"/C/Nuvoton/ISD91XX_SDK/NuvotonPlatform_Keil/Sample/TestOK/LDROM_ISP/main.c",
+		"/C/Nuvoton/ISD91XX_SDK/NuvotonPlatform_Keil/Sample/TestOK/LDROM_ISP/FMC.c",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/src/gpio.c",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/inc/SysClk.h",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Device/Nuvoton/ISD9100/Include/system_ISD9100.h",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/src/timer.c",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Device/Nuvoton/ISD9100/Source/system_ISD9100.c",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/inc/timer.h",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Storage/inc/SPIFlash.h",
+		"/E/shovelhpwork/hinoc/id_rsa.lyuyi.pub",
+		"/E/shovelhpwork/hinoc/interface_128M/interface/cache.v",
+		"/E/shovelhpwork/hinoc/interface_128M/interface/interface_top.v",
+		"/E/shovelhpwork/hinoc/RF配置模块相关/rf_ctr_code/soc/en1460_sio.v",
+		"/E/shovelhpwork/hinoc/RF配置模块相关/rf_ctr_code/soc/rf_ctr_en1460.v",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/src/pwm.c",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/inc/pwm.h",
+		"/C/Nuvoton/ISD91XX_SDK/NuvotonPlatform_Keil/Sample/Driver/Smpl_DrvPWM/Smpl_DrvPWM.c",
+		"/C/Nuvoton ISD9100 SDS/V5.02.001/SampleCode/StdDriver/PWM/KEIL/startup_ISD9100.s",
+		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/AppFunctions.c",
+		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/gpio_spi.c",
+		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/AudioRes/Output/AudioResText.h",
+		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/inc/pwm.h",
+		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/src/pwm.c",
+		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/.tags",
+		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/AudioRes/AudioRes.uid",
+		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/AudioRes/1.txt",
+		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/AudioRes/Output/AudioRes_AudioInfo.h",
+		"/F/shovelhp/Downloads/NuvotonISD9160/ISD9160_VR语音识别_2018年4月3日/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/AppFunctions.c",
+		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/AppFunctions - Origin.c_BACK",
+		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/AudioRes/AudioRes.wba",
+		"/C/Nuvoton ISD9100 SDS/V5.02.001/SampleCode/Template/main.c",
+		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/App.h",
+		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/ConfigIO.h",
+		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/src/ConfigIO.c",
+		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/inc/Framework.h",
+		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Device/Nuvoton/ISD9100/Include/ISD9100.h",
+		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Device/Nuvoton/ISD9100/Source/ARM/startup_ISD9100.s",
+		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/Library/CMSIS/DSP_Lib/Examples/Common/ARM/startup_ARMCM0.s",
+		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/ConfigSysClk.h",
+		"/C/Nuvoton/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/src/MicSpk.c",
+		"/C/Nuvoton/BSP Library/ISD9100BSP_CMSIS_V3.01.001/SampleCode/StdDriver/Uart/main.c",
+		"/C/Nuvoton/ISD91XX_SDK/NuvotonPlatform_Keil/Sample/TestOK/LightDemo_RecordG722__3VP_Touch-1pad/src/PlaySpiG722.c",
+		"/C/Nuvoton/ISD91XX_SDK/NuvotonPlatform_Keil/Sample/TestOK/LightDemo_RecordG722__3VP_Touch-1pad/src/PlaySpiSiren7_key.c",
+		"/C/Nuvoton/ISD91XX_SDK/NuvotonPlatform_Keil/Sample/TestOK/LightDemo_RecordG722__3VP_Touch-1pad/src/RecordSpiG722.c",
+		"/C/Nuvoton/ISD91XX_SDK/NuvotonPlatform_Keil/Sample/TestOK/LightDemo_RecordG722__3VP_Touch-1pad/src/Recording.c",
+		"/C/Program Files (x86)/Nuvoton/ISD9xxx/ISD91XX_SDK/NuvotonPlatform_Keil/Sample/TestOK/CheckVRID/CheckVRID.c",
+		"/C/Nuvoton/ISD91XX_SDK/NuvotonPlatform_Keil/Sample/TestOK/LightDemo_RecordG722__3VP_Touch-1pad/src/main.c",
+		"/C/Program Files (x86)/Spirent Communications/Spirent TestCenter 4.38/Spirent TestCenter Application/API/Tcl/readme.txt",
+		"/D/pkgIndex.tcl",
+		"/E/shovelhpwork/hinoc/MCU/ADCCTRL/ADCCTRL/ADCCTRL/chipinit.c",
+		"/E/shovelhpwork/hinoc/MCU/ADCCTRL/ADCCTRL/ADCCTRL/include/adc1_init_cfg.h",
+		"/Z/ghp/temp/ina220/ina220.txt",
+		"/F/softwares/专业软件/keysight/ScopeBinaryToMatlabBinaryExamples/importAgilentBin.m",
+		"/F/softwares/专业软件/keysight/ScopeBinaryToMatlabBinaryExamples/myFileName.bin",
+		"/F/softwares/专业软件/keysight/ScopeBinaryToMatlabBinaryExamples/points10.bin",
+		"/D/Program Files (x86)/Sublime Text 3/Data/Packages/HexViewer/hex_viewer.sublime-settings",
+		"/Z/ghp/temp/flash测试波形/analog/scope_25.bin",
+		"/F/softwares/专业软件/keysight/ScopeBinaryToMatlabBinaryExamples/headerSize",
+		"/D/Program Files (x86)/Sublime Text 3/Data/Packages/Git/Git.sublime-settings",
+		"/E/shovelhpwork/hinoc/MCU/ADCCTRL/ADCCTRL/ADCCTRL/main.c",
+		"/R/forZTE/20170623/PON/SCFDE_PON_SSB.vtmu_pack/Resources/Tx_SCFDE.vtmg_pack/Inputs/Tx_SCFDE.m",
+		"/Z/ghp/temp/RF滤波器带宽/Save0x0000000.dfl",
+		"/C/Program Files (x86)/Spirent Communications/Spirent TestCenter 4.38/Spirent TestCenter Application/Tcl/lib/stc2.0/pkgIndex.tcl",
+		"/C/Program Files (x86)/Spirent Communications/Spirent TestCenter 4.38/Spirent TestCenter Application/API/Tcl/SpirentTestCenter.tcl",
+		"/C/Program Files (x86)/Spirent Communications/Spirent TestCenter 4.38/Spirent TestCenter Application/API/Tcl/pkgIndex.tcl",
+		"/E/shovelhpwork/hinoc/MCU/ADCCTRL/ADCCTRL/ADCCTRL/include/clk_chip_cfg.h",
+		"/E/shovelhpwork/hinoc/MCU/ADCCTRL/ADCCTRL/ADCCTRL/include/chipinit.h",
+		"/E/shovelhpwork/hinoc/MCU/ADCCTRL/ADCCTRL/ADCCTRL/include/cmdres.h",
+		"/E/shovelhpwork/hinoc/MCU/ADCCTRL/ADCCTRL/ADCCTRL/include/dispstr.h"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"NOFLASH",
+			"ALLCMD",
+			"#ifdef NOFLASH",
+			"USEFLASH",
+			"flag1p25ms",
+			"sendbline",
+			"Px",
+			"Pxy",
+			"PA",
+			"DZI"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"#ifndef NOFLASH",
+			"NOFLASH"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "main.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13407,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								937,
+								937
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3357.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "AppFunctions.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 19733,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8323,
+								8324
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4517.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "isd9160newdemo.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 233.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

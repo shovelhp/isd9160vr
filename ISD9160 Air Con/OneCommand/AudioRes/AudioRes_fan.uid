@@ -1,0 +1,58 @@
+; UID file provides user to define play equation, and speech that will be used in program
+
+[Audio]
+; ===================================================================
+; All speech files and files in play equation, should be defined here
+; Syntax
+; 	DEFAUD file_name < ext= 0, format= XXX , bitrate=Y.Y>
+;
+; Description
+;	file_name: The speech file name (without extention name) which will be played in program.
+;	ext: Reserved for future use, set it to 0 now.
+;	format: audio format will be stored in storage
+;		"MD4", "P16", "LP8", "NUS", "NUO", "NUL", "NUV" for speech
+;		"MID" is for Midi.
+;	bitrate: encoded bits for one sample
+;		Range of NUS: 1.5~3.0 bits
+;		Range of NUO: 0.8~2.0 bits
+;		Range of NUL: 0.5~3.0 bits
+;		Range of NUV: 0.3, 0.7, and 0.8
+; ===================================================================
+
+; VR group1 response
+;defaud OK<ext=0,format=MD4>
+;defaud command0<ext=0,format=MD4>
+defaud cmd00zhinengdianshan<ext=0,format=MD4>
+defaud cmd01dakaidianshan<ext=0,format=MD4>
+defaud cmd02guanbidianshan<ext=0,format=MD4>
+defaud cmd03dakaiyaotou<ext=0,format=MD4>
+defaud cmd04guanbiyaotou<ext=0,format=MD4>
+defaud cmd05zengjiafengliang<ext=0,format=MD4>
+defaud cmd06jianshaofengliang<ext=0,format=MD4>
+defaud cmd07zengjiadingshi<ext=0,format=MD4>
+defaud cmd08jianshaodingshi<ext=0,format=MD4>
+;defaud cmd09jiadingshishijian<ext=0,format=MD4>
+;defaud cmd10jiandingshishijian<ext=0,format=MD4>
+;defaud cmd11dingshiguanbi<ext=0,format=MD4>
+;defaud cmd12kaifulizi<ext=0,format=MD4>
+;defaud cmd13guanfulizi<ext=0,format=MD4>
+;defaud cmd14kaicaideng<ext=0,format=MD4>
+;defaud cmd15guancaideng<ext=0,format=MD4>
+;defaud cmd16shuimianfeng<ext=0,format=MD4>
+;defaud cmd17ziranfeng<ext=0,format=MD4>
+
+;defaud command5<ext=0,format=MD4>;14
+;defaud command6<ext=0,format=MD4>
+;defaud huxideng<ext=0,format=MD4>
+;defaud yitiaoliang<ext=0,format=MD4>
+;defaud yitiaoan<ext=0,format=MD4>
+;defaud yizuiliang<ext=0,format=MD4>
+;defaud yizuian<ext=0,format=MD4>
+
+; VR group2 response
+
+
+
+
+
+

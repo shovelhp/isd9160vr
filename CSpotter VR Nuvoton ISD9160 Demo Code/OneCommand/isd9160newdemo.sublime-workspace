@@ -552,15 +552,6 @@
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
-		},
-		{
-			"file": "App.h.dump",
-			"settings":
-			{
-				"buffer_size": 7385,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
 		}
 	],
 	"build_system": "",
@@ -621,12 +612,15 @@
 	"expanded_folders":
 	[
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code",
-		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand"
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/VROneCmdApp"
 	],
 	"file_history":
 	[
-		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/App.h",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/AudioRes/Output/AudioRes_AudioInfo.h",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/AudioRes/Output/AudioResText.h",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/App.h.dump",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/App.h",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Device/Nuvoton/ISD9100/Include/ISD9100.h",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/inc/adc.h",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/inc/MicSpk.h",
@@ -672,7 +666,6 @@
 		"/Z/ghp/temp/icp/copyfile_wang8cmd.bat",
 		"/Z/ghp/temp/icp/copyfile_wang2cmd.bat",
 		"/Z/ghp/temp/icp/copyfile.bat",
-		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/AudioRes/Output/AudioResText.h",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/inc/gpio.h",
 		"/C/Windows/System32/drivers/etc/ipv6_google_hosts.zc",
 		"/C/Windows/System32/drivers/etc/hosts.dump",
@@ -751,12 +744,11 @@
 		"/E/shovelhpwork/hinoc/MCU/ADCCTRL/ADCCTRL/ADCCTRL/include/cmdres.h",
 		"/E/shovelhpwork/hinoc/MCU/ADCCTRL/ADCCTRL/ADCCTRL/include/dispstr.h",
 		"/E/shovelhpwork/hinoc/MCU/ADCCTRL/ADCCTRL/ADCCTRL/include/adc2_init_cfg.h",
-		"/E/shovelhpwork/hinoc/MCU/ADCCTRL/ADCCTRL/ADCCTRL/include/atmel_start_pins.h",
-		"/E/shovelhpwork/hinoc/MCU/ADCCTRL/ADCCTRL/ADCCTRL/clk_chip_cfg.h"
+		"/E/shovelhpwork/hinoc/MCU/ADCCTRL/ADCCTRL/ADCCTRL/include/atmel_start_pins.h"
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -799,7 +791,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -815,8 +807,8 @@
 						"selection":
 						[
 							[
-								10825,
-								10817
+								798,
+								798
 							]
 						],
 						"settings":
@@ -827,10 +819,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 6474.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -892,7 +884,7 @@
 						"translation.y": 2051.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -908,8 +900,8 @@
 						"selection":
 						[
 							[
-								8450,
-								8450
+								9325,
+								9325
 							]
 						],
 						"settings":
@@ -920,39 +912,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 4586.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "App.h.dump",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7385,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5681,
-								5681
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1463.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
 					"type": "text"
 				}
 			]

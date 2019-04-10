@@ -1,0 +1,5 @@
+--cpu Cortex-M0 -g --apcs=interwork 
+-Id:\Keil_v5\ARM\RV31\INC
+-Id:\Keil_v5\ARM\CMSIS\Include
+--pd "__UVISION_VERSION SETA 525" --pd "__ISD9100__ SETA 1"
+--list .\vr\startup_isd9100.lst --xref -o .\vr\startup_isd9100.o --depend .\vr\startup_isd9100.d "..\..\Library\Device\Nuvoton\ISD9100\Source\ARM\startup_ISD9100.s"
