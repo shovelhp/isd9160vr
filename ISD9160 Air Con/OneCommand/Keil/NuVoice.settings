@@ -1,2 +1,9 @@
 [SPI_Write_Info]
 StartAddress=0x0
+[AudioToolPrj]
+PrjPath=..\AudioRes\AudioRes.wba,F:\shovelhp\Documents\GitHub\isd9160vr\ISD9160 Air Con\OneCommand\AudioRes\AudioRes.wba
+[OutputPath]
+IOPath=..\
+[Project_Info]
+Target=VoiceRecognition
+Device=ISD9160

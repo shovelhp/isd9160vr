@@ -15,11 +15,11 @@ enum Audio_ID_Table
 #define AUDIOSYN_SOUND_MAX_ID	7
 
 // Define AudioRes_AudioInfoMerge.ROM size (without MIDI WavTable)
-#define AUDIOINFO_ROM_NO_WTB_SIZE	271456
+#define AUDIOINFO_ROM_NO_WTB_SIZE	204416
 // Define MIDI WavTable size
 #define MIDISYN_WTB_SIZE	0
 // Define AudioRes_AudioInfoMerge.ROM size (with MIDI WavTable)
-#define AUDIOINFO_ROM_SIZE	271456
+#define AUDIOINFO_ROM_SIZE	204416
 
 #endif
 

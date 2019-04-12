@@ -173,7 +173,7 @@ typedef struct		//
 //Compile Parameter
 #define USEFLASH 1 		//if use external flash and voice response
 #define USEWAKEUP 0		//if use wakeup voice to turn on the fan
-#define USEWAKEUPRES 0	//if use voice response for wakeup command
+#define USEWAKEUPRES 1	//if use voice response for wakeup command
 #define USEALLCMD 1		//if use all commands on list
 #define USEUART 0		//if use uart to see VR result
 #define USEEX32K 0		//if use external 32.768k xtal

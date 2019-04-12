@@ -550,12 +550,12 @@
 		"selected_items":
 		[
 			[
-				"Package Control: ins",
-				"Package Control: Install Package"
+				"Package Control: ",
+				"Package Control: Upgrade Package"
 			],
 			[
-				"Package Control: ",
-				"Package Control: List Packages"
+				"Package Control: ins",
+				"Package Control: Install Package"
 			],
 			[
 				"Package Control: de",
@@ -601,6 +601,7 @@
 	"file_history":
 	[
 		"/F/shovelhp/Documents/GitHub/isd9160vr/ISD9160 Air Con/OneCommand/App.h.dump",
+		"/Z/ghp/shanqiuisp/AudioRes_AudioInfoMerge.ROM",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/ISD9160 Air Con/OneCommand/App.h",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/main.c",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/inc/Framework.h",
@@ -726,8 +727,7 @@
 		"/C/Program Files (x86)/Spirent Communications/Spirent TestCenter 4.38/Spirent TestCenter Application/API/Tcl/pkgIndex.tcl",
 		"/E/shovelhpwork/hinoc/MCU/ADCCTRL/ADCCTRL/ADCCTRL/include/clk_chip_cfg.h",
 		"/E/shovelhpwork/hinoc/MCU/ADCCTRL/ADCCTRL/ADCCTRL/include/chipinit.h",
-		"/E/shovelhpwork/hinoc/MCU/ADCCTRL/ADCCTRL/ADCCTRL/include/cmdres.h",
-		"/E/shovelhpwork/hinoc/MCU/ADCCTRL/ADCCTRL/ADCCTRL/include/dispstr.h"
+		"/E/shovelhpwork/hinoc/MCU/ADCCTRL/ADCCTRL/ADCCTRL/include/cmdres.h"
 	],
 	"find":
 	{
@@ -774,7 +774,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -796,6 +796,8 @@
 						],
 						"settings":
 						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
 							"syntax": "Packages/C++/C.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
@@ -803,7 +805,7 @@
 						"translation.y": 3357.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -819,20 +821,22 @@
 						"selection":
 						[
 							[
-								8323,
-								8324
+								11430,
+								11430
 							]
 						],
 						"settings":
 						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
 							"syntax": "Packages/C++/C.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 4517.0,
+						"translation.y": 6614.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -872,6 +876,10 @@
 	"output.find_results":
 	{
 		"height": 0.0
+	},
+	"output.hex_viewer_inspector":
+	{
+		"height": 122.0
 	},
 	"pinned_build_system": "",
 	"project": "isd9160newdemo.sublime-project",
