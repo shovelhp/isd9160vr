@@ -601,8 +601,8 @@
 	"file_history":
 	[
 		"/F/shovelhp/Documents/GitHub/isd9160vr/ISD9160 Air Con/OneCommand/App.h.dump",
-		"/Z/ghp/shanqiuisp/AudioRes_AudioInfoMerge.ROM",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/ISD9160 Air Con/OneCommand/App.h",
+		"/Z/ghp/shanqiuisp/AudioRes_AudioInfoMerge.ROM",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/main.c",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/inc/Framework.h",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Framework/src/MicSpk.c",
@@ -833,7 +833,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 6614.0,
+						"translation.y": 1223.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
