@@ -2,34 +2,36 @@ classdef VoiceRecordnl_exported < matlab.apps.AppBase
 
     % Properties that correspond to app components
     properties (Access = public)
-        UIFigure            matlab.ui.Figure
-        TabGroup            matlab.ui.container.TabGroup
-        VoiceRecordTab      matlab.ui.container.Tab
-        VoiceRecordPanel    matlab.ui.container.Panel
-        RecordSW            matlab.ui.control.Button
-        UARTEditFieldLabel  matlab.ui.control.Label
-        UARTPort            matlab.ui.control.EditField
-        EditField_2Label    matlab.ui.control.Label
-        RecordLen           matlab.ui.control.NumericEditField
-        EditField_3Label    matlab.ui.control.Label
-        FrameSize           matlab.ui.control.NumericEditField
-        EditField_4Label    matlab.ui.control.Label
-        FilenamePrefix      matlab.ui.control.EditField
-        EditFieldLabel      matlab.ui.control.Label
-        RecordTimes         matlab.ui.control.NumericEditField
-        RecordStatus        matlab.ui.control.Lamp
-        Label               matlab.ui.control.Label
-        RecordBaud          matlab.ui.control.NumericEditField
-        Label_2             matlab.ui.control.Label
-        DispWindow          matlab.ui.control.TextArea
-        DispData            matlab.ui.control.CheckBox
-        FileDisplayTab      matlab.ui.container.Tab
-        FileDisplayPanel    matlab.ui.container.Panel
-        DispSW              matlab.ui.control.Button
-        Label_3             matlab.ui.control.Label
-        DispFilename        matlab.ui.control.EditField
-        DispStatus          matlab.ui.control.Lamp
-        DispAxes            matlab.ui.control.UIAxes
+        ISD9160VoiceRecordUIFigure  matlab.ui.Figure
+        TabGroup                    matlab.ui.container.TabGroup
+        VoiceRecordTab              matlab.ui.container.Tab
+        VoiceRecordPanel            matlab.ui.container.Panel
+        RecordSW                    matlab.ui.control.Button
+        UARTEditFieldLabel          matlab.ui.control.Label
+        UARTPort                    matlab.ui.control.EditField
+        EditField_2Label            matlab.ui.control.Label
+        RecordLen                   matlab.ui.control.NumericEditField
+        EditField_3Label            matlab.ui.control.Label
+        FrameSize                   matlab.ui.control.NumericEditField
+        EditField_4Label            matlab.ui.control.Label
+        FilenamePrefix              matlab.ui.control.EditField
+        EditFieldLabel              matlab.ui.control.Label
+        RecordTimes                 matlab.ui.control.NumericEditField
+        RecordStatus                matlab.ui.control.Lamp
+        Label                       matlab.ui.control.Label
+        RecordBaud                  matlab.ui.control.NumericEditField
+        Label_2                     matlab.ui.control.Label
+        DispWindow                  matlab.ui.control.TextArea
+        DispData                    matlab.ui.control.CheckBox
+        FileDisplayTab              matlab.ui.container.Tab
+        FileDisplayPanel            matlab.ui.container.Panel
+        DispSW                      matlab.ui.control.Button
+        Label_3                     matlab.ui.control.Label
+        DispFilename                matlab.ui.control.EditField
+        DispStatus                  matlab.ui.control.Lamp
+        DispAxes                    matlab.ui.control.UIAxes
+        Bin2WavSW                   matlab.ui.control.Button
+        TransStatus                 matlab.ui.control.Lamp
     end
 
     
@@ -37,6 +39,7 @@ classdef VoiceRecordnl_exported < matlab.apps.AppBase
         RecRuning = 0;% Description
         RecIndex = 1;
         DataDirName = 'data' % Description
+        WavDirName = 'wav'% Description
     end
     
     methods (Access = private)
@@ -125,7 +128,7 @@ classdef VoiceRecordnl_exported < matlab.apps.AppBase
             sComPortAct = instrfind({'PORT','Status'},{sComPort.port,'open'});
             if(~isempty(sComPortAct))
                 fclose(sComPortAct);
-            end                
+            end
             RecTimes = app.RecordTimes.Value;
             RecLen = app.RecordLen.Value + 1;
             RecFrameSize = app.FrameSize.Value;
@@ -192,7 +195,7 @@ classdef VoiceRecordnl_exported < matlab.apps.AppBase
                 app.DispStatus.Color = 'y';
                 fclose(Dispfile);
                 pause(0.1);
-                return                
+                return
             end
             for secindex = 1:length(index)-1
                 datasec = data(index(secindex)+frameheadersize+2:index(secindex+1)-1);
@@ -222,9 +225,66 @@ classdef VoiceRecordnl_exported < matlab.apps.AppBase
             app.DispAxes.XTickLabel = XTickStr;
             pause(1);
             app.DispSW.Text = '显示波形';
-            app.DispStatus.Color = 'g';  
+            app.DispStatus.Color = 'g';
             fclose(Dispfile);
             pause(0.1);
+        end
+
+        % Button pushed function: Bin2WavSW
+        function Bin2WavSWButtonPushed(app, event)
+            filedirstatus = mkdir(app.WavDirName);
+            if(~filedirstatus)
+                app.TransStatus.Color = 'y';
+                return
+            end
+            filename = ['.\' app.DataDirName '\' app.DispFilename.Value];
+            Binfile = fopen(filename, 'r');
+            if(Binfile <= 0)
+                app.TransStatus.Color = 'y';
+                return
+            end
+            pause(0.1);
+            app.TransStatus.Color = 'r';
+            app.Bin2WavSW.Text = '正在读取';
+            pause(0.1);
+            data = fread(Binfile,'uint8');
+            app.Bin2WavSW.Text = '正在转换';
+            pause(0.1);
+            frameheader = char([hex2dec('55') hex2dec('aa') hex2dec('aa') hex2dec('55') hex2dec('55') hex2dec('aa') hex2dec('aa') hex2dec('55')]);
+            frameheadersize = length(frameheader);
+            datachar = char(data);
+            datastr = string(datachar');
+            datas16 = [];
+            index = strfind(datastr, frameheader);
+            if(length(index)<2)
+                app.TransStatus.Color = 'y';
+                fclose(Binfile);
+                pause(0.1);
+                return
+            end
+            for secindex = 1:length(index)-1
+                datasec = data(index(secindex)+frameheadersize+2:index(secindex+1)-1);
+                if mod(length(datasec),2)
+                    datasec = [datasec;datasec(length(datasec))];
+                end
+                datasec2 = reshape(datasec,2,[])';
+                datasec16 = (datasec2(:,1)*256)+datasec2(:,2);
+                %     datasechex16 = dec2hex(datasec16);
+                datasecu16 = uint16(datasec16);
+                datasecs16 = typecast(datasecu16, 'int16');
+                %plot(datasecs16);
+                datas16 = [datas16;datasecs16];
+            end
+            index = strfind(app.DispFilename.Value,'.bin');
+            wavfilename = [app.DispFilename.Value(1:index) '.wav'];
+            wavfile = ['.\' app.WavDirName '\' wavfilename];
+            audiowrite(wavfile, datas16, 8000);
+            pause(1);
+            app.Bin2WavSW.Text = '另存wav';
+            app.TransStatus.Color = 'g';
+            fclose(Binfile);
+            pause(0.1);
+
         end
     end
 
@@ -234,13 +294,13 @@ classdef VoiceRecordnl_exported < matlab.apps.AppBase
         % Create UIFigure and components
         function createComponents(app)
 
-            % Create UIFigure
-            app.UIFigure = uifigure;
-            app.UIFigure.Position = [100 100 640 480];
-            app.UIFigure.Name = 'UI Figure';
+            % Create ISD9160VoiceRecordUIFigure
+            app.ISD9160VoiceRecordUIFigure = uifigure;
+            app.ISD9160VoiceRecordUIFigure.Position = [100 100 640 480];
+            app.ISD9160VoiceRecordUIFigure.Name = 'ISD9160 VoiceRecord';
 
             % Create TabGroup
-            app.TabGroup = uitabgroup(app.UIFigure);
+            app.TabGroup = uitabgroup(app.ISD9160VoiceRecordUIFigure);
             app.TabGroup.Position = [1 1 583 480];
 
             % Create VoiceRecordTab
@@ -395,8 +455,17 @@ classdef VoiceRecordnl_exported < matlab.apps.AppBase
             app.DispAxes.Box = 'on';
             app.DispAxes.XTick = [0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1];
             app.DispAxes.YTickLabel = {'-40000'; '-30000'; '-20000'; '-10000'; '0'; '10000'; '20000'; '30000'; '40000'};
-            app.DispAxes.TitleFontWeight = 'bold';
-            app.DispAxes.Position = [34 22 513 332];
+            app.DispAxes.Position = [34 22 513 314];
+
+            % Create Bin2WavSW
+            app.Bin2WavSW = uibutton(app.FileDisplayPanel, 'push');
+            app.Bin2WavSW.ButtonPushedFcn = createCallbackFcn(app, @Bin2WavSWButtonPushed, true);
+            app.Bin2WavSW.Position = [386 353 100 24];
+            app.Bin2WavSW.Text = '另存wav';
+
+            % Create TransStatus
+            app.TransStatus = uilamp(app.FileDisplayPanel);
+            app.TransStatus.Position = [503 355 20 20];
         end
     end
 
@@ -409,7 +478,7 @@ classdef VoiceRecordnl_exported < matlab.apps.AppBase
             createComponents(app)
 
             % Register the app with App Designer
-            registerApp(app, app.UIFigure)
+            registerApp(app, app.ISD9160VoiceRecordUIFigure)
 
             if nargout == 0
                 clear app
@@ -420,7 +489,7 @@ classdef VoiceRecordnl_exported < matlab.apps.AppBase
         function delete(app)
 
             % Delete UIFigure when app is deleted
-            delete(app.UIFigure)
+            delete(app.ISD9160VoiceRecordUIFigure)
         end
     end
 end
