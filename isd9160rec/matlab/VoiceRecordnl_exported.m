@@ -30,8 +30,20 @@ classdef VoiceRecordnl_exported < matlab.apps.AppBase
         DispFilename                matlab.ui.control.EditField
         DispStatus                  matlab.ui.control.Lamp
         DispAxes                    matlab.ui.control.UIAxes
-        Bin2WavSW                   matlab.ui.control.Button
+        Tab                         matlab.ui.container.Tab
+        BintoWavPanel               matlab.ui.container.Panel
         TransStatus                 matlab.ui.control.Lamp
+        Bin2WavSW                   matlab.ui.control.Button
+        Label_4                     matlab.ui.control.Label
+        BinFilename                 matlab.ui.control.EditField
+        BatBin2WavSW                matlab.ui.control.Button
+        BatTransStatus              matlab.ui.control.Lamp
+        Label_5                     matlab.ui.control.Label
+        BatBinFileDir               matlab.ui.control.EditField
+        Label_6                     matlab.ui.control.Label
+        BatTransInfo                matlab.ui.control.TextArea
+        Label_7                     matlab.ui.control.Label
+        BatWavFileDir               matlab.ui.control.EditField
     end
 
     
@@ -40,6 +52,7 @@ classdef VoiceRecordnl_exported < matlab.apps.AppBase
         RecIndex = 1;
         DataDirName = 'data' % Description
         WavDirName = 'wav'% Description
+        AudioFrameHeader = char([hex2dec('55') hex2dec('aa') hex2dec('aa') hex2dec('55') hex2dec('55') hex2dec('aa') hex2dec('aa') hex2dec('55')]); % Description
     end
     
     methods (Access = private)
@@ -115,6 +128,36 @@ classdef VoiceRecordnl_exported < matlab.apps.AppBase
             pause(0.1);
         end
         
+        
+        function WavData = BinData2Wav(app, BinData)
+            %             frameheader = char([hex2dec('55') hex2dec('aa') hex2dec('aa') hex2dec('55') hex2dec('55') hex2dec('aa') hex2dec('aa') hex2dec('55')]);
+            frameheader = app.AudioFrameHeader;
+            frameheadersize = length(frameheader);
+            datachar = char(BinData);
+            datastr = string(datachar');
+            WavData = [];
+            index = strfind(datastr, frameheader);
+            if(length(index)<2)
+                app.TransStatus.Color = 'y';
+                fclose(Binfile);
+                pause(0.1);
+                return
+            end
+            for secindex = 1:length(index)-1
+                datasec = BinData(index(secindex)+frameheadersize+2:index(secindex+1)-1);
+                if mod(length(datasec),2)
+                    datasec = [datasec;datasec(length(datasec))];
+                end
+                datasec2 = reshape(datasec,2,[])';
+                datasec16 = (datasec2(:,1)*256)+datasec2(:,2);
+                %     datasechex16 = dec2hex(datasec16);
+                datasecu16 = uint16(datasec16);
+                datasecs16 = typecast(datasecu16, 'int16');
+                %plot(datasecs16);
+                WavData = [WavData;datasecs16];
+            end
+            
+        end
     end
     
 
@@ -185,7 +228,8 @@ classdef VoiceRecordnl_exported < matlab.apps.AppBase
             data = fread(Dispfile,'uint8');
             app.DispSW.Text = '正在绘图';
             pause(0.1);
-            frameheader = char([hex2dec('55') hex2dec('aa') hex2dec('aa') hex2dec('55') hex2dec('55') hex2dec('aa') hex2dec('aa') hex2dec('55')]);
+            %             frameheader = char([hex2dec('55') hex2dec('aa') hex2dec('aa') hex2dec('55') hex2dec('55') hex2dec('aa') hex2dec('aa') hex2dec('55')]);
+            frameheader = app.AudioFrameHeader;
             frameheadersize = length(frameheader);
             datachar = char(data);
             datastr = string(datachar');
@@ -237,7 +281,7 @@ classdef VoiceRecordnl_exported < matlab.apps.AppBase
                 app.TransStatus.Color = 'y';
                 return
             end
-            filename = ['.\' app.DataDirName '\' app.DispFilename.Value];
+            filename = ['.\' app.DataDirName '\' app.BinFilename.Value];
             Binfile = fopen(filename, 'r');
             if(Binfile <= 0)
                 app.TransStatus.Color = 'y';
@@ -250,41 +294,65 @@ classdef VoiceRecordnl_exported < matlab.apps.AppBase
             data = fread(Binfile,'uint8');
             app.Bin2WavSW.Text = '正在转换';
             pause(0.1);
-            frameheader = char([hex2dec('55') hex2dec('aa') hex2dec('aa') hex2dec('55') hex2dec('55') hex2dec('aa') hex2dec('aa') hex2dec('55')]);
-            frameheadersize = length(frameheader);
-            datachar = char(data);
-            datastr = string(datachar');
-            datas16 = [];
-            index = strfind(datastr, frameheader);
-            if(length(index)<2)
-                app.TransStatus.Color = 'y';
-                fclose(Binfile);
-                pause(0.1);
-                return
-            end
-            for secindex = 1:length(index)-1
-                datasec = data(index(secindex)+frameheadersize+2:index(secindex+1)-1);
-                if mod(length(datasec),2)
-                    datasec = [datasec;datasec(length(datasec))];
-                end
-                datasec2 = reshape(datasec,2,[])';
-                datasec16 = (datasec2(:,1)*256)+datasec2(:,2);
-                %     datasechex16 = dec2hex(datasec16);
-                datasecu16 = uint16(datasec16);
-                datasecs16 = typecast(datasecu16, 'int16');
-                %plot(datasecs16);
-                datas16 = [datas16;datasecs16];
-            end
-            index = strfind(app.DispFilename.Value,'.bin');
-            wavfilename = [app.DispFilename.Value(1:index) '.wav'];
+            WavData = BinData2Wav(app, data);
+            index = strfind(app.BinFilename.Value,'.bin');
+            wavfilename = [app.BinFilename.Value(1:index-1) '.wav'];
             wavfile = ['.\' app.WavDirName '\' wavfilename];
-            audiowrite(wavfile, datas16, 8000);
+            audiowrite(wavfile, WavData, 8000);
             pause(1);
             app.Bin2WavSW.Text = '另存wav';
             app.TransStatus.Color = 'g';
             fclose(Binfile);
             pause(0.1);
+            
+        end
 
+        % Button pushed function: BatBin2WavSW
+        function BatBin2WavSWButtonPushed(app, event)
+            filedirstatus = mkdir(app.BatWavFileDir.Value);
+            if(~filedirstatus)
+                app.TransStatus.Color = 'y';
+                return
+            end
+            Binfilelist = dir(fullfile(app.BatBinFileDir.Value,'*.bin'));
+            app.BatTransInfo.Value = string(['Convert ' app.BatBinFileDir.Value ' Files Staring...']);
+            for fileindex = 1 : size(Binfilelist,1)
+                filename = fullfile(app.BatBinFileDir.Value, Binfilelist(fileindex).name);
+                Binfile = fopen(filename, 'r');
+                if(Binfile <= 0)
+                    app.BatTransStatus.Color = 'y';
+                    newinfo = string(['Read File : ' filename ' Error']);
+                    app.BatTransInfo.Value = [app.BatTransInfo.Value; newinfo];
+                    return
+                end
+                pause(0.1);
+                app.BatTransStatus.Color = 'r';
+                app.BatBin2WavSW.Text = '正在读取';
+                newinfo = string(['Open File : ' filename]);
+                app.BatTransInfo.Value = [app.BatTransInfo.Value; newinfo];
+                pause(0.1);
+                data = fread(Binfile,'uint8');
+                app.BatBin2WavSW.Text = '正在转换';
+                newinfo = string(['Converting : ' filename]);
+                app.BatTransInfo.Value = [app.BatTransInfo.Value; newinfo];
+                pause(0.1);
+                WavData = BinData2Wav(app, data);
+                index = strfind(Binfilelist(fileindex).name,'.bin');
+                wavfilename = [Binfilelist(fileindex).name(1:index-1) '.wav'];
+                wavfile = fullfile(app.BatWavFileDir.Value, wavfilename);
+                audiowrite(wavfile, WavData, 8000);
+                pause(0.1);
+                newinfo = string(['Save File : ' wavfile]);
+                app.BatTransInfo.Value = [app.BatTransInfo.Value; newinfo];
+                fclose(Binfile);
+            end
+            pause(1);
+            newinfo = string(['Convert ' app.BatBinFileDir.Value ' Files Finished!']);
+            app.BatTransInfo.Value = [app.BatTransInfo.Value; newinfo];
+            app.BatBin2WavSW.Text = '另存wav';
+            app.BatTransStatus.Color = 'g';
+            pause(0.1);
+            
         end
     end
 
@@ -457,15 +525,80 @@ classdef VoiceRecordnl_exported < matlab.apps.AppBase
             app.DispAxes.YTickLabel = {'-40000'; '-30000'; '-20000'; '-10000'; '0'; '10000'; '20000'; '30000'; '40000'};
             app.DispAxes.Position = [34 22 513 314];
 
+            % Create Tab
+            app.Tab = uitab(app.TabGroup);
+            app.Tab.Title = '格式转换';
+
+            % Create BintoWavPanel
+            app.BintoWavPanel = uipanel(app.Tab);
+            app.BintoWavPanel.Title = 'Bin to Wav';
+            app.BintoWavPanel.Position = [1 1 581 452];
+
+            % Create Label_4
+            app.Label_4 = uilabel(app.BintoWavPanel);
+            app.Label_4.HorizontalAlignment = 'right';
+            app.Label_4.Position = [34 385 41 22];
+            app.Label_4.Text = '文件名';
+
+            % Create BinFilename
+            app.BinFilename = uieditfield(app.BintoWavPanel, 'text');
+            app.BinFilename.HorizontalAlignment = 'center';
+            app.BinFilename.Position = [90 385 272 22];
+            app.BinFilename.Value = 'recordtest.bin';
+
             % Create Bin2WavSW
-            app.Bin2WavSW = uibutton(app.FileDisplayPanel, 'push');
+            app.Bin2WavSW = uibutton(app.BintoWavPanel, 'push');
             app.Bin2WavSW.ButtonPushedFcn = createCallbackFcn(app, @Bin2WavSWButtonPushed, true);
-            app.Bin2WavSW.Position = [386 353 100 24];
+            app.Bin2WavSW.Position = [391 384 100 24];
             app.Bin2WavSW.Text = '另存wav';
 
             % Create TransStatus
-            app.TransStatus = uilamp(app.FileDisplayPanel);
-            app.TransStatus.Position = [503 355 20 20];
+            app.TransStatus = uilamp(app.BintoWavPanel);
+            app.TransStatus.Position = [511 386 20 20];
+
+            % Create BatBin2WavSW
+            app.BatBin2WavSW = uibutton(app.BintoWavPanel, 'push');
+            app.BatBin2WavSW.ButtonPushedFcn = createCallbackFcn(app, @BatBin2WavSWButtonPushed, true);
+            app.BatBin2WavSW.Position = [391 310 100 24];
+            app.BatBin2WavSW.Text = '批量转换';
+
+            % Create BatTransStatus
+            app.BatTransStatus = uilamp(app.BintoWavPanel);
+            app.BatTransStatus.Position = [511 312 20 20];
+
+            % Create Label_5
+            app.Label_5 = uilabel(app.BintoWavPanel);
+            app.Label_5.HorizontalAlignment = 'right';
+            app.Label_5.Position = [22 311 53 22];
+            app.Label_5.Text = '源文件夹';
+
+            % Create BatBinFileDir
+            app.BatBinFileDir = uieditfield(app.BintoWavPanel, 'text');
+            app.BatBinFileDir.HorizontalAlignment = 'center';
+            app.BatBinFileDir.Position = [90 311 87 22];
+            app.BatBinFileDir.Value = 'data2';
+
+            % Create Label_6
+            app.Label_6 = uilabel(app.BintoWavPanel);
+            app.Label_6.HorizontalAlignment = 'right';
+            app.Label_6.Position = [39 272 53 22];
+            app.Label_6.Text = '转换信息';
+
+            % Create BatTransInfo
+            app.BatTransInfo = uitextarea(app.BintoWavPanel);
+            app.BatTransInfo.Position = [107 53 384 243];
+
+            % Create Label_7
+            app.Label_7 = uilabel(app.BintoWavPanel);
+            app.Label_7.HorizontalAlignment = 'right';
+            app.Label_7.Position = [195 311 65 22];
+            app.Label_7.Text = '目标文件夹';
+
+            % Create BatWavFileDir
+            app.BatWavFileDir = uieditfield(app.BintoWavPanel, 'text');
+            app.BatWavFileDir.HorizontalAlignment = 'center';
+            app.BatWavFileDir.Position = [275 311 87 22];
+            app.BatWavFileDir.Value = 'wav2';
         end
     end
 
