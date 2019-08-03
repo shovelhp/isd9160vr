@@ -144,9 +144,11 @@ typedef struct		//
 #define TIMERON BIT12
 #define SCMDLINE BIT7
 #define SCMDLINE1 BIT11
+#define STATLINE BIT10
+#define STATFANON 1
 //VR active time
 #define VRTIME 10000
-#define VRTIMELED BIT10
+#define VRTIMELED BIT13
 #define VRTIMEON 5000
 
 #define FAN_RUNING 1
@@ -178,6 +180,7 @@ typedef struct		//
 #define USEUART 0		//if use uart to see VR result
 #define USEEX32K 0		//if use external 32.768k xtal
 #define USEDUMYCMD 1	//if send dumy command in 150ms
+#define USESTATLINE 1   //if check FAN ON STATUS from signal line
 
 //#define NOFLASH
 
@@ -214,6 +217,7 @@ void SendCMDNULL(void);
 #define GPIO_SET_BIT(gpio, u32Bit)   ((gpio)->DOUT |= (u32Bit))
 #define GPIO_CLR_BIT(gpio, u32Bit)   ((gpio)->DOUT &= (~u32Bit))
 #define GPIO_TOGGLE_BIT(gpio, u32Bit)    ((gpio)->DOUT ^= (u32Bit))
+//#define GPIO_GET_IN_BIT(gpio, u32Bit)   ((gpio)->PIN &= (~u32Bit))
 
 #endif //#ifndef _APP_H_
 

@@ -8,6 +8,14 @@
 	"buffers":
 	[
 		{
+			"file": "CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/AppFunctions.c",
+			"settings":
+			{
+				"buffer_size": 19697,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "/E/shovelhpwork/hinoc/MCU/ADCCTRL/ADCCTRL/ADCCTRL/main.c",
 			"settings":
 			{
@@ -16,10 +24,26 @@
 			}
 		},
 		{
-			"file": "CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/AppFunctions.c",
+			"file": "/Z/ghp/山丘语音/fandemo/MCU_code/main.c",
 			"settings":
 			{
-				"buffer_size": 19668,
+				"buffer_size": 3343,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/Z/ghp/山丘语音/fandemo/MCU_code/fp.c",
+			"settings":
+			{
+				"buffer_size": 2450,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/Z/ghp/山丘语音/fandemo/MCU_code/fp.h",
+			"settings":
+			{
+				"buffer_size": 726,
 				"line_ending": "Windows"
 			}
 		}
@@ -196,11 +220,39 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
+					"file": "CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/AppFunctions.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 19697,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"encoding_helper_encoding": "UTF-8",
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 108.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
 					"file": "/E/shovelhpwork/hinoc/MCU/ADCCTRL/ADCCTRL/ADCCTRL/main.c",
 					"semi_transient": false,
 					"settings":
@@ -222,35 +274,95 @@
 							"syntax": "Packages/C++/C++.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1044.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/AppFunctions.c",
+					"buffer": 2,
+					"file": "/Z/ghp/山丘语音/fandemo/MCU_code/main.c",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 19668,
+						"buffer_size": 3343,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								9942,
-								9942
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"encoding_helper_encoding": "UTF-8",
+							"encoding_helper_encoding": "cp936",
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Z/ghp/山丘语音/fandemo/MCU_code/fp.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2450,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"encoding_helper_encoding": "cp936",
 							"syntax": "Packages/C++/C++.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 108.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Z/ghp/山丘语音/fandemo/MCU_code/fp.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 726,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"encoding_helper_encoding": "ISO-8859-2",
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

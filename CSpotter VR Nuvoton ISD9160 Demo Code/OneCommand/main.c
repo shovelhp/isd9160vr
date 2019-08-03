@@ -60,6 +60,7 @@ volatile uint8_t sendbline = 1;
 volatile uint8_t flag_150ms = 0;
 volatile uint8_t flag_0p5ms = 0;
 #endif
+extern uint8_t Fan_Stauts;
 
 UINT8 SPIFlash_Initiate(void)
 { 
@@ -267,6 +268,9 @@ void TMR1_IRQHandler(void)
 	static uint8_t time_0p5ms = 0;
 	static uint8_t time_150ms=0;
 #endif		
+#if USESTATLINE
+	static uint32_t fanstatline = 1;
+#endif
 	//uint32_t PAdata = 0;
 	if(time_1p25ms)	
 		time_1p25ms--;
@@ -299,7 +303,11 @@ void TMR1_IRQHandler(void)
 	else
 	// GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~SCMDLINE1));
 		GPIO_CLR_BIT(PA, SCMDLINE1);
-
+#if USESTATLINE
+	//fanstatline = ~GPIO_GET_IN_BIT(PA, STATLINE);
+	fanstatline = GPIO_GET_IN_DATA(PA) & STATLINE;
+	Fan_Stauts = (fanstatline==0)?FAN_RUNING:FAN_CLOSED;
+#endif
 	TIMER_ClearIntFlag(TIMER1);	
 }
 
@@ -453,6 +461,9 @@ INT32 main()
 	printf("\n\n");
 	printf("INIT Finished!\n");
 	printf("Starting VR...\n");
+#endif
+#if USESTATLINE
+	GPIO_SetMode(PA, STATLINE, GPIO_MODE_INPUT);
 #endif
 	while (1)
 	{

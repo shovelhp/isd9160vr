@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\VR\VoiceRecognition.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\VR\VoiceRecognition.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Fri Apr 12 13:52:55 2019
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Thu Aug 01 15:44:53 2019
 <BR><P>
 <H3>Maximum Stack Usage =        680 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1314,6 +1314,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = GPIO_SetMode
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OutputPin_Initiate
+<LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[4f]"></a>MD4App_DecodeInitiate</STRONG> (Thumb, 34 bytes, Stack size 16 bytes, md4app.o(i.MD4App_DecodeInitiate))
@@ -2127,7 +2128,9 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_isd9100.o(RESET)
 </UL>
-<P><STRONG><a name="[14]"></a>TMR1_IRQHandler</STRONG> (Thumb, 86 bytes, Stack size 0 bytes, main.o(i.TMR1_IRQHandler))
+<P><STRONG><a name="[14]"></a>TMR1_IRQHandler</STRONG> (Thumb, 108 bytes, Stack size 8 bytes, main.o(i.TMR1_IRQHandler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = TMR1_IRQHandler
+</UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_isd9100.o(RESET)
 </UL>
 <P><STRONG><a name="[15]"></a>UART0_IRQHandler</STRONG> (Thumb, 96 bytes, Stack size 16 bytes, main.o(i.UART0_IRQHandler))
@@ -2218,7 +2221,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendCMD
 </UL>
 
-<P><STRONG><a name="[2e]"></a>main</STRONG> (Thumb, 64 bytes, Stack size 0 bytes, main.o(i.main))
+<P><STRONG><a name="[2e]"></a>main</STRONG> (Thumb, 76 bytes, Stack size 0 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 680<LI>Call Chain = main &rArr; App_Initiate &rArr; App_StartRecognize &rArr; VROneCmdApp_Initiate &rArr; CSpotter_Init_Sep &rArr; CSpotter_Init_MultiWithExtRejModel &rArr; NINJA_API_73 &rArr; BsrRay &rArr; BsrDina
 </UL>
 <BR>[Calls]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysClk_InitiateRC
@@ -2226,6 +2229,7 @@ Global Symbols
 <LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PdmaCtrl_Init
 <LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OutputPin_Initiate
 <LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MIC_Open
+<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetMode
 <LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CLK_EnableLDO
 <LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_Process
 <LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;App_Initiate
