@@ -56,6 +56,7 @@ volatile UINT8 g_u8Con_Spk;
 extern pwm_type pwm0;
 extern pwm_type pwm1;
 extern uint8_t Fan_Stauts;
+extern uint8_t Fan_StautsLine;
 extern volatile uint8_t flag_1p25ms;
 extern volatile uint8_t sendbline;
 #if USEDUMYCMD
@@ -275,6 +276,10 @@ void App_Process(void)
 		//GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~VRTIMELED));
 		GPIO_CLR_BIT(PA, VRTIMELED);
 	}
+#if USESTATLINE
+	Fan_Stauts = Fan_StautsLine;
+	printf("Fan_Stauts is : %d\n", Fan_Stauts);
+#endif
 	if( g_u8AppCtrl&APPCTRL_PLAY )
 	{
 		if (MD4App_DecodeProcess(&g_sApp.Mic_MD4.asMD4App) == FALSE )

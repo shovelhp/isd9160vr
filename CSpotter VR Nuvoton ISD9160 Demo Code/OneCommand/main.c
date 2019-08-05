@@ -61,6 +61,7 @@ volatile uint8_t flag_150ms = 0;
 volatile uint8_t flag_0p5ms = 0;
 #endif
 extern uint8_t Fan_Stauts;
+extern uint8_t Fan_StautsLine;
 
 UINT8 SPIFlash_Initiate(void)
 { 
@@ -226,6 +227,9 @@ void TMR0_IRQHandler(void)
 
 	static uint16_t tt=0;
 	static uint8_t ll=0;
+#if USESTATLINE
+	static uint32_t fanstatline = 1;
+#endif
 	if(pwm0.Breath_light)
 	{
 		tt++;
@@ -259,6 +263,11 @@ void TMR0_IRQHandler(void)
     //printf("Timer IRQ handler test #%d/3.\n", ++u8Counter );
     TIMER_ClearIntFlag(TIMER0);	
 	if(vr_time)	vr_time--;
+#if USESTATLINE
+	//fanstatline = ~GPIO_GET_IN_BIT(PA, STATLINE);
+	fanstatline = GPIO_GET_IN_DATA(PA) & STATLINE;
+	Fan_StautsLine = (fanstatline==0)?FAN_RUNING:FAN_CLOSED;
+#endif
 }
 
 void TMR1_IRQHandler(void)
@@ -268,9 +277,6 @@ void TMR1_IRQHandler(void)
 	static uint8_t time_0p5ms = 0;
 	static uint8_t time_150ms=0;
 #endif		
-#if USESTATLINE
-	static uint32_t fanstatline = 1;
-#endif
 	//uint32_t PAdata = 0;
 	if(time_1p25ms)	
 		time_1p25ms--;
@@ -303,11 +309,6 @@ void TMR1_IRQHandler(void)
 	else
 	// GPIO_SET_OUT_DATA(PA, GPIO_GET_OUT_DATA(PA) & (~SCMDLINE1));
 		GPIO_CLR_BIT(PA, SCMDLINE1);
-#if USESTATLINE
-	//fanstatline = ~GPIO_GET_IN_BIT(PA, STATLINE);
-	fanstatline = GPIO_GET_IN_DATA(PA) & STATLINE;
-	Fan_Stauts = (fanstatline==0)?FAN_RUNING:FAN_CLOSED;
-#endif
 	TIMER_ClearIntFlag(TIMER1);	
 }
 
@@ -403,6 +404,7 @@ uint8_t spk_add=0;
 uint8_t key_spk;
 uint8_t io_aa;
 uint8_t Fan_Stauts = 0;
+uint8_t Fan_StautsLine = 1;
 //---------------------------------------------------------------------------------------------------------
 // Main Function                                                           
 //---------------------------------------------------------------------------------------------------------
