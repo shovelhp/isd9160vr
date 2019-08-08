@@ -171,6 +171,7 @@ typedef struct		//
 #define SENDCMDTIMES 3
 #define CMDGAPTIME 50
 #define DEBUGTIMER 0
+#define DEBUGSTATLINE 0
 
 //Compile Parameter
 #define USEFLASH 1 		//if use external flash and voice response

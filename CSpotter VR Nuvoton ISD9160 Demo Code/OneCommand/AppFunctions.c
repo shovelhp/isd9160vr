@@ -278,7 +278,16 @@ void App_Process(void)
 	}
 #if USESTATLINE
 	Fan_Stauts = Fan_StautsLine;
-	printf("Fan_Stauts is : %d\n", Fan_Stauts);
+	if(Fan_Stauts == FAN_RUNING)
+		GPIO_SET_BIT(PA, FANON);
+	else
+		GPIO_CLR_BIT(PA, FANON);
+#endif
+#if DEBUGSTATLINE
+	if (Fan_Stauts == FAN_RUNING)
+	{
+		printf("Fan is Runing\n");
+	}
 #endif
 	if( g_u8AppCtrl&APPCTRL_PLAY )
 	{
