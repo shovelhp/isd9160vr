@@ -96,9 +96,9 @@ BOOL App_StopPlay(void);
 
 void App_PowerDown(void);
 
-#define UART_TT		80	//uartÊı¾İÃ¿Ö¡Ö®¼äÓĞÊ±¼ä¼ä¸ô£¬         /////modify 20170804
+#define UART_TT		80	//uartæ•°æ®æ¯å¸§ä¹‹é—´æœ‰æ—¶é—´é—´éš”ï¼Œ         /////modify 20170804
 #define UART_DA		60                                         /////modify 20170804
-typedef struct		//uartÖĞ¶ÏÊÕ·¢Êı¾İ½á¹¹                     /////modify 20170804
+typedef struct		//uartä¸­æ–­æ”¶å‘æ•°æ®ç»“æ„                     /////modify 20170804
 {
 	uint16_t uart_tx_len;
 	uint8_t uart_tx_data[UART_DA];
@@ -110,10 +110,10 @@ typedef struct		//uartÖĞ¶ÏÊÕ·¢Êı¾İ½á¹¹                     /////modify 20170804
 
 typedef struct		//
 {
-	uint16_t period;	//ÖÜÆÚ
-	uint16_t Duty;		//Õ¼¿Õ±È
-	uint32_t rate;	  //ÆµÂÊ
-	uint8_t Breath_light; //ºôÎüµÆÊ¹ÄÜ
+	uint16_t period;	//å‘¨æœŸ
+	uint16_t Duty;		//å ç©ºæ¯”
+	uint32_t rate;	  //é¢‘ç‡
+	uint8_t Breath_light; //å‘¼å¸ç¯ä½¿èƒ½
 }pwm_type;
 
 //PWM parameter define
@@ -186,7 +186,7 @@ typedef struct		//
 //#define NOFLASH
 
 #define ADC_PGA_GAIN_USE 3525  //800,2600, -1200~3525, step75
-#define ADC_PGACTL_BOSST_GAIN_USE ADC_PGACTL_BOSST_GAIN_26DB //ADC_PGACTL_BOSST_GAIN_26DB£¬ADC_PGACTL_BOSST_GAIN_0DB
+#define ADC_PGACTL_BOSST_GAIN_USE ADC_PGACTL_BOSST_GAIN_26DB //ADC_PGACTL_BOSST_GAIN_26DBï¼ŒADC_PGACTL_BOSST_GAIN_0DB
 #define ADC_ALC_TARLEV_USE -750  //-750,-600, -600~-2850, step150
 #define ADC_ALCCTL_NGTH_USE ADC_ALCCTL_NGTH7  //7,4, 0~7
 #define ADC_MICBSEL_USE ADC_MICBSEL_17V //ADC_MICBSEL_90_VCCA, acd.h

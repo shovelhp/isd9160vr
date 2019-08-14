@@ -532,16 +532,7 @@
 			"file": "AppFunctions.c",
 			"settings":
 			{
-				"buffer_size": 19826,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "App.h.dump",
-			"settings":
-			{
-				"buffer_size": 7563,
+				"buffer_size": 19962,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -614,8 +605,8 @@
 	],
 	"file_history":
 	[
-		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/VROneCmdApp/vssver2.scc",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/App.h.dump",
+		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/OneCommand/VROneCmdApp/vssver2.scc",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/inc/gpio.h",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/StdDriver/src/gpio.c",
 		"/F/shovelhp/Documents/GitHub/isd9160vr/CSpotter VR Nuvoton ISD9160 Demo Code/Library/Device/Nuvoton/ISD9100/Include/ISD9100.h",
@@ -789,7 +780,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -805,8 +796,8 @@
 						"selection":
 						[
 							[
-								1618,
-								1618
+								7769,
+								7759
 							]
 						],
 						"settings":
@@ -817,10 +808,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 522.0,
+						"translation.y": 3483.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -829,15 +820,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 19826,
+						"buffer_size": 19962,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6639,
-								6639
+								19488,
+								19488
 							]
 						],
 						"settings":
@@ -848,39 +839,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 4140.0,
+						"translation.y": 12411.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "App.h.dump",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7563,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5168,
-								5168
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2385.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
