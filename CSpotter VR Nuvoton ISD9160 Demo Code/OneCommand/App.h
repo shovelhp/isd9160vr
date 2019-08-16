@@ -174,7 +174,7 @@ typedef struct		//
 #define DEBUGSTATLINE 0
 
 //Compile Parameter
-#define USEFLASH 0 		//if use external flash and voice response
+#define USEFLASH 1 		//if use external flash and voice response
 #define USEWAKEUP 0		//if use wakeup voice to turn on the fan
 #define USEWAKEUPRES 1	//if use voice response for wakeup command
 #define USEALLCMD 1		//if use all commands on list

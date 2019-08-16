@@ -750,6 +750,14 @@ void SendCMD1time(uint8_t u8CMDforMCU, uint8_t u8SendTimes)
 	SendCMDByteTimer(u8CRC);
 	return;
 }
+
+void SendCMD1time1B(uint8_t u8CMDforMCU)
+{
+	uint8_t u8CMD0 = 0;
+	u8CMD0 = (u8CMDforMCU&0x0f) | (((~u8CMDforMCU)<<4)&0xf0);
+	SendCMDByteTimer(u8CMD0);
+	return;
+}
 /*
 void SendCMD(uint8_t u8CMDforMCU)
 {//send command 3 times
@@ -806,7 +814,8 @@ void SendCMD(uint8_t u8CMDforMCU, uint8_t flag_CMD)
 	{
 		for (u8SendTimes = 1; u8SendTimes <= SENDCMDTIMES ; u8SendTimes++)
 		{
-			SendCMD1time(u8CMDforMCU, u8SendTimes);
+			// SendCMD1time(u8CMDforMCU, u8SendTimes);
+			SendCMD1time1B(u8CMDforMCU);
 			delayms(CMDGAPTIME);
 		}
 		App_StartPlay(i32ID);
